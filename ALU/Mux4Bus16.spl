@@ -1,0 +1,13 @@
+[Inputs]
+S_0
+S_1
+=IN_0[15:0]=
+=IN_1[15:0]=
+=IN_2[15:0]=
+=IN_3[15:0]=
+[Outputs]
+=Y[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Mux4Bus16
+

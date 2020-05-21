@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/Marcelo/ProyectosISE/ALU/Mux2Bus16.v -lang verilog -prj ALU -o Mux2Bus16.spl -module Mux2Bus16 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Mux2Bus16.spl C:/Users/Marcelo/ProyectosISE/ALU/Mux2Bus16.sym 

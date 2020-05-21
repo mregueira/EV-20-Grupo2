@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/Marcelo/ProyectosISE/ALU/AND_Bus16.v -lang verilog -prj ALU -o AND_Bus16.spl -module AND_Bus16 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 AND_Bus16.spl C:/Users/Marcelo/ProyectosISE/ALU/AND_Bus16.sym 

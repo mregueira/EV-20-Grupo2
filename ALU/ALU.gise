@@ -22,6 +22,18 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ALU.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ALU_main.cmd_log"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="ALU_main.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ALU_main.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ALU_main.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="ALU_main.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_main.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALU_main.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ALU_main.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ALU_main.vf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ALU_main.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ALU_main_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ALU_main_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="AND_Bus16.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="AND_Bus16.spl"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="AND_Bus16.stx"/>
@@ -43,6 +55,7 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="OR_Bus16.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="OR_Bus16.xst"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
@@ -51,11 +64,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1589978989" xil_pn:in_ck="3405720286189366898" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2029642466755996148" xil_pn:start_ts="1589978987">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1590417347" xil_pn:in_ck="3405720286189366898" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2029642466755996148" xil_pn:start_ts="1590417344">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="ALU_main.vf"/>
     </transform>
     <transform xil_pn:end_ts="1589978989" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-1173049782635636189" xil_pn:start_ts="1589978989">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -68,6 +80,31 @@
     <transform xil_pn:end_ts="1589978989" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-3940172533003138666" xil_pn:start_ts="1589978989">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1590417347" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1590417347">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1590417347" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="4130691368132193453" xil_pn:start_ts="1590417347">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1590417358" xil_pn:in_ck="-7405868384536076912" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-8329683717477476903" xil_pn:start_ts="1590417347">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU_main.jhd"/>
+      <outfile xil_pn:name="ALU_main.lso"/>
+      <outfile xil_pn:name="ALU_main.ngc"/>
+      <outfile xil_pn:name="ALU_main.ngr"/>
+      <outfile xil_pn:name="ALU_main.prj"/>
+      <outfile xil_pn:name="ALU_main.stx"/>
+      <outfile xil_pn:name="ALU_main.syr"/>
+      <outfile xil_pn:name="ALU_main.xst"/>
+      <outfile xil_pn:name="ALU_main_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
     </transform>
   </transforms>
 

@@ -23,6 +23,7 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloque_3.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
@@ -80,6 +81,9 @@
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="reg_to_bus_3bit_sel_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="reg_to_bus_3bit_sel_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="reg_to_bus_3bit_sel_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_4bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="reg_to_bus_4bit_sel_drc.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_5bit_sel.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
@@ -103,9 +107,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
-      <outfile xil_pn:name="reg_to_bus_2bit_sel.vf"/>
-      <outfile xil_pn:name="reg_to_bus_3bit_sel.vf"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590677076" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6442301923870912090" xil_pn:start_ts="1590677076">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -114,38 +121,44 @@
     <transform xil_pn:end_ts="1590679755" xil_pn:in_ck="3301292966272453644" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590679755">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="reg_to_bus_1bit_sel.v"/>
-      <outfile xil_pn:name="reg_to_bus_2bit_sel.vf"/>
-      <outfile xil_pn:name="reg_to_bus_3bit_sel.vf"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590679758" xil_pn:in_ck="3301292966272453644" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3745581454426009609" xil_pn:start_ts="1590679755">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="reg_to_bus_3bit_sel_beh.prj"/>
-      <outfile xil_pn:name="reg_to_bus_3bit_sel_isim_beh.exe"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590679758" xil_pn:in_ck="3265207752073913903" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5465564262485200710" xil_pn:start_ts="1590679758">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="reg_to_bus_3bit_sel_isim_beh.wdb"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590674871" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1590674871">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590679706" xil_pn:in_ck="2213127141440679921" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8891194991816673902" xil_pn:start_ts="1590679704">
+    <transform xil_pn:end_ts="1590682848" xil_pn:in_ck="1269843779764034907" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8891194991816673902" xil_pn:start_ts="1590682845">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="reg_to_bus_2bit_sel.vf"/>
       <outfile xil_pn:name="reg_to_bus_3bit_sel.vf"/>
@@ -162,7 +175,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590679706" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1590679706">
+    <transform xil_pn:end_ts="1590680817" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1590680817">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -172,12 +185,10 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1590679723" xil_pn:in_ck="3301292966272453644" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-6583488547859262377" xil_pn:start_ts="1590679706">
+    <transform xil_pn:end_ts="1590682863" xil_pn:in_ck="3301292966272453644" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-6583488547859262377" xil_pn:start_ts="1590682848">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="reg_to_bus_1bit_sel.ngr"/>
       <outfile xil_pn:name="reg_to_bus_2bit_sel.ngr"/>

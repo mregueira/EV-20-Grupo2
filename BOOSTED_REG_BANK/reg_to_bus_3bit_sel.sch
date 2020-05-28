@@ -8,9 +8,6 @@
     <netlist>
         <signal name="XLXN_1(15:0)" />
         <signal name="XLXN_2(15:0)" />
-        <signal name="SEL_3B(2:0)" />
-        <signal name="SEL_3B(1:0)" />
-        <signal name="SEL_3B(2)" />
         <signal name="R0(15:0)" />
         <signal name="R1(15:0)" />
         <signal name="R2(15:0)" />
@@ -20,7 +17,9 @@
         <signal name="R6(15:0)" />
         <signal name="R7(15:0)" />
         <signal name="TO_BUS_3B(15:0)" />
-        <port polarity="Input" name="SEL_3B(2:0)" />
+        <signal name="SEL_B(2:0)" />
+        <signal name="SEL_B(1:0)" />
+        <signal name="SEL_B(2)" />
         <port polarity="Input" name="R0(15:0)" />
         <port polarity="Input" name="R1(15:0)" />
         <port polarity="Input" name="R2(15:0)" />
@@ -30,6 +29,7 @@
         <port polarity="Input" name="R6(15:0)" />
         <port polarity="Input" name="R7(15:0)" />
         <port polarity="Output" name="TO_BUS_3B(15:0)" />
+        <port polarity="Input" name="SEL_B(2:0)" />
         <blockdef name="reg_to_bus_2bit_sel">
             <timestamp>2020-5-28T15:23:49</timestamp>
             <rect width="288" x="64" y="-320" height="320" />
@@ -58,7 +58,7 @@
             <line x2="384" y1="-160" y2="-160" x1="320" />
         </blockdef>
         <block symbolname="reg_to_bus_1bit_sel" name="XLXI_4">
-            <blockpin signalname="SEL_3B(2)" name="SEL_BUS" />
+            <blockpin signalname="SEL_B(2)" name="SEL_BUS" />
             <blockpin signalname="XLXN_1(15:0)" name="R0(15:0)" />
             <blockpin signalname="XLXN_2(15:0)" name="R1(15:0)" />
             <blockpin signalname="TO_BUS_3B(15:0)" name="TO_BUS(15:0)" />
@@ -68,7 +68,7 @@
             <blockpin signalname="R0(15:0)" name="R0(15:0)" />
             <blockpin signalname="R2(15:0)" name="R2(15:0)" />
             <blockpin signalname="R3(15:0)" name="R3(15:0)" />
-            <blockpin signalname="SEL_3B(1:0)" name="SEL(1:0)" />
+            <blockpin signalname="SEL_B(1:0)" name="SEL(1:0)" />
             <blockpin signalname="XLXN_1(15:0)" name="TO_BUS_Z(15:0)" />
         </block>
         <block symbolname="reg_to_bus_2bit_sel" name="XLXI_8">
@@ -76,7 +76,7 @@
             <blockpin signalname="R4(15:0)" name="R0(15:0)" />
             <blockpin signalname="R6(15:0)" name="R2(15:0)" />
             <blockpin signalname="R7(15:0)" name="R3(15:0)" />
-            <blockpin signalname="SEL_3B(1:0)" name="SEL(1:0)" />
+            <blockpin signalname="SEL_B(1:0)" name="SEL(1:0)" />
             <blockpin signalname="XLXN_2(15:0)" name="TO_BUS_Z(15:0)" />
         </block>
     </netlist>
@@ -88,37 +88,17 @@
             <wire x2="1520" y1="1328" y2="1504" x1="1520" />
             <wire x2="1648" y1="1328" y2="1328" x1="1520" />
         </branch>
-        <branch name="SEL_3B(2:0)">
-            <wire x2="992" y1="896" y2="896" x1="832" />
-        </branch>
-        <iomarker fontsize="28" x="832" y="896" name="SEL_3B(2:0)" orien="R180" />
-        <branch name="SEL_3B(1:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="768" y="1360" type="branch" />
-            <wire x2="960" y1="1360" y2="1360" x1="768" />
-            <wire x2="960" y1="1360" y2="1760" x1="960" />
-            <wire x2="976" y1="1760" y2="1760" x1="960" />
-            <wire x2="976" y1="1360" y2="1360" x1="960" />
-        </branch>
-        <branch name="SEL_3B(2)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1568" y="944" type="branch" />
-            <wire x2="1632" y1="944" y2="944" x1="1568" />
-            <wire x2="1632" y1="944" y2="1200" x1="1632" />
-            <wire x2="1648" y1="1200" y2="1200" x1="1632" />
-        </branch>
         <iomarker fontsize="28" x="944" y="1104" name="R0(15:0)" orien="R180" />
         <branch name="R1(15:0)">
-            <wire x2="960" y1="1168" y2="1168" x1="944" />
-            <wire x2="976" y1="1168" y2="1168" x1="960" />
+            <wire x2="976" y1="1168" y2="1168" x1="944" />
         </branch>
         <iomarker fontsize="28" x="944" y="1168" name="R1(15:0)" orien="R180" />
         <branch name="R2(15:0)">
-            <wire x2="960" y1="1232" y2="1232" x1="944" />
-            <wire x2="976" y1="1232" y2="1232" x1="960" />
+            <wire x2="976" y1="1232" y2="1232" x1="944" />
         </branch>
         <iomarker fontsize="28" x="944" y="1232" name="R2(15:0)" orien="R180" />
         <branch name="R3(15:0)">
-            <wire x2="960" y1="1296" y2="1296" x1="944" />
-            <wire x2="976" y1="1296" y2="1296" x1="960" />
+            <wire x2="976" y1="1296" y2="1296" x1="944" />
         </branch>
         <iomarker fontsize="28" x="944" y="1296" name="R3(15:0)" orien="R180" />
         <branch name="R4(15:0)">
@@ -144,16 +124,31 @@
         <branch name="XLXN_1(15:0)">
             <wire x2="1520" y1="1104" y2="1104" x1="1392" />
             <wire x2="1520" y1="1104" y2="1264" x1="1520" />
-            <wire x2="1632" y1="1264" y2="1264" x1="1520" />
-            <wire x2="1648" y1="1264" y2="1264" x1="1632" />
+            <wire x2="1648" y1="1264" y2="1264" x1="1520" />
         </branch>
         <branch name="R0(15:0)">
-            <wire x2="960" y1="1104" y2="1104" x1="944" />
-            <wire x2="976" y1="1104" y2="1104" x1="960" />
+            <wire x2="976" y1="1104" y2="1104" x1="944" />
         </branch>
         <instance x="976" y="1392" name="XLXI_7" orien="R0">
         </instance>
         <instance x="976" y="1792" name="XLXI_8" orien="R0">
         </instance>
+        <branch name="SEL_B(2:0)">
+            <wire x2="624" y1="848" y2="848" x1="496" />
+        </branch>
+        <iomarker fontsize="28" x="496" y="848" name="SEL_B(2:0)" orien="R180" />
+        <branch name="SEL_B(1:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="672" y="1360" type="branch" />
+            <wire x2="976" y1="1360" y2="1360" x1="672" />
+        </branch>
+        <branch name="SEL_B(1:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="672" y="1760" type="branch" />
+            <wire x2="976" y1="1760" y2="1760" x1="672" />
+        </branch>
+        <branch name="SEL_B(2)">
+            <attrtext style="alignment:SOFT-VLEFT;fontsize:28;fontname:Arial" attrname="Name" x="1568" y="944" type="branch" />
+            <wire x2="1568" y1="944" y2="1200" x1="1568" />
+            <wire x2="1648" y1="1200" y2="1200" x1="1568" />
+        </branch>
     </sheet>
 </drawing>

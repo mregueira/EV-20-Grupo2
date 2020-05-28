@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : reg_to_bus_3bit_sel.vf
-// /___/   /\     Timestamp : 05/28/2020 12:28:25
+// /___/   /\     Timestamp : 05/28/2020 13:20:47
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -60,7 +60,7 @@ module reg_to_bus_3bit_sel(R0,
                            R5, 
                            R6, 
                            R7, 
-                           SEL_3B, 
+                           SEL_B, 
                            TO_BUS_3B);
 
     input [15:0] R0;
@@ -71,7 +71,7 @@ module reg_to_bus_3bit_sel(R0,
     input [15:0] R5;
     input [15:0] R6;
     input [15:0] R7;
-    input [2:0] SEL_3B;
+    input [2:0] SEL_B;
    output [15:0] TO_BUS_3B;
    
    wire [15:0] XLXN_1;
@@ -79,20 +79,20 @@ module reg_to_bus_3bit_sel(R0,
    
    reg_to_bus_1bit_sel  XLXI_4 (.R0(XLXN_1[15:0]), 
                                .R1(XLXN_2[15:0]), 
-                               .SEL_BUS(SEL_3B[2]), 
+                               .SEL_BUS(SEL_B[2]), 
                                .TO_BUS(TO_BUS_3B[15:0]));
    reg_to_bus_2bit_sel_MUSER_reg_to_bus_3bit_sel  XLXI_7 (.R0(R0[15:0]), 
                                                          .R1(R1[15:0]), 
                                                          .R2(R2[15:0]), 
                                                          .R3(R3[15:0]), 
-                                                         .SEL(SEL_3B[1:0]), 
+                                                         .SEL(SEL_B[1:0]), 
                                                          
          .TO_BUS_Z(XLXN_1[15:0]));
    reg_to_bus_2bit_sel_MUSER_reg_to_bus_3bit_sel  XLXI_8 (.R0(R4[15:0]), 
                                                          .R1(R5[15:0]), 
                                                          .R2(R6[15:0]), 
                                                          .R3(R7[15:0]), 
-                                                         .SEL(SEL_3B[1:0]), 
+                                                         .SEL(SEL_B[1:0]), 
                                                          
          .TO_BUS_Z(XLXN_2[15:0]));
 endmodule

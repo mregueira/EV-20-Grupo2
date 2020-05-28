@@ -1,0 +1,5 @@
+MODULE bloque_3
+	SUBMODULE reg_to_bus_5bit_sel
+		INSTANCE XLXI_1
+	SUBMODULE reg_to_bus_5bit_sel
+		INSTANCE XLXI_2

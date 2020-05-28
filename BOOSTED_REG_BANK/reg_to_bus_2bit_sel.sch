@@ -12,9 +12,7 @@
         <signal name="R3(15:0)" />
         <signal name="XLXN_5(15:0)" />
         <signal name="XLXN_6(15:0)" />
-        <signal name="XLXN_8" />
         <signal name="SEL(0)" />
-        <signal name="XLXN_11" />
         <signal name="SEL(1)" />
         <signal name="SEL(1:0)" />
         <signal name="TO_BUS_Z(15:0)" />

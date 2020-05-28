@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\EV-20-Grupo2\BOOSTED_REG_BANK\reg_to_bus_2bit_sel_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_2bit_sel_isim_beh.wdb 
+Running: C:\EV-20-Grupo2\BOOSTED_REG_BANK\reg_to_bus_3bit_sel_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_3bit_sel_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,31 +11,46 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /reg_to_bus_2bit_sel/R0 0 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/R0 4 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/R0 4 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/R1 1 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/R1 1 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/R2 2 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/R2 2 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/R3 3 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/R3 3 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/SEL 0 -radix bin
-/reg_to_bus_2bit_sel/SEL: Array length and the input lengths are different
-
-# isim force add /reg_to_bus_2bit_sel/SEL 0 -radix bin
-/reg_to_bus_2bit_sel/SEL: Array length and the input lengths are different
-
+# isim force add /reg_to_bus_3bit_sel/R0 0 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 0 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 0 -radix unsigned
 # run all
-# isim force add /reg_to_bus_2bit_sel/SEL 0 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/SEL 0 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 1 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 1 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R1 24 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R1 24 -radix unsigned
 # run all
-# isim force add /reg_to_bus_2bit_sel/SEL 1 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/SEL 1 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R2 2 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R2 2 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R3 3 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R3 3 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R4 4 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R4 4 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R5 5 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R5 5 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R6 6 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R6 6 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R7 7 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R7 7 -radix unsigned
 # run all
-# isim force add /reg_to_bus_2bit_sel/SEL 2 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/SEL 2 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R1 1 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/R1 1 -radix unsigned
 # run all
-# isim force add /reg_to_bus_2bit_sel/SEL 3 -radix unsigned
-# isim force add /reg_to_bus_2bit_sel/SEL 3 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 2 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 2 -radix unsigned
+# run all
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 3 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 3 -radix unsigned
+# run all
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 4 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 4 -radix unsigned
+# run all
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 5 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 5 -radix unsigned
+# run all
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 6 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 6 -radix unsigned
+# run all
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 7 -radix unsigned
+# isim force add /reg_to_bus_3bit_sel/SEL_3B 7 -radix unsigned
 # run all

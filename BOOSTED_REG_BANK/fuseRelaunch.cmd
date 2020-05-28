@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_2bit_sel_isim_beh.exe" -prj "C:/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_2bit_sel_beh.prj" "work.reg_to_bus_2bit_sel" "work.glbl" 

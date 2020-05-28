@@ -1,0 +1,29 @@
+Command line:
+   reg_to_bus_2bit_sel_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  65249
+
+Thu May 28 11:09:22 2020
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5160.07 Meg
+
+ Total Signals          : 33
+ Total Nets             : 127
+ Total Signal Drivers   : 8
+ Total Blocks           : 5
+ Total Primitive Blocks : 4
+ Total Processes        : 9
+ Total Traceable Variables  : 18
+ Total Scalar Nets and Variables : 207
+Total Line Count : 17
+
+ Total Simulation Time: 0.09375 sec
+
+ Current Memory Usage: 5002.78 Meg
+
+Thu May 28 11:12:45 2020
+

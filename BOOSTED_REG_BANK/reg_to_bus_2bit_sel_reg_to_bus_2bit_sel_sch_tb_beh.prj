@@ -1,0 +1,4 @@
+verilog work "reg_to_bus_1bit_sel.v"
+verilog work "reg_to_bus_2bit_sel.vf"
+verilog work "simulacion.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

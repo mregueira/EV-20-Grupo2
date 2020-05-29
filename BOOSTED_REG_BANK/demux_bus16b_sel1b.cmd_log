@@ -1,0 +1,10 @@
+vhdtdtfi -lib work C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel1b.v -lang verilog -prj BOOSTED_REG_BANK -o demux_bus16b_sel1b.spl -module demux_bus16b_sel1b -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w demux_bus16b_sel1b.spl C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel1b.sym 
+vhdtdtfi -lib work C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel1b.v -lang verilog -prj BOOSTED_REG_BANK -o demux_bus16b_sel1b.spl -module demux_bus16b_sel1b -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w demux_bus16b_sel1b.spl C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel1b.sym 
+vhdtdtfi -lib work C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel1b.v -lang verilog -prj BOOSTED_REG_BANK -o demux_bus16b_sel1b.spl -module demux_bus16b_sel1b -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w demux_bus16b_sel1b.spl C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel1b.sym 
+vhdtdtfi -lib work C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel1b.v -lang verilog -prj BOOSTED_REG_BANK -o demux_bus16b_sel1b.spl -module demux_bus16b_sel1b -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w demux_bus16b_sel1b.spl C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel1b.sym 
+vhdtdtfi -lib work C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel1b.v -lang verilog -prj BOOSTED_REG_BANK -o demux_bus16b_sel1b.spl -module demux_bus16b_sel1b -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w demux_bus16b_sel1b.spl C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel1b.sym 

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-05-25T12:19:59</DateModified>
+  <DateModified>2020-05-29T09:00:52</DateModified>
   <ModuleName>ALU_main</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Marcelo/ProyectosISE/ALU/iseconfig/ALU_main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Marcelo/ProyectosISE/ALU\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/EV-20-Grupo2/ALU/iseconfig/ALU_main.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/EV-20-Grupo2/ALU\</ImplementationReportsDirectory>
   <DateInitialized>2020-05-20T08:33:00</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

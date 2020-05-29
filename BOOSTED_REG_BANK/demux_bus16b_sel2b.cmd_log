@@ -1,0 +1,5 @@
+sch2sym -intstyle ise -family artix7 -w -refsym demux_bus16b_sel2b C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym demux_bus16b_sel2b C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym demux_bus16b_sel2b C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.sym 
+sch2hdl -intstyle ise -family artix7 -verilog demux_bus16b_sel2b_drc.vf -w C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.sch 
+sch2sym -intstyle ise -family artix7 -w -refsym demux_bus16b_sel2b C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.sym 

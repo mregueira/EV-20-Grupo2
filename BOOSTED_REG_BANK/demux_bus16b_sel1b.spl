@@ -1,0 +1,10 @@
+[Inputs]
+SEL_BUS
+=FROM_BUS[15:0]=
+[Outputs]
+=R0[15:0]=
+=R1[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel demux_bus16b_sel1b
+

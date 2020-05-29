@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b_isim_beh.exe" -prj "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b_beh.prj" "work.demux_bus16b_sel2b" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel5b_isim_beh.exe" -prj "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel5b_beh.prj" "work.demux_bus16b_sel5b" "work.glbl" 

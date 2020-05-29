@@ -1,0 +1,98 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : demux_bus16b_sel3b.vf
+// /___/   /\     Timestamp : 05/29/2020 15:49:27
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel3b.vf -w C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel3b.sch
+//Design Name: demux_bus16b_sel3b
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module demux_bus16b_sel2b_MUSER_demux_bus16b_sel3b(FROM_BUS, 
+                                                   SEL_BUS, 
+                                                   R0, 
+                                                   R1, 
+                                                   R2, 
+                                                   R3);
+
+    input [15:0] FROM_BUS;
+    input [1:0] SEL_BUS;
+   output [15:0] R0;
+   output [15:0] R1;
+   output [15:0] R2;
+   output [15:0] R3;
+   
+   wire [15:0] XLXN_3;
+   wire [15:0] XLXN_4;
+   
+   demux_bus16b_sel1b  XLXI_1 (.FROM_BUS(XLXN_4[15:0]), 
+                              .SEL_BUS(SEL_BUS[0]), 
+                              .R0(R0[15:0]), 
+                              .R1(R1[15:0]));
+   demux_bus16b_sel1b  XLXI_2 (.FROM_BUS(XLXN_3[15:0]), 
+                              .SEL_BUS(SEL_BUS[0]), 
+                              .R0(R2[15:0]), 
+                              .R1(R3[15:0]));
+   demux_bus16b_sel1b  XLXI_3 (.FROM_BUS(FROM_BUS[15:0]), 
+                              .SEL_BUS(SEL_BUS[1]), 
+                              .R0(XLXN_4[15:0]), 
+                              .R1(XLXN_3[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module demux_bus16b_sel3b(FROM_BUS, 
+                          SEL_BUS, 
+                          R0, 
+                          R1, 
+                          R2, 
+                          R3, 
+                          R4, 
+                          R5, 
+                          R6, 
+                          R7);
+
+    input [15:0] FROM_BUS;
+    input [2:0] SEL_BUS;
+   output [15:0] R0;
+   output [15:0] R1;
+   output [15:0] R2;
+   output [15:0] R3;
+   output [15:0] R4;
+   output [15:0] R5;
+   output [15:0] R6;
+   output [15:0] R7;
+   
+   wire [15:0] XLXN_1;
+   wire [15:0] XLXN_2;
+   
+   demux_bus16b_sel2b_MUSER_demux_bus16b_sel3b  XLXI_1 
+         (.FROM_BUS(XLXN_1[15:0]), 
+                                                       .SEL_BUS(SEL_BUS[1:0]), 
+                                                       .R0(R0[15:0]), 
+                                                       .R1(R1[15:0]), 
+                                                       .R2(R2[15:0]), 
+                                                       .R3(R3[15:0]));
+   demux_bus16b_sel2b_MUSER_demux_bus16b_sel3b  XLXI_2 
+         (.FROM_BUS(XLXN_2[15:0]), 
+                                                       .SEL_BUS(SEL_BUS[1:0]), 
+                                                       .R0(R4[15:0]), 
+                                                       .R1(R5[15:0]), 
+                                                       .R2(R6[15:0]), 
+                                                       .R3(R7[15:0]));
+   demux_bus16b_sel1b  XLXI_3 (.FROM_BUS(FROM_BUS[15:0]), 
+                              .SEL_BUS(SEL_BUS[2]), 
+                              .R0(XLXN_1[15:0]), 
+                              .R1(XLXN_2[15:0]));
+endmodule

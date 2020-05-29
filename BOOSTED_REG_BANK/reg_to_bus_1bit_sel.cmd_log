@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "C:/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_1bit_sel.xst" -ofn "C:/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_1bit_sel.syr" 

@@ -1,0 +1,7 @@
+MODULE reg_to_bus_6bit_sel
+	SUBMODULE reg_to_bus_5bit_sel
+		INSTANCE XLXI_1
+	SUBMODULE reg_to_bus_5bit_sel
+		INSTANCE XLXI_2
+	SUBMODULE reg_to_bus_1bit_sel
+		INSTANCE XLXI_3

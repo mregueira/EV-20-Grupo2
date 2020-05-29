@@ -1,0 +1,5 @@
+MODULE bloque2
+	SUBMODULE demux5b_w_en
+		INSTANCE XLXI_6
+	SUBMODULE demux_bus16b_sel6b
+		INSTANCE XLXI_7

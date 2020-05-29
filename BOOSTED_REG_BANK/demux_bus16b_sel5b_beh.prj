@@ -1,6 +1,0 @@
-verilog work "demux_bus16b_sel1b.v"
-verilog work "demux_bus16b_sel2b.vf"
-verilog work "demux_bus16b_sel3b.vf"
-verilog work "demux_bus16b_sel4b.vf"
-verilog work "demux_bus16b_sel5b.vf"
-verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

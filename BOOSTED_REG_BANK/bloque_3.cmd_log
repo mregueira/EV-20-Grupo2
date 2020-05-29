@@ -1,1 +1,3 @@
 sch2sym -intstyle ise -family artix7 -w -refsym bloque_3 C:/EV-20-Grupo2/BOOSTED_REG_BANK/bloque_3.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/bloque_3.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym bloque_3 C:/EV-20-Grupo2/BOOSTED_REG_BANK/bloque_3.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/bloque_3.sym 
+sch2hdl -intstyle ise -family artix7 -verilog bloque_3_drc.vf -w C:/EV-20-Grupo2/BOOSTED_REG_BANK/bloque_3.sch 

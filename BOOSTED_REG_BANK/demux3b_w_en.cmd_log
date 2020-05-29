@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family artix7 -w -refsym demux3b_w_en C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux3b_w_en.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux3b_w_en.sym 

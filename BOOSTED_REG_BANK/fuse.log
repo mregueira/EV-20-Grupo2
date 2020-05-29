@@ -1,25 +1,21 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel5b_isim_beh.exe -prj C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel5b_beh.prj work.demux_bus16b_sel5b work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux2b_w_en_isim_beh.exe -prj C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux2b_w_en_beh.prj work.demux2b_w_en work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel1b.v" into library work
-Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.vf" into library work
-Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel3b.vf" into library work
-Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel4b.vf" into library work
-Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel5b.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux1b_w_en.v" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux1b.v" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux2b_w_en.vf" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module demux_bus16b_sel1b
-Compiling module demux_bus16b_sel2b_MUSER_demux_b...
-Compiling module demux_bus16b_sel3b_MUSER_demux_b...
-Compiling module demux_bus16b_sel4b_MUSER_demux_b...
-Compiling module demux_bus16b_sel5b
+Compiling module demux1b_w_en
+Compiling module demux1b
+Compiling module demux2b_w_en
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 6 Verilog Units
-Built simulation executable C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel5b_isim_beh.exe
-Fuse Memory Usage: 27700 KB
+Compiled 4 Verilog Units
+Built simulation executable C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux2b_w_en_isim_beh.exe
+Fuse Memory Usage: 27496 KB
 Fuse CPU Usage: 374 ms

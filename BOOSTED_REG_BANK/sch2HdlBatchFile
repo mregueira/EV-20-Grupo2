@@ -1,3 +1,1 @@
-sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel3b.vf,-w,C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel3b.sch
-sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel4b.vf,-w,C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel4b.sch
-sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel5b.vf,-w,C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel5b.sch
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux2b_w_en.vf,-w,C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux2b_w_en.sch

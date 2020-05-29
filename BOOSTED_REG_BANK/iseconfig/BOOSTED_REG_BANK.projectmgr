@@ -7,13 +7,26 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch</ClosedNode>
-         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_1 - reg_to_bus_5bit_sel</ClosedNode>
+         <ClosedNode>/bloque2 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque2.sch/XLXI_4 - demux5b_w_en</ClosedNode>
+         <ClosedNode>/bloque2 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque2.sch/XLXI_5 - demux_bus16b_sel5b</ClosedNode>
+         <ClosedNode>/bloque2 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque2.sch/XLXI_6 - demux5b_w_en</ClosedNode>
+         <ClosedNode>/bloque2 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque2.sch/XLXI_7 - demux_bus16b_sel6b</ClosedNode>
          <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_1 - reg_to_bus_5bit_sel/XLXI_1 - reg_to_bus_4bit_sel/XLXI_2 - reg_to_bus_3bit_sel</ClosedNode>
          <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_1 - reg_to_bus_5bit_sel/XLXI_1 - reg_to_bus_4bit_sel/XLXI_2 - reg_to_bus_3bit_sel/XLXI_8 - reg_to_bus_2bit_sel</ClosedNode>
          <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_1 - reg_to_bus_5bit_sel/XLXI_1 - reg_to_bus_4bit_sel/XLXI_3 - reg_to_bus_3bit_sel</ClosedNode>
          <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_1 - reg_to_bus_5bit_sel/XLXI_2 - reg_to_bus_4bit_sel</ClosedNode>
-         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_2 - reg_to_bus_5bit_sel</ClosedNode>
+         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_2 - reg_to_bus_5bit_sel/XLXI_1 - reg_to_bus_4bit_sel/XLXI_2 - reg_to_bus_3bit_sel</ClosedNode>
+         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_2 - reg_to_bus_5bit_sel/XLXI_1 - reg_to_bus_4bit_sel/XLXI_3 - reg_to_bus_3bit_sel</ClosedNode>
+         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_2 - reg_to_bus_5bit_sel/XLXI_2 - reg_to_bus_4bit_sel</ClosedNode>
+         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_3 - reg_to_bus_6bit_sel/XLXI_1 - reg_to_bus_5bit_sel/XLXI_1 - reg_to_bus_4bit_sel/XLXI_2 - reg_to_bus_3bit_sel</ClosedNode>
+         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_3 - reg_to_bus_6bit_sel/XLXI_1 - reg_to_bus_5bit_sel/XLXI_1 - reg_to_bus_4bit_sel/XLXI_3 - reg_to_bus_3bit_sel</ClosedNode>
+         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_3 - reg_to_bus_6bit_sel/XLXI_1 - reg_to_bus_5bit_sel/XLXI_2 - reg_to_bus_4bit_sel</ClosedNode>
+         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_3 - reg_to_bus_6bit_sel/XLXI_2 - reg_to_bus_5bit_sel</ClosedNode>
+         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_4 - reg_to_bus_6bit_sel</ClosedNode>
+         <ClosedNode>/demux3b_w_en C:|EV-20-Grupo2|BOOSTED_REG_BANK|demux3b_w_en.sch</ClosedNode>
+         <ClosedNode>/demux4b_w_en C:|EV-20-Grupo2|BOOSTED_REG_BANK|demux4b_w_en.sch</ClosedNode>
+         <ClosedNode>/demux5b_w_en C:|EV-20-Grupo2|BOOSTED_REG_BANK|demux5b_w_en.sch</ClosedNode>
+         <ClosedNode>/demux_bus16b_sel5b C:|EV-20-Grupo2|BOOSTED_REG_BANK|demux_bus16b_sel5b.sch</ClosedNode>
          <ClosedNode>/reg_to_bus_3bit_sel C:|EV-20-Grupo2|BOOSTED_REG_BANK|reg_to_bus_3bit_sel.sch/XLXI_1 - reg_to_bus_2bit_sel</ClosedNode>
          <ClosedNode>/reg_to_bus_3bit_sel C:|EV-20-Grupo2|BOOSTED_REG_BANK|reg_to_bus_3bit_sel.sch/XLXI_10 - reg_to_bus_2bit_sel</ClosedNode>
          <ClosedNode>/reg_to_bus_3bit_sel C:|EV-20-Grupo2|BOOSTED_REG_BANK|reg_to_bus_3bit_sel.sch/XLXI_2 - reg_to_bus_2bit_sel</ClosedNode>
@@ -24,13 +37,13 @@
          <ClosedNode>/reg_to_bus_4bit_sel C:|EV-20-Grupo2|BOOSTED_REG_BANK|reg_to_bus_4bit_sel.sch/XLXI_3 - reg_to_bus_3bit_sel</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>XLXI_6 - demux_bus16b_sel2b (C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.sch)</SelectedItem>
+         <SelectedItem>xc7a100t-3csg324</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000018d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000018d0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001bb000000020000000000000000000000000200000064ffffffff000000810000000300000002000001bb0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>XLXI_6 - demux_bus16b_sel2b (C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel2b.sch)</CurrentItem>
+      <CurrentItem>xc7a100t-3csg324</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -45,7 +58,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018f0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Update All Schematic Files</CurrentItem>
    </ItemView>
@@ -56,7 +69,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000263000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001970000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000252000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001860000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>reg_to_bus_1bit_sel.v</CurrentItem>
    </ItemView>
@@ -102,30 +115,32 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018f0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Create Schematic Symbol</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch</ClosedNode>
+         <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_1 - reg_to_bus_5bit_sel</ClosedNode>
          <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_1 - reg_to_bus_5bit_sel/XLXI_1 - reg_to_bus_4bit_sel</ClosedNode>
          <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_1 - reg_to_bus_5bit_sel/XLXI_2 - reg_to_bus_4bit_sel</ClosedNode>
          <ClosedNode>/bloque_3 C:|EV-20-Grupo2|BOOSTED_REG_BANK|bloque_3.sch/XLXI_2 - reg_to_bus_5bit_sel</ClosedNode>
+         <ClosedNode>/demux2b_w_en C:|EV-20-Grupo2|BOOSTED_REG_BANK|demux2b_w_en.sch</ClosedNode>
+         <ClosedNode>/demux_bus16b_sel5b C:|EV-20-Grupo2|BOOSTED_REG_BANK|demux_bus16b_sel5b.sch</ClosedNode>
          <ClosedNode>/reg_to_bus_2bit_sel C:|EV-20-Grupo2|BOOSTED_REG_BANK|reg_to_bus_2bit_sel.sch</ClosedNode>
          <ClosedNode>/reg_to_bus_2bit_sel_reg_to_bus_2bit_sel_sch_tb C:|EV-20-Grupo2|BOOSTED_REG_BANK|simulacion.v</ClosedNode>
          <ClosedNode>/reg_to_bus_3bit_sel C:|EV-20-Grupo2|BOOSTED_REG_BANK|reg_to_bus_3bit_sel.sch/XLXI_2 - reg_to_bus_2bit_sel</ClosedNode>
          <ClosedNode>/reg_to_bus_3bit_sel C:|EV-20-Grupo2|BOOSTED_REG_BANK|reg_to_bus_3bit_sel.sch/XLXI_5 - reg_to_bus_2bit_sel</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+         <SelectedItem>demux3b_w_en (C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux3b_w_en.sch)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000018d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000018d0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000016f000000020000000000000000000000000200000064ffffffff0000008100000003000000020000016f0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+      <CurrentItem>demux3b_w_en (C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux3b_w_en.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -133,41 +148,41 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000000dd0000008b01000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
    <CopyAdditionalFiles/>
 </Project>

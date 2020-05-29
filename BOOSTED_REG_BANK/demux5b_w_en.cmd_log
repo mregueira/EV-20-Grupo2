@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family artix7 -w -refsym demux5b_w_en C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux5b_w_en.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux5b_w_en.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym demux5b_w_en C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux5b_w_en.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux5b_w_en.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym demux5b_w_en C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux5b_w_en.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux5b_w_en.sym 

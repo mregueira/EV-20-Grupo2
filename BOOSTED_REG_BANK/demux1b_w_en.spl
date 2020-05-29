@@ -1,0 +1,11 @@
+[Inputs]
+x
+sel
+enable
+[Outputs]
+a0
+a1
+[BiDir]
+[ATTRIBUTES]
+VeriModel demux1b_w_en
+

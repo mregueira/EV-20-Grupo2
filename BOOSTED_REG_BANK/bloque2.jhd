@@ -1,5 +1,9 @@
 MODULE bloque2
-	SUBMODULE demux5b_w_en
-		INSTANCE XLXI_6
 	SUBMODULE demux_bus16b_sel6b
 		INSTANCE XLXI_7
+	SUBMODULE demux6b_w_en
+		INSTANCE XLXI_8
+	SUBMODULE reg_to_bus_1bit_sel
+		INSTANCE XLXI_11
+	SUBMODULE bidir_port
+		INSTANCE XLXI_15

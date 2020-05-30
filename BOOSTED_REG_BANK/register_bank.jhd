@@ -1,0 +1,5 @@
+MODULE register_bank
+	SUBMODULE bloque2
+		INSTANCE XLXI_1
+	SUBMODULE bloque_3
+		INSTANCE XLXI_2

@@ -1,0 +1,11 @@
+[Inputs]
+mem_write
+mem_read
+=from_wreg[15:0]=
+[Outputs]
+=to_wreg[15:0]=
+[BiDir]
+=data[15:0]=
+[ATTRIBUTES]
+VeriModel bidir_port
+

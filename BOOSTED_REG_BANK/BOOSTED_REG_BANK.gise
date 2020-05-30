@@ -22,6 +22,10 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="BOOSTED_REG_BANK.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="bidir_port.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bidir_port.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="bidir_port.tfi"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloque2.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloque_3.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="bloque_3_drc.vf"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="demux1b.spl"/>
@@ -39,6 +43,7 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux3b_w_en.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux4b_w_en.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux5b_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux6b_w_en.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel1b.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel2b.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel3b.sym" xil_pn:origination="imported"/>
@@ -66,6 +71,9 @@
     <transform xil_pn:end_ts="1590785144" xil_pn:in_ck="6635402945339229802" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1590785144">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="demux1b.v"/>
       <outfile xil_pn:name="demux1b_w_en.v"/>
       <outfile xil_pn:name="demux_bus16b_sel1b.v"/>

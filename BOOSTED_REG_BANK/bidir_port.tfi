@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+bidir_port instance_name (
+    .from_wreg(from_wreg), 
+    .data(data), 
+    .mem_write(mem_write), 
+    .mem_read(mem_read), 
+    .to_wreg(to_wreg)
+    );
+
+

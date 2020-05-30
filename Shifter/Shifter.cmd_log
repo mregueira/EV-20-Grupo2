@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/Shifter/Shifter.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/Shifter/Shifter.syr" 

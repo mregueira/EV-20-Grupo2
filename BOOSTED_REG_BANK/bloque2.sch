@@ -81,11 +81,9 @@
         <signal name="to_wreg(15:0)" />
         <signal name="FROM_WREG(15:0)" />
         <signal name="WR_WORK_REG" />
-        <signal name="XLXN_130" />
         <signal name="WR_WREG_C" />
-        <signal name="XLXN_132" />
-        <signal name="XLXN_135" />
         <signal name="MW" />
+        <signal name="CLK" />
         <port polarity="Output" name="R0(15:0)" />
         <port polarity="Output" name="R1(15:0)" />
         <port polarity="Output" name="R2(15:0)" />
@@ -160,6 +158,7 @@
         <port polarity="Input" name="FROM_WREG(15:0)" />
         <port polarity="Output" name="WR_WORK_REG" />
         <port polarity="Input" name="MW" />
+        <port polarity="Input" name="CLK" />
         <blockdef name="demux_bus16b_sel6b">
             <timestamp>2020-5-29T23:37:32</timestamp>
             <rect width="320" x="64" y="-4096" height="4096" />
@@ -380,8 +379,8 @@
             <line x2="384" y1="-160" y2="-160" x1="320" />
         </blockdef>
         <blockdef name="bidir_port">
-            <timestamp>2020-5-30T3:24:54</timestamp>
-            <rect width="336" x="64" y="-192" height="192" />
+            <timestamp>2020-5-30T18:27:44</timestamp>
+            <line x2="0" y1="32" y2="32" x1="64" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <rect width="64" x="0" y="-44" height="24" />
@@ -390,6 +389,7 @@
             <line x2="464" y1="-160" y2="-160" x1="400" />
             <rect width="64" x="400" y="-44" height="24" />
             <line x2="464" y1="-32" y2="-32" x1="400" />
+            <rect width="336" x="64" y="-192" height="256" />
         </blockdef>
         <blockdef name="m2_1">
             <timestamp>2000-1-1T10:10:10</timestamp>
@@ -551,8 +551,9 @@
             <blockpin signalname="MW" name="mem_write" />
             <blockpin signalname="MR" name="mem_read" />
             <blockpin signalname="FROM_WREG(15:0)" name="from_wreg(15:0)" />
-            <blockpin signalname="to_wreg(15:0)" name="to_wreg(15:0)" />
             <blockpin signalname="TO_FROM_W(15:0)" name="data(15:0)" />
+            <blockpin signalname="to_wreg(15:0)" name="to_wreg(15:0)" />
+            <blockpin signalname="CLK" name="clk" />
         </block>
         <block symbolname="m2_1" name="XLXI_18">
             <blockpin signalname="WR_WREG_C" name="D0" />
@@ -857,24 +858,27 @@
         </branch>
         <iomarker fontsize="28" x="2064" y="176" name="IN_WORK_REG(15:0)" orien="R0" />
         <branch name="TO_FROM_W(15:0)">
-            <wire x2="1056" y1="320" y2="320" x1="976" />
-            <wire x2="1056" y1="320" y2="400" x1="1056" />
-            <wire x2="1056" y1="400" y2="400" x1="1040" />
+            <wire x2="992" y1="320" y2="320" x1="976" />
+            <wire x2="1104" y1="320" y2="320" x1="992" />
+            <wire x2="1104" y1="320" y2="512" x1="1104" />
+            <wire x2="1104" y1="512" y2="512" x1="1088" />
         </branch>
         <branch name="MR">
-            <wire x2="512" y1="256" y2="256" x1="400" />
+            <wire x2="416" y1="256" y2="256" x1="400" />
+            <wire x2="512" y1="256" y2="256" x1="416" />
         </branch>
         <instance x="512" y="352" name="XLXI_15" orien="R0">
         </instance>
         <iomarker fontsize="28" x="400" y="256" name="MR" orien="R180" />
-        <iomarker fontsize="28" x="1040" y="400" name="TO_FROM_W(15:0)" orien="R180" />
         <branch name="to_wreg(15:0)">
             <wire x2="1280" y1="192" y2="192" x1="976" />
             <wire x2="1280" y1="192" y2="304" x1="1280" />
-            <wire x2="1600" y1="304" y2="304" x1="1280" />
+            <wire x2="1584" y1="304" y2="304" x1="1280" />
+            <wire x2="1600" y1="304" y2="304" x1="1584" />
         </branch>
         <branch name="FROM_WREG(15:0)">
-            <wire x2="512" y1="320" y2="320" x1="480" />
+            <wire x2="496" y1="320" y2="320" x1="480" />
+            <wire x2="512" y1="320" y2="320" x1="496" />
         </branch>
         <iomarker fontsize="28" x="480" y="320" name="FROM_WREG(15:0)" orien="R180" />
         <instance x="1600" y="592" name="XLXI_18" orien="R0" />
@@ -903,5 +907,11 @@
             <wire x2="1600" y1="496" y2="496" x1="1344" />
         </branch>
         <iomarker fontsize="28" x="400" y="192" name="MW" orien="R180" />
+        <branch name="CLK">
+            <wire x2="496" y1="384" y2="384" x1="480" />
+            <wire x2="512" y1="384" y2="384" x1="496" />
+        </branch>
+        <iomarker fontsize="28" x="480" y="384" name="CLK" orien="R180" />
+        <iomarker fontsize="28" x="1088" y="512" name="TO_FROM_W(15:0)" orien="R180" />
     </sheet>
 </drawing>

@@ -1,3 +1,3 @@
 MODULE test
-	SUBMODULE demux_bus16b_sel1b
-		INSTANCE XLXI_1
+	SUBMODULE register_bank
+		INSTANCE XLXI_3

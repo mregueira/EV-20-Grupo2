@@ -19,6 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module bidir_port(
+	input clk,
 	input [15:0] from_wreg,
 	inout [15:0] data,
 	input mem_write, 
@@ -27,6 +28,7 @@ module bidir_port(
     );
 	 
 	reg to_wreg_reg;
+	reg data_reg;
 	// Hay tres casos:
 	// 1) write from DATA to WORKING REG (mem_write = 1 , mem_read = 0)
 	// puede tardar bastante
@@ -36,8 +38,13 @@ module bidir_port(
 	
 	// 3) do nothing  (mem_write = 1 , mem_read = 1 o mem_write = 0 , mem_read = 0 )
 	// a esto le puse z
-
-	assign to_wreg_reg = (mem_write && ! mem_read)? data : 16'bz; // DATA => WREG
-	assign data = (!mem_write && mem_read)? from_wreg : 16'bz;	  // WREG => DATA
+	
+	always @(posedge clk)begin 
+		to_wreg_reg = (mem_write && ! mem_read)? data : 16'bz ; // DATA => WREG
+		data_reg = (!mem_write && mem_read)? from_wreg : 16'bz; // WREG => DATA
+	end
+	
+	assign to_wreg = to_wreg_reg;
+	assign data = data_reg;
 	
 endmodule

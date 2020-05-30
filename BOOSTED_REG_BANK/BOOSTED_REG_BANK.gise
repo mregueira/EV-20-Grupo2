@@ -22,9 +22,13 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="BOOSTED_REG_BANK.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bidir_port.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="bidir_port.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="bidir_port.stx"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bidir_port.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="bidir_port.tfi"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="bidir_port.xst"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloque2.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloque_3.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="bloque_3_drc.vf"/>
@@ -59,8 +63,11 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_4bit_sel.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_5bit_sel.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_6bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="register_bank.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="register_bank_drc.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="test.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
@@ -98,7 +105,9 @@
     <transform xil_pn:end_ts="1590785394" xil_pn:in_ck="-5508417733392341933" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590785394">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="demux1b.v"/>
       <outfile xil_pn:name="demux1b_w_en.v"/>
       <outfile xil_pn:name="demux2b_w_en.vf"/>
@@ -108,9 +117,11 @@
     <transform xil_pn:end_ts="1590785397" xil_pn:in_ck="-5508417733392341933" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1077484341280763173" xil_pn:start_ts="1590785394">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="demux2b_w_en_beh.prj"/>
       <outfile xil_pn:name="demux2b_w_en_isim_beh.exe"/>

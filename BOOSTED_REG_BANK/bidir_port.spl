@@ -1,4 +1,5 @@
 [Inputs]
+clk
 mem_write
 mem_read
 =from_wreg[15:0]=

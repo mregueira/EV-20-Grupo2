@@ -9,11 +9,8 @@
     <netlist>
         <signal name="XLXN_1" />
         <signal name="XLXN_2" />
-        <signal name="XLXN_4(4:0)" />
         <signal name="ENABLE" />
-        <signal name="XLXN_6" />
-        <signal name="SEL(4:0)">
-        </signal>
+        <signal name="SEL(4:0)" />
         <signal name="x" />
         <signal name="SEL(5:0)" />
         <signal name="SEL(5)" />

@@ -1,0 +1,8 @@
+verilog work "mux1.vf"
+verilog work "mux2.vf"
+verilog work "mux4.vf"
+verilog work "mux5.vf"
+verilog work "mux6.vf"
+verilog work "mux7.vf"
+verilog work "UC1.vf"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

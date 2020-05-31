@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family artix7 -verilog toRetire_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toRetire.sch 
+sch2sym -intstyle ise -family artix7 -refsym toRetire C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toRetire.sch C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toRetire.sym 

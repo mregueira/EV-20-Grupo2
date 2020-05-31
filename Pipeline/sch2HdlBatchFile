@@ -1,2 +1,5 @@
-sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC2.vf,-w,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC2.sch
-sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP5.vf,-w,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP5.sch
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux5.vf,-w,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux5.sch
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC1.vf,-w,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC1.sch
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux6.vf,-w,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux6.sch
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux7.vf,-w,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux7.sch
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC1.vf,-w,C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC1.sch

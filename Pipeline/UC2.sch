@@ -28,7 +28,6 @@
         <signal name="XLXN_30" />
         <signal name="XLXN_31" />
         <signal name="XLXN_32" />
-        <signal name="XLXN_33" />
         <signal name="DecodeType(2)" />
         <signal name="OperandType(3)" />
         <signal name="ExecuteType(3)" />

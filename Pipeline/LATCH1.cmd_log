@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family artix7 -verilog LATCH1_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH1.sch 
+sch2sym -intstyle ise -family artix7 -refsym LATCH1 C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH1.sch C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH1.sym 

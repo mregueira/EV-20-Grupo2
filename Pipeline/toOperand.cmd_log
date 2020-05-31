@@ -1,0 +1,6 @@
+sch2hdl -intstyle ise -family artix7 -verilog toOperand_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.sch 
+sch2sym -intstyle ise -family artix7 -refsym toOperand C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.sch C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.sym 
+sch2hdl -intstyle ise -family artix7 -verilog toOperand_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.sch 
+sch2sym -intstyle ise -family artix7 -refsym toOperand C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.sch C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.sym 
+sch2hdl -intstyle ise -family artix7 -verilog toOperand_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.sch 
+sch2sym -intstyle ise -family artix7 -refsym toOperand C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.sch C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.sym 

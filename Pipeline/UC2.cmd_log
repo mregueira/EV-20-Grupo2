@@ -1,2 +1,6 @@
 sch2hdl -intstyle ise -family artix7 -verilog UC2_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC2.sch 
 sch2sym -intstyle ise -family artix7 -refsym UC2 C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC2.sch C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC2.sym 
+xst -intstyle ise -ifn "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC2.xst" -ofn "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 UC2.ngc UC2.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o UC2_map.ncd UC2.ngd UC2.pcf 
+par -w -intstyle ise -ol high -mt off UC2_map.ncd UC2.ncd UC2.pcf 

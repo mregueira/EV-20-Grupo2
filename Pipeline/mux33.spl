@@ -1,0 +1,10 @@
+[Inputs]
+SEL_BUS
+=R0[32:0]=
+=R1[32:0]=
+[Outputs]
+=TO_BUS[32:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel mux33
+

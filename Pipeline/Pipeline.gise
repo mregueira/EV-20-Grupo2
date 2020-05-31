@@ -24,8 +24,21 @@
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="COMP5.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="COMP5_drc.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="UC1_drc.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="UC2.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="UC2_drc.vf"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mux33.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="mux33.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mux33.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux33.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="mux33.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="reg_to_bus_1bit_sel.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="reg_to_bus_1bit_sel.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="reg_to_bus_1bit_sel.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_1bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="reg_to_bus_1bit_sel.xst"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema"/>

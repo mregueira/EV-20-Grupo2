@@ -1,0 +1,39 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : UC1_drc.vf
+// /___/   /\     Timestamp : 05/30/2020 23:40:09
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family artix7 -verilog UC1_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC1.sch
+//Design Name: UC1
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module UC1(holdUC1, 
+           microinstructionUC1, 
+           toPipeline);
+
+    input holdUC1;
+    input [32:0] microinstructionUC1;
+   output [32:0] toPipeline;
+   
+   wire [32:0] R1;
+   
+   assign R1 = 32'h008C0460;
+   mux33  XLXI_6 (.R0(microinstructionUC1[32:0]), 
+                 .R1(R1[32:0]), 
+                 .SEL_BUS(holdUC1), 
+                 .TO_BUS(toPipeline[32:0]));
+   VCC  XLXI_8 (.P(R1[32]));
+endmodule

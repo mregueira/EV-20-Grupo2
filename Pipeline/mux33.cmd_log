@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux33.v -lang verilog -prj Pipeline -o mux33.spl -module mux33 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 mux33.spl C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux33.sym 

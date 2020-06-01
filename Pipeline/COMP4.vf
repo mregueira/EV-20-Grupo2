@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : COMP4.vf
+// /___/   /\     Timestamp : 06/01/2020 15:19:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP4.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP4.sch
+//Design Name: COMP4
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module COMP4(a, 
+             b, 
+             eq);
+
+    input [3:0] a;
+    input [3:0] b;
+   output eq;
+   
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   
+   XOR2  XLXI_1 (.I0(b[0]), 
+                .I1(a[0]), 
+                .O(XLXN_4));
+   XOR2  XLXI_2 (.I0(b[1]), 
+                .I1(a[1]), 
+                .O(XLXN_5));
+   XOR2  XLXI_3 (.I0(b[2]), 
+                .I1(a[2]), 
+                .O(XLXN_6));
+   XOR2  XLXI_4 (.I0(b[3]), 
+                .I1(a[3]), 
+                .O(XLXN_7));
+   INV  XLXI_5 (.I(XLXN_4), 
+               .O(XLXN_11));
+   INV  XLXI_6 (.I(XLXN_5), 
+               .O(XLXN_8));
+   INV  XLXI_7 (.I(XLXN_6), 
+               .O(XLXN_9));
+   INV  XLXI_8 (.I(XLXN_7), 
+               .O(XLXN_10));
+   AND4  XLXI_9 (.I0(XLXN_10), 
+                .I1(XLXN_9), 
+                .I2(XLXN_8), 
+                .I3(XLXN_11), 
+                .O(eq));
+endmodule

@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : COMP5.vf
-// /___/   /\     Timestamp : 06/01/2020 00:38:44
+// /___/   /\     Timestamp : 06/01/2020 15:19:22
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -18,24 +18,50 @@
 //    This verilog netlist is translated from an ECS schematic.It can be 
 //    synthesized and simulated, but it should not be modified. 
 //
-`timescale  100 ps / 10 ps
+`timescale 1ns / 1ps
 
-module COMP4_HXILINX_COMP5 (EQ, A0, A1, A2, A3, B0, B1, B2, B3);
-    
+module COMP4_MUSER_COMP5(A0, 
+                         A1, 
+                         A2, 
+                         A3, 
+                         B0, 
+                         B1, 
+                         B2, 
+                         B3, 
+                         EQ);
 
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
    output EQ;
-
-   input A0;
-   input A1;
-   input A2;
-   input A3;
-   input B0;
-   input B1;
-   input B2;
-   input B3;
-
-   assign EQ = ((A0==B0) && (A1==B1) && (A2==B2) && (A3==B3)) ;
-
+   
+   wire AB0;
+   wire AB1;
+   wire AB2;
+   wire AB3;
+   
+   AND4  I_36_32 (.I0(AB3), 
+                 .I1(AB2), 
+                 .I2(AB1), 
+                 .I3(AB0), 
+                 .O(EQ));
+   XNOR2  I_36_33 (.I0(B2), 
+                  .I1(A2), 
+                  .O(AB2));
+   XNOR2  I_36_34 (.I0(B3), 
+                  .I1(A3), 
+                  .O(AB3));
+   XNOR2  I_36_42 (.I0(B1), 
+                  .I1(A1), 
+                  .O(AB1));
+   XNOR2  I_36_43 (.I0(B0), 
+                  .I1(A0), 
+                  .O(AB0));
 endmodule
 `timescale 1ns / 1ps
 
@@ -51,16 +77,6 @@ module COMP5(A,
    wire XLXN_14;
    wire XLXN_15;
    
-   (* HU_SET = "XLXI_1_2" *) 
-   COMP4_HXILINX_COMP5  XLXI_1 (.A0(A[0]), 
-                               .A1(A[1]), 
-                               .A2(A[2]), 
-                               .A3(A[3]), 
-                               .B0(B[0]), 
-                               .B1(B[1]), 
-                               .B2(B[2]), 
-                               .B3(B[3]), 
-                               .EQ(XLXN_15));
    XOR2  XLXI_2 (.I0(B[4]), 
                 .I1(A[4]), 
                 .O(XLXN_13));
@@ -69,4 +85,7 @@ module COMP5(A,
    AND2  XLXI_4 (.I0(XLXN_14), 
                 .I1(XLXN_15), 
                 .O(equal));
+   COMP4_MUSER_COMP5  XLXI_5 (.a(A[3:0]), 
+                             .b(B[3:0]), 
+                             .eq(XLXN_15));
 endmodule

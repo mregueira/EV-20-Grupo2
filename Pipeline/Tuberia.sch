@@ -6,7 +6,6 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="HOLD" />
         <signal name="XLXN_2" />
         <signal name="CLK2" />
         <signal name="XLXN_11" />
@@ -46,6 +45,7 @@
         <signal name="SHOUT(1:0)" />
         <signal name="CBUSOUT(5:0)" />
         <signal name="TYPEOUT(6:0)" />
+        <signal name="HOLD" />
         <port polarity="Input" name="CLK2" />
         <port polarity="Input" name="DAdd(9:0)" />
         <port polarity="Input" name="ALU(3:0)" />
@@ -65,30 +65,10 @@
         <port polarity="Output" name="SHOUT(1:0)" />
         <port polarity="Output" name="CBUSOUT(5:0)" />
         <port polarity="Output" name="TYPEOUT(6:0)" />
-        <blockdef name="UC2">
-            <timestamp>2020-5-30T21:29:18</timestamp>
-            <rect width="256" x="64" y="-512" height="512" />
-            <rect width="64" x="0" y="-492" height="24" />
-            <line x2="0" y1="-480" y2="-480" x1="64" />
-            <rect width="64" x="0" y="-428" height="24" />
-            <line x2="0" y1="-416" y2="-416" x1="64" />
-            <rect width="64" x="0" y="-364" height="24" />
-            <line x2="0" y1="-352" y2="-352" x1="64" />
-            <rect width="64" x="0" y="-300" height="24" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <rect width="64" x="0" y="-236" height="24" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <rect width="64" x="0" y="-172" height="24" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <rect width="64" x="0" y="-108" height="24" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="384" y1="-480" y2="-480" x1="320" />
-        </blockdef>
         <blockdef name="toOperand">
-            <timestamp>2020-5-31T19:45:20</timestamp>
-            <rect width="304" x="64" y="-768" height="768" />
+            <timestamp>2020-6-1T14:26:35</timestamp>
+            <rect width="64" x="368" y="20" height="24" />
+            <line x2="432" y1="32" y2="32" x1="368" />
             <line x2="0" y1="-736" y2="-736" x1="64" />
             <line x2="0" y1="-672" y2="-672" x1="64" />
             <line x2="0" y1="-608" y2="-608" x1="64" />
@@ -122,10 +102,9 @@
             <line x2="432" y1="-336" y2="-336" x1="368" />
             <rect width="64" x="368" y="-268" height="24" />
             <line x2="432" y1="-256" y2="-256" x1="368" />
-            <rect width="64" x="368" y="-188" height="24" />
-            <line x2="432" y1="-176" y2="-176" x1="368" />
             <rect width="64" x="368" y="-108" height="24" />
             <line x2="432" y1="-96" y2="-96" x1="368" />
+            <rect width="304" x="64" y="-768" height="832" />
         </blockdef>
         <blockdef name="UC1">
             <timestamp>2020-5-31T21:32:53</timestamp>
@@ -223,40 +202,27 @@
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="384" y1="-224" y2="-224" x1="320" />
         </blockdef>
-        <block symbolname="UC2" name="XLXI_2">
-            <blockpin signalname="ABUS(4:0)" name="DecodeBusA(4:0)" />
-            <blockpin signalname="TYPEop(6:0)" name="OperandType(6:0)" />
-            <blockpin signalname="CBUSop(5:0)" name="OperandBusC(5:0)" />
-            <blockpin signalname="CBUSexec(5:0)" name="ExecuteBusC(5:0)" />
-            <blockpin signalname="TYPEexec(6:0)" name="ExecuteType(6:0)" />
-            <blockpin signalname="TYPEOUT(6:0)" name="RetireType(6:0)" />
-            <blockpin signalname="CBUSOUT(5:0)" name="RetireBusC(5:0)" />
-            <blockpin signalname="TYPEIN(6:0)" name="DecodeType(6:0)" />
-            <blockpin signalname="HOLD" name="hold" />
-        </block>
-        <block symbolname="toOperand" name="XLXI_3">
-            <blockpin signalname="CLK2" name="CLK" />
-            <blockpin signalname="XLXN_11" name="CLR" />
-            <blockpin signalname="XLXN_2" name="ENABLE" />
-            <blockpin signalname="DAdd(9:0)" name="DAddIN(9:0)" />
-            <blockpin signalname="ALU(3:0)" name="aluIN(3:0)" />
-            <blockpin signalname="SH(1:0)" name="shIN(1:0)" />
-            <blockpin signalname="MEM(1:0)" name="memIN(1:0)" />
-            <blockpin signalname="BBUS(5:0)" name="bbusIN(5:0)" />
-            <blockpin signalname="CBUS(5:0)" name="cbusIN(5:0)" />
-            <blockpin signalname="TYPEIN(6:0)" name="typeIN(6:0)" />
-            <blockpin signalname="ABUS(4:0)" name="abusIN(4:0)" />
-            <blockpin signalname="KMX" name="kmxIN" />
-            <blockpin signalname="DAddOUT(9:0)" name="DAddOUT(9:0)" />
-            <blockpin signalname="ALUaUC1(3:0)" name="aluOUT(3:0)" />
-            <blockpin signalname="KMXaUC1" name="kmxOUT" />
-            <blockpin signalname="MEMaUC1(1:0)" name="memOUT(1:0)" />
-            <blockpin signalname="TYPEaUC1(6:0)" name="typeOUT(6:0)" />
-            <blockpin signalname="BBUSaUC1(5:0)" name="bbusOUT(5:0)" />
-            <blockpin signalname="SHaUC1(1:0)" name="shOUT(1:0)" />
-            <blockpin signalname="CBUSaUC1(5:0)" name="cbus(5:0)" />
-            <blockpin signalname="ABUSaUC1(4:0)" name="abusOUT(4:0)" />
-        </block>
+        <blockdef name="UC2">
+            <timestamp>2020-5-30T21:29:18</timestamp>
+            <rect width="256" x="64" y="-512" height="512" />
+            <rect width="64" x="0" y="-492" height="24" />
+            <line x2="0" y1="-480" y2="-480" x1="64" />
+            <rect width="64" x="0" y="-428" height="24" />
+            <line x2="0" y1="-416" y2="-416" x1="64" />
+            <rect width="64" x="0" y="-364" height="24" />
+            <line x2="0" y1="-352" y2="-352" x1="64" />
+            <rect width="64" x="0" y="-300" height="24" />
+            <line x2="0" y1="-288" y2="-288" x1="64" />
+            <rect width="64" x="0" y="-236" height="24" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <rect width="64" x="0" y="-172" height="24" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <rect width="64" x="0" y="-108" height="24" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-480" y2="-480" x1="320" />
+        </blockdef>
         <block symbolname="inv" name="XLXI_7">
             <blockpin signalname="HOLD" name="I" />
             <blockpin signalname="XLXN_2" name="O" />
@@ -349,29 +315,59 @@
             <blockpin name="INPUT" />
             <blockpin name="OUTPUT" />
         </block>
+        <block symbolname="toOperand" name="XLXI_14">
+            <blockpin signalname="CLK2" name="CLK" />
+            <blockpin signalname="XLXN_11" name="CLR" />
+            <blockpin signalname="XLXN_2" name="ENABLE" />
+            <blockpin signalname="DAdd(9:0)" name="DAddIN(9:0)" />
+            <blockpin signalname="ALU(3:0)" name="aluIN(3:0)" />
+            <blockpin signalname="SH(1:0)" name="shIN(1:0)" />
+            <blockpin signalname="MEM(1:0)" name="memIN(1:0)" />
+            <blockpin signalname="BBUS(5:0)" name="bbusIN(5:0)" />
+            <blockpin signalname="CBUS(5:0)" name="cbusIN(5:0)" />
+            <blockpin signalname="TYPEIN(6:0)" name="typeIN(6:0)" />
+            <blockpin signalname="ABUS(4:0)" name="abusIN(4:0)" />
+            <blockpin signalname="KMX" name="kmxIN" />
+            <blockpin signalname="DAddOUT(9:0)" name="DAddOUT(9:0)" />
+            <blockpin signalname="ALUaUC1(3:0)" name="aluOUT(3:0)" />
+            <blockpin signalname="KMXaUC1" name="kmxOUT" />
+            <blockpin signalname="MEMaUC1(1:0)" name="memOUT(1:0)" />
+            <blockpin signalname="TYPEaUC1(6:0)" name="typeOUT(6:0)" />
+            <blockpin signalname="BBUSaUC1(5:0)" name="bbusOUT(5:0)" />
+            <blockpin signalname="SHaUC1(1:0)" name="shOUT(1:0)" />
+            <blockpin signalname="ABUSaUC1(4:0)" name="abusOUT(4:0)" />
+            <blockpin signalname="CBUSaUC1(5:0)" name="cbusOUT(5:0)" />
+        </block>
+        <block symbolname="UC2" name="XLXI_17">
+            <blockpin signalname="ABUS(4:0)" name="DecodeBusA(4:0)" />
+            <blockpin signalname="TYPEop(6:0)" name="OperandType(6:0)" />
+            <blockpin signalname="CBUSop(5:0)" name="OperandBusC(5:0)" />
+            <blockpin signalname="CBUSexec(5:0)" name="ExecuteBusC(5:0)" />
+            <blockpin signalname="TYPEexec(6:0)" name="ExecuteType(6:0)" />
+            <blockpin signalname="TYPEOUT(6:0)" name="RetireType(6:0)" />
+            <blockpin signalname="CBUSOUT(5:0)" name="RetireBusC(5:0)" />
+            <blockpin signalname="TYPEIN(6:0)" name="DecodeType(6:0)" />
+            <blockpin signalname="HOLD" name="hold" />
+        </block>
+        <block symbolname="constant" name="XLXI_21">
+            <attr value="0" name="CValue">
+                <trait delete="all:1 sym:0" />
+                <trait editname="all:1 sch:0" />
+                <trait valuetype="BitVector 32 Hexadecimal" />
+            </attr>
+            <blockpin signalname="HOLD" name="O" />
+        </block>
+        <block symbolname="constant" name="XLXI_22">
+            <attr value="0" name="CValue">
+                <trait delete="all:1 sym:0" />
+                <trait editname="all:1 sch:0" />
+                <trait valuetype="BitVector 32 Hexadecimal" />
+            </attr>
+            <blockpin signalname="HOLD" name="O" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
-        <instance x="512" y="944" name="XLXI_3" orien="R0">
-        </instance>
-        <instance x="1328" y="1184" name="XLXI_2" orien="R90">
-        </instance>
-        <branch name="HOLD">
-            <attrtext style="alignment:SOFT-VRIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1808" y="1632" type="branch" />
-            <wire x2="1808" y1="1568" y2="1632" x1="1808" />
-        </branch>
         <instance x="240" y="368" name="XLXI_7" orien="R0" />
-        <branch name="XLXN_2">
-            <wire x2="480" y1="336" y2="336" x1="464" />
-            <wire x2="512" y1="336" y2="336" x1="480" />
-        </branch>
-        <branch name="HOLD">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="208" y="336" type="branch" />
-            <wire x2="240" y1="336" y2="336" x1="208" />
-        </branch>
-        <branch name="CLK2">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="448" y="208" type="branch" />
-            <wire x2="512" y1="208" y2="208" x1="448" />
-        </branch>
         <branch name="XLXN_11">
             <wire x2="384" y1="240" y2="240" x1="368" />
             <wire x2="480" y1="240" y2="240" x1="384" />
@@ -380,7 +376,8 @@
         </branch>
         <branch name="DAddOUT(9:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1008" y="208" type="branch" />
-            <wire x2="1008" y1="208" y2="208" x1="944" />
+            <wire x2="992" y1="208" y2="208" x1="944" />
+            <wire x2="1008" y1="208" y2="208" x1="992" />
         </branch>
         <branch name="ALUaUC1(3:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="992" y="288" type="branch" />
@@ -412,55 +409,10 @@
             <wire x2="960" y1="688" y2="688" x1="944" />
             <wire x2="976" y1="688" y2="688" x1="960" />
         </branch>
-        <branch name="CBUSaUC1(5:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="992" y="768" type="branch" />
-            <wire x2="976" y1="768" y2="768" x1="944" />
-            <wire x2="992" y1="768" y2="768" x1="976" />
-        </branch>
         <branch name="ABUSaUC1(4:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="992" y="848" type="branch" />
-            <wire x2="992" y1="848" y2="848" x1="944" />
-        </branch>
-        <branch name="KMX">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="496" y="912" type="branch" />
-            <wire x2="512" y1="912" y2="912" x1="496" />
-        </branch>
-        <branch name="ABUS(4:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="848" type="branch" />
-            <wire x2="496" y1="848" y2="848" x1="480" />
-            <wire x2="512" y1="848" y2="848" x1="496" />
-        </branch>
-        <branch name="TYPEIN(6:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="464" y="784" type="branch" />
-            <wire x2="480" y1="784" y2="784" x1="464" />
-            <wire x2="512" y1="784" y2="784" x1="480" />
-        </branch>
-        <branch name="CBUS(5:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="720" type="branch" />
-            <wire x2="496" y1="720" y2="720" x1="480" />
-            <wire x2="512" y1="720" y2="720" x1="496" />
-        </branch>
-        <branch name="BBUS(5:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="656" type="branch" />
-            <wire x2="496" y1="656" y2="656" x1="480" />
-            <wire x2="512" y1="656" y2="656" x1="496" />
-        </branch>
-        <branch name="MEM(1:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="496" y="592" type="branch" />
-            <wire x2="512" y1="592" y2="592" x1="496" />
-        </branch>
-        <branch name="SH(1:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="528" type="branch" />
-            <wire x2="496" y1="528" y2="528" x1="480" />
-            <wire x2="512" y1="528" y2="528" x1="496" />
-        </branch>
-        <branch name="ALU(3:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="464" type="branch" />
-            <wire x2="512" y1="464" y2="464" x1="480" />
-        </branch>
-        <branch name="DAdd(9:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="400" type="branch" />
-            <wire x2="512" y1="400" y2="400" x1="480" />
+            <wire x2="976" y1="848" y2="848" x1="944" />
+            <wire x2="992" y1="848" y2="848" x1="976" />
         </branch>
         <branch name="BBUSaUC1(5:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1584" y="464" type="branch" />
@@ -469,38 +421,6 @@
         <branch name="TYPEaUC1(6:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1600" y="528" type="branch" />
             <wire x2="1632" y1="528" y2="528" x1="1600" />
-        </branch>
-        <branch name="TYPEIN(6:0)">
-            <attrtext style="alignment:SOFT-VLEFT;fontsize:28;fontname:Arial" attrname="Name" x="1360" y="1120" type="branch" />
-            <wire x2="1360" y1="1120" y2="1184" x1="1360" />
-        </branch>
-        <branch name="CBUSOUT(5:0)">
-            <attrtext style="alignment:SOFT-VLEFT;fontsize:28;fontname:Arial" attrname="Name" x="1424" y="1152" type="branch" />
-            <wire x2="1424" y1="1152" y2="1184" x1="1424" />
-        </branch>
-        <branch name="TYPEOUT(6:0)">
-            <attrtext style="alignment:SOFT-VLEFT;fontsize:28;fontname:Arial" attrname="Name" x="1488" y="1120" type="branch" />
-            <wire x2="1488" y1="1120" y2="1184" x1="1488" />
-        </branch>
-        <branch name="TYPEexec(6:0)">
-            <attrtext style="alignment:SOFT-VLEFT;fontsize:28;fontname:Arial" attrname="Name" x="1552" y="1152" type="branch" />
-            <wire x2="1552" y1="1152" y2="1184" x1="1552" />
-        </branch>
-        <branch name="CBUSexec(5:0)">
-            <attrtext style="alignment:SOFT-VLEFT;fontsize:28;fontname:Arial" attrname="Name" x="1616" y="1136" type="branch" />
-            <wire x2="1616" y1="1136" y2="1184" x1="1616" />
-        </branch>
-        <branch name="CBUSop(5:0)">
-            <attrtext style="alignment:SOFT-VLEFT;fontsize:28;fontname:Arial" attrname="Name" x="1680" y="1136" type="branch" />
-            <wire x2="1680" y1="1136" y2="1184" x1="1680" />
-        </branch>
-        <branch name="TYPEop(6:0)">
-            <attrtext style="alignment:SOFT-VLEFT;fontsize:28;fontname:Arial" attrname="Name" x="1744" y="1152" type="branch" />
-            <wire x2="1744" y1="1152" y2="1184" x1="1744" />
-        </branch>
-        <branch name="ABUS(4:0)">
-            <attrtext style="alignment:SOFT-VLEFT;fontsize:28;fontname:Arial" attrname="Name" x="1808" y="1120" type="branch" />
-            <wire x2="1808" y1="1120" y2="1184" x1="1808" />
         </branch>
         <branch name="MEM(1:0)">
             <wire x2="256" y1="976" y2="976" x1="176" />
@@ -596,10 +516,6 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1600" y="656" type="branch" />
             <wire x2="1632" y1="656" y2="656" x1="1600" />
         </branch>
-        <branch name="HOLD">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1600" y="720" type="branch" />
-            <wire x2="1632" y1="720" y2="720" x1="1600" />
-        </branch>
         <branch name="ALUop(3:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="208" type="branch" />
             <wire x2="2112" y1="208" y2="208" x1="2080" />
@@ -645,8 +561,8 @@
             <wire x2="2720" y1="256" y2="256" x1="2688" />
         </branch>
         <branch name="XLXN_49">
-            <wire x2="2704" y1="272" y2="272" x1="2640" />
-            <wire x2="2704" y1="272" y2="320" x1="2704" />
+            <wire x2="2704" y1="304" y2="304" x1="2512" />
+            <wire x2="2704" y1="304" y2="320" x1="2704" />
             <wire x2="2720" y1="320" y2="320" x1="2704" />
         </branch>
         <branch name="XLXN_50">
@@ -685,8 +601,6 @@
             <wire x2="3232" y1="640" y2="640" x1="3184" />
         </branch>
         <instance x="2496" y="352" name="XLXI_11" orien="R0">
-        </instance>
-        <instance x="2496" y="240" name="XLXI_9" orien="R0">
         </instance>
         <branch name="BBUSOUT(5:0)">
             <wire x2="2688" y1="1008" y2="1008" x1="2512" />
@@ -733,6 +647,115 @@
         <iomarker fontsize="28" x="2784" y="1328" name="CBUSOUT(5:0)" orien="R0" />
         <iomarker fontsize="28" x="2816" y="1392" name="TYPEOUT(6:0)" orien="R0" />
         <instance x="1424" y="2144" name="XLXI_13" orien="R0">
+        </instance>
+        <branch name="KMX">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="496" y="912" type="branch" />
+            <wire x2="512" y1="912" y2="912" x1="496" />
+        </branch>
+        <branch name="ABUS(4:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="848" type="branch" />
+            <wire x2="496" y1="848" y2="848" x1="480" />
+            <wire x2="512" y1="848" y2="848" x1="496" />
+        </branch>
+        <branch name="TYPEIN(6:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="464" y="784" type="branch" />
+            <wire x2="480" y1="784" y2="784" x1="464" />
+            <wire x2="512" y1="784" y2="784" x1="480" />
+        </branch>
+        <branch name="CBUS(5:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="720" type="branch" />
+            <wire x2="496" y1="720" y2="720" x1="480" />
+            <wire x2="512" y1="720" y2="720" x1="496" />
+        </branch>
+        <branch name="BBUS(5:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="656" type="branch" />
+            <wire x2="496" y1="656" y2="656" x1="480" />
+            <wire x2="512" y1="656" y2="656" x1="496" />
+        </branch>
+        <branch name="MEM(1:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="496" y="592" type="branch" />
+            <wire x2="512" y1="592" y2="592" x1="496" />
+        </branch>
+        <branch name="SH(1:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="528" type="branch" />
+            <wire x2="496" y1="528" y2="528" x1="480" />
+            <wire x2="512" y1="528" y2="528" x1="496" />
+        </branch>
+        <branch name="ALU(3:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="464" type="branch" />
+            <wire x2="496" y1="464" y2="464" x1="480" />
+            <wire x2="512" y1="464" y2="464" x1="496" />
+        </branch>
+        <branch name="DAdd(9:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="480" y="400" type="branch" />
+            <wire x2="496" y1="400" y2="400" x1="480" />
+            <wire x2="512" y1="400" y2="400" x1="496" />
+        </branch>
+        <branch name="XLXN_2">
+            <wire x2="480" y1="336" y2="336" x1="464" />
+            <wire x2="512" y1="336" y2="336" x1="480" />
+        </branch>
+        <branch name="CLK2">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="448" y="208" type="branch" />
+            <wire x2="464" y1="208" y2="208" x1="448" />
+            <wire x2="512" y1="208" y2="208" x1="464" />
+        </branch>
+        <instance x="512" y="944" name="XLXI_14" orien="R0">
+        </instance>
+        <branch name="CBUSaUC1(5:0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1024" y="976" type="branch" />
+            <wire x2="1024" y1="976" y2="976" x1="944" />
+        </branch>
+        <instance x="848" y="1936" name="XLXI_17" orien="R0">
+        </instance>
+        <branch name="HOLD">
+            <wire x2="240" y1="336" y2="336" x1="176" />
+        </branch>
+        <branch name="HOLD">
+            <wire x2="1584" y1="720" y2="720" x1="1568" />
+            <wire x2="1632" y1="720" y2="720" x1="1584" />
+        </branch>
+        <branch name="HOLD">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1392" y="1456" type="branch" />
+            <wire x2="1392" y1="1456" y2="1456" x1="1232" />
+        </branch>
+        <branch name="ABUS(4:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="768" y="1456" type="branch" />
+            <wire x2="848" y1="1456" y2="1456" x1="768" />
+        </branch>
+        <branch name="TYPEop(6:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="784" y="1520" type="branch" />
+            <wire x2="848" y1="1520" y2="1520" x1="784" />
+        </branch>
+        <branch name="CBUSop(5:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="784" y="1584" type="branch" />
+            <wire x2="848" y1="1584" y2="1584" x1="784" />
+        </branch>
+        <branch name="CBUSexec(5:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="768" y="1648" type="branch" />
+            <wire x2="848" y1="1648" y2="1648" x1="768" />
+        </branch>
+        <branch name="TYPEexec(6:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="816" y="1712" type="branch" />
+            <wire x2="848" y1="1712" y2="1712" x1="816" />
+        </branch>
+        <branch name="TYPEOUT(6:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="784" y="1776" type="branch" />
+            <wire x2="848" y1="1776" y2="1776" x1="784" />
+        </branch>
+        <branch name="CBUSOUT(5:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="720" y="1840" type="branch" />
+            <wire x2="848" y1="1840" y2="1840" x1="720" />
+        </branch>
+        <branch name="TYPEIN(6:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="736" y="1904" type="branch" />
+            <wire x2="848" y1="1904" y2="1904" x1="736" />
+        </branch>
+        <instance x="2368" y="272" name="XLXI_9" orien="R0">
+        </instance>
+        <instance x="1424" y="688" name="XLXI_21" orien="R0">
+        </instance>
+        <instance x="32" y="304" name="XLXI_22" orien="R0">
         </instance>
     </sheet>
 </drawing>

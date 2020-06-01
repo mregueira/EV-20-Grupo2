@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : LATCH7.vf
-// /___/   /\     Timestamp : 06/01/2020 00:39:06
+// /___/   /\     Timestamp : 06/01/2020 16:23:34
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -33,10 +33,10 @@ module LATCH1_MUSER_LATCH7(CLK,
    output OUTPUT;
    
    
-   LDCE #( .INIT(1'b0) ) XLXI_1 (.CLR(CLR), 
+   FDCE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
                 .D(INPUT), 
-                .G(CLK), 
-                .GE(ENABLE), 
                 .Q(OUTPUT));
 endmodule
 `timescale 1ns / 1ps
@@ -54,26 +54,26 @@ module LATCH4_MUSER_LATCH7(CLK,
    output [3:0] OUTPUT;
    
    
-   LDCE #( .INIT(1'b0) ) XLXI_4 (.CLR(CLR), 
-                .D(INPUT[2]), 
-                .G(CLK), 
-                .GE(ENABLE), 
-                .Q(OUTPUT[2]));
-   LDCE #( .INIT(1'b0) ) XLXI_5 (.CLR(CLR), 
-                .D(INPUT[3]), 
-                .G(CLK), 
-                .GE(ENABLE), 
-                .Q(OUTPUT[3]));
-   LDCE #( .INIT(1'b0) ) XLXI_6 (.CLR(CLR), 
-                .D(INPUT[1]), 
-                .G(CLK), 
-                .GE(ENABLE), 
-                .Q(OUTPUT[1]));
-   LDCE #( .INIT(1'b0) ) XLXI_7 (.CLR(CLR), 
+   FDCE #( .INIT(1'b0) ) XLXI_8 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
                 .D(INPUT[0]), 
-                .G(CLK), 
-                .GE(ENABLE), 
                 .Q(OUTPUT[0]));
+   FDCE #( .INIT(1'b0) ) XLXI_9 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[1]), 
+                .Q(OUTPUT[1]));
+   FDCE #( .INIT(1'b0) ) XLXI_10 (.C(CLK), 
+                 .CE(ENABLE), 
+                 .CLR(CLR), 
+                 .D(INPUT[2]), 
+                 .Q(OUTPUT[2]));
+   FDCE #( .INIT(1'b0) ) XLXI_12 (.C(CLK), 
+                 .CE(ENABLE), 
+                 .CLR(CLR), 
+                 .D(INPUT[3]), 
+                 .Q(OUTPUT[3]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -95,10 +95,10 @@ module LATCH5_MUSER_LATCH7(CLK,
                                .ENABLE(ENABLE), 
                                .INPUT(INPUT[3:0]), 
                                .OUTPUT(OUTPUT[3:0]));
-   LDCE #( .INIT(1'b0) ) XLXI_2 (.CLR(CLR), 
+   FDCE #( .INIT(1'b0) ) XLXI_4 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
                 .D(INPUT[4]), 
-                .G(CLK), 
-                .GE(ENABLE), 
                 .Q(OUTPUT[4]));
 endmodule
 `timescale 1ns / 1ps
@@ -121,10 +121,10 @@ module LATCH6_MUSER_LATCH7(CLK,
                                .ENABLE(ENABLE), 
                                .INPUT(INPUT[4:0]), 
                                .OUTPUT(OUTPUT[4:0]));
-   LDCE #( .INIT(1'b0) ) XLXI_2 (.CLR(CLR), 
+   FDCE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
                 .D(INPUT[5]), 
-                .G(CLK), 
-                .GE(ENABLE), 
                 .Q(OUTPUT[5]));
 endmodule
 `timescale 1ns / 1ps

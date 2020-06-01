@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : LATCH1.vf
-// /___/   /\     Timestamp : 06/01/2020 00:38:48
+// /___/   /\     Timestamp : 06/01/2020 15:29:00
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -33,9 +33,9 @@ module LATCH1(CLK,
    output OUTPUT;
    
    
-   LDCE #( .INIT(1'b0) ) XLXI_1 (.CLR(CLR), 
+   FDCE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
                 .D(INPUT), 
-                .G(CLK), 
-                .GE(ENABLE), 
                 .Q(OUTPUT));
 endmodule

@@ -215,29 +215,24 @@
             <wire x2="1424" y1="1120" y2="1120" x1="1360" />
         </branch>
         <branch name="CLK">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1360" y="1296" type="branch" />
-            <wire x2="1360" y1="1296" y2="1296" x1="1344" />
-            <wire x2="1408" y1="1296" y2="1296" x1="1360" />
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1344" y="1296" type="branch" />
+            <wire x2="1408" y1="1296" y2="1296" x1="1344" />
         </branch>
         <branch name="CLR">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1328" y="1360" type="branch" />
-            <wire x2="1328" y1="1360" y2="1360" x1="1312" />
-            <wire x2="1408" y1="1360" y2="1360" x1="1328" />
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1312" y="1360" type="branch" />
+            <wire x2="1408" y1="1360" y2="1360" x1="1312" />
         </branch>
         <branch name="ENABLE">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1376" y="1424" type="branch" />
-            <wire x2="1376" y1="1424" y2="1424" x1="1360" />
-            <wire x2="1408" y1="1424" y2="1424" x1="1376" />
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1360" y="1424" type="branch" />
+            <wire x2="1408" y1="1424" y2="1424" x1="1360" />
         </branch>
         <branch name="cbusIN(5:0)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1392" y="1488" type="branch" />
-            <wire x2="1392" y1="1488" y2="1488" x1="1360" />
-            <wire x2="1408" y1="1488" y2="1488" x1="1392" />
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1360" y="1488" type="branch" />
+            <wire x2="1408" y1="1488" y2="1488" x1="1360" />
         </branch>
         <branch name="cbusOUTexec(5:0)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1888" y="1296" type="branch" />
-            <wire x2="1888" y1="1296" y2="1296" x1="1792" />
-            <wire x2="1936" y1="1296" y2="1296" x1="1888" />
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1936" y="1296" type="branch" />
+            <wire x2="1936" y1="1296" y2="1296" x1="1792" />
         </branch>
         <branch name="typeOUTexec(6:0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1888" y="928" type="branch" />

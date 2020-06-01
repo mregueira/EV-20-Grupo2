@@ -16,27 +16,28 @@
         <port polarity="Input" name="ENABLE" />
         <port polarity="Input" name="INPUT" />
         <port polarity="Output" name="OUTPUT" />
-        <blockdef name="ldce">
+        <blockdef name="fdce">
             <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-128" y2="-128" x1="0" />
+            <line x2="64" y1="-192" y2="-192" x1="0" />
             <line x2="64" y1="-32" y2="-32" x1="0" />
             <line x2="64" y1="-256" y2="-256" x1="0" />
-            <line x2="64" y1="-192" y2="-192" x1="0" />
             <line x2="320" y1="-256" y2="-256" x1="384" />
+            <line x2="80" y1="-112" y2="-128" x1="64" />
+            <line x2="64" y1="-128" y2="-144" x1="80" />
             <line x2="192" y1="-64" y2="-32" x1="192" />
             <line x2="64" y1="-32" y2="-32" x1="192" />
-            <line x2="64" y1="-128" y2="-128" x1="0" />
             <rect width="256" x="64" y="-320" height="256" />
         </blockdef>
-        <block symbolname="ldce" name="XLXI_1">
+        <block symbolname="fdce" name="XLXI_3">
+            <blockpin signalname="CLK" name="C" />
+            <blockpin signalname="ENABLE" name="CE" />
             <blockpin signalname="CLR" name="CLR" />
             <blockpin signalname="INPUT" name="D" />
-            <blockpin signalname="CLK" name="G" />
-            <blockpin signalname="ENABLE" name="GE" />
             <blockpin signalname="OUTPUT" name="Q" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
-        <instance x="1296" y="1424" name="XLXI_1" orien="R0" />
         <branch name="CLK">
             <wire x2="464" y1="1008" y2="1008" x1="224" />
         </branch>
@@ -85,5 +86,6 @@
         <iomarker fontsize="28" x="2496" y="1264" name="OUTPUT" orien="R0" />
         <iomarker fontsize="28" x="288" y="1632" name="INPUT" orien="R180" />
         <iomarker fontsize="28" x="256" y="1440" name="ENABLE" orien="R180" />
+        <instance x="1296" y="1424" name="XLXI_3" orien="R0" />
     </sheet>
 </drawing>

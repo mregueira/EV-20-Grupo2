@@ -1,0 +1,748 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : test1_drc.vf
+// /___/   /\     Timestamp : 06/01/2020 15:01:09
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family artix7 -verilog test1_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/test1.sch
+//Design Name: test1
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LATCH4_MUSER_test1(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [3:0] INPUT;
+   output [3:0] OUTPUT;
+   
+   
+   FDCE #( .INIT(1'b0) ) XLXI_8 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[0]), 
+                .Q(OUTPUT[0]));
+   FDCE #( .INIT(1'b0) ) XLXI_9 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[1]), 
+                .Q(OUTPUT[1]));
+   FDCE #( .INIT(1'b0) ) XLXI_10 (.C(CLK), 
+                 .CE(ENABLE), 
+                 .CLR(CLR), 
+                 .D(INPUT[2]), 
+                 .Q(OUTPUT[2]));
+   FDCE #( .INIT(1'b0) ) XLXI_12 (.C(CLK), 
+                 .CE(ENABLE), 
+                 .CLR(CLR), 
+                 .D(INPUT[3]), 
+                 .Q(OUTPUT[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH5_MUSER_test1(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [4:0] INPUT;
+   output [4:0] OUTPUT;
+   
+   
+   LATCH4_MUSER_test1  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[3:0]), 
+                              .OUTPUT(OUTPUT[3:0]));
+   LDCE #( .INIT(1'b0) ) XLXI_2 (.CLR(CLR), 
+                .D(INPUT[4]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH6_MUSER_test1(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [5:0] INPUT;
+   output [5:0] OUTPUT;
+   
+   
+   LATCH5_MUSER_test1  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[4:0]), 
+                              .OUTPUT(OUTPUT[4:0]));
+   LDCE #( .INIT(1'b0) ) XLXI_2 (.CLR(CLR), 
+                .D(INPUT[5]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[5]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH10_MUSER_test1(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [9:0] INPUT;
+   output [9:0] OUTPUT;
+   
+   
+   LATCH6_MUSER_test1  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[5:0]), 
+                              .OUTPUT(OUTPUT[5:0]));
+   LATCH4_MUSER_test1  XLXI_2 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[9:6]), 
+                              .OUTPUT(OUTPUT[9:6]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH1_MUSER_test1(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input INPUT;
+   output OUTPUT;
+   
+   
+   FDCE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT), 
+                .Q(OUTPUT));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH2_MUSER_test1(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [1:0] INPUT;
+   output [1:0] OUTPUT;
+   
+   
+   LATCH1_MUSER_test1  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[0]), 
+                              .OUTPUT(OUTPUT[0]));
+   LATCH1_MUSER_test1  XLXI_2 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[1]), 
+                              .OUTPUT(OUTPUT[1]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH7_MUSER_test1(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [6:0] INPUT;
+   output [6:0] OUTPUT;
+   
+   
+   LATCH6_MUSER_test1  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[5:0]), 
+                              .OUTPUT(OUTPUT[5:0]));
+   LATCH1_MUSER_test1  XLXI_2 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[6]), 
+                              .OUTPUT(OUTPUT[6]));
+endmodule
+`timescale 1ns / 1ps
+
+module toOperand_MUSER_test1(abusIN, 
+                             aluIN, 
+                             bbusIN, 
+                             cbusIN, 
+                             CLK, 
+                             CLR, 
+                             DAddIN, 
+                             ENABLE, 
+                             kmxIN, 
+                             memIN, 
+                             shIN, 
+                             typeIN, 
+                             abusOUT, 
+                             aluOUT, 
+                             bbusOUT, 
+                             cbusOUT, 
+                             DAddOUT, 
+                             kmxOUT, 
+                             memOUT, 
+                             shOUT, 
+                             typeOUT);
+
+    input [4:0] abusIN;
+    input [3:0] aluIN;
+    input [5:0] bbusIN;
+    input [5:0] cbusIN;
+    input CLK;
+    input CLR;
+    input [9:0] DAddIN;
+    input ENABLE;
+    input kmxIN;
+    input [1:0] memIN;
+    input [1:0] shIN;
+    input [6:0] typeIN;
+   output [4:0] abusOUT;
+   output [3:0] aluOUT;
+   output [5:0] bbusOUT;
+   output [5:0] cbusOUT;
+   output [9:0] DAddOUT;
+   output kmxOUT;
+   output [1:0] memOUT;
+   output [1:0] shOUT;
+   output [6:0] typeOUT;
+   
+   
+   LATCH4_MUSER_test1  ALU (.CLK(CLK), 
+                           .CLR(CLR), 
+                           .ENABLE(ENABLE), 
+                           .INPUT(aluIN[3:0]), 
+                           .OUTPUT(aluOUT[3:0]));
+   LATCH2_MUSER_test1  XLXI_2 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(shIN[1:0]), 
+                              .OUTPUT(shOUT[1:0]));
+   LATCH1_MUSER_test1  XLXI_3 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(kmxIN), 
+                              .OUTPUT(kmxOUT));
+   LATCH2_MUSER_test1  XLXI_4 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(memIN[1:0]), 
+                              .OUTPUT(memOUT[1:0]));
+   LATCH6_MUSER_test1  XLXI_5 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(bbusIN[5:0]), 
+                              .OUTPUT(bbusOUT[5:0]));
+   LATCH7_MUSER_test1  XLXI_6 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(typeIN[6:0]), 
+                              .OUTPUT(typeOUT[6:0]));
+   LATCH6_MUSER_test1  XLXI_22 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(cbusIN[5:0]), 
+                               .OUTPUT(cbusOUT[5:0]));
+   LATCH5_MUSER_test1  XLXI_23 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(abusIN[4:0]), 
+                               .OUTPUT(abusOUT[4:0]));
+   LATCH10_MUSER_test1  XLXI_24 (.CLK(CLK), 
+                                .CLR(CLR), 
+                                .ENABLE(ENABLE), 
+                                .INPUT(DAddIN[9:0]), 
+                                .OUTPUT(DAddOUT[9:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module toExecute_MUSER_test1(aluIN, 
+                             cbusIN, 
+                             CLK, 
+                             CLR, 
+                             ENABLE, 
+                             shIN, 
+                             typeIN, 
+                             aluOUTexec, 
+                             cbusOUTexec, 
+                             shOUTexec, 
+                             typeOUTexec);
+
+    input [3:0] aluIN;
+    input [5:0] cbusIN;
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [1:0] shIN;
+    input [6:0] typeIN;
+   output [3:0] aluOUTexec;
+   output [5:0] cbusOUTexec;
+   output [1:0] shOUTexec;
+   output [6:0] typeOUTexec;
+   
+   
+   LATCH4_MUSER_test1  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(aluIN[3:0]), 
+                              .OUTPUT(aluOUTexec[3:0]));
+   LATCH2_MUSER_test1  XLXI_2 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(shIN[1:0]), 
+                              .OUTPUT(shOUTexec[1:0]));
+   LATCH7_MUSER_test1  XLXI_3 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(typeIN[6:0]), 
+                              .OUTPUT(typeOUTexec[6:0]));
+   LATCH6_MUSER_test1  XLXI_4 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(cbusIN[5:0]), 
+                              .OUTPUT(cbusOUTexec[5:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux1_MUSER_test1(constante, 
+                        hold, 
+                        muxin, 
+                        muxout);
+
+    input constante;
+    input hold;
+    input muxin;
+   output muxout;
+   
+   
+   MUXCY  XLXI_1 (.CI(constante), 
+                 .DI(muxin), 
+                 .S(hold), 
+                 .O(muxout));
+endmodule
+`timescale 1ns / 1ps
+
+module mux2_MUSER_test1(const, 
+                        hold, 
+                        muxin, 
+                        muxout);
+
+    input [1:0] const;
+    input hold;
+    input [1:0] muxin;
+   output [1:0] muxout;
+   
+   
+   mux1_MUSER_test1  XLXI_1 (.constante(const[0]), 
+                            .hold(hold), 
+                            .muxin(muxin[0]), 
+                            .muxout(muxout[0]));
+   mux1_MUSER_test1  XLXI_2 (.constante(const[1]), 
+                            .hold(hold), 
+                            .muxin(muxin[1]), 
+                            .muxout(muxout[1]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux4_MUSER_test1(const, 
+                        hold, 
+                        muxin, 
+                        muxout);
+
+    input [3:0] const;
+    input hold;
+    input [3:0] muxin;
+   output [3:0] muxout;
+   
+   
+   mux2_MUSER_test1  XLXI_1 (.const(const[1:0]), 
+                            .hold(hold), 
+                            .muxin(muxin[1:0]), 
+                            .muxout(muxout[1:0]));
+   mux2_MUSER_test1  XLXI_2 (.const(const[3:2]), 
+                            .hold(hold), 
+                            .muxin(muxin[3:2]), 
+                            .muxout(muxout[3:2]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux5_MUSER_test1(const, 
+                        hold, 
+                        muxin, 
+                        muxout);
+
+    input [4:0] const;
+    input hold;
+    input [4:0] muxin;
+   output [4:0] muxout;
+   
+   
+   mux4_MUSER_test1  XLXI_1 (.const(const[3:0]), 
+                            .hold(hold), 
+                            .muxin(muxin[3:0]), 
+                            .muxout(muxout[3:0]));
+   mux1_MUSER_test1  XLXI_3 (.constante(const[4]), 
+                            .hold(hold), 
+                            .muxin(muxin[4]), 
+                            .muxout(muxout[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux6_MUSER_test1(const, 
+                        hold, 
+                        muxin, 
+                        muxout);
+
+    input [5:0] const;
+    input hold;
+    input [5:0] muxin;
+   output [5:0] muxout;
+   
+   
+   mux5_MUSER_test1  XLXI_1 (.const(const[4:0]), 
+                            .hold(hold), 
+                            .muxin(muxin[4:0]), 
+                            .muxout(muxout[4:0]));
+   mux1_MUSER_test1  XLXI_2 (.constante(const[5]), 
+                            .hold(hold), 
+                            .muxin(muxin[5]), 
+                            .muxout(muxout[5]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux7_MUSER_test1(const, 
+                        hold, 
+                        muxin, 
+                        muxout);
+
+    input [6:0] const;
+    input hold;
+    input [6:0] muxin;
+   output [6:0] muxout;
+   
+   
+   mux6_MUSER_test1  XLXI_1 (.const(const[5:0]), 
+                            .hold(hold), 
+                            .muxin(muxin[5:0]), 
+                            .muxout(muxout[5:0]));
+   mux1_MUSER_test1  XLXI_2 (.constante(const[6]), 
+                            .hold(hold), 
+                            .muxin(muxin[6]), 
+                            .muxout(muxout[6]));
+endmodule
+`timescale 1ns / 1ps
+
+module UC1_MUSER_test1(abusIN, 
+                       aluIN, 
+                       bbusIN, 
+                       cbusIN, 
+                       hold, 
+                       kmxIN, 
+                       memIN, 
+                       shIN, 
+                       typeIN, 
+                       abusOUTuc1, 
+                       aluOUTuc1, 
+                       bbusOUTuc1, 
+                       cbusOUTuc1, 
+                       kmxOUTuc1, 
+                       memOUTuc1, 
+                       shOUTuc1, 
+                       typeOUTuc1);
+
+    input [4:0] abusIN;
+    input [3:0] aluIN;
+    input [5:0] bbusIN;
+    input [5:0] cbusIN;
+    input hold;
+    input kmxIN;
+    input [1:0] memIN;
+    input [1:0] shIN;
+    input [6:0] typeIN;
+   output [4:0] abusOUTuc1;
+   output [3:0] aluOUTuc1;
+   output [5:0] bbusOUTuc1;
+   output [5:0] cbusOUTuc1;
+   output kmxOUTuc1;
+   output [1:0] memOUTuc1;
+   output [1:0] shOUTuc1;
+   output [6:0] typeOUTuc1;
+   
+   wire [3:0] XLXN_20;
+   wire [1:0] XLXN_23;
+   wire XLXN_26;
+   wire [1:0] XLXN_29;
+   wire [5:0] XLXN_33;
+   wire [6:0] XLXN_36;
+   wire [5:0] XLXN_39;
+   wire [4:0] XLXN_42;
+   
+   assign XLXN_20 = 4'h8;
+   assign XLXN_23 = 2'b00;
+   assign XLXN_26 = 0;
+   assign XLXN_29 = 2'b00;
+   assign XLXN_33 = 6'b100011;
+   assign XLXN_36 = 7'b0000000;
+   assign XLXN_39 = 6'b100011;
+   assign XLXN_42 = 5'b00000;
+   mux4_MUSER_test1  XLXI_1 (.const(XLXN_20[3:0]), 
+                            .hold(hold), 
+                            .muxin(aluIN[3:0]), 
+                            .muxout(aluOUTuc1[3:0]));
+   mux2_MUSER_test1  XLXI_2 (.const(XLXN_23[1:0]), 
+                            .hold(hold), 
+                            .muxin(shIN[1:0]), 
+                            .muxout(shOUTuc1[1:0]));
+   mux1_MUSER_test1  XLXI_3 (.constante(XLXN_26), 
+                            .hold(hold), 
+                            .muxin(kmxIN), 
+                            .muxout(kmxOUTuc1));
+   mux2_MUSER_test1  XLXI_4 (.const(XLXN_29[1:0]), 
+                            .hold(hold), 
+                            .muxin(memIN[1:0]), 
+                            .muxout(memOUTuc1[1:0]));
+   mux6_MUSER_test1  XLXI_5 (.const(XLXN_33[5:0]), 
+                            .hold(hold), 
+                            .muxin(bbusIN[5:0]), 
+                            .muxout(bbusOUTuc1[5:0]));
+   mux7_MUSER_test1  XLXI_6 (.const(XLXN_36[6:0]), 
+                            .hold(hold), 
+                            .muxin(typeIN[6:0]), 
+                            .muxout(typeOUTuc1[6:0]));
+   mux6_MUSER_test1  XLXI_7 (.const(XLXN_39[5:0]), 
+                            .hold(hold), 
+                            .muxin(cbusIN[5:0]), 
+                            .muxout(cbusOUTuc1[5:0]));
+   mux5_MUSER_test1  XLXI_8 (.const(XLXN_42[4:0]), 
+                            .hold(hold), 
+                            .muxin(abusIN[4:0]), 
+                            .muxout(abusOUTuc1[4:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module toRetire_MUSER_test1(cbusIN, 
+                            CLK, 
+                            CLR, 
+                            ENABLE, 
+                            typeIN, 
+                            cbusOUTret, 
+                            typeOUTret);
+
+    input [5:0] cbusIN;
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [6:0] typeIN;
+   output [5:0] cbusOUTret;
+   output [6:0] typeOUTret;
+   
+   
+   LATCH7_MUSER_test1  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(typeIN[6:0]), 
+                              .OUTPUT(typeOUTret[6:0]));
+   LATCH6_MUSER_test1  XLXI_2 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(cbusIN[5:0]), 
+                              .OUTPUT(cbusOUTret[5:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module test1(abus, 
+             ALU, 
+             BBUS, 
+             CBUS, 
+             DAdd, 
+             HOLD, 
+             KMX, 
+             MEM, 
+             SH, 
+             typein, 
+             BBUSOUT, 
+             MEMOUT, 
+             XLXN_112, 
+             XLXN_149, 
+             XLXN_153, 
+             XLXN_154, 
+             XLXN_155, 
+             XLXN_156, 
+             XLXN_157);
+
+    input [4:0] abus;
+    input [3:0] ALU;
+    input [5:0] BBUS;
+    input [5:0] CBUS;
+    input [9:0] DAdd;
+    input HOLD;
+    input KMX;
+    input [1:0] MEM;
+    input [1:0] SH;
+    input [6:0] typein;
+   output [5:0] BBUSOUT;
+   output [1:0] MEMOUT;
+   output [9:0] XLXN_112;
+   output [4:0] XLXN_149;
+   output XLXN_153;
+   output [3:0] XLXN_154;
+   output [1:0] XLXN_155;
+   output [5:0] XLXN_156;
+   output [6:0] XLXN_157;
+   
+   wire [4:0] ABUSaUC1;
+   wire [4:0] ABUSOUT;
+   wire [3:0] ALUaUC1;
+   wire [3:0] ALUop;
+   wire [3:0] ALUOUT;
+   wire [5:0] BBUSaUC1;
+   wire [5:0] CBUSaUC1;
+   wire CLK2;
+   wire [9:0] DAddOUT;
+   wire KMXaUC1;
+   wire KMXOUT;
+   wire [1:0] MEMaUC1;
+   wire [1:0] SHaUC1;
+   wire [1:0] SHop;
+   wire [1:0] SHOUT;
+   wire [6:0] TYPEaUC1;
+   wire XLXN_2;
+   wire XLXN_11;
+   wire XLXN_49;
+   wire XLXN_50;
+   wire XLXN_60;
+   wire XLXN_61;
+   wire [5:0] XLXN_96;
+   wire [6:0] XLXN_97;
+   wire [5:0] XLXN_113;
+   wire [6:0] XLXN_114;
+   wire [5:0] XLXN_115;
+   wire [6:0] XLXN_116;
+   wire [3:0] XLXN_120;
+   wire [1:0] XLXN_121;
+   wire XLXN_122;
+   wire [1:0] XLXN_123;
+   wire [4:0] XLXN_125;
+   wire XLXN_126;
+   wire [6:0] XLXN_129;
+   wire [5:0] XLXN_130;
+   wire XLXN_136;
+   wire [3:0] XLXN_139;
+   wire [1:0] XLXN_140;
+   wire [6:0] XLXN_141;
+   wire [5:0] XLXN_142;
+   wire [6:0] XLXN_145;
+   wire [5:0] XLXN_146;
+   wire [1:0] XLXN_151;
+   wire [5:0] XLXN_152;
+   wire XLXN_168;
+   wire [5:0] XLXN_169;
+   
+   assign XLXN_11 = 0;
+   assign XLXN_49 = 0;
+   assign XLXN_50 = 1;
+   assign XLXN_60 = 0;
+   assign XLXN_61 = 1;
+   UC1_MUSER_test1  XLXI_4 (.abusIN(XLXN_125[4:0]), 
+                           .aluIN(XLXN_120[3:0]), 
+                           .bbusIN(XLXN_96[5:0]), 
+                           .cbusIN(CBUSaUC1[5:0]), 
+                           .hold(XLXN_126), 
+                           .kmxIN(XLXN_122), 
+                           .memIN(XLXN_123[1:0]), 
+                           .shIN(XLXN_121[1:0]), 
+                           .typeIN(XLXN_97[6:0]), 
+                           .abusOUTuc1(ABUSOUT[4:0]), 
+                           .aluOUTuc1(ALUop[3:0]), 
+                           .bbusOUTuc1(XLXN_152[5:0]), 
+                           .cbusOUTuc1(XLXN_130[5:0]), 
+                           .kmxOUTuc1(KMXOUT), 
+                           .memOUTuc1(XLXN_151[1:0]), 
+                           .shOUTuc1(SHop[1:0]), 
+                           .typeOUTuc1(XLXN_129[6:0]));
+   toExecute_MUSER_test1  XLXI_5 (.aluIN(XLXN_139[3:0]), 
+                                 .cbusIN(XLXN_142[5:0]), 
+                                 .CLK(XLXN_136), 
+                                 .CLR(XLXN_49), 
+                                 .ENABLE(XLXN_50), 
+                                 .shIN(XLXN_140[1:0]), 
+                                 .typeIN(XLXN_141[6:0]), 
+                                 .aluOUTexec(ALUOUT[3:0]), 
+                                 .cbusOUTexec(XLXN_146[5:0]), 
+                                 .shOUTexec(SHOUT[1:0]), 
+                                 .typeOUTexec(XLXN_145[6:0]));
+   toRetire_MUSER_test1  XLXI_6 (.cbusIN(XLXN_115[5:0]), 
+                                .CLK(CLK2), 
+                                .CLR(XLXN_60), 
+                                .ENABLE(XLXN_61), 
+                                .typeIN(XLXN_116[6:0]), 
+                                .cbusOUTret(XLXN_113[5:0]), 
+                                .typeOUTret(XLXN_114[6:0]));
+   INV  XLXI_7 (.I(HOLD), 
+               .O(XLXN_2));
+   toOperand_MUSER_test1  XLXI_14 (.abusIN(), 
+                                  .aluIN(ALU[3:0]), 
+                                  .bbusIN(BBUS[5:0]), 
+                                  .cbusIN(CBUS[5:0]), 
+                                  .CLK(XLXN_168), 
+                                  .CLR(XLXN_11), 
+                                  .DAddIN(DAdd[9:0]), 
+                                  .ENABLE(XLXN_2), 
+                                  .kmxIN(KMX), 
+                                  .memIN(MEM[1:0]), 
+                                  .shIN(SH[1:0]), 
+                                  .typeIN(typein[6:0]), 
+                                  .abusOUT(ABUSaUC1[4:0]), 
+                                  .aluOUT(ALUaUC1[3:0]), 
+                                  .bbusOUT(BBUSaUC1[5:0]), 
+                                  .cbusOUT(XLXN_169[5:0]), 
+                                  .DAddOUT(DAddOUT[9:0]), 
+                                  .kmxOUT(KMXaUC1), 
+                                  .memOUT(MEMaUC1[1:0]), 
+                                  .shOUT(SHaUC1[1:0]), 
+                                  .typeOUT(TYPEaUC1[6:0]));
+endmodule

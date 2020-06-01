@@ -22,12 +22,16 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Pipeline.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="COMP5.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="COMP4.vf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="COMP4_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="COMP5.vf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="COMP5_drc.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="COMPARADOR5.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="COMPARADOR5.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="COMPARADOR5_drc.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="LATCH1.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH1.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="LATCH10.sym" xil_pn:origination="imported"/>
@@ -51,10 +55,8 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH7.vf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH7_drc.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Tuberia.vf"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Tuberia_beh.prj"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="Tuberia_drc.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Tuberia_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Tuberia_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="UC1.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="UC1.vf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="UC1_drc.vf"/>
@@ -78,8 +80,11 @@
       <branch xil_pn:name="BehavioralSim"/>
     </file>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="UC2.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="UC2_beh.prj"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="UC2_drc.vf"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="UC2_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="UC2_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="UC2_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="UC2_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="UC2_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="UC2_map.ncd" xil_pn:subbranch="Map"/>
@@ -130,12 +135,16 @@
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="reg_to_bus_1bit_sel.stx"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_1bit_sel.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="reg_to_bus_1bit_sel.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="test1.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="test1_drc.vf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test1_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="toExecute.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="toExecute.vf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="toExecute_drc.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="toOperand.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="toOperand.vf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="toOperand_drc.vf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="toOperand_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="toRetire.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="toRetire.vf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="toRetire_drc.vf"/>
@@ -154,14 +163,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590980814" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5178288379686400356" xil_pn:start_ts="1590980813">
+    <transform xil_pn:end_ts="1591040179" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5959335608016689126" xil_pn:start_ts="1591040179">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590982748" xil_pn:in_ck="1327676252197992518" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-9181577188482698310" xil_pn:start_ts="1590982709">
+    <transform xil_pn:end_ts="1591040187" xil_pn:in_ck="1062014574998357631" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3407093791898647096" xil_pn:start_ts="1591040179">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="COMP5.vf"/>
+      <outfile xil_pn:name="COMPARADOR5.vf"/>
       <outfile xil_pn:name="LATCH1.vf"/>
       <outfile xil_pn:name="LATCH10.vf"/>
       <outfile xil_pn:name="LATCH2.vf"/>
@@ -186,10 +195,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590982748" xil_pn:in_ck="-2990802878713700930" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590982748">
+    <transform xil_pn:end_ts="1591040187" xil_pn:in_ck="-5336259596871543662" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591040187">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="COMP4.vf"/>
       <outfile xil_pn:name="COMP5.vf"/>
+      <outfile xil_pn:name="COMPARADOR5.vf"/>
       <outfile xil_pn:name="LATCH1.vf"/>
       <outfile xil_pn:name="LATCH10.vf"/>
       <outfile xil_pn:name="LATCH2.vf"/>
@@ -210,27 +221,24 @@
       <outfile xil_pn:name="toOperand.vf"/>
       <outfile xil_pn:name="toRetire.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1590982758" xil_pn:in_ck="-2990802878713700930" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8278219166048071534" xil_pn:start_ts="1590982748">
+    <transform xil_pn:end_ts="1591040191" xil_pn:in_ck="-5336259596871543662" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6179697285856505322" xil_pn:start_ts="1591040187">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Tuberia_beh.prj"/>
-      <outfile xil_pn:name="Tuberia_isim_beh.exe"/>
+      <outfile xil_pn:name="UC2_beh.prj"/>
+      <outfile xil_pn:name="UC2_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1590983186" xil_pn:in_ck="3116346625420292560" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8574813542316024719" xil_pn:start_ts="1590983186">
+    <transform xil_pn:end_ts="1591040192" xil_pn:in_ck="-3230518152836167402" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="9066919271334890644" xil_pn:start_ts="1591040191">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Tuberia_isim_beh.wdb"/>
+      <outfile xil_pn:name="UC2_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
@@ -246,9 +254,9 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="COMP5.vf"/>
-      <outfile xil_pn:name="UC2.vf"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590892982" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="1737147426169038151" xil_pn:start_ts="1590892982">
       <status xil_pn:value="SuccessfullyRun"/>

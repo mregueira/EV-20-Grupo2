@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : toOperand_drc.vf
-// /___/   /\     Timestamp : 05/31/2020 16:44:58
+// /___/   /\     Timestamp : 06/01/2020 11:20:35
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -151,7 +151,7 @@ module LATCH1_MUSER_toOperand(CLK,
                 .D(INPUT), 
                 .G(CLK), 
                 .GE(ENABLE), 
-                .Q());
+                .Q(OUTPUT));
 endmodule
 `timescale 1ns / 1ps
 
@@ -193,11 +193,10 @@ module LATCH7_MUSER_toOperand(CLK,
     input [6:0] INPUT;
    output [6:0] OUTPUT;
    
-   wire XLXN_3;
    
    LATCH6_MUSER_toOperand  XLXI_1 (.CLK(CLK), 
                                   .CLR(CLR), 
-                                  .ENABLE(XLXN_3), 
+                                  .ENABLE(ENABLE), 
                                   .INPUT(INPUT[5:0]), 
                                   .OUTPUT(OUTPUT[5:0]));
    LATCH1_MUSER_toOperand  XLXI_2 (.CLK(CLK), 
@@ -223,7 +222,7 @@ module toOperand(abusIN,
                  abusOUT, 
                  aluOUT, 
                  bbusOUT, 
-                 cbus, 
+                 cbusOUT, 
                  DAddOUT, 
                  kmxOUT, 
                  memOUT, 
@@ -245,14 +244,13 @@ module toOperand(abusIN,
    output [4:0] abusOUT;
    output [3:0] aluOUT;
    output [5:0] bbusOUT;
-   output [5:0] cbus;
+   output [5:0] cbusOUT;
    output [9:0] DAddOUT;
    output kmxOUT;
    output [1:0] memOUT;
    output [1:0] shOUT;
    output [6:0] typeOUT;
    
-   wire [5:0] cbusOUT;
    
    LATCH4_MUSER_toOperand  ALU (.CLK(CLK), 
                                .CLR(CLR), 

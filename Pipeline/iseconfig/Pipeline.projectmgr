@@ -15,36 +15,44 @@
          <ClosedNode>/Tuberia C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|Tuberia.sch/XLXI_2 - UC2</ClosedNode>
          <ClosedNode>/Tuberia C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|Tuberia.sch/XLXI_3 - UC1</ClosedNode>
          <ClosedNode>/Tuberia C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|Tuberia.sch/XLXI_3 - toOperand</ClosedNode>
+         <ClosedNode>/Tuberia C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|Tuberia.sch/XLXI_4 - UC1</ClosedNode>
+         <ClosedNode>/Tuberia C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|Tuberia.sch/XLXI_5 - toExecute</ClosedNode>
+         <ClosedNode>/Tuberia C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|Tuberia.sch/XLXI_6 - toRetire</ClosedNode>
          <ClosedNode>/UC1 C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|UC1.sch</ClosedNode>
          <ClosedNode>/UC2 C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|UC2.sch</ClosedNode>
          <ClosedNode>/mux4 C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|mux4.sch</ClosedNode>
+         <ClosedNode>/mux5 C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|mux5.sch</ClosedNode>
+         <ClosedNode>/mux6 C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|mux6.sch</ClosedNode>
+         <ClosedNode>/toExecute C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|toExecute.sch</ClosedNode>
          <ClosedNode>/toOperand C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|toOperand.sch</ClosedNode>
+         <ClosedNode>/toRetire C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|toRetire.sch</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Pipeline</SelectedItem>
+         <SelectedItem>Tuberia (C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/Tuberia.sch)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000117000000020000000000000000000000000200000064ffffffff000000810000000300000002000001170000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Pipeline</CurrentItem>
+      <CurrentItem>Tuberia (C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/Tuberia.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Create Schematic Symbol</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000b8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000b80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Create Schematic Symbol</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -53,7 +61,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000263000000040101000100000000000000000000000064ffffffff000000810000000000000004000000440000000100000000000000360000000100000000000000660000000100000000000001830000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000252000000040101000100000000000000000000000064ffffffff000000810000000000000004000000440000000100000000000000360000000100000000000000660000000100000000000001720000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>UC2.sch</CurrentItem>
    </ItemView>
@@ -111,13 +119,13 @@
          <ClosedNode>/Tuberia C:|Users|Martina|Desktop|EV-20-Grupo2|Pipeline|Tuberia.sch/XLXI_3 - UC1</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>XLXI_1 - mux4 (C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux4.sch)</SelectedItem>
+         <SelectedItem>UC1 (C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC1.sch)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000107000000020000000000000000000000000200000064ffffffff000000810000000300000002000001070000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000143000000020000000000000000000000000200000064ffffffff000000810000000300000002000001430000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>XLXI_1 - mux4 (C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux4.sch)</CurrentItem>
+      <CurrentItem>UC1 (C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC1.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>

@@ -1,0 +1,41 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : LATCH1.vf
+// /___/   /\     Timestamp : 06/01/2020 00:38:48
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH1.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH1.sch
+//Design Name: LATCH1
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LATCH1(CLK, 
+              CLR, 
+              ENABLE, 
+              INPUT, 
+              OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input INPUT;
+   output OUTPUT;
+   
+   
+   LDCE #( .INIT(1'b0) ) XLXI_1 (.CLR(CLR), 
+                .D(INPUT), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT));
+endmodule

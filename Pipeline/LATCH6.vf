@@ -1,0 +1,108 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : LATCH6.vf
+// /___/   /\     Timestamp : 06/01/2020 00:39:05
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH6.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH6.sch
+//Design Name: LATCH6
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LATCH4_MUSER_LATCH6(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [3:0] INPUT;
+   output [3:0] OUTPUT;
+   
+   
+   LDCE #( .INIT(1'b0) ) XLXI_4 (.CLR(CLR), 
+                .D(INPUT[2]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[2]));
+   LDCE #( .INIT(1'b0) ) XLXI_5 (.CLR(CLR), 
+                .D(INPUT[3]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[3]));
+   LDCE #( .INIT(1'b0) ) XLXI_6 (.CLR(CLR), 
+                .D(INPUT[1]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[1]));
+   LDCE #( .INIT(1'b0) ) XLXI_7 (.CLR(CLR), 
+                .D(INPUT[0]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH5_MUSER_LATCH6(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [4:0] INPUT;
+   output [4:0] OUTPUT;
+   
+   
+   LATCH4_MUSER_LATCH6  XLXI_1 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(INPUT[3:0]), 
+                               .OUTPUT(OUTPUT[3:0]));
+   LDCE #( .INIT(1'b0) ) XLXI_2 (.CLR(CLR), 
+                .D(INPUT[4]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH6(CLK, 
+              CLR, 
+              ENABLE, 
+              INPUT, 
+              OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [5:0] INPUT;
+   output [5:0] OUTPUT;
+   
+   
+   LATCH5_MUSER_LATCH6  XLXI_1 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(INPUT[4:0]), 
+                               .OUTPUT(OUTPUT[4:0]));
+   LDCE #( .INIT(1'b0) ) XLXI_2 (.CLR(CLR), 
+                .D(INPUT[5]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[5]));
+endmodule

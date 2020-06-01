@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC1_isim_beh.exe -prj C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC1_beh.prj work.UC1 work.glbl 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/Tuberia_isim_beh.exe" -prj "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/Tuberia_beh.prj" "work.Tuberia" "work.glbl" 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -6,25 +6,60 @@ Determining compilation order of HDL files
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux1.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux2.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux4.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH4.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux5.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH5.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux6.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH6.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH1.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux7.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH7.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH2.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH10.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP5.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC2.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC1.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toRetire.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toExecute.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/Tuberia.vf" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
+Compiling module OR2
+Compiling module AND2
+Compiling module AND3
+Compiling module OR5
+Compiling module OR3
+Compiling module COMP4_HXILINX_Tuberia
+Compiling module XOR2
+Compiling module INV
+Compiling module COMP5_MUSER_Tuberia
+Compiling module UC2_MUSER_Tuberia
+Compiling module LDCE
+Compiling module LATCH4_MUSER_Tuberia
+Compiling module LATCH1_MUSER_Tuberia
+Compiling module LATCH2_MUSER_Tuberia
+Compiling module LATCH5_MUSER_Tuberia
+Compiling module LATCH6_MUSER_Tuberia
+Compiling module LATCH7_MUSER_Tuberia
+Compiling module LATCH10_MUSER_Tuberia
+Compiling module toOperand_MUSER_Tuberia
 Compiling module MUXCY
-Compiling module mux1_MUSER_UC1
-Compiling module mux2_MUSER_UC1
-Compiling module mux4_MUSER_UC1
-Compiling module mux5_MUSER_UC1
-Compiling module mux6_MUSER_UC1
-Compiling module mux7_MUSER_UC1
-Compiling module UC1
+Compiling module mux1_MUSER_Tuberia
+Compiling module mux2_MUSER_Tuberia
+Compiling module mux4_MUSER_Tuberia
+Compiling module mux5_MUSER_Tuberia
+Compiling module mux6_MUSER_Tuberia
+Compiling module mux7_MUSER_Tuberia
+Compiling module UC1_MUSER_Tuberia
+Compiling module toExecute_MUSER_Tuberia
+Compiling module toRetire_MUSER_Tuberia
+Compiling module Tuberia
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 9 Verilog Units
-Built simulation executable C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC1_isim_beh.exe
-Fuse Memory Usage: 27756 KB
-Fuse CPU Usage: 656 ms
+Waiting for 24 sub-compilation(s) to finish...
+Compiled 31 Verilog Units
+Built simulation executable C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/Tuberia_isim_beh.exe
+Fuse Memory Usage: 28112 KB
+Fuse CPU Usage: 827 ms

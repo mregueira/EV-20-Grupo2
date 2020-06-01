@@ -1,0 +1,29 @@
+Command line:
+   Tuberia_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  3269
+
+Mon Jun 01 00:49:06 2020
+
+
+ Elaboration Time: 0.09375 sec
+
+ Current Memory Usage: 850.28 Meg
+
+ Total Signals          : 1263
+ Total Nets             : 324
+ Total Signal Drivers   : 302
+ Total Blocks           : 245
+ Total Primitive Blocks : 131
+ Total Processes        : 412
+ Total Traceable Variables  : 203
+ Total Scalar Nets and Variables : 589
+Total Line Count : 924
+
+ Total Simulation Time: 12.2969 sec
+
+ Current Memory Usage: 3205.05 Meg
+
+Mon Jun 01 00:50:55 2020
+

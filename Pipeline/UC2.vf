@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : UC2.vf
-// /___/   /\     Timestamp : 05/30/2020 23:43:00
+// /___/   /\     Timestamp : 06/01/2020 00:39:02
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -51,7 +51,7 @@ module COMP5_MUSER_UC2(A,
    wire XLXN_14;
    wire XLXN_15;
    
-   (* HU_SET = "XLXI_1_0" *) 
+   (* HU_SET = "XLXI_1_4" *) 
    COMP4_HXILINX_UC2  XLXI_1 (.A0(A[0]), 
                              .A1(A[1]), 
                              .A2(A[2]), 

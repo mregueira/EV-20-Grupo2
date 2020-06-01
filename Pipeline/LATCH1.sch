@@ -32,7 +32,7 @@
             <blockpin signalname="INPUT" name="D" />
             <blockpin signalname="CLK" name="G" />
             <blockpin signalname="ENABLE" name="GE" />
-            <blockpin name="Q" />
+            <blockpin signalname="OUTPUT" name="Q" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -77,7 +77,7 @@
         </branch>
         <branch name="OUTPUT">
             <attrtext style="alignment:SOFT-TCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1168" type="branch" />
-            <wire x2="1824" y1="1168" y2="1168" x1="1696" />
+            <wire x2="1824" y1="1168" y2="1168" x1="1680" />
             <wire x2="1824" y1="1152" y2="1168" x1="1824" />
         </branch>
         <iomarker fontsize="28" x="224" y="1008" name="CLK" orien="R180" />

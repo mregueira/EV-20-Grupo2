@@ -1,0 +1,56 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : LATCH4.vf
+// /___/   /\     Timestamp : 06/01/2020 00:38:47
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH4.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/LATCH4.sch
+//Design Name: LATCH4
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LATCH4(CLK, 
+              CLR, 
+              ENABLE, 
+              INPUT, 
+              OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [3:0] INPUT;
+   output [3:0] OUTPUT;
+   
+   
+   LDCE #( .INIT(1'b0) ) XLXI_4 (.CLR(CLR), 
+                .D(INPUT[2]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[2]));
+   LDCE #( .INIT(1'b0) ) XLXI_5 (.CLR(CLR), 
+                .D(INPUT[3]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[3]));
+   LDCE #( .INIT(1'b0) ) XLXI_6 (.CLR(CLR), 
+                .D(INPUT[1]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[1]));
+   LDCE #( .INIT(1'b0) ) XLXI_7 (.CLR(CLR), 
+                .D(INPUT[0]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[0]));
+endmodule

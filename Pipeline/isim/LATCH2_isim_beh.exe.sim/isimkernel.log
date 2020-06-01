@@ -1,0 +1,29 @@
+Command line:
+   LATCH2_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  3168
+
+Mon Jun 01 00:00:52 2020
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 846.139 Meg
+
+ Total Signals          : 48
+ Total Nets             : 26
+ Total Signal Drivers   : 14
+ Total Blocks           : 8
+ Total Primitive Blocks : 5
+ Total Processes        : 17
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 110
+Total Line Count : 35
+
+ Total Simulation Time: 3.125 sec
+
+ Current Memory Usage: 1003.43 Meg
+
+Mon Jun 01 00:06:06 2020
+

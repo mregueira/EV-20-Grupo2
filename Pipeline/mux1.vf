@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mux1.vf
+// /___/   /\     Timestamp : 06/01/2020 15:29:07
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux1.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux1.sch
+//Design Name: mux1
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mux1(constante, 
+            hold, 
+            muxin, 
+            muxout);
+
+    input constante;
+    input hold;
+    input muxin;
+   output muxout;
+   
+   
+   MUXCY  XLXI_1 (.CI(constante), 
+                 .DI(muxin), 
+                 .S(hold), 
+                 .O(muxout));
+endmodule

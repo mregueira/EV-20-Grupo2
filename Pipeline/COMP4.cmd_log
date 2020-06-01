@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family artix7 -w -refsym COMP4 C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP4.sch C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP4.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym COMP4 C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP4.sch C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP4.sym 

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.28 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.28 secs
  
 --> Reading design: ALU_main.prj
 
@@ -105,18 +105,19 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Marcelo\ProyectosISE\ALU\OR_Bus16.v" into library work
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\OR_Bus16.v" into library work
 Parsing module <OR_Bus16>.
-Analyzing Verilog file "C:\Users\Marcelo\ProyectosISE\ALU\Mux4Bus16.v" into library work
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\Mux4Bus16.v" into library work
 Parsing module <Mux4Bus16>.
-Analyzing Verilog file "C:\Users\Marcelo\ProyectosISE\ALU\Mux2Bus16.v" into library work
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\Mux2Bus16.v" into library work
 Parsing module <Mux2Bus16>.
-Analyzing Verilog file "C:\Users\Marcelo\ProyectosISE\ALU\AND_Bus16.v" into library work
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\AND_Bus16.v" into library work
 Parsing module <AND_Bus16>.
-Analyzing Verilog file "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf" into library work
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" into library work
 Parsing module <INV16_HXILINX_ALU_main>.
 Parsing module <ADD16_HXILINX_ALU_main>.
 Parsing module <D4_16E_HXILINX_ALU_main>.
+Parsing module <AND6_HXILINX_ALU_main>.
 Parsing module <ALU_main>.
 
 =========================================================================
@@ -126,8 +127,8 @@ Parsing module <ALU_main>.
 Elaborating module <ALU_main>.
 
 Elaborating module <D4_16E_HXILINX_ALU_main>.
-WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf" Line 204: Assignment to ZERO ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf" Line 207: Assignment to CY_0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" Line 226: Assignment to ZERO ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" Line 229: Assignment to CY_0 ignored, since the identifier is never used
 
 Elaborating module <AND_Bus16>.
 
@@ -147,42 +148,47 @@ Elaborating module <INV16_HXILINX_ALU_main>.
 
 Elaborating module <INV>.
 
-Elaborating module <AND4>.
+Elaborating module <OR4>.
+
+Elaborating module <OR3>.
+
+Elaborating module <AND5>.
+
+Elaborating module <AND6_HXILINX_ALU_main>.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <ALU_main>.
-    Related source file is "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf".
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf".
     Set property "HU_SET = ALUC_DECODER_0" for instance <ALUC_Decoder>.
     Set property "HU_SET = XLXI_1_1" for instance <XLXI_1>.
     Set property "HU_SET = XLXI_9_2" for instance <XLXI_9>.
     Set property "HU_SET = XLXI_10_3" for instance <XLXI_10>.
-INFO:Xst:3210 - "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf" line 191: Output port <D8> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf" line 191: Output port <D11> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf" line 191: Output port <D13> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf" line 191: Output port <D14> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf" line 191: Output port <D15> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf" line 242: Output port <OFL> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_143_4" for instance <XLXI_143>.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" line 213: Output port <D8> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" line 213: Output port <D11> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" line 213: Output port <D15> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" line 264: Output port <OFL> of the instance <XLXI_1> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <ALU_main> synthesized.
 
 Synthesizing Unit <D4_16E_HXILINX_ALU_main>.
-    Related source file is "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf".
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf".
     Summary:
 	inferred  16 Multiplexer(s).
 Unit <D4_16E_HXILINX_ALU_main> synthesized.
 
 Synthesizing Unit <AND_Bus16>.
-    Related source file is "C:\Users\Marcelo\ProyectosISE\ALU\AND_Bus16.v".
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\AND_Bus16.v".
     Summary:
 	no macro.
 Unit <AND_Bus16> synthesized.
 
 Synthesizing Unit <Mux4Bus16>.
-    Related source file is "C:\Users\Marcelo\ProyectosISE\ALU\Mux4Bus16.v".
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\Mux4Bus16.v".
     Found 3-bit adder for signal <n0047> created at line 12.
     Found 1-bit 4-to-1 multiplexer for signal <_n0063> created at line 12.
     Found 1-bit 4-to-1 multiplexer for signal <_n0073> created at line 12.
@@ -223,19 +229,19 @@ WARNING:Xst:737 - Found 1-bit latch for signal <Y<15>>. Latches may be generated
 Unit <Mux4Bus16> synthesized.
 
 Synthesizing Unit <OR_Bus16>.
-    Related source file is "C:\Users\Marcelo\ProyectosISE\ALU\OR_Bus16.v".
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\OR_Bus16.v".
     Summary:
 	no macro.
 Unit <OR_Bus16> synthesized.
 
 Synthesizing Unit <Mux2Bus16>.
-    Related source file is "C:\Users\Marcelo\ProyectosISE\ALU\Mux2Bus16.v".
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\Mux2Bus16.v".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Mux2Bus16> synthesized.
 
 Synthesizing Unit <ADD16_HXILINX_ALU_main>.
-    Related source file is "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf".
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf".
     Found 17-bit adder for signal <n0019> created at line 46.
     Found 17-bit adder for signal <n0010> created at line 46.
     Summary:
@@ -243,10 +249,16 @@ Synthesizing Unit <ADD16_HXILINX_ALU_main>.
 Unit <ADD16_HXILINX_ALU_main> synthesized.
 
 Synthesizing Unit <INV16_HXILINX_ALU_main>.
-    Related source file is "C:\Users\Marcelo\ProyectosISE\ALU\ALU_main.vf".
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf".
     Summary:
 	no macro.
 Unit <INV16_HXILINX_ALU_main> synthesized.
+
+Synthesizing Unit <AND6_HXILINX_ALU_main>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf".
+    Summary:
+	no macro.
+Unit <AND6_HXILINX_ALU_main> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -313,6 +325,8 @@ Optimizing unit <ADD16_HXILINX_ALU_main> ...
 
 Optimizing unit <D4_16E_HXILINX_ALU_main> ...
 
+Optimizing unit <AND6_HXILINX_ALU_main> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block ALU_main, actual ratio is 0.
@@ -344,15 +358,17 @@ Top Level Output File Name         : ALU_main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 163
+# BELS                             : 168
 #      AND2                        : 3
-#      AND4                        : 2
-#      INV                         : 42
+#      AND5                        : 1
+#      INV                         : 45
 #      LUT2                        : 16
-#      LUT5                        : 43
-#      LUT6                        : 16
+#      LUT5                        : 45
+#      LUT6                        : 17
 #      MUXCY                       : 16
-#      OR2                         : 9
+#      OR2                         : 6
+#      OR3                         : 2
+#      OR4                         : 1
 #      XORCY                       : 16
 # IO Buffers                       : 86
 #      IBUF                        : 69
@@ -365,14 +381,14 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                  117  out of  63400     0%  
-    Number used as Logic:               117  out of  63400     0%  
+ Number of Slice LUTs:                  123  out of  63400     0%  
+    Number used as Logic:               123  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    117
-   Number with an unused Flip Flop:     117  out of    117   100%  
-   Number with an unused LUT:             0  out of    117     0%  
-   Number of fully used LUT-FF pairs:     0  out of    117     0%  
+ Number of LUT Flip Flop pairs used:    123
+   Number with an unused Flip Flop:     123  out of    123   100%  
+   Number with an unused LUT:             0  out of    123     0%  
+   Number of fully used LUT-FF pairs:     0  out of    123     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -412,7 +428,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 6.451ns
+   Maximum combinational path delay: 6.461ns
 
 Timing Details:
 ---------------
@@ -420,9 +436,9 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 15537 / 17
+  Total number of paths / destination ports: 19512 / 17
 -------------------------------------------------------------------------
-Delay:               6.451ns (Levels of Logic = 27)
+Delay:               6.461ns (Levels of Logic = 28)
   Source:            ALUC<2> (PAD)
   Destination:       CO (PAD)
 
@@ -430,12 +446,14 @@ Delay:               6.451ns (Levels of Logic = 27)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            11   0.001   0.729  ALUC_2_IBUF (ALUC_2_IBUF)
+     IBUF:I->O            13   0.001   0.739  ALUC_2_IBUF (ALUC_2_IBUF)
      begin scope: 'ALUC_Decoder:A2'
-     LUT5:I0->O            4   0.097   0.293  Mmux_D511 (D5)
-     end scope: 'ALUC_Decoder:D5'
-     INV:I->O              1   0.511   0.693  XLXI_109 (XLXN_247)
-     AND4:I0->O           16   0.097   0.752  XLXI_110 (B_SEL_2)
+     LUT5:I0->O            4   0.097   0.293  Mmux_D1411 (D14)
+     end scope: 'ALUC_Decoder:D14'
+     INV:I->O              1   0.511   0.693  XLXI_142 (XLXN_348)
+     begin scope: 'XLXI_143:I0'
+     LUT6:I0->O           16   0.097   0.752  O1 (O)
+     end scope: 'XLXI_143:O'
      LUT5:I0->O            1   0.097   0.295  B_MUX1/Mmux_Y11 (XLXN_6<0>)
      begin scope: 'XLXI_1:B<0>'
      LUT2:I1->O            1   0.097   0.000  Madd_n0010_Madd_lut<0> (Madd_n0010_Madd_lut<0>)
@@ -460,8 +478,8 @@ Delay:               6.451ns (Levels of Logic = 27)
      OR2:I1->O             1   0.107   0.279  XLXI_6 (CO_OBUF)
      OBUF:I->O                 0.000          CO_OBUF (CO)
     ----------------------------------------
-    Total                      6.451ns (2.042ns logic, 4.409ns route)
-                                       (31.7% logic, 68.3% route)
+    Total                      6.461ns (2.042ns logic, 4.419ns route)
+                                       (31.6% logic, 68.4% route)
 
 =========================================================================
 
@@ -472,13 +490,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.94 secs
+Total CPU time to Xst completion: 9.61 secs
  
 --> 
 
-Total memory usage is 4641092 kilobytes
+Total memory usage is 4641080 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   34 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

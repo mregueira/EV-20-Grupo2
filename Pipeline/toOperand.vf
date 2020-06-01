@@ -1,0 +1,300 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : toOperand.vf
+// /___/   /\     Timestamp : 06/01/2020 16:23:35
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toOperand.sch
+//Design Name: toOperand
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LATCH4_MUSER_toOperand(CLK, 
+                              CLR, 
+                              ENABLE, 
+                              INPUT, 
+                              OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [3:0] INPUT;
+   output [3:0] OUTPUT;
+   
+   
+   FDCE #( .INIT(1'b0) ) XLXI_8 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[0]), 
+                .Q(OUTPUT[0]));
+   FDCE #( .INIT(1'b0) ) XLXI_9 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[1]), 
+                .Q(OUTPUT[1]));
+   FDCE #( .INIT(1'b0) ) XLXI_10 (.C(CLK), 
+                 .CE(ENABLE), 
+                 .CLR(CLR), 
+                 .D(INPUT[2]), 
+                 .Q(OUTPUT[2]));
+   FDCE #( .INIT(1'b0) ) XLXI_12 (.C(CLK), 
+                 .CE(ENABLE), 
+                 .CLR(CLR), 
+                 .D(INPUT[3]), 
+                 .Q(OUTPUT[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH5_MUSER_toOperand(CLK, 
+                              CLR, 
+                              ENABLE, 
+                              INPUT, 
+                              OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [4:0] INPUT;
+   output [4:0] OUTPUT;
+   
+   
+   LATCH4_MUSER_toOperand  XLXI_1 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(INPUT[3:0]), 
+                                  .OUTPUT(OUTPUT[3:0]));
+   FDCE #( .INIT(1'b0) ) XLXI_4 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[4]), 
+                .Q(OUTPUT[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH6_MUSER_toOperand(CLK, 
+                              CLR, 
+                              ENABLE, 
+                              INPUT, 
+                              OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [5:0] INPUT;
+   output [5:0] OUTPUT;
+   
+   
+   LATCH5_MUSER_toOperand  XLXI_1 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(INPUT[4:0]), 
+                                  .OUTPUT(OUTPUT[4:0]));
+   FDCE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[5]), 
+                .Q(OUTPUT[5]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH10_MUSER_toOperand(CLK, 
+                               CLR, 
+                               ENABLE, 
+                               INPUT, 
+                               OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [9:0] INPUT;
+   output [9:0] OUTPUT;
+   
+   
+   LATCH6_MUSER_toOperand  XLXI_1 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(INPUT[5:0]), 
+                                  .OUTPUT(OUTPUT[5:0]));
+   LATCH4_MUSER_toOperand  XLXI_2 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(INPUT[9:6]), 
+                                  .OUTPUT(OUTPUT[9:6]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH1_MUSER_toOperand(CLK, 
+                              CLR, 
+                              ENABLE, 
+                              INPUT, 
+                              OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input INPUT;
+   output OUTPUT;
+   
+   
+   FDCE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT), 
+                .Q(OUTPUT));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH2_MUSER_toOperand(CLK, 
+                              CLR, 
+                              ENABLE, 
+                              INPUT, 
+                              OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [1:0] INPUT;
+   output [1:0] OUTPUT;
+   
+   
+   LATCH1_MUSER_toOperand  XLXI_1 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(INPUT[0]), 
+                                  .OUTPUT(OUTPUT[0]));
+   LATCH1_MUSER_toOperand  XLXI_2 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(INPUT[1]), 
+                                  .OUTPUT(OUTPUT[1]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH7_MUSER_toOperand(CLK, 
+                              CLR, 
+                              ENABLE, 
+                              INPUT, 
+                              OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [6:0] INPUT;
+   output [6:0] OUTPUT;
+   
+   
+   LATCH6_MUSER_toOperand  XLXI_1 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(INPUT[5:0]), 
+                                  .OUTPUT(OUTPUT[5:0]));
+   LATCH1_MUSER_toOperand  XLXI_2 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(INPUT[6]), 
+                                  .OUTPUT(OUTPUT[6]));
+endmodule
+`timescale 1ns / 1ps
+
+module toOperand(abusIN, 
+                 aluIN, 
+                 bbusIN, 
+                 cbusIN, 
+                 CLK, 
+                 CLR, 
+                 DAddIN, 
+                 ENABLE, 
+                 kmxIN, 
+                 memIN, 
+                 shIN, 
+                 typeIN, 
+                 abusOUT, 
+                 aluOUT, 
+                 bbusOUT, 
+                 cbusOUT, 
+                 DAddOUT, 
+                 kmxOUT, 
+                 memOUT, 
+                 shOUT, 
+                 typeOUT);
+
+    input [4:0] abusIN;
+    input [3:0] aluIN;
+    input [5:0] bbusIN;
+    input [5:0] cbusIN;
+    input CLK;
+    input CLR;
+    input [9:0] DAddIN;
+    input ENABLE;
+    input kmxIN;
+    input [1:0] memIN;
+    input [1:0] shIN;
+    input [6:0] typeIN;
+   output [4:0] abusOUT;
+   output [3:0] aluOUT;
+   output [5:0] bbusOUT;
+   output [5:0] cbusOUT;
+   output [9:0] DAddOUT;
+   output kmxOUT;
+   output [1:0] memOUT;
+   output [1:0] shOUT;
+   output [6:0] typeOUT;
+   
+   
+   LATCH4_MUSER_toOperand  ALU (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(aluIN[3:0]), 
+                               .OUTPUT(aluOUT[3:0]));
+   LATCH2_MUSER_toOperand  XLXI_2 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(shIN[1:0]), 
+                                  .OUTPUT(shOUT[1:0]));
+   LATCH1_MUSER_toOperand  XLXI_3 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(kmxIN), 
+                                  .OUTPUT(kmxOUT));
+   LATCH2_MUSER_toOperand  XLXI_4 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(memIN[1:0]), 
+                                  .OUTPUT(memOUT[1:0]));
+   LATCH6_MUSER_toOperand  XLXI_5 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(bbusIN[5:0]), 
+                                  .OUTPUT(bbusOUT[5:0]));
+   LATCH7_MUSER_toOperand  XLXI_6 (.CLK(CLK), 
+                                  .CLR(CLR), 
+                                  .ENABLE(ENABLE), 
+                                  .INPUT(typeIN[6:0]), 
+                                  .OUTPUT(typeOUT[6:0]));
+   LATCH6_MUSER_toOperand  XLXI_22 (.CLK(CLK), 
+                                   .CLR(CLR), 
+                                   .ENABLE(ENABLE), 
+                                   .INPUT(cbusIN[5:0]), 
+                                   .OUTPUT(cbusOUT[5:0]));
+   LATCH5_MUSER_toOperand  XLXI_23 (.CLK(CLK), 
+                                   .CLR(CLR), 
+                                   .ENABLE(ENABLE), 
+                                   .INPUT(abusIN[4:0]), 
+                                   .OUTPUT(abusOUT[4:0]));
+   LATCH10_MUSER_toOperand  XLXI_24 (.CLK(CLK), 
+                                    .CLR(CLR), 
+                                    .ENABLE(ENABLE), 
+                                    .INPUT(DAddIN[9:0]), 
+                                    .OUTPUT(DAddOUT[9:0]));
+endmodule

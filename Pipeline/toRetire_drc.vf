@@ -1,0 +1,186 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : toRetire_drc.vf
+// /___/   /\     Timestamp : 05/31/2020 19:02:48
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family artix7 -verilog toRetire_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/toRetire.sch
+//Design Name: toRetire
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LATCH4_MUSER_toRetire(CLK, 
+                             CLR, 
+                             ENABLE, 
+                             INPUT, 
+                             OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [3:0] INPUT;
+   output [3:0] OUTPUT;
+   
+   
+   LDCE #( .INIT(1'b0) ) XLXI_4 (.CLR(CLR), 
+                .D(INPUT[2]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[2]));
+   LDCE #( .INIT(1'b0) ) XLXI_5 (.CLR(CLR), 
+                .D(INPUT[3]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[3]));
+   LDCE #( .INIT(1'b0) ) XLXI_6 (.CLR(CLR), 
+                .D(INPUT[1]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[1]));
+   LDCE #( .INIT(1'b0) ) XLXI_7 (.CLR(CLR), 
+                .D(INPUT[0]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH5_MUSER_toRetire(CLK, 
+                             CLR, 
+                             ENABLE, 
+                             INPUT, 
+                             OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [4:0] INPUT;
+   output [4:0] OUTPUT;
+   
+   
+   LATCH4_MUSER_toRetire  XLXI_1 (.CLK(CLK), 
+                                 .CLR(CLR), 
+                                 .ENABLE(ENABLE), 
+                                 .INPUT(INPUT[3:0]), 
+                                 .OUTPUT(OUTPUT[3:0]));
+   LDCE #( .INIT(1'b0) ) XLXI_2 (.CLR(CLR), 
+                .D(INPUT[4]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH6_MUSER_toRetire(CLK, 
+                             CLR, 
+                             ENABLE, 
+                             INPUT, 
+                             OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [5:0] INPUT;
+   output [5:0] OUTPUT;
+   
+   
+   LATCH5_MUSER_toRetire  XLXI_1 (.CLK(CLK), 
+                                 .CLR(CLR), 
+                                 .ENABLE(ENABLE), 
+                                 .INPUT(INPUT[4:0]), 
+                                 .OUTPUT(OUTPUT[4:0]));
+   LDCE #( .INIT(1'b0) ) XLXI_2 (.CLR(CLR), 
+                .D(INPUT[5]), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q(OUTPUT[5]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH1_MUSER_toRetire(CLK, 
+                             CLR, 
+                             ENABLE, 
+                             INPUT, 
+                             OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input INPUT;
+   output OUTPUT;
+   
+   
+   LDCE #( .INIT(1'b0) ) XLXI_1 (.CLR(CLR), 
+                .D(INPUT), 
+                .G(CLK), 
+                .GE(ENABLE), 
+                .Q());
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH7_MUSER_toRetire(CLK, 
+                             CLR, 
+                             ENABLE, 
+                             INPUT, 
+                             OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [6:0] INPUT;
+   output [6:0] OUTPUT;
+   
+   wire XLXN_3;
+   
+   LATCH6_MUSER_toRetire  XLXI_1 (.CLK(CLK), 
+                                 .CLR(CLR), 
+                                 .ENABLE(XLXN_3), 
+                                 .INPUT(INPUT[5:0]), 
+                                 .OUTPUT(OUTPUT[5:0]));
+   LATCH1_MUSER_toRetire  XLXI_2 (.CLK(CLK), 
+                                 .CLR(CLR), 
+                                 .ENABLE(ENABLE), 
+                                 .INPUT(INPUT[6]), 
+                                 .OUTPUT(OUTPUT[6]));
+endmodule
+`timescale 1ns / 1ps
+
+module toRetire(cbusIN, 
+                CLK, 
+                CLR, 
+                ENABLE, 
+                typeIN, 
+                cbusOUTret, 
+                typeOUTret);
+
+    input [5:0] cbusIN;
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [6:0] typeIN;
+   output [5:0] cbusOUTret;
+   output [6:0] typeOUTret;
+   
+   
+   LATCH7_MUSER_toRetire  XLXI_1 (.CLK(CLK), 
+                                 .CLR(CLR), 
+                                 .ENABLE(ENABLE), 
+                                 .INPUT(typeIN[6:0]), 
+                                 .OUTPUT(typeOUTret[6:0]));
+   LATCH6_MUSER_toRetire  XLXI_2 (.CLK(CLK), 
+                                 .CLR(CLR), 
+                                 .ENABLE(ENABLE), 
+                                 .INPUT(cbusIN[5:0]), 
+                                 .OUTPUT(cbusOUTret[5:0]));
+endmodule

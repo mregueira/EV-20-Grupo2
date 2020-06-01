@@ -1,0 +1,72 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : COMP5_drc.vf
+// /___/   /\     Timestamp : 05/30/2020 18:13:52
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family artix7 -verilog COMP5_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP5.sch
+//Design Name: COMP5
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module COMP4_HXILINX_COMP5 (EQ, A0, A1, A2, A3, B0, B1, B2, B3);
+    
+
+   output EQ;
+
+   input A0;
+   input A1;
+   input A2;
+   input A3;
+   input B0;
+   input B1;
+   input B2;
+   input B3;
+
+   assign EQ = ((A0==B0) && (A1==B1) && (A2==B2) && (A3==B3)) ;
+
+endmodule
+`timescale 1ns / 1ps
+
+module COMP5(A, 
+             B, 
+             equal);
+
+    input [4:0] A;
+    input [4:0] B;
+   output equal;
+   
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   COMP4_HXILINX_COMP5  XLXI_1 (.A0(A[0]), 
+                               .A1(A[1]), 
+                               .A2(A[2]), 
+                               .A3(A[3]), 
+                               .B0(B[0]), 
+                               .B1(B[1]), 
+                               .B2(B[2]), 
+                               .B3(B[3]), 
+                               .EQ(XLXN_15));
+   XOR2  XLXI_2 (.I0(B[4]), 
+                .I1(A[4]), 
+                .O(XLXN_13));
+   INV  XLXI_3 (.I(XLXN_13), 
+               .O(XLXN_14));
+   AND2  XLXI_4 (.I0(XLXN_14), 
+                .I1(XLXN_15), 
+                .O(equal));
+endmodule

@@ -1,0 +1,91 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : COMP5.vf
+// /___/   /\     Timestamp : 06/01/2020 15:19:22
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP5.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/COMP5.sch
+//Design Name: COMP5
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module COMP4_MUSER_COMP5(A0, 
+                         A1, 
+                         A2, 
+                         A3, 
+                         B0, 
+                         B1, 
+                         B2, 
+                         B3, 
+                         EQ);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+   output EQ;
+   
+   wire AB0;
+   wire AB1;
+   wire AB2;
+   wire AB3;
+   
+   AND4  I_36_32 (.I0(AB3), 
+                 .I1(AB2), 
+                 .I2(AB1), 
+                 .I3(AB0), 
+                 .O(EQ));
+   XNOR2  I_36_33 (.I0(B2), 
+                  .I1(A2), 
+                  .O(AB2));
+   XNOR2  I_36_34 (.I0(B3), 
+                  .I1(A3), 
+                  .O(AB3));
+   XNOR2  I_36_42 (.I0(B1), 
+                  .I1(A1), 
+                  .O(AB1));
+   XNOR2  I_36_43 (.I0(B0), 
+                  .I1(A0), 
+                  .O(AB0));
+endmodule
+`timescale 1ns / 1ps
+
+module COMP5(A, 
+             B, 
+             equal);
+
+    input [4:0] A;
+    input [4:0] B;
+   output equal;
+   
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   
+   XOR2  XLXI_2 (.I0(B[4]), 
+                .I1(A[4]), 
+                .O(XLXN_13));
+   INV  XLXI_3 (.I(XLXN_13), 
+               .O(XLXN_14));
+   AND2  XLXI_4 (.I0(XLXN_14), 
+                .I1(XLXN_15), 
+                .O(equal));
+   COMP4_MUSER_COMP5  XLXI_5 (.a(A[3:0]), 
+                             .b(B[3:0]), 
+                             .eq(XLXN_15));
+endmodule

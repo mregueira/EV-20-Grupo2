@@ -1,0 +1,7 @@
+[Inputs]
+[Outputs]
+clock_signal
+[BiDir]
+[ATTRIBUTES]
+VeriModel clock_for_testing
+

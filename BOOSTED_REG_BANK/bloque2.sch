@@ -6,7 +6,6 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="R0(15:0)" />
         <signal name="R1(15:0)" />
         <signal name="R2(15:0)" />
         <signal name="R3(15:0)" />
@@ -74,7 +73,6 @@
         <signal name="WOUTPORT1" />
         <signal name="WAUX0" />
         <signal name="WAUX1" />
-        <signal name="WREG_C" />
         <signal name="IN_WORK_REG(15:0)" />
         <signal name="TO_FROM_W(15:0)" />
         <signal name="MR" />
@@ -84,7 +82,8 @@
         <signal name="WR_WREG_C" />
         <signal name="MW" />
         <signal name="CLK" />
-        <port polarity="Output" name="R0(15:0)" />
+        <signal name="WREG_FROM_C(15:0)" />
+        <signal name="R0(15:0)" />
         <port polarity="Output" name="R1(15:0)" />
         <port polarity="Output" name="R2(15:0)" />
         <port polarity="Output" name="R3(15:0)" />
@@ -157,8 +156,119 @@
         <port polarity="Input" name="MR" />
         <port polarity="Input" name="FROM_WREG(15:0)" />
         <port polarity="Output" name="WR_WORK_REG" />
+        <port polarity="Output" name="WR_WREG_C" />
         <port polarity="Input" name="MW" />
         <port polarity="Input" name="CLK" />
+        <port polarity="Output" name="R0(15:0)" />
+        <blockdef name="demux6b_w_en">
+            <timestamp>2020-5-30T1:18:24</timestamp>
+            <rect width="256" x="64" y="-4096" height="4096" />
+            <line x2="0" y1="-4064" y2="-4064" x1="64" />
+            <line x2="0" y1="-2048" y2="-2048" x1="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-4064" y2="-4064" x1="320" />
+            <line x2="384" y1="-4000" y2="-4000" x1="320" />
+            <line x2="384" y1="-3936" y2="-3936" x1="320" />
+            <line x2="384" y1="-3872" y2="-3872" x1="320" />
+            <line x2="384" y1="-3808" y2="-3808" x1="320" />
+            <line x2="384" y1="-3744" y2="-3744" x1="320" />
+            <line x2="384" y1="-3680" y2="-3680" x1="320" />
+            <line x2="384" y1="-3616" y2="-3616" x1="320" />
+            <line x2="384" y1="-3552" y2="-3552" x1="320" />
+            <line x2="384" y1="-3488" y2="-3488" x1="320" />
+            <line x2="384" y1="-3424" y2="-3424" x1="320" />
+            <line x2="384" y1="-3360" y2="-3360" x1="320" />
+            <line x2="384" y1="-3296" y2="-3296" x1="320" />
+            <line x2="384" y1="-3232" y2="-3232" x1="320" />
+            <line x2="384" y1="-3168" y2="-3168" x1="320" />
+            <line x2="384" y1="-3104" y2="-3104" x1="320" />
+            <line x2="384" y1="-3040" y2="-3040" x1="320" />
+            <line x2="384" y1="-2976" y2="-2976" x1="320" />
+            <line x2="384" y1="-2912" y2="-2912" x1="320" />
+            <line x2="384" y1="-2848" y2="-2848" x1="320" />
+            <line x2="384" y1="-2784" y2="-2784" x1="320" />
+            <line x2="384" y1="-2720" y2="-2720" x1="320" />
+            <line x2="384" y1="-2656" y2="-2656" x1="320" />
+            <line x2="384" y1="-2592" y2="-2592" x1="320" />
+            <line x2="384" y1="-2528" y2="-2528" x1="320" />
+            <line x2="384" y1="-2464" y2="-2464" x1="320" />
+            <line x2="384" y1="-2400" y2="-2400" x1="320" />
+            <line x2="384" y1="-2336" y2="-2336" x1="320" />
+            <line x2="384" y1="-2272" y2="-2272" x1="320" />
+            <line x2="384" y1="-2208" y2="-2208" x1="320" />
+            <line x2="384" y1="-2144" y2="-2144" x1="320" />
+            <line x2="384" y1="-2080" y2="-2080" x1="320" />
+            <line x2="384" y1="-2016" y2="-2016" x1="320" />
+            <line x2="384" y1="-1952" y2="-1952" x1="320" />
+            <line x2="384" y1="-1888" y2="-1888" x1="320" />
+            <line x2="384" y1="-1824" y2="-1824" x1="320" />
+            <line x2="384" y1="-1760" y2="-1760" x1="320" />
+            <line x2="384" y1="-1696" y2="-1696" x1="320" />
+            <line x2="384" y1="-1632" y2="-1632" x1="320" />
+            <line x2="384" y1="-1568" y2="-1568" x1="320" />
+            <line x2="384" y1="-1504" y2="-1504" x1="320" />
+            <line x2="384" y1="-1440" y2="-1440" x1="320" />
+            <line x2="384" y1="-1376" y2="-1376" x1="320" />
+            <line x2="384" y1="-1312" y2="-1312" x1="320" />
+            <line x2="384" y1="-1248" y2="-1248" x1="320" />
+            <line x2="384" y1="-1184" y2="-1184" x1="320" />
+            <line x2="384" y1="-1120" y2="-1120" x1="320" />
+            <line x2="384" y1="-1056" y2="-1056" x1="320" />
+            <line x2="384" y1="-992" y2="-992" x1="320" />
+            <line x2="384" y1="-928" y2="-928" x1="320" />
+            <line x2="384" y1="-864" y2="-864" x1="320" />
+            <line x2="384" y1="-800" y2="-800" x1="320" />
+            <line x2="384" y1="-736" y2="-736" x1="320" />
+            <line x2="384" y1="-672" y2="-672" x1="320" />
+            <line x2="384" y1="-608" y2="-608" x1="320" />
+            <line x2="384" y1="-544" y2="-544" x1="320" />
+            <line x2="384" y1="-480" y2="-480" x1="320" />
+            <line x2="384" y1="-416" y2="-416" x1="320" />
+            <line x2="384" y1="-352" y2="-352" x1="320" />
+            <line x2="384" y1="-288" y2="-288" x1="320" />
+            <line x2="384" y1="-224" y2="-224" x1="320" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+        </blockdef>
+        <blockdef name="reg_to_bus_1bit_sel">
+            <timestamp>2020-5-28T13:12:56</timestamp>
+            <rect width="256" x="64" y="-192" height="192" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <rect width="64" x="0" y="-108" height="24" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="320" y="-172" height="24" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+        </blockdef>
+        <blockdef name="bidir_port">
+            <timestamp>2020-5-30T18:27:44</timestamp>
+            <line x2="0" y1="32" y2="32" x1="64" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="400" y="-172" height="24" />
+            <line x2="464" y1="-160" y2="-160" x1="400" />
+            <rect width="64" x="400" y="-44" height="24" />
+            <line x2="464" y1="-32" y2="-32" x1="400" />
+            <rect width="336" x="64" y="-192" height="256" />
+        </blockdef>
+        <blockdef name="m2_1">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="96" y1="-64" y2="-192" x1="96" />
+            <line x2="96" y1="-96" y2="-64" x1="256" />
+            <line x2="256" y1="-160" y2="-96" x1="256" />
+            <line x2="256" y1="-192" y2="-160" x1="96" />
+            <line x2="96" y1="-32" y2="-32" x1="176" />
+            <line x2="176" y1="-80" y2="-32" x1="176" />
+            <line x2="96" y1="-32" y2="-32" x1="0" />
+            <line x2="256" y1="-128" y2="-128" x1="320" />
+            <line x2="96" y1="-96" y2="-96" x1="0" />
+            <line x2="96" y1="-160" y2="-160" x1="0" />
+        </blockdef>
         <blockdef name="demux_bus16b_sel6b">
             <timestamp>2020-5-29T23:37:32</timestamp>
             <rect width="320" x="64" y="-4096" height="4096" />
@@ -295,183 +405,6 @@
             <rect width="64" x="384" y="-44" height="24" />
             <line x2="448" y1="-32" y2="-32" x1="384" />
         </blockdef>
-        <blockdef name="demux6b_w_en">
-            <timestamp>2020-5-30T1:18:24</timestamp>
-            <rect width="256" x="64" y="-4096" height="4096" />
-            <line x2="0" y1="-4064" y2="-4064" x1="64" />
-            <line x2="0" y1="-2048" y2="-2048" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="384" y1="-4064" y2="-4064" x1="320" />
-            <line x2="384" y1="-4000" y2="-4000" x1="320" />
-            <line x2="384" y1="-3936" y2="-3936" x1="320" />
-            <line x2="384" y1="-3872" y2="-3872" x1="320" />
-            <line x2="384" y1="-3808" y2="-3808" x1="320" />
-            <line x2="384" y1="-3744" y2="-3744" x1="320" />
-            <line x2="384" y1="-3680" y2="-3680" x1="320" />
-            <line x2="384" y1="-3616" y2="-3616" x1="320" />
-            <line x2="384" y1="-3552" y2="-3552" x1="320" />
-            <line x2="384" y1="-3488" y2="-3488" x1="320" />
-            <line x2="384" y1="-3424" y2="-3424" x1="320" />
-            <line x2="384" y1="-3360" y2="-3360" x1="320" />
-            <line x2="384" y1="-3296" y2="-3296" x1="320" />
-            <line x2="384" y1="-3232" y2="-3232" x1="320" />
-            <line x2="384" y1="-3168" y2="-3168" x1="320" />
-            <line x2="384" y1="-3104" y2="-3104" x1="320" />
-            <line x2="384" y1="-3040" y2="-3040" x1="320" />
-            <line x2="384" y1="-2976" y2="-2976" x1="320" />
-            <line x2="384" y1="-2912" y2="-2912" x1="320" />
-            <line x2="384" y1="-2848" y2="-2848" x1="320" />
-            <line x2="384" y1="-2784" y2="-2784" x1="320" />
-            <line x2="384" y1="-2720" y2="-2720" x1="320" />
-            <line x2="384" y1="-2656" y2="-2656" x1="320" />
-            <line x2="384" y1="-2592" y2="-2592" x1="320" />
-            <line x2="384" y1="-2528" y2="-2528" x1="320" />
-            <line x2="384" y1="-2464" y2="-2464" x1="320" />
-            <line x2="384" y1="-2400" y2="-2400" x1="320" />
-            <line x2="384" y1="-2336" y2="-2336" x1="320" />
-            <line x2="384" y1="-2272" y2="-2272" x1="320" />
-            <line x2="384" y1="-2208" y2="-2208" x1="320" />
-            <line x2="384" y1="-2144" y2="-2144" x1="320" />
-            <line x2="384" y1="-2080" y2="-2080" x1="320" />
-            <line x2="384" y1="-2016" y2="-2016" x1="320" />
-            <line x2="384" y1="-1952" y2="-1952" x1="320" />
-            <line x2="384" y1="-1888" y2="-1888" x1="320" />
-            <line x2="384" y1="-1824" y2="-1824" x1="320" />
-            <line x2="384" y1="-1760" y2="-1760" x1="320" />
-            <line x2="384" y1="-1696" y2="-1696" x1="320" />
-            <line x2="384" y1="-1632" y2="-1632" x1="320" />
-            <line x2="384" y1="-1568" y2="-1568" x1="320" />
-            <line x2="384" y1="-1504" y2="-1504" x1="320" />
-            <line x2="384" y1="-1440" y2="-1440" x1="320" />
-            <line x2="384" y1="-1376" y2="-1376" x1="320" />
-            <line x2="384" y1="-1312" y2="-1312" x1="320" />
-            <line x2="384" y1="-1248" y2="-1248" x1="320" />
-            <line x2="384" y1="-1184" y2="-1184" x1="320" />
-            <line x2="384" y1="-1120" y2="-1120" x1="320" />
-            <line x2="384" y1="-1056" y2="-1056" x1="320" />
-            <line x2="384" y1="-992" y2="-992" x1="320" />
-            <line x2="384" y1="-928" y2="-928" x1="320" />
-            <line x2="384" y1="-864" y2="-864" x1="320" />
-            <line x2="384" y1="-800" y2="-800" x1="320" />
-            <line x2="384" y1="-736" y2="-736" x1="320" />
-            <line x2="384" y1="-672" y2="-672" x1="320" />
-            <line x2="384" y1="-608" y2="-608" x1="320" />
-            <line x2="384" y1="-544" y2="-544" x1="320" />
-            <line x2="384" y1="-480" y2="-480" x1="320" />
-            <line x2="384" y1="-416" y2="-416" x1="320" />
-            <line x2="384" y1="-352" y2="-352" x1="320" />
-            <line x2="384" y1="-288" y2="-288" x1="320" />
-            <line x2="384" y1="-224" y2="-224" x1="320" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
-            <line x2="384" y1="-96" y2="-96" x1="320" />
-            <line x2="384" y1="-32" y2="-32" x1="320" />
-        </blockdef>
-        <blockdef name="reg_to_bus_1bit_sel">
-            <timestamp>2020-5-28T13:12:56</timestamp>
-            <rect width="256" x="64" y="-192" height="192" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <rect width="64" x="0" y="-108" height="24" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="320" y="-172" height="24" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
-        </blockdef>
-        <blockdef name="bidir_port">
-            <timestamp>2020-5-30T18:27:44</timestamp>
-            <line x2="0" y1="32" y2="32" x1="64" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="400" y="-172" height="24" />
-            <line x2="464" y1="-160" y2="-160" x1="400" />
-            <rect width="64" x="400" y="-44" height="24" />
-            <line x2="464" y1="-32" y2="-32" x1="400" />
-            <rect width="336" x="64" y="-192" height="256" />
-        </blockdef>
-        <blockdef name="m2_1">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="96" y1="-64" y2="-192" x1="96" />
-            <line x2="96" y1="-96" y2="-64" x1="256" />
-            <line x2="256" y1="-160" y2="-96" x1="256" />
-            <line x2="256" y1="-192" y2="-160" x1="96" />
-            <line x2="96" y1="-32" y2="-32" x1="176" />
-            <line x2="176" y1="-80" y2="-32" x1="176" />
-            <line x2="96" y1="-32" y2="-32" x1="0" />
-            <line x2="256" y1="-128" y2="-128" x1="320" />
-            <line x2="96" y1="-96" y2="-96" x1="0" />
-            <line x2="96" y1="-160" y2="-160" x1="0" />
-        </blockdef>
-        <block symbolname="demux_bus16b_sel6b" name="XLXI_7">
-            <blockpin signalname="FROM_BUS(15:0)" name="FROM_BUS(15:0)" />
-            <blockpin signalname="C(5:0)" name="SEL(5:0)" />
-            <blockpin signalname="R0(15:0)" name="R0(15:0)" />
-            <blockpin signalname="R1(15:0)" name="R1(15:0)" />
-            <blockpin signalname="R2(15:0)" name="R2(15:0)" />
-            <blockpin signalname="R3(15:0)" name="R3(15:0)" />
-            <blockpin signalname="R4(15:0)" name="R4(15:0)" />
-            <blockpin signalname="R5(15:0)" name="R5(15:0)" />
-            <blockpin signalname="R6(15:0)" name="R6(15:0)" />
-            <blockpin signalname="R7(15:0)" name="R7(15:0)" />
-            <blockpin signalname="R8(15:0)" name="R8(15:0)" />
-            <blockpin signalname="R9(15:0)" name="R9(15:0)" />
-            <blockpin signalname="R10(15:0)" name="R10(15:0)" />
-            <blockpin signalname="R11(15:0)" name="R11(15:0)" />
-            <blockpin signalname="R12(15:0)" name="R12(15:0)" />
-            <blockpin signalname="R13(15:0)" name="R13(15:0)" />
-            <blockpin signalname="R14(15:0)" name="R14(15:0)" />
-            <blockpin signalname="R15(15:0)" name="R15(15:0)" />
-            <blockpin signalname="R16(15:0)" name="R16(15:0)" />
-            <blockpin signalname="R17(15:0)" name="R17(15:0)" />
-            <blockpin signalname="R18(15:0)" name="R18(15:0)" />
-            <blockpin signalname="R19(15:0)" name="R19(15:0)" />
-            <blockpin signalname="R20(15:0)" name="R20(15:0)" />
-            <blockpin signalname="R21(15:0)" name="R21(15:0)" />
-            <blockpin signalname="R22(15:0)" name="R22(15:0)" />
-            <blockpin signalname="R23(15:0)" name="R23(15:0)" />
-            <blockpin signalname="R24(15:0)" name="R24(15:0)" />
-            <blockpin signalname="R25(15:0)" name="R25(15:0)" />
-            <blockpin signalname="R26(15:0)" name="R26(15:0)" />
-            <blockpin signalname="R27(15:0)" name="R27(15:0)" />
-            <blockpin name="R28(15:0)" />
-            <blockpin name="R29(15:0)" />
-            <blockpin signalname="OUTPORT0(15:0)" name="R30(15:0)" />
-            <blockpin signalname="OUTPORT1(15:0)" name="R31(15:0)" />
-            <blockpin signalname="AUX0(15:0)" name="R32(15:0)" />
-            <blockpin signalname="AUX1(15:0)" name="R33(15:0)" />
-            <blockpin signalname="WREG_C" name="R34(15:0)" />
-            <blockpin name="R35(15:0)" />
-            <blockpin name="R36(15:0)" />
-            <blockpin name="R37(15:0)" />
-            <blockpin name="R38(15:0)" />
-            <blockpin name="R39(15:0)" />
-            <blockpin name="R40(15:0)" />
-            <blockpin name="R41(15:0)" />
-            <blockpin name="R42(15:0)" />
-            <blockpin name="R43(15:0)" />
-            <blockpin name="R44(15:0)" />
-            <blockpin name="R45(15:0)" />
-            <blockpin name="R46(15:0)" />
-            <blockpin name="R47(15:0)" />
-            <blockpin name="R48(15:0)" />
-            <blockpin name="R49(15:0)" />
-            <blockpin name="R50(15:0)" />
-            <blockpin name="R51(15:0)" />
-            <blockpin name="R52(15:0)" />
-            <blockpin name="R53(15:0)" />
-            <blockpin name="R54(15:0)" />
-            <blockpin name="R55(15:0)" />
-            <blockpin name="R56(15:0)" />
-            <blockpin name="R57(15:0)" />
-            <blockpin name="R58(15:0)" />
-            <blockpin name="R59(15:0)" />
-            <blockpin name="R60(15:0)" />
-            <blockpin name="R61(15:0)" />
-            <blockpin name="R62(15:0)" />
-            <blockpin name="R63(15:0)" />
-        </block>
         <block symbolname="demux6b_w_en" name="XLXI_8">
             <blockpin signalname="ENABLE" name="ENABLE" />
             <blockpin signalname="WRITE_DEMUX" name="x" />
@@ -543,7 +476,7 @@
         </block>
         <block symbolname="reg_to_bus_1bit_sel" name="XLXI_11">
             <blockpin signalname="MW" name="SEL_BUS" />
-            <blockpin signalname="WREG_C" name="R0(15:0)" />
+            <blockpin signalname="WREG_FROM_C(15:0)" name="R0(15:0)" />
             <blockpin signalname="to_wreg(15:0)" name="R1(15:0)" />
             <blockpin signalname="IN_WORK_REG(15:0)" name="TO_BUS(15:0)" />
         </block>
@@ -561,12 +494,76 @@
             <blockpin signalname="MW" name="S0" />
             <blockpin signalname="WR_WORK_REG" name="O" />
         </block>
+        <block symbolname="demux_bus16b_sel6b" name="XLXI_19">
+            <blockpin signalname="FROM_BUS(15:0)" name="FROM_BUS(15:0)" />
+            <blockpin signalname="C(5:0)" name="SEL(5:0)" />
+            <blockpin signalname="R0(15:0)" name="R0(15:0)" />
+            <blockpin signalname="R1(15:0)" name="R1(15:0)" />
+            <blockpin signalname="R2(15:0)" name="R2(15:0)" />
+            <blockpin signalname="R3(15:0)" name="R3(15:0)" />
+            <blockpin signalname="R4(15:0)" name="R4(15:0)" />
+            <blockpin signalname="R5(15:0)" name="R5(15:0)" />
+            <blockpin signalname="R6(15:0)" name="R6(15:0)" />
+            <blockpin signalname="R7(15:0)" name="R7(15:0)" />
+            <blockpin signalname="R8(15:0)" name="R8(15:0)" />
+            <blockpin signalname="R9(15:0)" name="R9(15:0)" />
+            <blockpin signalname="R10(15:0)" name="R10(15:0)" />
+            <blockpin signalname="R11(15:0)" name="R11(15:0)" />
+            <blockpin signalname="R12(15:0)" name="R12(15:0)" />
+            <blockpin signalname="R13(15:0)" name="R13(15:0)" />
+            <blockpin signalname="R14(15:0)" name="R14(15:0)" />
+            <blockpin signalname="R15(15:0)" name="R15(15:0)" />
+            <blockpin signalname="R16(15:0)" name="R16(15:0)" />
+            <blockpin signalname="R17(15:0)" name="R17(15:0)" />
+            <blockpin signalname="R18(15:0)" name="R18(15:0)" />
+            <blockpin signalname="R19(15:0)" name="R19(15:0)" />
+            <blockpin signalname="R20(15:0)" name="R20(15:0)" />
+            <blockpin signalname="R21(15:0)" name="R21(15:0)" />
+            <blockpin signalname="R22(15:0)" name="R22(15:0)" />
+            <blockpin signalname="R23(15:0)" name="R23(15:0)" />
+            <blockpin signalname="R24(15:0)" name="R24(15:0)" />
+            <blockpin signalname="R25(15:0)" name="R25(15:0)" />
+            <blockpin signalname="R26(15:0)" name="R26(15:0)" />
+            <blockpin signalname="R27(15:0)" name="R27(15:0)" />
+            <blockpin name="R28(15:0)" />
+            <blockpin name="R29(15:0)" />
+            <blockpin signalname="OUTPORT0(15:0)" name="R30(15:0)" />
+            <blockpin signalname="OUTPORT1(15:0)" name="R31(15:0)" />
+            <blockpin signalname="AUX0(15:0)" name="R32(15:0)" />
+            <blockpin signalname="AUX1(15:0)" name="R33(15:0)" />
+            <blockpin signalname="WREG_FROM_C(15:0)" name="R34(15:0)" />
+            <blockpin name="R35(15:0)" />
+            <blockpin name="R36(15:0)" />
+            <blockpin name="R37(15:0)" />
+            <blockpin name="R38(15:0)" />
+            <blockpin name="R39(15:0)" />
+            <blockpin name="R40(15:0)" />
+            <blockpin name="R41(15:0)" />
+            <blockpin name="R42(15:0)" />
+            <blockpin name="R43(15:0)" />
+            <blockpin name="R44(15:0)" />
+            <blockpin name="R45(15:0)" />
+            <blockpin name="R46(15:0)" />
+            <blockpin name="R47(15:0)" />
+            <blockpin name="R48(15:0)" />
+            <blockpin name="R49(15:0)" />
+            <blockpin name="R50(15:0)" />
+            <blockpin name="R51(15:0)" />
+            <blockpin name="R52(15:0)" />
+            <blockpin name="R53(15:0)" />
+            <blockpin name="R54(15:0)" />
+            <blockpin name="R55(15:0)" />
+            <blockpin name="R56(15:0)" />
+            <blockpin name="R57(15:0)" />
+            <blockpin name="R58(15:0)" />
+            <blockpin name="R59(15:0)" />
+            <blockpin name="R60(15:0)" />
+            <blockpin name="R61(15:0)" />
+            <blockpin name="R62(15:0)" />
+            <blockpin name="R63(15:0)" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="7040" height="5440">
-        <branch name="R0(15:0)">
-            <wire x2="1584" y1="736" y2="736" x1="1552" />
-        </branch>
-        <iomarker fontsize="28" x="1584" y="736" name="R0(15:0)" orien="R0" />
         <branch name="R1(15:0)">
             <wire x2="1584" y1="800" y2="800" x1="1552" />
         </branch>
@@ -677,8 +674,6 @@
         <branch name="FROM_BUS(15:0)">
             <wire x2="1104" y1="736" y2="736" x1="1040" />
         </branch>
-        <instance x="1104" y="4800" name="XLXI_7" orien="R0">
-        </instance>
         <iomarker fontsize="28" x="1040" y="736" name="FROM_BUS(15:0)" orien="R180" />
         <branch name="C(5:0)">
             <wire x2="1104" y1="2752" y2="2752" x1="960" />
@@ -844,14 +839,6 @@
         <iomarker fontsize="28" x="2656" y="2640" name="WAUX1" orien="R0" />
         <instance x="1600" y="336" name="XLXI_11" orien="R0">
         </instance>
-        <branch name="WREG_C">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1584" y="2912" type="branch" />
-            <wire x2="1584" y1="2912" y2="2912" x1="1552" />
-        </branch>
-        <branch name="WREG_C">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1552" y="240" type="branch" />
-            <wire x2="1600" y1="240" y2="240" x1="1552" />
-        </branch>
         <iomarker fontsize="28" x="960" y="2752" name="C(5:0)" orien="R180" />
         <branch name="IN_WORK_REG(15:0)">
             <wire x2="2064" y1="176" y2="176" x1="1984" />
@@ -887,7 +874,6 @@
         </branch>
         <iomarker fontsize="28" x="1952" y="464" name="WR_WORK_REG" orien="R0" />
         <branch name="WR_WREG_C">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2656" y="2704" type="branch" />
             <wire x2="2656" y1="2704" y2="2704" x1="2608" />
         </branch>
         <branch name="WR_WREG_C">
@@ -913,5 +899,20 @@
         </branch>
         <iomarker fontsize="28" x="480" y="384" name="CLK" orien="R180" />
         <iomarker fontsize="28" x="1088" y="512" name="TO_FROM_W(15:0)" orien="R180" />
+        <branch name="WREG_FROM_C(15:0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1584" y="2912" type="branch" />
+            <wire x2="1584" y1="2912" y2="2912" x1="1552" />
+        </branch>
+        <iomarker fontsize="28" x="2656" y="2704" name="WR_WREG_C" orien="R0" />
+        <branch name="R0(15:0)">
+            <wire x2="1584" y1="736" y2="736" x1="1552" />
+        </branch>
+        <iomarker fontsize="28" x="1584" y="736" name="R0(15:0)" orien="R0" />
+        <instance x="1104" y="4800" name="XLXI_19" orien="R0">
+        </instance>
+        <branch name="WREG_FROM_C(15:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1536" y="240" type="branch" />
+            <wire x2="1600" y1="240" y2="240" x1="1536" />
+        </branch>
     </sheet>
 </drawing>

@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\EV-20-Grupo2\BOOSTED_REG_BANK\demux2b_w_en_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux2b_w_en_isim_beh.wdb 
+Running: C:\EV-20-Grupo2\BOOSTED_REG_BANK\test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/EV-20-Grupo2/BOOSTED_REG_BANK/test_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,37 +11,13 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /demux2b_w_en/ENABLE 0 -radix unsigned
-# isim force add /demux2b_w_en/ENABLE 0 -radix unsigned
-# isim force add /demux2b_w_en/SEL 1 -radix unsigned
-# isim force add /demux2b_w_en/SEL 1 -radix unsigned
-# isim force add /demux2b_w_en/x 1 -radix unsigned
-# isim force add /demux2b_w_en/x 1 -radix unsigned
-# run all
-# isim force add /demux2b_w_en/SEL 0 -radix unsigned
-# isim force add /demux2b_w_en/SEL 0 -radix unsigned
-# run all
-# isim force add /demux2b_w_en/SEL 2 -radix unsigned
-# isim force add /demux2b_w_en/SEL 2 -radix unsigned
-# run all
-# isim force add /demux2b_w_en/SEL 3 -radix unsigned
-# isim force add /demux2b_w_en/SEL 3 -radix unsigned
-# run all
-# run all
-# isim force add /demux2b_w_en/ENABLE 1 -radix unsigned
-# isim force add /demux2b_w_en/ENABLE 1 -radix unsigned
-# isim force add /demux2b_w_en/SEL 0 -radix unsigned
-# isim force add /demux2b_w_en/SEL 0 -radix unsigned
-# run all
-# isim force add /demux2b_w_en/SEL 1 -radix unsigned
-# isim force add /demux2b_w_en/SEL 1 -radix unsigned
-# run all
-# isim force add /demux2b_w_en/SEL 2 -radix unsigned
-# isim force add /demux2b_w_en/SEL 2 -radix unsigned
-# run all
-# isim force add /demux2b_w_en/SEL 3 -radix unsigned
-# isim force add /demux2b_w_en/SEL 3 -radix unsigned
-# run all
-# isim force add /demux2b_w_en/SEL 0 -radix unsigned
-# isim force add /demux2b_w_en/SEL 0 -radix unsigned
-# run all
+# isim force add /test/CLK 1 -radix unsigned -value 0 -radix unsigned -time 50 ns -repeat 100 ns
+# isim force add /test/CLK 1 -radix unsigned -value 0 -radix unsigned -time 50 ns -repeat 100 ns
+# run 1.00us
+# isim force add /test/C_SEL 34 -radix unsigned
+# isim force add /test/C_SEL 34 -radix unsigned
+# isim force add /test/SEL_A 34 -radix unsigned
+# isim force add /test/SEL_A 34 -radix unsigned
+# isim force add /test/SEL_B 34 -radix unsigned
+# isim force add /test/SEL_B 34 -radix unsigned
+# run 1.00us

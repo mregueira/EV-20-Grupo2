@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MROM.vf
+// /___/   /\     Timestamp : 06/02/2020 16:34:52
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath "C:/Users/PC 64/Desktop/Luciano Games/IK Electronic Engineering/Electronica V/MicroinstructionROM/ipcore_dir" -intstyle ise -family artix7 -verilog "C:/Users/PC 64/Desktop/Luciano Games/IK Electronic Engineering/Electronica V/MicroinstructionROM/MROM.vf" -w "C:/Users/PC 64/Desktop/Luciano Games/IK Electronic Engineering/Electronica V/MicroinstructionROM/MROM.sch"
+//Design Name: MROM
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MROM(Bus_B, 
+            CLK_ROM, 
+            ROM_RESET, 
+            MROM_OUT);
+
+    input [6:0] Bus_B;
+    input CLK_ROM;
+    input ROM_RESET;
+   output [27:0] MROM_OUT;
+   
+   
+   MicroinstructionROM  XLXI_7 (.a(Bus_B[6:0]), 
+                               .clk(CLK_ROM), 
+                               .qspo_rst(ROM_RESET), 
+                               .qspo(MROM_OUT[27:0]));
+endmodule

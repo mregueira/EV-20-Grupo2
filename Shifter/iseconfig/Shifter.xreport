@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-05-30T11:47:45</DateModified>
+  <DateModified>2020-05-31T18:13:08</DateModified>
   <ModuleName>Shifter</ModuleName>
   <SummaryTimeStamp>2020-05-30T11:46:55</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/Shifter/iseconfig/Shifter.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/Shifter</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Shifter/iseconfig/Shifter.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Shifter\</ImplementationReportsDirectory>
   <DateInitialized>2020-05-30T11:36:29</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

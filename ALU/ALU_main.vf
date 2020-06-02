@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ALU_main.vf
-// /___/   /\     Timestamp : 05/25/2020 11:35:45
+// /___/   /\     Timestamp : 05/31/2020 14:32:17
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Marcelo/ProyectosISE/ALU/ALU_main.vf -w C:/Users/Marcelo/ProyectosISE/ALU/ALU_main.sch
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/ALU/ALU_main.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/ALU/ALU_main.sch
 //Design Name: ALU_main
 //Device: artix7
 //Purpose:
@@ -120,6 +120,23 @@ module D4_16E_HXILINX_ALU_main (D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11
      end 
 
 endmodule
+`timescale  100 ps / 10 ps
+
+module AND6_HXILINX_ALU_main (O, I0, I1, I2, I3, I4, I5);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+
+assign O = I0 && I1 && I2 && I3 && I4 && I5;
+
+endmodule
 `timescale 1ns / 1ps
 
 module ALU_main(A, 
@@ -142,6 +159,7 @@ module ALU_main(A,
    
    wire [15:0] AdderOut;
    wire A_AND_B;
+   wire A_m_B;
    wire A_OR_B;
    wire A_p_B;
    wire A_p_B_p_CY;
@@ -154,6 +172,7 @@ module ALU_main(A,
    wire CY_EN;
    wire CY_0;
    wire CY_1;
+   wire m_B;
    wire Not_A;
    wire Not_B;
    wire ONE;
@@ -175,13 +194,16 @@ module ALU_main(A,
    wire XLXN_215;
    wire XLXN_216;
    wire XLXN_222;
-   wire XLXN_223;
-   wire XLXN_224;
-   wire XLXN_225;
-   wire XLXN_244;
-   wire XLXN_245;
-   wire XLXN_246;
-   wire XLXN_247;
+   wire XLXN_291;
+   wire XLXN_292;
+   wire XLXN_293;
+   wire XLXN_295;
+   wire XLXN_343;
+   wire XLXN_344;
+   wire XLXN_345;
+   wire XLXN_346;
+   wire XLXN_347;
+   wire XLXN_348;
    wire ZERO;
    wire _A;
    wire _B;
@@ -206,8 +228,8 @@ module ALU_main(A,
                                          .D10(_0xFFFF), 
                                          .D11(CY_0), 
                                          .D12(CY_1), 
-                                         .D13(), 
-                                         .D14(), 
+                                         .D13(A_m_B), 
+                                         .D14(m_B), 
                                          .D15());
    AND_Bus16  A_AND_B_OP (.IN_0(A[15:0]), 
                          .IN_1(B[15:0]), 
@@ -263,12 +285,6 @@ module ALU_main(A,
    (* HU_SET = "XLXI_10_3" *) 
    INV16_HXILINX_ALU_main  XLXI_10 (.I(B[15:0]), 
                                    .O(XLXN_143[15:0]));
-   OR2  XLXI_84 (.I0(ONE), 
-                .I1(A_p_B_p_CY), 
-                .O(CY_EN));
-   OR2  XLXI_85 (.I0(ONE), 
-                .I1(ONE), 
-                .O(OUT_1b));
    OR2  XLXI_86 (.I0(A_p_B_p_CY), 
                 .I1(A_p_B), 
                 .O(CO_A));
@@ -288,33 +304,53 @@ module ALU_main(A,
    INV  XLXI_92 (.I(_A), 
                 .O(XLXN_222));
    INV  XLXI_93 (.I(Not_A), 
-                .O(XLXN_223));
+                .O(XLXN_291));
    INV  XLXI_94 (.I(A_p_B), 
-                .O(XLXN_224));
+                .O(XLXN_292));
    INV  XLXI_95 (.I(A_p_B_p_CY), 
-                .O(XLXN_225));
-   AND4  XLXI_99 (.I0(XLXN_225), 
-                 .I1(XLXN_224), 
-                 .I2(XLXN_223), 
-                 .I3(XLXN_222), 
-                 .O(A_SEL_1));
+                .O(XLXN_293));
    OR2  XLXI_104 (.I0(_0xFFFF), 
                  .I1(Not_A), 
                  .O(A_SEL_2));
-   OR2  XLXI_105 (.I0(Not_B), 
-                 .I1(Not_B), 
-                 .O(B_SEL_1));
    INV  XLXI_106 (.I(_B), 
-                 .O(XLXN_244));
+                 .O(XLXN_343));
    INV  XLXI_107 (.I(Not_B), 
-                 .O(XLXN_245));
+                 .O(XLXN_344));
    INV  XLXI_108 (.I(A_p_B), 
-                 .O(XLXN_246));
+                 .O(XLXN_345));
    INV  XLXI_109 (.I(A_p_B_p_CY), 
-                 .O(XLXN_247));
-   AND4  XLXI_110 (.I0(XLXN_247), 
-                  .I1(XLXN_246), 
-                  .I2(XLXN_245), 
-                  .I3(XLXN_244), 
-                  .O(B_SEL_2));
+                 .O(XLXN_346));
+   OR4  XLXI_118 (.I0(m_B), 
+                 .I1(A_m_B), 
+                 .I2(ONE), 
+                 .I3(A_p_B_p_CY), 
+                 .O(CY_EN));
+   OR3  XLXI_119 (.I0(m_B), 
+                 .I1(A_m_B), 
+                 .I2(ONE), 
+                 .O(OUT_1b));
+   AND5  XLXI_124 (.I0(XLXN_295), 
+                  .I1(XLXN_293), 
+                  .I2(XLXN_292), 
+                  .I3(XLXN_291), 
+                  .I4(XLXN_222), 
+                  .O(A_SEL_1));
+   INV  XLXI_125 (.I(A_m_B), 
+                 .O(XLXN_295));
+   OR3  XLXI_126 (.I0(m_B), 
+                 .I1(A_m_B), 
+                 .I2(Not_B), 
+                 .O(B_SEL_1));
+   INV  XLXI_141 (.I(A_m_B), 
+                 .O(XLXN_347));
+   INV  XLXI_142 (.I(m_B), 
+                 .O(XLXN_348));
+   (* HU_SET = "XLXI_143_4" *) 
+   AND6_HXILINX_ALU_main  XLXI_143 (.I0(XLXN_348), 
+                                   .I1(XLXN_347), 
+                                   .I2(XLXN_346), 
+                                   .I3(XLXN_345), 
+                                   .I4(XLXN_344), 
+                                   .I5(XLXN_343), 
+                                   .O(B_SEL_2));
 endmodule

@@ -1,7 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
+<<<<<<< HEAD
   <DateModified>2020-05-31T19:57:31</DateModified>
+=======
+  <DateModified>2020-06-01T16:52:29</DateModified>
+>>>>>>> 83df502b3e6790a6855fe7d5f92b4390f1eb021f
   <ModuleName>reg_to_bus_3bit_sel</ModuleName>
   <SummaryTimeStamp>2020-05-28T13:07:15</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/BOOSTED_REG_BANK/iseconfig/reg_to_bus_3bit_sel.xreport</SavedFilePath>

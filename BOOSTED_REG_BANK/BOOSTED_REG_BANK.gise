@@ -22,124 +22,161 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="BOOSTED_REG_BANK.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bidir_port.prj"/>
-    <file xil_pn:fileType="FILE_SPL" xil_pn:name="bidir_port.spl"/>
-    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="bidir_port.stx"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bidir_port.sym" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="bidir_port.tfi"/>
-    <file xil_pn:fileType="FILE_XST" xil_pn:name="bidir_port.xst"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloque2.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="bloque2.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloque_3.sym" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="bloque_3_drc.vf"/>
-    <file xil_pn:fileType="FILE_SPL" xil_pn:name="demux1b.spl"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="bloque_3.vf"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="clock_for_testing.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="constants_for_test.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux1b.sym" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="demux1b.tfi"/>
-    <file xil_pn:fileType="FILE_SPL" xil_pn:name="demux1b_w_en.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux1b_w_en.sym" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="demux1b_w_en_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux2b_w_en.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux2b_w_en.vf"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="demux2b_w_en_beh.prj"/>
-    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux2b_w_en_drc.vf"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="demux2b_w_en_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="demux2b_w_en_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux3b_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux3b_w_en.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux4b_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux4b_w_en.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux5b_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux5b_w_en.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux6b_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux6b_w_en.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel1b.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel2b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux_bus16b_sel2b.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel3b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux_bus16b_sel3b.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel4b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux_bus16b_sel4b.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel5b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux_bus16b_sel5b.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel6b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux_bus16b_sel6b.vf"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="gnd_for_testing.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_2bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="reg_to_bus_2bit_sel.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_3bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="reg_to_bus_3bit_sel.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_4bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="reg_to_bus_4bit_sel.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_5bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="reg_to_bus_5bit_sel.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_6bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="reg_to_bus_6bit_sel.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="register_bank.sym" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="register_bank_drc.vf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="register_bank.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="test.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="test.vf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="vcc_for_testing.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1590784217" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1590784217">
+    <transform xil_pn:end_ts="1591040217" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1591040217">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590785144" xil_pn:in_ck="6635402945339229802" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1590785144">
+    <transform xil_pn:end_ts="1591041305" xil_pn:in_ck="-8757018983793539291" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1591041305">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="bidir_port.v"/>
+      <outfile xil_pn:name="constants_for_test.v"/>
       <outfile xil_pn:name="demux1b.v"/>
       <outfile xil_pn:name="demux1b_w_en.v"/>
       <outfile xil_pn:name="demux_bus16b_sel1b.v"/>
+      <outfile xil_pn:name="gnd_for_testing.v"/>
       <outfile xil_pn:name="reg_to_bus_1bit_sel.v"/>
+      <outfile xil_pn:name="vcc_for_testing.v"/>
     </transform>
-    <transform xil_pn:end_ts="1590784217" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5695370598683364554" xil_pn:start_ts="1590784217">
+    <transform xil_pn:end_ts="1591039928" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4846834790194202313" xil_pn:start_ts="1591039928">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590785394" xil_pn:in_ck="4158162886477589547" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7936932743184236972" xil_pn:start_ts="1590785392">
+    <transform xil_pn:end_ts="1591041312" xil_pn:in_ck="5782114101492556793" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1119169853662409259" xil_pn:start_ts="1591041305">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="bloque2.vf"/>
+      <outfile xil_pn:name="bloque_3.vf"/>
       <outfile xil_pn:name="demux2b_w_en.vf"/>
+      <outfile xil_pn:name="demux3b_w_en.vf"/>
+      <outfile xil_pn:name="demux4b_w_en.vf"/>
+      <outfile xil_pn:name="demux5b_w_en.vf"/>
+      <outfile xil_pn:name="demux6b_w_en.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel2b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel3b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel4b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel5b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel6b.vf"/>
+      <outfile xil_pn:name="reg_to_bus_2bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_3bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_4bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_5bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_6bit_sel.vf"/>
+      <outfile xil_pn:name="register_bank.vf"/>
+      <outfile xil_pn:name="test.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1590782628" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6442301923870912090" xil_pn:start_ts="1590782628">
+    <transform xil_pn:end_ts="1591039953" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6442301923870912090" xil_pn:start_ts="1591039953">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590785394" xil_pn:in_ck="-5508417733392341933" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590785394">
+    <transform xil_pn:end_ts="1591041312" xil_pn:in_ck="7348719853772457176" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591041312">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="bidir_port.v"/>
+      <outfile xil_pn:name="bloque2.vf"/>
+      <outfile xil_pn:name="bloque_3.vf"/>
+      <outfile xil_pn:name="constants_for_test.v"/>
       <outfile xil_pn:name="demux1b.v"/>
       <outfile xil_pn:name="demux1b_w_en.v"/>
       <outfile xil_pn:name="demux2b_w_en.vf"/>
+      <outfile xil_pn:name="demux3b_w_en.vf"/>
+      <outfile xil_pn:name="demux4b_w_en.vf"/>
+      <outfile xil_pn:name="demux5b_w_en.vf"/>
+      <outfile xil_pn:name="demux6b_w_en.vf"/>
       <outfile xil_pn:name="demux_bus16b_sel1b.v"/>
+      <outfile xil_pn:name="demux_bus16b_sel2b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel3b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel4b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel5b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel6b.vf"/>
+      <outfile xil_pn:name="gnd_for_testing.v"/>
       <outfile xil_pn:name="reg_to_bus_1bit_sel.v"/>
+      <outfile xil_pn:name="reg_to_bus_2bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_3bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_4bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_5bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_6bit_sel.vf"/>
+      <outfile xil_pn:name="register_bank.vf"/>
+      <outfile xil_pn:name="test.vf"/>
+      <outfile xil_pn:name="vcc_for_testing.v"/>
     </transform>
-    <transform xil_pn:end_ts="1590785397" xil_pn:in_ck="-5508417733392341933" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1077484341280763173" xil_pn:start_ts="1590785394">
+    <transform xil_pn:end_ts="1591041316" xil_pn:in_ck="7348719853772457176" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3886462792435381443" xil_pn:start_ts="1591041312">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="demux2b_w_en_beh.prj"/>
-      <outfile xil_pn:name="demux2b_w_en_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="test_beh.prj"/>
+      <outfile xil_pn:name="test_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1590785397" xil_pn:in_ck="-4751632563257633074" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3002439003375832130" xil_pn:start_ts="1590785397">
+    <transform xil_pn:end_ts="1591041945" xil_pn:in_ck="4140465173363612911" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3146704178770760256" xil_pn:start_ts="1591041944">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="demux2b_w_en_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="test_isim_beh.wdb"/>
     </transform>
   </transforms>
 

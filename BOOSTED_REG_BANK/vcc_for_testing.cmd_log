@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/EV-20-Grupo2/BOOSTED_REG_BANK/vcc_for_testing.v -lang verilog -prj BOOSTED_REG_BANK -o vcc_for_testing.spl -module vcc_for_testing -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w vcc_for_testing.spl C:/EV-20-Grupo2/BOOSTED_REG_BANK/vcc_for_testing.sym 

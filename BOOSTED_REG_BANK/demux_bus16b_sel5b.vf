@@ -1,0 +1,286 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : demux_bus16b_sel5b.vf
+// /___/   /\     Timestamp : 06/01/2020 16:32:30
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel5b.vf -w C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux_bus16b_sel5b.sch
+//Design Name: demux_bus16b_sel5b
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module demux_bus16b_sel2b_MUSER_demux_bus16b_sel5b(FROM_BUS, 
+                                                   SEL_BUS, 
+                                                   R0, 
+                                                   R1, 
+                                                   R2, 
+                                                   R3);
+
+    input [15:0] FROM_BUS;
+    input [1:0] SEL_BUS;
+   output [15:0] R0;
+   output [15:0] R1;
+   output [15:0] R2;
+   output [15:0] R3;
+   
+   wire [15:0] XLXN_3;
+   wire [15:0] XLXN_4;
+   
+   demux_bus16b_sel1b  XLXI_1 (.FROM_BUS(XLXN_4[15:0]), 
+                              .SEL_BUS(SEL_BUS[0]), 
+                              .R0(R0[15:0]), 
+                              .R1(R1[15:0]));
+   demux_bus16b_sel1b  XLXI_2 (.FROM_BUS(XLXN_3[15:0]), 
+                              .SEL_BUS(SEL_BUS[0]), 
+                              .R0(R2[15:0]), 
+                              .R1(R3[15:0]));
+   demux_bus16b_sel1b  XLXI_3 (.FROM_BUS(FROM_BUS[15:0]), 
+                              .SEL_BUS(SEL_BUS[1]), 
+                              .R0(XLXN_4[15:0]), 
+                              .R1(XLXN_3[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module demux_bus16b_sel3b_MUSER_demux_bus16b_sel5b(FROM_BUS, 
+                                                   SEL_BUS, 
+                                                   R0, 
+                                                   R1, 
+                                                   R2, 
+                                                   R3, 
+                                                   R4, 
+                                                   R5, 
+                                                   R6, 
+                                                   R7);
+
+    input [15:0] FROM_BUS;
+    input [2:0] SEL_BUS;
+   output [15:0] R0;
+   output [15:0] R1;
+   output [15:0] R2;
+   output [15:0] R3;
+   output [15:0] R4;
+   output [15:0] R5;
+   output [15:0] R6;
+   output [15:0] R7;
+   
+   wire [15:0] XLXN_1;
+   wire [15:0] XLXN_2;
+   
+   demux_bus16b_sel2b_MUSER_demux_bus16b_sel5b  XLXI_1 
+         (.FROM_BUS(XLXN_1[15:0]), 
+                                                       .SEL_BUS(SEL_BUS[1:0]), 
+                                                       .R0(R0[15:0]), 
+                                                       .R1(R1[15:0]), 
+                                                       .R2(R2[15:0]), 
+                                                       .R3(R3[15:0]));
+   demux_bus16b_sel2b_MUSER_demux_bus16b_sel5b  XLXI_2 
+         (.FROM_BUS(XLXN_2[15:0]), 
+                                                       .SEL_BUS(SEL_BUS[1:0]), 
+                                                       .R0(R4[15:0]), 
+                                                       .R1(R5[15:0]), 
+                                                       .R2(R6[15:0]), 
+                                                       .R3(R7[15:0]));
+   demux_bus16b_sel1b  XLXI_3 (.FROM_BUS(FROM_BUS[15:0]), 
+                              .SEL_BUS(SEL_BUS[2]), 
+                              .R0(XLXN_1[15:0]), 
+                              .R1(XLXN_2[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module demux_bus16b_sel4b_MUSER_demux_bus16b_sel5b(FROM_BUS, 
+                                                   SEL_BUS, 
+                                                   R0, 
+                                                   R1, 
+                                                   R2, 
+                                                   R3, 
+                                                   R4, 
+                                                   R5, 
+                                                   R6, 
+                                                   R7, 
+                                                   R8, 
+                                                   R9, 
+                                                   R10, 
+                                                   R11, 
+                                                   R12, 
+                                                   R13, 
+                                                   R14, 
+                                                   R15);
+
+    input [15:0] FROM_BUS;
+    input [3:0] SEL_BUS;
+   output [15:0] R0;
+   output [15:0] R1;
+   output [15:0] R2;
+   output [15:0] R3;
+   output [15:0] R4;
+   output [15:0] R5;
+   output [15:0] R6;
+   output [15:0] R7;
+   output [15:0] R8;
+   output [15:0] R9;
+   output [15:0] R10;
+   output [15:0] R11;
+   output [15:0] R12;
+   output [15:0] R13;
+   output [15:0] R14;
+   output [15:0] R15;
+   
+   wire [15:0] XLXN_1;
+   wire [15:0] XLXN_3;
+   
+   demux_bus16b_sel3b_MUSER_demux_bus16b_sel5b  XLXI_1 
+         (.FROM_BUS(XLXN_1[15:0]), 
+                                                       .SEL_BUS(SEL_BUS[2:0]), 
+                                                       .R0(R0[15:0]), 
+                                                       .R1(R1[15:0]), 
+                                                       .R2(R2[15:0]), 
+                                                       .R3(R3[15:0]), 
+                                                       .R4(R4[15:0]), 
+                                                       .R5(R5[15:0]), 
+                                                       .R6(R6[15:0]), 
+                                                       .R7(R7[15:0]));
+   demux_bus16b_sel3b_MUSER_demux_bus16b_sel5b  XLXI_2 
+         (.FROM_BUS(XLXN_3[15:0]), 
+                                                       .SEL_BUS(SEL_BUS[2:0]), 
+                                                       .R0(R8[15:0]), 
+                                                       .R1(R9[15:0]), 
+                                                       .R2(R10[15:0]), 
+                                                       .R3(R11[15:0]), 
+                                                       .R4(R12[15:0]), 
+                                                       .R5(R13[15:0]), 
+                                                       .R6(R14[15:0]), 
+                                                       .R7(R15[15:0]));
+   demux_bus16b_sel1b  XLXI_3 (.FROM_BUS(FROM_BUS[15:0]), 
+                              .SEL_BUS(SEL_BUS[3]), 
+                              .R0(XLXN_1[15:0]), 
+                              .R1(XLXN_3[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module demux_bus16b_sel5b(FROM_BUS, 
+                          SEL_BUS, 
+                          R0, 
+                          R1, 
+                          R2, 
+                          R3, 
+                          R4, 
+                          R5, 
+                          R6, 
+                          R7, 
+                          R8, 
+                          R9, 
+                          R10, 
+                          R11, 
+                          R12, 
+                          R13, 
+                          R14, 
+                          R15, 
+                          R16, 
+                          R17, 
+                          R18, 
+                          R19, 
+                          R20, 
+                          R21, 
+                          R22, 
+                          R23, 
+                          R24, 
+                          R25, 
+                          R26, 
+                          R27, 
+                          R28, 
+                          R29, 
+                          R30, 
+                          R31);
+
+    input [15:0] FROM_BUS;
+    input [4:0] SEL_BUS;
+   output [15:0] R0;
+   output [15:0] R1;
+   output [15:0] R2;
+   output [15:0] R3;
+   output [15:0] R4;
+   output [15:0] R5;
+   output [15:0] R6;
+   output [15:0] R7;
+   output [15:0] R8;
+   output [15:0] R9;
+   output [15:0] R10;
+   output [15:0] R11;
+   output [15:0] R12;
+   output [15:0] R13;
+   output [15:0] R14;
+   output [15:0] R15;
+   output [15:0] R16;
+   output [15:0] R17;
+   output [15:0] R18;
+   output [15:0] R19;
+   output [15:0] R20;
+   output [15:0] R21;
+   output [15:0] R22;
+   output [15:0] R23;
+   output [15:0] R24;
+   output [15:0] R25;
+   output [15:0] R26;
+   output [15:0] R27;
+   output [15:0] R28;
+   output [15:0] R29;
+   output [15:0] R30;
+   output [15:0] R31;
+   
+   wire [15:0] XLXN_1;
+   wire [15:0] XLXN_2;
+   
+   demux_bus16b_sel4b_MUSER_demux_bus16b_sel5b  XLXI_1 
+         (.FROM_BUS(XLXN_1[15:0]), 
+                                                       .SEL_BUS(SEL_BUS[3:0]), 
+                                                       .R0(R0[15:0]), 
+                                                       .R1(R1[15:0]), 
+                                                       .R2(R2[15:0]), 
+                                                       .R3(R3[15:0]), 
+                                                       .R4(R4[15:0]), 
+                                                       .R5(R5[15:0]), 
+                                                       .R6(R6[15:0]), 
+                                                       .R7(R7[15:0]), 
+                                                       .R8(R8[15:0]), 
+                                                       .R9(R9[15:0]), 
+                                                       .R10(R10[15:0]), 
+                                                       .R11(R11[15:0]), 
+                                                       .R12(R12[15:0]), 
+                                                       .R13(R13[15:0]), 
+                                                       .R14(R14[15:0]), 
+                                                       .R15(R15[15:0]));
+   demux_bus16b_sel4b_MUSER_demux_bus16b_sel5b  XLXI_2 
+         (.FROM_BUS(XLXN_2[15:0]), 
+                                                       .SEL_BUS(SEL_BUS[3:0]), 
+                                                       .R0(R16[15:0]), 
+                                                       .R1(R17[15:0]), 
+                                                       .R2(R18[15:0]), 
+                                                       .R3(R19[15:0]), 
+                                                       .R4(R20[15:0]), 
+                                                       .R5(R21[15:0]), 
+                                                       .R6(R22[15:0]), 
+                                                       .R7(R23[15:0]), 
+                                                       .R8(R24[15:0]), 
+                                                       .R9(R25[15:0]), 
+                                                       .R10(R26[15:0]), 
+                                                       .R11(R27[15:0]), 
+                                                       .R12(R28[15:0]), 
+                                                       .R13(R29[15:0]), 
+                                                       .R14(R30[15:0]), 
+                                                       .R15(R31[15:0]));
+   demux_bus16b_sel1b  XLXI_3 (.FROM_BUS(FROM_BUS[15:0]), 
+                              .SEL_BUS(SEL_BUS[4]), 
+                              .R0(XLXN_1[15:0]), 
+                              .R1(XLXN_2[15:0]));
+endmodule

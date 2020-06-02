@@ -31,15 +31,17 @@
             <rect width="64" x="320" y="-236" height="24" />
             <line x2="384" y1="-224" y2="-224" x1="320" />
         </blockdef>
-        <blockdef name="ldce">
+        <blockdef name="fdce">
             <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-128" y2="-128" x1="0" />
+            <line x2="64" y1="-192" y2="-192" x1="0" />
             <line x2="64" y1="-32" y2="-32" x1="0" />
             <line x2="64" y1="-256" y2="-256" x1="0" />
-            <line x2="64" y1="-192" y2="-192" x1="0" />
             <line x2="320" y1="-256" y2="-256" x1="384" />
+            <line x2="80" y1="-112" y2="-128" x1="64" />
+            <line x2="64" y1="-128" y2="-144" x1="80" />
             <line x2="192" y1="-64" y2="-32" x1="192" />
             <line x2="64" y1="-32" y2="-32" x1="192" />
-            <line x2="64" y1="-128" y2="-128" x1="0" />
             <rect width="256" x="64" y="-320" height="256" />
         </blockdef>
         <block symbolname="LATCH4" name="XLXI_1">
@@ -49,11 +51,11 @@
             <blockpin signalname="ENABLE" name="ENABLE" />
             <blockpin signalname="OUTPUT(3:0)" name="OUTPUT(3:0)" />
         </block>
-        <block symbolname="ldce" name="XLXI_2">
+        <block symbolname="fdce" name="XLXI_4">
+            <blockpin signalname="CLK" name="C" />
+            <blockpin signalname="ENABLE" name="CE" />
             <blockpin signalname="CLR" name="CLR" />
             <blockpin signalname="INPUT(4)" name="D" />
-            <blockpin signalname="CLK" name="G" />
-            <blockpin signalname="ENABLE" name="GE" />
             <blockpin signalname="OUTPUT(4)" name="Q" />
         </block>
     </netlist>
@@ -80,7 +82,6 @@
         <iomarker fontsize="28" x="2656" y="880" name="OUTPUT(4:0)" orien="R0" />
         <instance x="928" y="688" name="XLXI_1" orien="R0">
         </instance>
-        <instance x="944" y="1200" name="XLXI_2" orien="R0" />
         <branch name="CLK">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="896" y="464" type="branch" />
             <wire x2="896" y1="464" y2="464" x1="864" />
@@ -124,7 +125,8 @@
         </branch>
         <branch name="OUTPUT(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1408" y="944" type="branch" />
-            <wire x2="1408" y1="944" y2="944" x1="1328" />
+            <wire x2="1344" y1="944" y2="944" x1="1328" />
+            <wire x2="1408" y1="944" y2="944" x1="1344" />
             <wire x2="1424" y1="944" y2="944" x1="1408" />
             <wire x2="1424" y1="944" y2="960" x1="1424" />
         </branch>
@@ -134,5 +136,6 @@
             <wire x2="1488" y1="464" y2="464" x1="1360" />
             <wire x2="1504" y1="464" y2="464" x1="1488" />
         </branch>
+        <instance x="944" y="1200" name="XLXI_4" orien="R0" />
     </sheet>
 </drawing>

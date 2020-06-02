@@ -1,0 +1,4 @@
+add instance pc_increment_module 1360 976 R0 -sn=1
+select figure at 1469 840 8 -branches -sn=1
+move instance at 1360 976 to 1408 800 R0 -keepConn -sn=1
+select figure at 1450 995 8 -branches -sn=1

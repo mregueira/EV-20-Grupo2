@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family artix7 -verilog mux5_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux5.sch 
+sch2sym -intstyle ise -family artix7 -refsym mux5 C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux5.sch C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/mux5.sym 

@@ -8,6 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<<<<<<< HEAD
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/BOOSTED_REG_BANK/bidir_port.v&quot; into library work</arg>
 </msg>
 
@@ -23,5 +24,7 @@
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_1bit_sel.v&quot; into library work</arg>
 </msg>
 
+=======
+>>>>>>> 83df502b3e6790a6855fe7d5f92b4390f1eb021f
 </messages>
 

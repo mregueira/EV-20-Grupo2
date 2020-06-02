@@ -1,7 +1,10 @@
-set -tmpdir "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/xst"
-run -compileonly yes
--p xc7a100t-3-csg324
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn pc_increment_module.prj
+-ofn pc_increment_module
+-ofmt NGC
+-p xc7a200t-3-fbg484
 -top pc_increment_module
 -opt_mode Speed
 -opt_level 1
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn pc_increment_module.prj

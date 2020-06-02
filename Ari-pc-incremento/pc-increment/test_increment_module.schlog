@@ -1,0 +1,4 @@
+select figure at 1296 1130 8 -branches -sn=1
+select figure at 1259 833 8 -branches -sn=1
+select all in 1259 833 2102 1226 -branches -enclosed -sn=1
+select figure at 2315 1195 8 -branches -sn=1

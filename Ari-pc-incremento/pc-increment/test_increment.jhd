@@ -1,1 +1,3 @@
 MODULE test_increment
+	SUBMODULE pc_increment_module
+		INSTANCE XLXI_5

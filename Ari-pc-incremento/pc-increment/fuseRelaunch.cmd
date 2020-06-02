@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/pc_increment_module_isim_beh.exe" -prj "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/pc_increment_module_beh.prj" "work.pc_increment_module" "work.glbl" 

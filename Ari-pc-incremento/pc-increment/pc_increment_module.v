@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+	`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -31,15 +31,20 @@ module pc_increment_module(
     input increment,
     input load,
     input [11:0] D,
-    output reg [11:0] Q
+    output [11:0] Q
     );
+	reg [11:0]pc = 0;
 	
-	always (@clk) begin
-		if (increment) begin
-			Q <= Q + 1;
-		else if (load) begin
-			Q <= D;
+	always @(posedge clk) begin
+		if (!hold) begin
+			if (increment) begin
+				pc <= pc + 1;
+			end else if (load) begin
+				pc <= D;
+			end
 		end
 	end
+	
+	assign Q = pc;
 	
 endmodule

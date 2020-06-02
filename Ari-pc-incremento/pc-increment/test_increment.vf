@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : test_increment.vf
-// /___/   /\     Timestamp : 06/01/2020 21:00:33
+// /___/   /\     Timestamp : 06/02/2020 01:50:00
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -24,4 +24,10 @@ module test_increment();
 
    
    
+   pc_increment_module  XLXI_5 (.clk(), 
+                               .D(), 
+                               .hold(), 
+                               .increment(), 
+                               .load(), 
+                               .Q());
 endmodule

@@ -1,2 +1,5 @@
-vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/pc_increment_module.v -lang verilog -prj pc-increment -o pc_increment_module.spl -module pc_increment_module -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family artix7 pc_increment_module.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/pc_increment_module.sym 
+xst -intstyle ise -ifn "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/pc_increment_module.xst" -ofn "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/pc_increment_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a200t-fbg484-3 pc_increment_module.ngc pc_increment_module.ngd  
+map -intstyle ise -p xc7a200t-fbg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o pc_increment_module_map.ncd pc_increment_module.ngd pc_increment_module.pcf 
+par -w -intstyle ise -ol high -mt off pc_increment_module_map.ncd pc_increment_module.ncd pc_increment_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml pc_increment_module.twx pc_increment_module.ncd -o pc_increment_module.twr pc_increment_module.pcf 

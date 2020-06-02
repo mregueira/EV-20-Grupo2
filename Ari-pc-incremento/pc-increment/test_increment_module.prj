@@ -1,0 +1,2 @@
+verilog work "pc_increment_module.v"
+verilog work "test_increment_module.vf"

@@ -1,0 +1,44 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : test_increment_module.vf
+// /___/   /\     Timestamp : 06/02/2020 01:57:34
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/test_increment_module.vf -w C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/test_increment_module.sch
+//Design Name: test_increment_module
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module test_increment_module(clk, 
+                             D, 
+                             hold, 
+                             increment, 
+                             load, 
+                             Q);
+
+    input clk;
+    input [11:0] D;
+    input hold;
+    input increment;
+    input load;
+   output [11:0] Q;
+   
+   
+   pc_increment_module  XLXI_1 (.clk(clk), 
+                               .D(D[11:0]), 
+                               .hold(hold), 
+                               .increment(increment), 
+                               .load(load), 
+                               .Q(Q[11:0]));
+endmodule

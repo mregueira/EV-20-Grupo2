@@ -1,0 +1,47 @@
+Command line:
+   test_increment_module_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  61799
+
+Tue Jun 02 02:16:05 2020
+
+
+ Elaboration Time: 0.015625 sec
+
+ Current Memory Usage: 5159.87 Meg
+
+ Total Signals          : 24
+ Total Nets             : 41
+ Total Signal Drivers   : 6
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 8
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 133
+Total Line Count : 20
+Total Line Count : 20
+Total Line Count : 20
+Total Line Count : 20
+Total Line Count : 20
+Total Line Count : 20
+Signal was not forced.Total Line Count : 20
+Total Line Count : 20
+Total Line Count : 20
+Signal was not forced.Total Line Count : 20
+Signal was not forced.Total Line Count : 20
+Signal was not forced.Total Line Count : 20
+Signal was not forced.Total Line Count : 20
+Signal was not forced.Total Line Count : 20
+Signal was not forced.Total Line Count : 20
+Signal was not forced.Total Line Count : 20
+Total Line Count : 20
+Total Line Count : 20
+Total Line Count : 20
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 4688.02 Meg
+
+Tue Jun 02 02:32:35 2020
+

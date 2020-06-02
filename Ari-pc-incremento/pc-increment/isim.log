@@ -1,0 +1,138 @@
+ISim log file
+Running: C:\Users\Ariel\Documents\GitHub\EV-20-Grupo2\Ari-pc-incremento\pc-increment\pc_increment_module_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/pc_increment_module_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 500 fs -repeat 1 ps -cancel 30 ps
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 500 fs -repeat 1 ps -cancel 30 ps
+# isim force add /pc_increment_module/hold 0 -radix bin -cancel 20 ps
+# isim force add /pc_increment_module/hold 0 -radix bin -cancel 20 ps
+# isim force add /pc_increment_module/increment 1 -radix bin -cancel 20 ps
+# isim force add /pc_increment_module/increment 1 -radix bin -cancel 20 ps
+# isim force add /pc_increment_module/load 0 -radix bin -cancel 20 ps
+# isim force add /pc_increment_module/load 0 -radix bin -cancel 20 ps
+# run 20ps
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /pc_increment_module/clk 0 -radix bin -value 1 -radix bin -time 500 fs -repeat 1 ps -cancel 20 ps
+# isim force add /pc_increment_module/clk 0 -radix bin -value 1 -radix bin -time 500 fs -repeat 1 ps -cancel 20 ps
+# restart
+# run 20ps
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# isim force add /pc_increment_module/clk 0 -radix bin -value 1 -radix bin -time 500 fs -repeat 1 ps -cancel 20 ps
+# isim force add /pc_increment_module/clk 0 -radix bin -value 1 -radix bin -time 500 fs -repeat 1 ps -cancel 20 ps
+# run 20us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# isim force remove /pc_increment_module/clk
+Signal was not forced.
+# run 1000ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# isim force add /pc_increment_module/clk 0 -radix bin -value 1 -radix bin -time 25 ps -repeat 50 ps -cancel 1 ns
+# isim force add /pc_increment_module/clk 0 -radix bin -value 1 -radix bin -time 25 ps -repeat 50 ps -cancel 1 ns
+# restart
+# run 1000ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force remove /pc_increment_module/clk
+Signal was not forced.
+# restart
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 25 ps -repeat 50 ps
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 25 ps -repeat 50 ps
+# restart
+# isim force add /pc_increment_module/clk 0 -radix bin -value 1 -radix bin -time 25 ps -repeat 50 ps
+# isim force add /pc_increment_module/clk 0 -radix bin -value 1 -radix bin -time 25 ps -repeat 50 ps
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 518183925 ps : File "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-pc-incremento/pc-increment/pc_increment_module.v" Line 38
+# restart
+# run 1000ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 1000ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /pc_increment_module/clk 0 -radix bin -value 1 -radix bin -time 25 ps -repeat 50 ps
+# isim force add /pc_increment_module/clk 0 -radix bin -value 1 -radix bin -time 25 ps -repeat 50 ps
+# restart
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 25 ps -repeat 50 ps -cancel 1 ns
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 25 ps -repeat 50 ps -cancel 1 ns
+# run 1000ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /pc_increment_module/hold 0 -radix bin
+# isim force add /pc_increment_module/hold 0 -radix bin
+# isim force add /pc_increment_module/increment 1 -radix bin
+# isim force add /pc_increment_module/increment 1 -radix bin
+# isim force add /pc_increment_module/load 0 -radix bin
+# isim force add /pc_increment_module/load 0 -radix bin
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 25 ps -repeat 50 ps -cancel 1 ns
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 25 ps -repeat 50 ps -cancel 1 ns
+# run 1000ps
+# restart
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 25 ps -repeat 50 ps
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 25 ps -repeat 50 ps
+# isim force add /pc_increment_module/hold 0 -radix bin
+# isim force add /pc_increment_module/hold 0 -radix bin
+# isim force add /pc_increment_module/increment 0 -radix bin
+# isim force add /pc_increment_module/increment 1 -radix bin
+# isim force add /pc_increment_module/increment 1 -radix bin
+# isim force add /pc_increment_module/load 0 -radix bin
+# isim force add /pc_increment_module/load 0 -radix bin
+# run 1000ps
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /pc_increment_module/D 101010101010 -radix bin
+# isim force add /pc_increment_module/D 101010101010 -radix bin
+# isim force add /pc_increment_module/load 1 -radix bin
+# isim force add /pc_increment_module/increment 0 -radix bin
+# isim force add /pc_increment_module/increment 0 -radix bin
+# isim force add /pc_increment_module/hold 0 -radix bin
+# isim force add /pc_increment_module/hold 0 -radix bin
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 12500 fs -repeat 25 ps
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 12500 fs -repeat 25 ps
+# restart
+# run 1000ps
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+The simulator has terminated in an unexpected manner.  Please review the ISim log (isim.log) for details.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 12500 fs -repeat 25 ps -cancel 400 ps
+# isim force add /pc_increment_module/clk 1 -radix bin -value 0 -radix bin -time 12500 fs -repeat 25 ps -cancel 400 ps
+# isim force add /pc_increment_module/hold 0 -radix bin -value 1 -radix bin -time 100 ps -repeat 200 ps -cancel 400 ps
+# isim force add /pc_increment_module/hold 0 -radix bin -value 1 -radix bin -time 100 ps -repeat 200 ps -cancel 400 ps
+# isim force add /pc_increment_module/hold 0 -radix bin -cancel 400 ps
+# isim force add /pc_increment_module/hold 0 -radix bin -cancel 400 ps
+# isim force add /pc_increment_module/increment 0 -radix bin -value 1 -radix bin -time 100 ps -repeat 200 ps -cancel 400 ps
+# isim force add /pc_increment_module/increment 0 -radix bin -value 1 -radix bin -time 100 ps -repeat 200 ps -cancel 400 ps
+# isim force add /pc_increment_module/load 1 -radix bin -value 0 -radix bin -time 100 ps -repeat 200 ps -cancel 400 ps
+# isim force add /pc_increment_module/load 1 -radix bin -value 0 -radix bin -time 100 ps -repeat 200 ps -cancel 400 ps
+# isim force add /pc_increment_module/D 101001010100 -radix bin
+# isim force add /pc_increment_module/D 101001010100 -radix bin
+# run 1000ps
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

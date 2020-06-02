@@ -1,6 +1,1 @@
-ALU/iseconfig/
-Ari-pc-incremento/pc-increment/iseconfig
-BOOSTED_REG_BANK/iseconfig
-MicroinstructionROM/iseconfig
-Pipeline/iseconfig
-Shifter/iseconfig
+**/iseconfig/

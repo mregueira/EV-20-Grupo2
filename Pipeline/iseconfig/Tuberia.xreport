@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-06-01T15:46:55</DateModified>
+  <DateModified>2020-06-02T19:35:14</DateModified>
   <ModuleName>Tuberia</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/iseconfig/Tuberia.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Martina/Desktop/Pipeline/iseconfig/Tuberia.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Martina/Desktop/Pipeline\</ImplementationReportsDirectory>
   <DateInitialized>2020-05-31T14:40:37</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

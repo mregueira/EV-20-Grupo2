@@ -11,18 +11,31 @@ Time resolution is 1 ps
 # run 10 us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /UC2/DecodeBusA 11111 -radix bin
 # isim force add /UC2/DecodeType 1111111 -radix bin
-# isim force add /UC2/ExecuteBusC 111111 -radix bin
-# isim force add /UC2/ExecuteType 1111111 -radix bin
-# isim force add /UC2/OperandBusC 111111 -radix bin
 # isim force add /UC2/OperandType 1111111 -radix bin
-# isim force add /UC2/RetireBusC 111111 -radix bin
+# run 1.00us
+# isim force add /UC2/OperandType 0000000 -radix bin
 # isim force add /UC2/RetireType 1111111 -radix bin
 # run 1.00us
-# restart
+# isim force add /UC2/RetireType 0000000 -radix bin
+# run 1.00us
 # isim force add /UC2/DecodeBusA 11111 -radix bin
+# isim force add /UC2/RetireBusC 011111 -radix bin
+# isim force add /UC2/RetireType 0001000 -radix bin
+# run 1.00us
+# isim force add /UC2/DecodeMem 00 -radix bin
+# isim force add /UC2/DecodeType 0000000 -radix bin
+# isim force add /UC2/ExecuteBusC 000000 -radix bin
+# isim force add /UC2/ExecuteType 0000000 -radix bin
+# isim force add /UC2/OperandBusC 000000 -radix bin
+# isim force add /UC2/OperandType 0000000 -radix bin
+# isim force add /UC2/RetireBusC 000000 -radix bin
+# isim force add /UC2/RetireType 0000000 -radix bin
+# run 1.00us
+# isim force add /UC2/ExecuteType 1111111 -radix bin
+# run 1.00us
 # isim force add /UC2/DecodeType 1111111 -radix bin
-# run all
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
+# run 1.00us
+# isim force add /UC2/DecodeMem 01 -radix bin
+# isim force add /UC2/ExecuteType 0000001 -radix bin
+# run 1.00us

@@ -13,16 +13,17 @@ Completed static elaboration
 Compiling module OR2
 Compiling module AND2
 Compiling module AND3
-Compiling module OR5
 Compiling module OR3
 Compiling module XOR2
 Compiling module INV
 Compiling module AND4
 Compiling module COMPARADOR5_MUSER_UC2
+Compiling module OR6_HXILINX_UC2
 Compiling module UC2
 Compiling module glbl
 Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
 Compiled 11 Verilog Units
 Built simulation executable C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC2_isim_beh.exe
-Fuse Memory Usage: 27620 KB
-Fuse CPU Usage: 531 ms
+Fuse Memory Usage: 27752 KB
+Fuse CPU Usage: 780 ms

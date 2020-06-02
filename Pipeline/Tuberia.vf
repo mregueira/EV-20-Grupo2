@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Tuberia.vf
-// /___/   /\     Timestamp : 06/01/2020 16:36:25
+// /___/   /\     Timestamp : 06/02/2020 19:08:08
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -18,135 +18,22 @@
 //    This verilog netlist is translated from an ECS schematic.It can be 
 //    synthesized and simulated, but it should not be modified. 
 //
-`timescale 1ns / 1ps
+`timescale  100 ps / 10 ps
 
-module COMPARADOR5_MUSER_Tuberia(a, 
-                                 b, 
-                                 iguales);
+module OR6_HXILINX_Tuberia (O, I0, I1, I2, I3, I4, I5);
+    
 
-    input [4:0] a;
-    input [4:0] b;
-   output iguales;
-   
-   wire XLXN_3;
-   wire XLXN_4;
-   wire XLXN_5;
-   wire XLXN_6;
-   wire XLXN_7;
-   wire XLXN_8;
-   wire XLXN_9;
-   wire XLXN_10;
-   wire XLXN_20;
-   wire XLXN_23;
-   wire XLXN_24;
-   
-   XOR2  XLXI_1 (.I0(b[0]), 
-                .I1(a[0]), 
-                .O(XLXN_3));
-   XOR2  XLXI_2 (.I0(b[1]), 
-                .I1(a[1]), 
-                .O(XLXN_4));
-   XOR2  XLXI_3 (.I0(b[2]), 
-                .I1(a[2]), 
-                .O(XLXN_5));
-   XOR2  XLXI_4 (.I0(b[3]), 
-                .I1(a[3]), 
-                .O(XLXN_6));
-   INV  XLXI_5 (.I(XLXN_3), 
-               .O(XLXN_10));
-   INV  XLXI_6 (.I(XLXN_4), 
-               .O(XLXN_7));
-   INV  XLXI_7 (.I(XLXN_5), 
-               .O(XLXN_8));
-   INV  XLXI_8 (.I(XLXN_6), 
-               .O(XLXN_9));
-   AND4  XLXI_9 (.I0(XLXN_9), 
-                .I1(XLXN_8), 
-                .I2(XLXN_7), 
-                .I3(XLXN_10), 
-                .O(XLXN_24));
-   XOR2  XLXI_10 (.I0(b[4]), 
-                 .I1(a[4]), 
-                 .O(XLXN_20));
-   INV  XLXI_11 (.I(XLXN_20), 
-                .O(XLXN_23));
-   AND2  XLXI_12 (.I0(XLXN_23), 
-                 .I1(XLXN_24), 
-                 .O(iguales));
-endmodule
-`timescale 1ns / 1ps
+   output O;
 
-module UC2_MUSER_Tuberia(DecodeBusA, 
-                         DecodeType, 
-                         ExecuteBusC, 
-                         ExecuteType, 
-                         OperandBusC, 
-                         OperandType, 
-                         RetireBusC, 
-                         RetireType, 
-                         hold);
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
 
-    input [4:0] DecodeBusA;
-    input [6:0] DecodeType;
-    input [5:0] ExecuteBusC;
-    input [6:0] ExecuteType;
-    input [5:0] OperandBusC;
-    input [6:0] OperandType;
-    input [5:0] RetireBusC;
-    input [6:0] RetireType;
-   output hold;
-   
-   wire XLXN_19;
-   wire XLXN_20;
-   wire XLXN_28;
-   wire XLXN_29;
-   wire XLXN_30;
-   wire XLXN_31;
-   wire XLXN_32;
-   wire XLXN_41;
-   wire XLXN_42;
-   wire XLXN_43;
-   
-   OR2  XLXI_2 (.I0(ExecuteType[5]), 
-               .I1(OperandType[5]), 
-               .O(XLXN_19));
-   AND2  XLXI_3 (.I0(DecodeType[4]), 
-                .I1(XLXN_19), 
-                .O(XLXN_28));
-   AND2  XLXI_4 (.I0(DecodeType[0]), 
-                .I1(XLXN_20), 
-                .O(XLXN_29));
-   AND3  XLXI_5 (.I0(DecodeType[2]), 
-                .I1(OperandType[3]), 
-                .I2(XLXN_41), 
-                .O(XLXN_30));
-   AND3  XLXI_6 (.I0(DecodeType[2]), 
-                .I1(ExecuteType[3]), 
-                .I2(XLXN_42), 
-                .O(XLXN_31));
-   AND3  XLXI_7 (.I0(DecodeType[2]), 
-                .I1(RetireType[3]), 
-                .I2(XLXN_43), 
-                .O(XLXN_32));
-   OR5  XLXI_8 (.I0(XLXN_32), 
-               .I1(XLXN_31), 
-               .I2(XLXN_30), 
-               .I3(XLXN_29), 
-               .I4(XLXN_28), 
-               .O(hold));
-   OR3  XLXI_9 (.I0(RetireType[1]), 
-               .I1(ExecuteType[1]), 
-               .I2(OperandType[1]), 
-               .O(XLXN_20));
-   COMPARADOR5_MUSER_Tuberia  XLXI_26 (.a(DecodeBusA[4:0]), 
-                                      .b(OperandBusC[4:0]), 
-                                      .iguales(XLXN_41));
-   COMPARADOR5_MUSER_Tuberia  XLXI_28 (.a(DecodeBusA[4:0]), 
-                                      .b(ExecuteBusC[4:0]), 
-                                      .iguales(XLXN_42));
-   COMPARADOR5_MUSER_Tuberia  XLXI_29 (.a(DecodeBusA[4:0]), 
-                                      .b(RetireBusC[4:0]), 
-                                      .iguales(XLXN_43));
+assign O = (I0 || I1 || I2 || I3 || I4 || I5);
+
 endmodule
 `timescale 1ns / 1ps
 
@@ -238,32 +125,6 @@ module LATCH6_MUSER_Tuberia(CLK,
 endmodule
 `timescale 1ns / 1ps
 
-module LATCH10_MUSER_Tuberia(CLK, 
-                             CLR, 
-                             ENABLE, 
-                             INPUT, 
-                             OUTPUT);
-
-    input CLK;
-    input CLR;
-    input ENABLE;
-    input [9:0] INPUT;
-   output [9:0] OUTPUT;
-   
-   
-   LATCH6_MUSER_Tuberia  XLXI_1 (.CLK(CLK), 
-                                .CLR(CLR), 
-                                .ENABLE(ENABLE), 
-                                .INPUT(INPUT[5:0]), 
-                                .OUTPUT(OUTPUT[5:0]));
-   LATCH4_MUSER_Tuberia  XLXI_2 (.CLK(CLK), 
-                                .CLR(CLR), 
-                                .ENABLE(ENABLE), 
-                                .INPUT(INPUT[9:6]), 
-                                .OUTPUT(OUTPUT[9:6]));
-endmodule
-`timescale 1ns / 1ps
-
 module LATCH1_MUSER_Tuberia(CLK, 
                             CLR, 
                             ENABLE, 
@@ -282,32 +143,6 @@ module LATCH1_MUSER_Tuberia(CLK,
                 .CLR(CLR), 
                 .D(INPUT), 
                 .Q(OUTPUT));
-endmodule
-`timescale 1ns / 1ps
-
-module LATCH2_MUSER_Tuberia(CLK, 
-                            CLR, 
-                            ENABLE, 
-                            INPUT, 
-                            OUTPUT);
-
-    input CLK;
-    input CLR;
-    input ENABLE;
-    input [1:0] INPUT;
-   output [1:0] OUTPUT;
-   
-   
-   LATCH1_MUSER_Tuberia  XLXI_1 (.CLK(CLK), 
-                                .CLR(CLR), 
-                                .ENABLE(ENABLE), 
-                                .INPUT(INPUT[0]), 
-                                .OUTPUT(OUTPUT[0]));
-   LATCH1_MUSER_Tuberia  XLXI_2 (.CLK(CLK), 
-                                .CLR(CLR), 
-                                .ENABLE(ENABLE), 
-                                .INPUT(INPUT[1]), 
-                                .OUTPUT(OUTPUT[1]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -334,6 +169,239 @@ module LATCH7_MUSER_Tuberia(CLK,
                                 .ENABLE(ENABLE), 
                                 .INPUT(INPUT[6]), 
                                 .OUTPUT(OUTPUT[6]));
+endmodule
+`timescale 1ns / 1ps
+
+module toRetire_MUSER_Tuberia(cbusIN, 
+                              CLK, 
+                              CLR, 
+                              ENABLE, 
+                              typeIN, 
+                              cbusOUTret, 
+                              typeOUTret);
+
+    input [5:0] cbusIN;
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [6:0] typeIN;
+   output [5:0] cbusOUTret;
+   output [6:0] typeOUTret;
+   
+   
+   LATCH7_MUSER_Tuberia  XLXI_1 (.CLK(CLK), 
+                                .CLR(CLR), 
+                                .ENABLE(ENABLE), 
+                                .INPUT(typeIN[6:0]), 
+                                .OUTPUT(typeOUTret[6:0]));
+   LATCH6_MUSER_Tuberia  XLXI_2 (.CLK(CLK), 
+                                .CLR(CLR), 
+                                .ENABLE(ENABLE), 
+                                .INPUT(cbusIN[5:0]), 
+                                .OUTPUT(cbusOUTret[5:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module COMPARADOR5_MUSER_Tuberia(a, 
+                                 b, 
+                                 iguales);
+
+    input [4:0] a;
+    input [4:0] b;
+   output iguales;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_20;
+   wire XLXN_23;
+   wire XLXN_24;
+   
+   XOR2  XLXI_1 (.I0(b[0]), 
+                .I1(a[0]), 
+                .O(XLXN_3));
+   XOR2  XLXI_2 (.I0(b[1]), 
+                .I1(a[1]), 
+                .O(XLXN_4));
+   XOR2  XLXI_3 (.I0(b[2]), 
+                .I1(a[2]), 
+                .O(XLXN_5));
+   XOR2  XLXI_4 (.I0(b[3]), 
+                .I1(a[3]), 
+                .O(XLXN_6));
+   INV  XLXI_5 (.I(XLXN_3), 
+               .O(XLXN_10));
+   INV  XLXI_6 (.I(XLXN_4), 
+               .O(XLXN_7));
+   INV  XLXI_7 (.I(XLXN_5), 
+               .O(XLXN_8));
+   INV  XLXI_8 (.I(XLXN_6), 
+               .O(XLXN_9));
+   AND4  XLXI_9 (.I0(XLXN_9), 
+                .I1(XLXN_8), 
+                .I2(XLXN_7), 
+                .I3(XLXN_10), 
+                .O(XLXN_24));
+   XOR2  XLXI_10 (.I0(b[4]), 
+                 .I1(a[4]), 
+                 .O(XLXN_20));
+   INV  XLXI_11 (.I(XLXN_20), 
+                .O(XLXN_23));
+   AND2  XLXI_12 (.I0(XLXN_23), 
+                 .I1(XLXN_24), 
+                 .O(iguales));
+endmodule
+`timescale 1ns / 1ps
+
+module UC2_MUSER_Tuberia(DecodeBusA, 
+                         DecodeMem, 
+                         DecodeType, 
+                         ExecuteBusC, 
+                         ExecuteType, 
+                         OperandBusC, 
+                         OperandType, 
+                         RetireBusC, 
+                         RetireType, 
+                         hold);
+
+    input [4:0] DecodeBusA;
+    input [1:0] DecodeMem;
+    input [6:0] DecodeType;
+    input [5:0] ExecuteBusC;
+    input [6:0] ExecuteType;
+    input [5:0] OperandBusC;
+    input [6:0] OperandType;
+    input [5:0] RetireBusC;
+    input [6:0] RetireType;
+   output hold;
+   
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_41;
+   wire XLXN_42;
+   wire XLXN_43;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire XLXN_48;
+   wire XLXN_49;
+   wire XLXN_60;
+   wire XLXN_76;
+   wire XLXN_77;
+   wire XLXN_78;
+   
+   OR2  XLXI_2 (.I0(ExecuteType[5]), 
+               .I1(OperandType[5]), 
+               .O(XLXN_19));
+   AND2  XLXI_3 (.I0(DecodeType[4]), 
+                .I1(XLXN_19), 
+                .O(XLXN_60));
+   AND2  XLXI_4 (.I0(DecodeType[0]), 
+                .I1(XLXN_20), 
+                .O(XLXN_46));
+   AND3  XLXI_5 (.I0(DecodeType[2]), 
+                .I1(OperandType[3]), 
+                .I2(XLXN_41), 
+                .O(XLXN_47));
+   AND3  XLXI_6 (.I0(DecodeType[2]), 
+                .I1(ExecuteType[3]), 
+                .I2(XLXN_42), 
+                .O(XLXN_48));
+   AND3  XLXI_7 (.I0(DecodeType[2]), 
+                .I1(RetireType[3]), 
+                .I2(XLXN_43), 
+                .O(XLXN_49));
+   OR3  XLXI_9 (.I0(RetireType[1]), 
+               .I1(ExecuteType[1]), 
+               .I2(OperandType[1]), 
+               .O(XLXN_20));
+   COMPARADOR5_MUSER_Tuberia  XLXI_26 (.a(DecodeBusA[4:0]), 
+                                      .b(OperandBusC[4:0]), 
+                                      .iguales(XLXN_41));
+   COMPARADOR5_MUSER_Tuberia  XLXI_28 (.a(DecodeBusA[4:0]), 
+                                      .b(ExecuteBusC[4:0]), 
+                                      .iguales(XLXN_42));
+   COMPARADOR5_MUSER_Tuberia  XLXI_29 (.a(DecodeBusA[4:0]), 
+                                      .b(RetireBusC[4:0]), 
+                                      .iguales(XLXN_43));
+   (* HU_SET = "XLXI_30_2" *) 
+   OR6_HXILINX_Tuberia  XLXI_30 (.I0(XLXN_78), 
+                                .I1(XLXN_49), 
+                                .I2(XLXN_48), 
+                                .I3(XLXN_47), 
+                                .I4(XLXN_46), 
+                                .I5(XLXN_60), 
+                                .O(hold));
+   (* HU_SET = "XLXI_41_3" *) 
+   OR6_HXILINX_Tuberia  XLXI_41 (.I0(RetireType[1]), 
+                                .I1(RetireType[0]), 
+                                .I2(ExecuteType[1]), 
+                                .I3(ExecuteType[0]), 
+                                .I4(OperandType[1]), 
+                                .I5(OperandType[0]), 
+                                .O(XLXN_76));
+   OR2  XLXI_42 (.I0(DecodeMem[1]), 
+                .I1(DecodeMem[0]), 
+                .O(XLXN_77));
+   AND2  XLXI_43 (.I0(XLXN_77), 
+                 .I1(XLXN_76), 
+                 .O(XLXN_78));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH10_MUSER_Tuberia(CLK, 
+                             CLR, 
+                             ENABLE, 
+                             INPUT, 
+                             OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [9:0] INPUT;
+   output [9:0] OUTPUT;
+   
+   
+   LATCH6_MUSER_Tuberia  XLXI_1 (.CLK(CLK), 
+                                .CLR(CLR), 
+                                .ENABLE(ENABLE), 
+                                .INPUT(INPUT[5:0]), 
+                                .OUTPUT(OUTPUT[5:0]));
+   LATCH4_MUSER_Tuberia  XLXI_2 (.CLK(CLK), 
+                                .CLR(CLR), 
+                                .ENABLE(ENABLE), 
+                                .INPUT(INPUT[9:6]), 
+                                .OUTPUT(OUTPUT[9:6]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH2_MUSER_Tuberia(CLK, 
+                            CLR, 
+                            ENABLE, 
+                            INPUT, 
+                            OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [1:0] INPUT;
+   output [1:0] OUTPUT;
+   
+   
+   LATCH1_MUSER_Tuberia  XLXI_1 (.CLK(CLK), 
+                                .CLR(CLR), 
+                                .ENABLE(ENABLE), 
+                                .INPUT(INPUT[0]), 
+                                .OUTPUT(OUTPUT[0]));
+   LATCH1_MUSER_Tuberia  XLXI_2 (.CLK(CLK), 
+                                .CLR(CLR), 
+                                .ENABLE(ENABLE), 
+                                .INPUT(INPUT[1]), 
+                                .OUTPUT(OUTPUT[1]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -694,36 +762,6 @@ module UC1_MUSER_Tuberia(abusIN,
 endmodule
 `timescale 1ns / 1ps
 
-module toRetire_MUSER_Tuberia(cbusIN, 
-                              CLK, 
-                              CLR, 
-                              ENABLE, 
-                              typeIN, 
-                              cbusOUTret, 
-                              typeOUTret);
-
-    input [5:0] cbusIN;
-    input CLK;
-    input CLR;
-    input ENABLE;
-    input [6:0] typeIN;
-   output [5:0] cbusOUTret;
-   output [6:0] typeOUTret;
-   
-   
-   LATCH7_MUSER_Tuberia  XLXI_1 (.CLK(CLK), 
-                                .CLR(CLR), 
-                                .ENABLE(ENABLE), 
-                                .INPUT(typeIN[6:0]), 
-                                .OUTPUT(typeOUTret[6:0]));
-   LATCH6_MUSER_Tuberia  XLXI_2 (.CLK(CLK), 
-                                .CLR(CLR), 
-                                .ENABLE(ENABLE), 
-                                .INPUT(cbusIN[5:0]), 
-                                .OUTPUT(cbusOUTret[5:0]));
-endmodule
-`timescale 1ns / 1ps
-
 module Tuberia(ABUS, 
                ALU, 
                BBUS, 
@@ -739,6 +777,7 @@ module Tuberia(ABUS,
                BBUSOUT, 
                CBUSOUT, 
                DAddOUT, 
+               HOLD, 
                KMXOUT, 
                MEMOUT, 
                SHOUT, 
@@ -759,6 +798,7 @@ module Tuberia(ABUS,
    output [5:0] BBUSOUT;
    output [5:0] CBUSOUT;
    output [9:0] DAddOUT;
+   output HOLD;
    output KMXOUT;
    output [1:0] MEMOUT;
    output [1:0] SHOUT;
@@ -771,7 +811,6 @@ module Tuberia(ABUS,
    wire [5:0] CBUSaUC1;
    wire [5:0] CBUSexec;
    wire [5:0] CBUSop;
-   wire HOLD;
    wire KMXaUC1;
    wire [1:0] MEMaUC1;
    wire [1:0] SHaUC1;
@@ -785,22 +824,29 @@ module Tuberia(ABUS,
    wire XLXN_50;
    wire XLXN_60;
    wire XLXN_61;
+   wire XLXN_66;
+   wire XLXN_67;
+   wire XLXN_77;
+   wire XLXN_80;
    wire [6:0] TYPEOUT_DUMMY;
    wire [5:0] CBUSOUT_DUMMY;
+   wire HOLD_DUMMY;
    
-   assign HOLD = 0;
    assign XLXN_11 = 0;
    assign XLXN_49 = 0;
    assign XLXN_50 = 1;
    assign XLXN_60 = 0;
    assign XLXN_61 = 1;
+   assign XLXN_67 = 0;
+   assign XLXN_80 = 1;
    assign CBUSOUT[5:0] = CBUSOUT_DUMMY[5:0];
+   assign HOLD = HOLD_DUMMY;
    assign TYPEOUT[6:0] = TYPEOUT_DUMMY[6:0];
    UC1_MUSER_Tuberia  XLXI_4 (.abusIN(ABUSaUC1[4:0]), 
                              .aluIN(ALUaUC1[3:0]), 
                              .bbusIN(BBUSaUC1[5:0]), 
                              .cbusIN(CBUSaUC1[5:0]), 
-                             .hold(HOLD), 
+                             .hold(HOLD_DUMMY), 
                              .kmxIN(KMXaUC1), 
                              .memIN(MEMaUC1[1:0]), 
                              .shIN(SHaUC1[1:0]), 
@@ -831,13 +877,13 @@ module Tuberia(ABUS,
                                   .typeIN(TYPEexec[6:0]), 
                                   .cbusOUTret(CBUSOUT_DUMMY[5:0]), 
                                   .typeOUTret(TYPEOUT_DUMMY[6:0]));
-   INV  XLXI_7 (.I(HOLD), 
+   INV  XLXI_7 (.I(HOLD_DUMMY), 
                .O(XLXN_2));
-   LATCH1_MUSER_Tuberia  XLXI_13 (.CLK(), 
-                                 .CLR(), 
-                                 .ENABLE(), 
-                                 .INPUT(), 
-                                 .OUTPUT());
+   LATCH1_MUSER_Tuberia  XLXI_13 (.CLK(XLXN_66), 
+                                 .CLR(XLXN_67), 
+                                 .ENABLE(XLXN_80), 
+                                 .INPUT(XLXN_77), 
+                                 .OUTPUT(HOLD_DUMMY));
    toOperand_MUSER_Tuberia  XLXI_14 (.abusIN(ABUS[4:0]), 
                                     .aluIN(ALU[3:0]), 
                                     .bbusIN(BBUS[5:0]), 
@@ -860,6 +906,7 @@ module Tuberia(ABUS,
                                     .shOUT(SHaUC1[1:0]), 
                                     .typeOUT(TYPEaUC1[6:0]));
    UC2_MUSER_Tuberia  XLXI_17 (.DecodeBusA(ABUS[4:0]), 
+                              .DecodeMem(MEM[1:0]), 
                               .DecodeType(TYPEIN[6:0]), 
                               .ExecuteBusC(CBUSexec[5:0]), 
                               .ExecuteType(TYPEexec[6:0]), 
@@ -867,5 +914,7 @@ module Tuberia(ABUS,
                               .OperandType(TYPEop[6:0]), 
                               .RetireBusC(CBUSOUT_DUMMY[5:0]), 
                               .RetireType(TYPEOUT_DUMMY[6:0]), 
-                              .hold(HOLD));
+                              .hold(XLXN_77));
+   INV  XLXI_26 (.I(CLK2), 
+                .O(XLXN_66));
 endmodule

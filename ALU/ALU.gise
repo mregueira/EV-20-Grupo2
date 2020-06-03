@@ -68,6 +68,8 @@
     <transform xil_pn:end_ts="1590946338" xil_pn:in_ck="3405720286189366898" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2029642466755996148" xil_pn:start_ts="1590946336">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ALU_main.vf"/>
     </transform>
     <transform xil_pn:end_ts="1589978989" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-1173049782635636189" xil_pn:start_ts="1589978989">
@@ -85,15 +87,20 @@
     <transform xil_pn:end_ts="1590417347" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1590417347">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1590417347" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="4130691368132193453" xil_pn:start_ts="1590417347">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1590946351" xil_pn:in_ck="-7405868384536076912" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-8329683717477476903" xil_pn:start_ts="1590946338">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_main.jhd"/>
       <outfile xil_pn:name="ALU_main.lso"/>
       <outfile xil_pn:name="ALU_main.ngc"/>

@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : bloque2.vf
-// /___/   /\     Timestamp : 06/04/2020 16:49:34
+// /___/   /\     Timestamp : 06/04/2020 16:59:25
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/EV-20-Grupo2/JoinTest/bloque2.vf -w C:/EV-20-Grupo2/JoinTest/bloque2.sch
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/bloque2.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/bloque2.sch
 //Design Name: bloque2
 //Device: artix7
 //Purpose:

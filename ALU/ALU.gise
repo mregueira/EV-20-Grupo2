@@ -146,16 +146,20 @@
     <transform xil_pn:end_ts="1591247233" xil_pn:in_ck="3405720286189361580" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2872143744144421396" xil_pn:start_ts="1591247222">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="ALU_main.bld"/>
       <outfile xil_pn:name="ALU_main.ngd"/>
       <outfile xil_pn:name="ALU_main_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
     <transform xil_pn:end_ts="1591247271" xil_pn:in_ck="3405720286189361581" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1591247233">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="ALU_main.pcf"/>
       <outfile xil_pn:name="ALU_main_map.map"/>
       <outfile xil_pn:name="ALU_main_map.mrp"/>
@@ -164,11 +168,13 @@
       <outfile xil_pn:name="ALU_main_map.xrpt"/>
       <outfile xil_pn:name="ALU_main_summary.xml"/>
       <outfile xil_pn:name="ALU_main_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
     <transform xil_pn:end_ts="1591247321" xil_pn:in_ck="592581354342610758" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="2516432636991085863" xil_pn:start_ts="1591247271">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="ALU_main.ncd"/>
       <outfile xil_pn:name="ALU_main.pad"/>
       <outfile xil_pn:name="ALU_main.par"/>
@@ -178,14 +184,15 @@
       <outfile xil_pn:name="ALU_main_pad.csv"/>
       <outfile xil_pn:name="ALU_main_pad.txt"/>
       <outfile xil_pn:name="ALU_main_par.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
     <transform xil_pn:end_ts="1591247321" xil_pn:in_ck="3405720286189361449" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1591247299">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="ALU_main.twr"/>
       <outfile xil_pn:name="ALU_main.twx"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
     </transform>
   </transforms>
 

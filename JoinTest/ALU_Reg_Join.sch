@@ -21,8 +21,6 @@
         <signal name="W_Block1(15:0)" />
         <signal name="DAddr(9:0)" />
         <signal name="XLXN_27(15:0)" />
-        <signal name="MW" />
-        <signal name="MR" />
         <signal name="Y_X_Kmx_Sel" />
         <signal name="XLXN_31" />
         <signal name="XLXN_32" />
@@ -37,11 +35,11 @@
         <signal name="SEL_A_RB(5:0)" />
         <signal name="SEL_B_RB(5:0)" />
         <signal name="C_SEL_RB(5:0)" />
+        <signal name="Rd" />
+        <signal name="Wr" />
         <port polarity="Input" name="Y_KMx_IN(15:0)" />
         <port polarity="Output" name="W_Block1(15:0)" />
         <port polarity="Input" name="DAddr(9:0)" />
-        <port polarity="Input" name="MW" />
-        <port polarity="Input" name="MR" />
         <port polarity="Input" name="Y_X_Kmx_Sel" />
         <port polarity="Input" name="Shifter_Sel(1:0)" />
         <port polarity="Input" name="CLK" />
@@ -51,6 +49,8 @@
         <port polarity="Input" name="SEL_A_RB(5:0)" />
         <port polarity="Input" name="SEL_B_RB(5:0)" />
         <port polarity="Input" name="C_SEL_RB(5:0)" />
+        <port polarity="Input" name="Rd" />
+        <port polarity="Input" name="Wr" />
         <blockdef name="ALU_main">
             <timestamp>2020-6-4T15:3:29</timestamp>
             <rect width="256" x="64" y="-384" height="384" />
@@ -179,8 +179,8 @@
             <blockpin name="IN0(15:0)" />
             <blockpin name="IN1(15:0)" />
             <blockpin signalname="XLXN_11(15:0)" name="FROM_C_LATCH(15:0)" />
-            <blockpin signalname="MR" name="MR" />
-            <blockpin signalname="MW" name="MW" />
+            <blockpin signalname="Wr" name="MR" />
+            <blockpin signalname="Rd" name="MW" />
             <blockpin signalname="XLXN_24(15:0)" name="TO_FROM_W(15:0)" />
             <blockpin signalname="XLXN_7(15:0)" name="TO_BUS_A(15:0)" />
             <blockpin signalname="XLXN_5(15:0)" name="TO_BUS_B(15:0)" />
@@ -200,8 +200,8 @@
         </block>
         <block symbolname="RAM_main" name="XLXI_27">
             <blockpin signalname="CLK" name="CLK" />
-            <blockpin signalname="MW" name="Wr" />
-            <blockpin signalname="MR" name="Rd" />
+            <blockpin signalname="Wr" name="Wr" />
+            <blockpin signalname="Rd" name="Rd" />
             <blockpin signalname="DAddr(9:0)" name="MemADDR(9:0)" />
             <blockpin signalname="XLXN_27(15:0)" name="GND(15:0)" />
             <blockpin signalname="XLXN_24(15:0)" name="ToFromW(15:0)" />
@@ -300,13 +300,6 @@
         <iomarker fontsize="28" x="3440" y="2208" name="W_Block1(15:0)" orien="R0" />
         <iomarker fontsize="28" x="2624" y="2752" name="DAddr(9:0)" orien="R180" />
         <instance x="2320" y="2752" name="GND2(15:0)" orien="R90" />
-        <branch name="MR">
-            <wire x2="2240" y1="2480" y2="2480" x1="2160" />
-            <wire x2="2240" y1="2480" y2="2688" x1="2240" />
-            <wire x2="2768" y1="2688" y2="2688" x1="2240" />
-            <wire x2="2672" y1="2336" y2="2336" x1="2240" />
-            <wire x2="2240" y1="2336" y2="2480" x1="2240" />
-        </branch>
         <branch name="Y_X_Kmx_Sel">
             <wire x2="3760" y1="1648" y2="1648" x1="3648" />
         </branch>
@@ -350,19 +343,10 @@
         </branch>
         <iomarker fontsize="28" x="6112" y="2016" name="Shifter_Sel(1:0)" orien="R0" />
         <branch name="XLXN_27(15:0)">
-            <wire x2="2464" y1="2816" y2="2816" x1="2448" />
-            <wire x2="2768" y1="2816" y2="2816" x1="2464" />
+            <wire x2="2768" y1="2816" y2="2816" x1="2448" />
         </branch>
         <branch name="DAddr(9:0)">
-            <wire x2="2640" y1="2752" y2="2752" x1="2624" />
-            <wire x2="2768" y1="2752" y2="2752" x1="2640" />
-        </branch>
-        <branch name="MW">
-            <wire x2="2448" y1="2400" y2="2400" x1="2400" />
-            <wire x2="2656" y1="2400" y2="2400" x1="2448" />
-            <wire x2="2672" y1="2400" y2="2400" x1="2656" />
-            <wire x2="2448" y1="2400" y2="2624" x1="2448" />
-            <wire x2="2768" y1="2624" y2="2624" x1="2448" />
+            <wire x2="2768" y1="2752" y2="2752" x1="2624" />
         </branch>
         <instance x="2768" y="2848" name="XLXI_27" orien="R0">
         </instance>
@@ -413,16 +397,29 @@
         <branch name="XLXN_5(15:0)">
             <wire x2="4080" y1="2048" y2="2048" x1="3344" />
             <wire x2="4080" y1="2048" y2="2240" x1="4080" />
-            <wire x2="4240" y1="2240" y2="2240" x1="4080" />
-            <wire x2="4272" y1="2240" y2="2240" x1="4240" />
+            <wire x2="4272" y1="2240" y2="2240" x1="4080" />
         </branch>
-        <iomarker fontsize="28" x="2160" y="2480" name="MR" orien="R180" />
-        <iomarker fontsize="28" x="2400" y="2400" name="MW" orien="R180" />
         <instance x="4656" y="2768" name="XLXI_34" orien="R180">
         </instance>
         <instance x="4272" y="2016" name="XLXI_35" orien="R0">
         </instance>
         <instance x="4272" y="2400" name="XLXI_36" orien="R0">
         </instance>
+        <branch name="Rd">
+            <wire x2="2576" y1="2544" y2="2544" x1="2368" />
+            <wire x2="2576" y1="2544" y2="2688" x1="2576" />
+            <wire x2="2768" y1="2688" y2="2688" x1="2576" />
+            <wire x2="2672" y1="2400" y2="2400" x1="2576" />
+            <wire x2="2576" y1="2400" y2="2544" x1="2576" />
+        </branch>
+        <branch name="Wr">
+            <wire x2="2512" y1="2400" y2="2400" x1="2432" />
+            <wire x2="2512" y1="2400" y2="2624" x1="2512" />
+            <wire x2="2768" y1="2624" y2="2624" x1="2512" />
+            <wire x2="2672" y1="2336" y2="2336" x1="2512" />
+            <wire x2="2512" y1="2336" y2="2400" x1="2512" />
+        </branch>
+        <iomarker fontsize="28" x="2432" y="2400" name="Wr" orien="R180" />
+        <iomarker fontsize="28" x="2368" y="2544" name="Rd" orien="R180" />
     </sheet>
 </drawing>

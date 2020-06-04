@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: ALU_Reg_Join.prj
 
@@ -175,6 +175,9 @@ Parsing module <demux5b_w_en_MUSER_demux6b_w_en>.
 Parsing module <demux6b_w_en>.
 Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\bidir_port.v" into library work
 Parsing module <bidir_port>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ffd16_w_en.vf" into library work
+Parsing module <IFD16_HXILINX_ffd16_w_en>.
+Parsing module <ffd16_w_en>.
 Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\bloque_3.vf" into library work
 Parsing module <reg_to_bus_2bit_sel_MUSER_bloque_3>.
 Parsing module <reg_to_bus_3bit_sel_MUSER_bloque_3>.
@@ -195,7 +198,8 @@ Parsing module <demux5b_w_en_MUSER_bloque2>.
 Parsing module <demux6b_w_en_MUSER_bloque2>.
 Parsing module <bloque2>.
 Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\register_bank.vf" into library work
-Parsing module <FD16CE_HXILINX_register_bank>.
+Parsing module <IFD16_HXILINX_register_bank>.
+Parsing module <ffd16_w_en_MUSER_register_bank>.
 Parsing module <demux_bus16b_sel2b_MUSER_register_bank>.
 Parsing module <demux_bus16b_sel3b_MUSER_register_bank>.
 Parsing module <demux_bus16b_sel4b_MUSER_register_bank>.
@@ -229,7 +233,8 @@ Parsing module <AND_Bus16>.
 Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\Shifter.v" into library work
 Parsing module <Shifter>.
 Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\register_bank_easy.vf" into library work
-Parsing module <FD16CE_HXILINX_register_bank_easy>.
+Parsing module <IFD16_HXILINX_register_bank_easy>.
+Parsing module <ffd16_w_en_MUSER_register_bank_easy>.
 Parsing module <demux_bus16b_sel2b_MUSER_register_bank_easy>.
 Parsing module <demux_bus16b_sel3b_MUSER_register_bank_easy>.
 Parsing module <demux_bus16b_sel4b_MUSER_register_bank_easy>.
@@ -258,11 +263,12 @@ Parsing module <D4_16E_HXILINX_ALU_main>.
 Parsing module <AND6_HXILINX_ALU_main>.
 Parsing module <ALU_main>.
 Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" into library work
-Parsing module <FD16CE_HXILINX_ALU_Reg_Join>.
 Parsing module <INV16_HXILINX_ALU_Reg_Join>.
 Parsing module <ADD16_HXILINX_ALU_Reg_Join>.
 Parsing module <D4_16E_HXILINX_ALU_Reg_Join>.
 Parsing module <AND6_HXILINX_ALU_Reg_Join>.
+Parsing module <IFD16_HXILINX_ALU_Reg_Join>.
+Parsing module <ffd16_w_en_MUSER_ALU_Reg_Join>.
 Parsing module <RAM_main_MUSER_ALU_Reg_Join>.
 Parsing module <demux_bus16b_sel2b_MUSER_ALU_Reg_Join>.
 Parsing module <demux_bus16b_sel3b_MUSER_ALU_Reg_Join>.
@@ -294,15 +300,13 @@ Elaborating module <ALU_Reg_Join>.
 
 Elaborating module <GND>.
 
-Elaborating module <FD16CE_HXILINX_ALU_Reg_Join>.
-
 Elaborating module <VCC>.
 
 Elaborating module <ALU_main_MUSER_ALU_Reg_Join>.
 
 Elaborating module <D4_16E_HXILINX_ALU_Reg_Join>.
-WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" Line 2764: Assignment to ZERO ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" Line 2767: Assignment to CY_0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" Line 2697: Assignment to ZERO ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" Line 2700: Assignment to CY_0 ignored, since the identifier is never used
 
 Elaborating module <AND_Bus16>.
 
@@ -387,15 +391,19 @@ Elaborating module <reg_to_bus_4bit_sel_MUSER_ALU_Reg_Join>.
 Elaborating module <reg_to_bus_3bit_sel_MUSER_ALU_Reg_Join>.
 
 Elaborating module <reg_to_bus_2bit_sel_MUSER_ALU_Reg_Join>.
-WARNING:HDLCompiler:552 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" Line 2025: Input port R35[15] is not connected on this instance
-WARNING:HDLCompiler:552 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" Line 2091: Input port R35[15] is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" Line 2044: Input port R35[15] is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" Line 2110: Input port R35[15] is not connected on this instance
+
+Elaborating module <ffd16_w_en_MUSER_ALU_Reg_Join>.
+
+Elaborating module <IFD16_HXILINX_ALU_Reg_Join>.
 
 Elaborating module <RAM_main_MUSER_ALU_Reg_Join>.
 
 Elaborating module <RAM_internal>.
 
 Elaborating module <BiMux2Bus16>.
-WARNING:HDLCompiler:552 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" Line 3024: Input port IN0[15] is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" Line 2936: Input port IN0[15] is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -403,33 +411,23 @@ WARNING:HDLCompiler:552 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTe
 
 Synthesizing Unit <ALU_Reg_Join>.
     Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf".
-    Set property "HU_SET = LATCHA_40" for instance <LatchA>.
-    Set property "HU_SET = LATCHB_41" for instance <LatchB>.
-    Set property "HU_SET = LATCHC_42" for instance <LatchC>.
 WARNING:Xst:2898 - Port 'IN0', unconnected in block instance 'XLXI_3', is tied to GND.
 WARNING:Xst:2898 - Port 'IN1', unconnected in block instance 'XLXI_3', is tied to GND.
     Summary:
 	no macro.
 Unit <ALU_Reg_Join> synthesized.
 
-Synthesizing Unit <FD16CE_HXILINX_ALU_Reg_Join>.
-    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf".
-    Found 16-bit register for signal <Q>.
-    Summary:
-	inferred  16 D-type flip-flop(s).
-Unit <FD16CE_HXILINX_ALU_Reg_Join> synthesized.
-
 Synthesizing Unit <ALU_main_MUSER_ALU_Reg_Join>.
     Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf".
-    Set property "HU_SET = ALUC_DECODER_35" for instance <ALUC_Decoder>.
-    Set property "HU_SET = XLXI_1_36" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_9_37" for instance <XLXI_9>.
-    Set property "HU_SET = XLXI_10_38" for instance <XLXI_10>.
-    Set property "HU_SET = XLXI_143_39" for instance <XLXI_143>.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 2751: Output port <D8> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 2751: Output port <D11> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 2751: Output port <D15> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 2802: Output port <OFL> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+    Set property "HU_SET = ALUC_DECODER_1" for instance <ALUC_Decoder>.
+    Set property "HU_SET = XLXI_1_2" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_9_3" for instance <XLXI_9>.
+    Set property "HU_SET = XLXI_10_4" for instance <XLXI_10>.
+    Set property "HU_SET = XLXI_143_5" for instance <XLXI_143>.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 2684: Output port <D8> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 2684: Output port <D11> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 2684: Output port <D15> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 2735: Output port <OFL> of the instance <XLXI_1> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <ALU_main_MUSER_ALU_Reg_Join> synthesized.
@@ -469,8 +467,8 @@ Unit <Mux2Bus16> synthesized.
 
 Synthesizing Unit <ADD16_HXILINX_ALU_Reg_Join>.
     Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf".
-    Found 17-bit adder for signal <n0019> created at line 70.
-    Found 17-bit adder for signal <n0010> created at line 70.
+    Found 17-bit adder for signal <n0019> created at line 46.
+    Found 17-bit adder for signal <n0010> created at line 46.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 Unit <ADD16_HXILINX_ALU_Reg_Join> synthesized.
@@ -536,109 +534,74 @@ Unit <register_bank_easy_MUSER_ALU_Reg_Join> synthesized.
 
 Synthesizing Unit <register_bank_MUSER_ALU_Reg_Join>.
     Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf".
-    Set property "HU_SET = XLXI_6_12" for instance <XLXI_6>.
-    Set property "HU_SET = XLXI_7_10" for instance <XLXI_7>.
-    Set property "HU_SET = XLXI_8_11" for instance <XLXI_8>.
-    Set property "HU_SET = XLXI_9_7" for instance <XLXI_9>.
-    Set property "HU_SET = XLXI_10_9" for instance <XLXI_10>.
-    Set property "HU_SET = XLXI_11_8" for instance <XLXI_11>.
-    Set property "HU_SET = XLXI_12_6" for instance <XLXI_12>.
-    Set property "HU_SET = XLXI_13_5" for instance <XLXI_13>.
-    Set property "HU_SET = XLXI_14_4" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_15_3" for instance <XLXI_15>.
-    Set property "HU_SET = XLXI_16_2" for instance <XLXI_16>.
-    Set property "HU_SET = XLXI_17_1" for instance <XLXI_17>.
-    Set property "HU_SET = XLXI_18_0" for instance <XLXI_18>.
-    Set property "HU_SET = XLXI_73_13" for instance <XLXI_73>.
-    Set property "HU_SET = XLXI_74_14" for instance <XLXI_74>.
-    Set property "HU_SET = XLXI_75_15" for instance <XLXI_75>.
-    Set property "HU_SET = XLXI_76_16" for instance <XLXI_76>.
-    Set property "HU_SET = XLXI_77_17" for instance <XLXI_77>.
-    Set property "HU_SET = XLXI_78_18" for instance <XLXI_78>.
-    Set property "HU_SET = XLXI_80_19" for instance <XLXI_80>.
-    Set property "HU_SET = XLXI_81_20" for instance <XLXI_81>.
-    Set property "HU_SET = XLXI_82_21" for instance <XLXI_82>.
-    Set property "HU_SET = XLXI_83_22" for instance <XLXI_83>.
-    Set property "HU_SET = XLXI_84_23" for instance <XLXI_84>.
-    Set property "HU_SET = XLXI_85_24" for instance <XLXI_85>.
-    Set property "HU_SET = XLXI_86_25" for instance <XLXI_86>.
-    Set property "HU_SET = XLXI_87_26" for instance <XLXI_87>.
-    Set property "HU_SET = XLXI_88_27" for instance <XLXI_88>.
-    Set property "HU_SET = XLXI_89_28" for instance <XLXI_89>.
-    Set property "HU_SET = XLXI_90_29" for instance <XLXI_90>.
-    Set property "HU_SET = XLXI_91_30" for instance <XLXI_91>.
-    Set property "HU_SET = XLXI_92_31" for instance <XLXI_92>.
-    Set property "HU_SET = XLXI_93_32" for instance <XLXI_93>.
-    Set property "HU_SET = XLXI_94_33" for instance <XLXI_94>.
-    Set property "HU_SET = XLXI_95_34" for instance <XLXI_95>.
     Summary:
 	no macro.
 Unit <register_bank_MUSER_ALU_Reg_Join> synthesized.
 
 Synthesizing Unit <bloque2_MUSER_ALU_Reg_Join>.
     Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf".
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR28> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR29> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR35> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR36> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR37> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR38> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR39> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR40> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR41> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR42> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR43> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR44> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR45> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR46> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR47> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR48> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR49> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR50> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR51> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR52> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR53> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR54> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR55> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR56> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR57> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR58> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR59> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR60> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR61> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR62> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1318: Output port <WR63> of the instance <XLXI_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R28> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R29> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R35> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R36> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R37> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R38> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R39> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R40> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R41> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R42> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R43> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R44> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R45> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R46> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R47> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R48> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R49> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R50> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R51> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R52> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R53> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R54> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R55> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R56> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R57> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R58> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R59> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R60> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R61> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R62> of the instance <XLXI_19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1395: Output port <R63> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR28> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR29> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR35> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR36> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR37> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR38> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR39> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR40> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR41> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR42> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR43> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR44> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR45> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR46> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR47> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR48> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR49> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR50> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR51> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR52> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR53> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR54> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR55> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR56> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR57> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR58> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR59> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR60> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR61> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR62> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1335: Output port <WR63> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R28> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R29> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R35> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R36> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R37> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R38> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R39> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R40> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R41> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R42> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R43> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R44> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R45> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R46> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R47> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R48> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R49> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R50> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R51> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R52> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R53> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R54> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R55> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R56> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R57> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R58> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R59> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R60> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R61> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R62> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf" line 1412: Output port <R63> of the instance <XLXI_19> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <bloque2_MUSER_ALU_Reg_Join> synthesized.
@@ -860,6 +823,20 @@ Synthesizing Unit <reg_to_bus_2bit_sel_MUSER_ALU_Reg_Join>.
 	no macro.
 Unit <reg_to_bus_2bit_sel_MUSER_ALU_Reg_Join> synthesized.
 
+Synthesizing Unit <ffd16_w_en_MUSER_ALU_Reg_Join>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf".
+    Set property "HU_SET = XLXI_1_0" for instance <XLXI_1>.
+    Summary:
+	no macro.
+Unit <ffd16_w_en_MUSER_ALU_Reg_Join> synthesized.
+
+Synthesizing Unit <IFD16_HXILINX_ALU_Reg_Join>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf".
+    Found 16-bit register for signal <Q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <IFD16_HXILINX_ALU_Reg_Join> synthesized.
+
 Synthesizing Unit <RAM_main_MUSER_ALU_Reg_Join>.
     Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join.vf".
     Summary:
@@ -945,38 +922,38 @@ WARNING:Xst:1290 - Hierarchical block <XLXI_2> is unconnected in block <XLXI_1>.
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <XLXI_2> is unconnected in block <XLXI_2>.
    It will be removed from the design.
-WARNING:Xst:1710 - FF/Latch <Q_15> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_14> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_13> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_12> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_11> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_10> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_9> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_8> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_7> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_6> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_5> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_4> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_3> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_2> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_1> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_0> (without init value) has a constant value of 0 in block <XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_15> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_14> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_13> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_12> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_11> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_10> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_9> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_8> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_7> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_6> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_5> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_4> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_3> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_2> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_1> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_0> (without init value) has a constant value of 0 in block <XLXI_89>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_15> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_14> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_13> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_12> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_11> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_10> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_9> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_8> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_7> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_6> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_5> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_4> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_3> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_2> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_1> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_0> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_15> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_14> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_13> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_12> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_11> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_10> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_9> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_8> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_7> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_6> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_5> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_4> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_3> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_2> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_1> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_0> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <RAM_internal>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -1019,10 +996,9 @@ Macro Statistics
 WARNING:Xst:2042 - Unit BiMux2Bus16: 16 internal tristates are replaced by logic (pull-up yes): Y<0>, Y<10>, Y<11>, Y<12>, Y<13>, Y<14>, Y<15>, Y<1>, Y<2>, Y<3>, Y<4>, Y<5>, Y<6>, Y<7>, Y<8>, Y<9>.
 WARNING:Xst:2042 - Unit bidir_port: 32 internal tristates are replaced by logic (pull-up yes): data<0>, data<10>, data<11>, data<12>, data<13>, data<14>, data<15>, data<1>, data<2>, data<3>, data<4>, data<5>, data<6>, data<7>, data<8>, data<9>, to_wreg<0>, to_wreg<10>, to_wreg<11>, to_wreg<12>, to_wreg<13>, to_wreg<14>, to_wreg<15>, to_wreg<1>, to_wreg<2>, to_wreg<3>, to_wreg<4>, to_wreg<5>, to_wreg<6>, to_wreg<7>, to_wreg<8>, to_wreg<9>.
 
-Optimizing unit <FD16CE_HXILINX_ALU_Reg_Join> ...
+Optimizing unit <IFD16_HXILINX_ALU_Reg_Join> ...
 
 Optimizing unit <ALU_Reg_Join> ...
-WARNING:Xst:2973 - All outputs of instance <XLXI_27/XLXI_1> of block <RAM_internal> are unconnected in block <ALU_Reg_Join>. Underlying logic will be removed.
 
 Optimizing unit <ALU_main_MUSER_ALU_Reg_Join> ...
 
@@ -1037,38 +1013,38 @@ Optimizing unit <AND6_HXILINX_ALU_Reg_Join> ...
 Optimizing unit <RAM_internal> ...
 
 Optimizing unit <Shifter> ...
-WARNING:Xst:1710 - FF/Latch <Q_15> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_14> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_13> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_12> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_11> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_10> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_9> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_8> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_7> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_6> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_5> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_4> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_3> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_2> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_1> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_0> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_89>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_15> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_14> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_13> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_12> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_11> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_10> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_9> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_8> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_7> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_6> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_5> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_4> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_3> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_2> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_1> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Q_0> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_90>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_15> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_14> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_13> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_12> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_11> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_10> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_9> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_8> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_7> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_6> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_5> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_4> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_3> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_2> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_1> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_0> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_126/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_15> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_14> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_13> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_12> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_11> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_10> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_9> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_8> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_7> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_6> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_5> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_4> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_3> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_2> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_1> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_0> (without init value) has a constant value of 0 in block <XLXI_3/XLXI_10/XLXI_125/XLXI_1>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -1080,8 +1056,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 576
- Flip-Flops                                            : 576
+# Registers                                            : 592
+ Flip-Flops                                            : 592
 
 =========================================================================
 
@@ -1104,30 +1080,34 @@ Top Level Output File Name         : ALU_Reg_Join.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1203
-#      AND2                        : 4
+# BELS                             : 1277
+#      AND2                        : 42
 #      AND5                        : 1
 #      GND                         : 3
 #      INV                         : 46
-#      LUT2                        : 49
-#      LUT3                        : 32
-#      LUT4                        : 81
+#      LUT2                        : 34
+#      LUT3                        : 36
+#      LUT4                        : 64
 #      LUT5                        : 78
-#      LUT6                        : 866
+#      LUT6                        : 898
 #      MUXCY                       : 16
+#      MUXF7                       : 32
 #      OR2                         : 6
 #      OR3                         : 2
 #      OR4                         : 1
 #      VCC                         : 1
 #      XOR2                        : 1
 #      XORCY                       : 16
-# FlipFlops/Latches                : 592
-#      FDCE                        : 576
+# FlipFlops/Latches                : 608
+#      FD                          : 576
+#      FDE                         : 16
 #      LD                          : 16
+# RAMS                             : 64
+#      RAM256X1S                   : 64
 # Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 61
-#      IBUF                        : 44
+#      BUFG                        : 1
+# IO Buffers                       : 72
+#      IBUF                        : 55
 #      OBUF                        : 17
 
 Device utilization summary:
@@ -1137,20 +1117,22 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             592  out of  126800     0%  
- Number of Slice LUTs:                 1152  out of  63400     1%  
-    Number used as Logic:              1152  out of  63400     1%  
+ Number of Slice Registers:             608  out of  126800     0%  
+ Number of Slice LUTs:                 1412  out of  63400     2%  
+    Number used as Logic:              1156  out of  63400     1%  
+    Number used as Memory:              256  out of  19000     1%  
+       Number used as RAM:              256
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1728
-   Number with an unused Flip Flop:    1136  out of   1728    65%  
-   Number with an unused LUT:           576  out of   1728    33%  
-   Number of fully used LUT-FF pairs:    16  out of   1728     0%  
-   Number of unique control sets:        37
+ Number of LUT Flip Flop pairs used:   1988
+   Number with an unused Flip Flop:    1380  out of   1988    69%  
+   Number with an unused LUT:           576  out of   1988    28%  
+   Number of fully used LUT-FF pairs:    32  out of   1988     1%  
+   Number of unique control sets:        38
 
 IO Utilization: 
  Number of IOs:                          72
- Number of bonded IOBs:                  62  out of    210    29%  
+ Number of bonded IOBs:                  72  out of    210    34%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -1173,13 +1155,49 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 576   |
-XLXI_2/_n0058(XLXI_2/out1:O)       | NONE(*)(XLXI_2/OUT_C_0)| 16    |
------------------------------------+------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
+----------------------------------------------------------------+--------------------------------------------+-------+
+Clock Signal                                                    | Clock buffer(FF name)                      | Load  |
+----------------------------------------------------------------+--------------------------------------------+-------+
+XLXI_3/XLXI_10/XLXI_96/XLXN_1(XLXI_3/XLXI_10/XLXI_96/XLXI_2:O)  | NONE(*)(XLXI_3/XLXI_10/XLXI_96/XLXI_1/Q_0) | 16    |
+XLXI_3/XLXI_10/XLXI_97/XLXN_1(XLXI_3/XLXI_10/XLXI_97/XLXI_2:O)  | NONE(*)(XLXI_3/XLXI_10/XLXI_97/XLXI_1/Q_0) | 16    |
+XLXI_3/XLXI_10/XLXI_98/XLXN_1(XLXI_3/XLXI_10/XLXI_98/XLXI_2:O)  | NONE(*)(XLXI_3/XLXI_10/XLXI_98/XLXI_1/Q_0) | 16    |
+XLXI_3/XLXI_10/XLXI_99/XLXN_1(XLXI_3/XLXI_10/XLXI_99/XLXI_2:O)  | NONE(*)(XLXI_3/XLXI_10/XLXI_99/XLXI_1/Q_0) | 16    |
+XLXI_3/XLXI_10/XLXI_100/XLXN_1(XLXI_3/XLXI_10/XLXI_100/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_100/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_101/XLXN_1(XLXI_3/XLXI_10/XLXI_101/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_101/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_102/XLXN_1(XLXI_3/XLXI_10/XLXI_102/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_102/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_103/XLXN_1(XLXI_3/XLXI_10/XLXI_103/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_103/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_104/XLXN_1(XLXI_3/XLXI_10/XLXI_104/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_104/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_105/XLXN_1(XLXI_3/XLXI_10/XLXI_105/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_105/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_107/XLXN_1(XLXI_3/XLXI_10/XLXI_107/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_107/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_108/XLXN_1(XLXI_3/XLXI_10/XLXI_108/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_108/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_109/XLXN_1(XLXI_3/XLXI_10/XLXI_109/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_109/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_110/XLXN_1(XLXI_3/XLXI_10/XLXI_110/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_110/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_111/XLXN_1(XLXI_3/XLXI_10/XLXI_111/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_111/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_112/XLXN_1(XLXI_3/XLXI_10/XLXI_112/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_112/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_113/XLXN_1(XLXI_3/XLXI_10/XLXI_113/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_113/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_114/XLXN_1(XLXI_3/XLXI_10/XLXI_114/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_114/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_115/XLXN_1(XLXI_3/XLXI_10/XLXI_115/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_115/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_116/XLXN_1(XLXI_3/XLXI_10/XLXI_116/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_116/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_117/XLXN_1(XLXI_3/XLXI_10/XLXI_117/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_117/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_118/XLXN_1(XLXI_3/XLXI_10/XLXI_118/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_118/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_119/XLXN_1(XLXI_3/XLXI_10/XLXI_119/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_119/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_120/XLXN_1(XLXI_3/XLXI_10/XLXI_120/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_120/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_121/XLXN_1(XLXI_3/XLXI_10/XLXI_121/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_121/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_122/XLXN_1(XLXI_3/XLXI_10/XLXI_122/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_122/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_123/XLXN_1(XLXI_3/XLXI_10/XLXI_123/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_123/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_124/XLXN_1(XLXI_3/XLXI_10/XLXI_124/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_124/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_127/XLXN_1(XLXI_3/XLXI_10/XLXI_127/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_127/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_128/XLXN_1(XLXI_3/XLXI_10/XLXI_128/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_128/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_129/XLXN_1(XLXI_3/XLXI_10/XLXI_129/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_129/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_130/XLXN_1(XLXI_3/XLXI_10/XLXI_130/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_130/XLXI_1/Q_0)| 16    |
+XLXI_3/XLXI_10/XLXI_131/XLXN_1(XLXI_3/XLXI_10/XLXI_131/XLXI_2:O)| NONE(*)(XLXI_3/XLXI_10/XLXI_131/XLXI_1/Q_0)| 16    |
+XLXI_34/XLXN_1(XLXI_34/XLXI_2:O)                                | NONE(*)(XLXI_34/XLXI_1/Q_0)                | 16    |
+XLXI_35/XLXN_1(XLXI_35/XLXI_2:O)                                | NONE(*)(XLXI_35/XLXI_1/Q_0)                | 16    |
+XLXI_36/XLXN_1(XLXI_36/XLXI_2:O)                                | NONE(*)(XLXI_36/XLXI_1/Q_0)                | 16    |
+CLK                                                             | IBUF+BUFG                                  | 80    |
+XLXI_2/_n0058(XLXI_2/out1:O)                                    | NONE(*)(XLXI_2/OUT_C_0)                    | 16    |
+----------------------------------------------------------------+--------------------------------------------+-------+
+(*) These 37 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -1192,7 +1210,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.111ns (Maximum Frequency: 473.687MHz)
+   Minimum period: 2.226ns (Maximum Frequency: 449.176MHz)
    Minimum input arrival time before clock: 5.496ns
    Maximum output required time after clock: 4.636ns
    Maximum combinational path delay: 6.207ns
@@ -1203,52 +1221,820 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 2.111ns (frequency: 473.687MHz)
-  Total number of paths / destination ports: 1584 / 560
+  Clock period: 2.226ns (frequency: 449.176MHz)
+  Total number of paths / destination ports: 128 / 80
 -------------------------------------------------------------------------
-Delay:               2.111ns (Levels of Logic = 4)
-  Source:            XLXI_3/XLXI_10/XLXI_77/Q_0 (FF)
-  Destination:       LatchB/Q_0 (FF)
+Delay:               2.226ns (Levels of Logic = 1)
+  Source:            XLXI_27/XLXI_1/Mram_mem62 (RAM)
+  Destination:       XLXI_27/XLXI_1/data_out_15 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: XLXI_3/XLXI_10/XLXI_77/Q_0 to LatchB/Q_0
+  Data Path: XLXI_27/XLXI_1/Mram_mem62 to XLXI_27/XLXI_1/data_out_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             2   0.361   0.561  Q_0 (Q_0)
-     end scope: 'XLXI_3/XLXI_10/XLXI_77:Q<0>'
-     LUT6:I2->O            1   0.097   0.511  XLXI_3/XLXI_10/XLXI_2/XLXI_4/XLXI_3/Mmux_TO_BUS_10 (XLXI_3/XLXI_10/XLXI_2/XLXI_4/XLXI_3/Mmux_TO_BUS_10)
-     LUT6:I3->O            1   0.097   0.379  XLXI_3/XLXI_10/XLXI_2/XLXI_4/XLXI_3/Mmux_TO_BUS_6 (XLXI_3/XLXI_10/XLXI_2/XLXI_4/XLXI_3/Mmux_TO_BUS_6)
-     LUT6:I4->O            1   0.097   0.000  XLXI_3/XLXI_10/SEL_B<5> (XLXN_5<0>)
-     begin scope: 'LatchB:D<0>'
-     FDCE:D                    0.008          Q_0
+     RAM256X1S:WCLK->O     1   1.565   0.556  XLXI_27/XLXI_1/Mram_mem62 (XLXI_27/XLXI_1/N128)
+     LUT6:I2->O            1   0.097   0.000  XLXI_27/XLXI_1/inst_LPM_MUX1511 (XLXI_27/XLXI_1/_n0010<15>)
+     FDE:D                     0.008          XLXI_27/XLXI_1/data_out_15
     ----------------------------------------
-    Total                      2.111ns (0.660ns logic, 1.451ns route)
-                                       (31.3% logic, 68.7% route)
+    Total                      2.226ns (1.670ns logic, 0.556ns route)
+                                       (75.0% logic, 25.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_96/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.312ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_96/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_96/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_96/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.618  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I3->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n0003381 (XLXI_3/XLXI_10/R0<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_96/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.312ns (0.203ns logic, 1.109ns route)
+                                       (15.5% logic, 84.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_97/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_97/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_97/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_97/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000311751 (XLXI_3/XLXI_10/R1<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_97/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_98/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_98/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_98/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_98/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000313191 (XLXI_3/XLXI_10/R2<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_98/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_99/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.484ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_99/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_99/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_99/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.790  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I1->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000313351 (XLXI_3/XLXI_10/R3<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_99/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.484ns (0.203ns logic, 1.281ns route)
+                                       (13.7% logic, 86.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_100/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_100/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_100/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_100/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000313511 (XLXI_3/XLXI_10/R4<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_100/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_101/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.484ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_101/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_101/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_101/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.790  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I1->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000313671 (XLXI_3/XLXI_10/R5<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_101/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.484ns (0.203ns logic, 1.281ns route)
+                                       (13.7% logic, 86.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_102/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.484ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_102/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_102/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_102/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.790  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I1->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000313831 (XLXI_3/XLXI_10/R6<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_102/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.484ns (0.203ns logic, 1.281ns route)
+                                       (13.7% logic, 86.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_103/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.494ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_103/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_103/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_103/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.800  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I0->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000313991 (XLXI_3/XLXI_10/R7<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_103/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.494ns (0.203ns logic, 1.291ns route)
+                                       (13.6% logic, 86.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_104/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.312ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_104/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_104/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_104/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.618  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I3->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000314151 (XLXI_3/XLXI_10/R8<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_104/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.312ns (0.203ns logic, 1.109ns route)
+                                       (15.5% logic, 84.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_105/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_105/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_105/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_105/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000314311 (XLXI_3/XLXI_10/R9<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_105/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_107/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_107/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_107/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_107/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000311510 (XLXI_3/XLXI_10/R10<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_107/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_108/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_108/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_108/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_108/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n00031311 (XLXI_3/XLXI_10/R11<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_108/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_109/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_109/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_109/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_109/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n00031471 (XLXI_3/XLXI_10/R12<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_109/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_110/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_110/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_110/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_110/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n00031631 (XLXI_3/XLXI_10/R13<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_110/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_111/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_111/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_111/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_111/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n00031791 (XLXI_3/XLXI_10/R14<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_111/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_112/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_112/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_112/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_112/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n00031951 (XLXI_3/XLXI_10/R15<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_112/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_113/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.312ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_113/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_113/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_113/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.618  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I3->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000311111 (XLXI_3/XLXI_10/R16<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_113/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.312ns (0.203ns logic, 1.109ns route)
+                                       (15.5% logic, 84.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_114/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_114/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_114/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_114/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000311271 (XLXI_3/XLXI_10/R17<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_114/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_115/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_115/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_115/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_115/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000311431 (XLXI_3/XLXI_10/R18<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_115/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_116/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_116/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_116/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_116/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000311591 (XLXI_3/XLXI_10/R19<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_116/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_117/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_117/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_117/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_117/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000311911 (XLXI_3/XLXI_10/R20<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_117/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_118/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_118/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_118/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_118/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000312071 (XLXI_3/XLXI_10/R21<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_118/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_119/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_119/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_119/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_119/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000312231 (XLXI_3/XLXI_10/R22<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_119/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_120/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.357ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_120/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_120/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_120/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.663  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000312391 (XLXI_3/XLXI_10/R23<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_120/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.357ns (0.203ns logic, 1.154ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_121/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.312ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_121/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_121/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_121/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.618  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I3->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000312551 (XLXI_3/XLXI_10/R24<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_121/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.312ns (0.203ns logic, 1.109ns route)
+                                       (15.5% logic, 84.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_122/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.312ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_122/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_122/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_122/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.618  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I3->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000312711 (XLXI_3/XLXI_10/R25<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_122/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.312ns (0.203ns logic, 1.109ns route)
+                                       (15.5% logic, 84.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_123/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.312ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_123/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_123/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_123/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.618  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I3->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000312871 (XLXI_3/XLXI_10/R26<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_123/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.312ns (0.203ns logic, 1.109ns route)
+                                       (15.5% logic, 84.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_124/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.312ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_124/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_124/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_124/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.618  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I3->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000313031 (XLXI_3/XLXI_10/R27<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_124/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.312ns (0.203ns logic, 1.109ns route)
+                                       (15.5% logic, 84.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_127/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.312ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_127/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_127/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_127/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.618  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I3->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000361 (XLXI_3/XLXI_10/OUT0<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_127/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.312ns (0.203ns logic, 1.109ns route)
+                                       (15.5% logic, 84.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_128/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.312ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<5> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_128/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_128/XLXN_1 rising
+
+  Data Path: C_SEL_RB<5> to XLXI_3/XLXI_10/XLXI_128/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   0.001   0.491  C_SEL_RB_5_IBUF (C_SEL_RB_5_IBUF)
+     LUT2:I0->O           30   0.097   0.618  XLXI_3/XLXI_10/XLXI_1/C<5>16 (XLXI_3/XLXI_10/XLXI_1/C<5>_mmx_out)
+     LUT6:I3->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n0003221 (XLXI_3/XLXI_10/OUT1<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_128/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.312ns (0.203ns logic, 1.109ns route)
+                                       (15.5% logic, 84.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_129/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.371ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<4> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_129/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_129/XLXN_1 rising
+
+  Data Path: C_SEL_RB<4> to XLXI_3/XLXI_10/XLXI_129/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           529   0.001   0.863  C_SEL_RB_4_IBUF (C_SEL_RB_4_IBUF)
+     LUT5:I0->O            3   0.097   0.305  XLXI_3/XLXI_10/XLXI_1/C<2>16 (XLXI_3/XLXI_10/XLXI_1/C<2>_mmx_out)
+     LUT3:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_2/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n000361 (XLXI_3/XLXI_10/AUX0<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_129/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.371ns (0.203ns logic, 1.168ns route)
+                                       (14.8% logic, 85.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_130/XLXN_1'
+  Total number of paths / destination ports: 96 / 16
+-------------------------------------------------------------------------
+Offset:              1.371ns (Levels of Logic = 4)
+  Source:            C_SEL_RB<4> (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_130/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_130/XLXN_1 rising
+
+  Data Path: C_SEL_RB<4> to XLXI_3/XLXI_10/XLXI_130/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           529   0.001   0.863  C_SEL_RB_4_IBUF (C_SEL_RB_4_IBUF)
+     LUT5:I0->O            3   0.097   0.305  XLXI_3/XLXI_10/XLXI_1/C<2>16 (XLXI_3/XLXI_10/XLXI_1/C<2>_mmx_out)
+     LUT3:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_19/XLXI_2/XLXI_1/XLXI_1/XLXI_1/XLXI_1/Mmux_n00031121 (XLXI_3/XLXI_10/AUX1<14>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_130/XLXI_1:D<14>'
+     FD:D                      0.008          Q_14
+    ----------------------------------------
+    Total                      1.371ns (0.203ns logic, 1.168ns route)
+                                       (14.8% logic, 85.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_3/XLXI_10/XLXI_131/XLXN_1'
+  Total number of paths / destination ports: 160 / 16
+-------------------------------------------------------------------------
+Offset:              2.549ns (Levels of Logic = 5)
+  Source:            Wr (PAD)
+  Destination:       XLXI_3/XLXI_10/XLXI_131/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_3/XLXI_10/XLXI_131/XLXN_1 rising
+
+  Data Path: Wr to XLXI_3/XLXI_10/XLXI_131/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   0.001   0.375  Wr_IBUF (Wr_IBUF)
+     INV:I->O              1   0.511   0.693  XLXI_3/XLXI_10/XLXI_1/XLXI_22 (XLXI_3/XLXI_10/XLXI_1/XLXN_3)
+     AND2:I0->O           17   0.097   0.767  XLXI_3/XLXI_10/XLXI_1/XLXI_21 (XLXI_3/XLXI_10/XLXI_1/XLXN_6)
+     LUT6:I0->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_1/XLXI_11/Mmux_TO_BUS17 (XLXI_3/XLXI_10/WORK_REG<0>)
+     begin scope: 'XLXI_3/XLXI_10/XLXI_131/XLXI_1:D<0>'
+     FD:D                      0.008          Q_0
+    ----------------------------------------
+    Total                      2.549ns (0.714ns logic, 1.835ns route)
+                                       (28.0% logic, 72.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_35/XLXN_1'
+  Total number of paths / destination ports: 480 / 16
+-------------------------------------------------------------------------
+Offset:              2.464ns (Levels of Logic = 6)
+  Source:            SEL_A_RB<0> (PAD)
+  Destination:       XLXI_35/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_35/XLXN_1 rising
+
+  Data Path: SEL_A_RB<0> to XLXI_35/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           144   0.001   0.817  SEL_A_RB_0_IBUF (SEL_A_RB_0_IBUF)
+     LUT6:I0->O            1   0.097   0.556  XLXI_3/XLXI_10/XLXI_2/XLXI_3/XLXI_3/Mmux_TO_BUS_111 (XLXI_3/XLXI_10/XLXI_2/XLXI_3/XLXI_3/Mmux_TO_BUS_111)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_2/XLXI_3/XLXI_3/Mmux_TO_BUS_6 (XLXI_3/XLXI_10/XLXI_2/XLXI_3/XLXI_3/Mmux_TO_BUS_6)
+     MUXF7:I1->O           1   0.279   0.511  XLXI_3/XLXI_10/XLXI_2/XLXI_3/XLXI_3/Mmux_TO_BUS_5_f7 (XLXI_3/XLXI_10/XLXI_2/XLXI_3/XLXI_3/Mmux_TO_BUS_5_f7)
+     LUT6:I3->O            1   0.097   0.000  XLXI_13/Mmux_Y1 (XLXN_6<0>)
+     begin scope: 'XLXI_35/XLXI_1:D<0>'
+     FD:D                      0.008          Q_0
+    ----------------------------------------
+    Total                      2.464ns (0.579ns logic, 1.885ns route)
+                                       (23.5% logic, 76.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_36/XLXN_1'
+  Total number of paths / destination ports: 432 / 16
+-------------------------------------------------------------------------
+Offset:              2.636ns (Levels of Logic = 6)
+  Source:            SEL_B_RB<0> (PAD)
+  Destination:       XLXI_36/XLXI_1/Q_0 (FF)
+  Destination Clock: XLXI_36/XLXN_1 rising
+
+  Data Path: SEL_B_RB<0> to XLXI_36/XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           144   0.001   0.817  SEL_B_RB_0_IBUF (SEL_B_RB_0_IBUF)
+     LUT6:I0->O            1   0.097   0.556  XLXI_3/XLXI_10/XLXI_2/XLXI_4/XLXI_3/Mmux_TO_BUS_111 (XLXI_3/XLXI_10/XLXI_2/XLXI_4/XLXI_3/Mmux_TO_BUS_111)
+     LUT6:I2->O            1   0.097   0.000  XLXI_3/XLXI_10/XLXI_2/XLXI_4/XLXI_3/Mmux_TO_BUS_6 (XLXI_3/XLXI_10/XLXI_2/XLXI_4/XLXI_3/Mmux_TO_BUS_6)
+     MUXF7:I1->O           1   0.279   0.683  XLXI_3/XLXI_10/XLXI_2/XLXI_4/XLXI_3/Mmux_TO_BUS_5_f7 (XLXI_3/XLXI_10/XLXI_2/XLXI_4/XLXI_3/Mmux_TO_BUS_5_f7)
+     LUT6:I1->O            1   0.097   0.000  XLXI_3/XLXI_10/SEL_B<5> (XLXN_5<0>)
+     begin scope: 'XLXI_36/XLXI_1:D<0>'
+     FD:D                      0.008          Q_0
+    ----------------------------------------
+    Total                      2.636ns (0.579ns logic, 2.057ns route)
+                                       (22.0% logic, 78.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 7360 / 1088
+  Total number of paths / destination ports: 880 / 672
 -------------------------------------------------------------------------
-Offset:              2.889ns (Levels of Logic = 5)
-  Source:            MR (PAD)
-  Destination:       XLXI_3/XLXI_10/XLXI_95/Q_0 (FF)
+Offset:              1.579ns (Levels of Logic = 2)
+  Source:            Wr (PAD)
+  Destination:       XLXI_27/XLXI_1/Mram_mem64 (RAM)
   Destination Clock: CLK rising
 
-  Data Path: MR to XLXI_3/XLXI_10/XLXI_95/Q_0
+  Data Path: Wr to XLXI_27/XLXI_1/Mram_mem64
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.001   0.279  MR_IBUF (MR_IBUF)
-     INV:I->O              1   0.511   0.693  XLXI_3/XLXI_10/XLXI_1/XLXI_22 (XLXI_3/XLXI_10/XLXI_1/XLXN_3)
-     AND2:I0->O           17   0.097   0.768  XLXI_3/XLXI_10/XLXI_1/XLXI_21 (XLXI_3/XLXI_10/XLXI_1/XLXN_6)
-     XOR2:I0->O           16   0.097   0.348  XLXI_3/XLXI_10/XLXI_1/XLXI_20 (XLXI_3/XLXI_10/WR_WORK_REG)
-     begin scope: 'XLXI_3/XLXI_10/XLXI_95:CE'
-     FDCE:CE                   0.095          Q_0
+     IBUF:I->O            22   0.001   0.652  Wr_IBUF (Wr_IBUF)
+     LUT4:I0->O            4   0.097   0.000  XLXN_24<15>LogicTrst1 (XLXN_24<15>)
+     RAM256X1S:D               0.830          XLXI_27/XLXI_1/Mram_mem63
     ----------------------------------------
-    Total                      2.889ns (0.801ns logic, 2.088ns route)
-                                       (27.7% logic, 72.3% route)
+    Total                      1.579ns (0.928ns logic, 0.652ns route)
+                                       (58.8% logic, 41.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/_n0058'
@@ -1298,20 +2084,85 @@ Offset:              5.496ns (Levels of Logic = 26)
                                        (38.5% logic, 61.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 112 / 17
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_3/XLXI_10/XLXI_131/XLXN_1'
+  Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
-Offset:              4.636ns (Levels of Logic = 25)
-  Source:            LatchA/Q_0 (FF)
-  Destination:       CY_OUT (PAD)
-  Source Clock:      CLK rising
+Offset:              0.654ns (Levels of Logic = 2)
+  Source:            XLXI_3/XLXI_10/XLXI_131/XLXI_1/Q_15 (FF)
+  Destination:       W_Block1<15> (PAD)
+  Source Clock:      XLXI_3/XLXI_10/XLXI_131/XLXN_1 rising
 
-  Data Path: LatchA/Q_0 to CY_OUT
+  Data Path: XLXI_3/XLXI_10/XLXI_131/XLXI_1/Q_15 to W_Block1<15>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             3   0.361   0.289  Q_0 (Q_0)
-     end scope: 'LatchA:Q<0>'
+     FD:C->Q               4   0.361   0.293  Q_15 (Q_15)
+     end scope: 'XLXI_3/XLXI_10/XLXI_131/XLXI_1:Q<15>'
+     OBUF:I->O                 0.000          W_Block1_15_OBUF (W_Block1<15>)
+    ----------------------------------------
+    Total                      0.654ns (0.361ns logic, 0.293ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_36/XLXN_1'
+  Total number of paths / destination ports: 32 / 1
+-------------------------------------------------------------------------
+Offset:              4.420ns (Levels of Logic = 25)
+  Source:            XLXI_36/XLXI_1/Q_0 (FF)
+  Destination:       CY_OUT (PAD)
+  Source Clock:      XLXI_36/XLXN_1 rising
+
+  Data Path: XLXI_36/XLXI_1/Q_0 to CY_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.361   0.289  Q_0 (Q_0)
+     end scope: 'XLXI_36/XLXI_1:Q<0>'
+     begin scope: 'XLXI_1/XLXI_10:I<0>'
+     INV:I->O              1   0.113   0.379  O<0>1_INV_0 (O<0>)
+     end scope: 'XLXI_1/XLXI_10:O<0>'
+     LUT4:I2->O            1   0.097   0.295  XLXI_1/B_MUX1/Mmux_Y17 (XLXI_1/XLXN_6<0>)
+     begin scope: 'XLXI_1/XLXI_1:B<0>'
+     LUT2:I1->O            1   0.097   0.000  Madd_n0010_Madd_lut<0> (Madd_n0010_Madd_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Madd_n0010_Madd_cy<0> (Madd_n0010_Madd_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<1> (Madd_n0010_Madd_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<2> (Madd_n0010_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<3> (Madd_n0010_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<4> (Madd_n0010_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<5> (Madd_n0010_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<6> (Madd_n0010_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<7> (Madd_n0010_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<8> (Madd_n0010_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<9> (Madd_n0010_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<10> (Madd_n0010_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<11> (Madd_n0010_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<12> (Madd_n0010_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<13> (Madd_n0010_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0010_Madd_cy<14> (Madd_n0010_Madd_cy<14>)
+     MUXCY:CI->O           1   0.253   0.683  Madd_n0010_Madd_cy<15> (CO)
+     end scope: 'XLXI_1/XLXI_1:CO'
+     AND2:I1->O            1   0.107   0.683  XLXI_1/XLXI_5 (XLXI_1/XLXN_4)
+     OR2:I1->O             1   0.107   0.279  XLXI_1/XLXI_6 (CY_OUT_OBUF)
+     OBUF:I->O                 0.000          CY_OUT_OBUF (CY_OUT)
+    ----------------------------------------
+    Total                      4.420ns (1.810ns logic, 2.610ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_35/XLXN_1'
+  Total number of paths / destination ports: 64 / 1
+-------------------------------------------------------------------------
+Offset:              4.636ns (Levels of Logic = 25)
+  Source:            XLXI_35/XLXI_1/Q_0 (FF)
+  Destination:       CY_OUT (PAD)
+  Source Clock:      XLXI_35/XLXN_1 rising
+
+  Data Path: XLXI_35/XLXI_1/Q_0 to CY_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.361   0.289  Q_0 (Q_0)
+     end scope: 'XLXI_35/XLXI_1:Q<0>'
      begin scope: 'XLXI_1/XLXI_9:I<0>'
      INV:I->O              1   0.113   0.511  O<0>1_INV_0 (O<0>)
      end scope: 'XLXI_1/XLXI_9:O<0>'
@@ -1395,33 +2246,387 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock CLK
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |    2.111|         |         |         |
-XLXI_2/_n0058  |         |    0.759|         |         |
----------------+---------+---------+---------+---------+
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+CLK                           |    2.226|         |         |         |
+XLXI_3/XLXI_10/XLXI_131/XLXN_1|    1.681|         |         |         |
+------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock XLXI_2/_n0058
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    3.925|         |
+XLXI_35/XLXN_1 |         |         |    3.925|         |
+XLXI_36/XLXN_1 |         |         |    3.709|         |
 ---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_100/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_101/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.652|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_102/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.652|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_103/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.662|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_104/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.480|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_105/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_107/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_108/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_109/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_110/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_111/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_112/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_113/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.480|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_114/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_115/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_116/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_117/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_118/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_119/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_120/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_121/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.480|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_122/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.480|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_123/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.480|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_124/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.480|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_127/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.480|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_128/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.480|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_129/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.252|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_130/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.252|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_131/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    1.027|         |         |         |
+XLXI_34/XLXN_1 |    1.468|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_96/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.480|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_97/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_98/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.525|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/XLXI_10/XLXI_99/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_34/XLXN_1 |    1.652|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_34/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_2/_n0058  |         |    0.759|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_35/XLXN_1
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+XLXI_3/XLXI_10/XLXI_100/XLXN_1|    2.127|         |         |         |
+XLXI_3/XLXI_10/XLXI_101/XLXN_1|    2.388|         |         |         |
+XLXI_3/XLXI_10/XLXI_102/XLXN_1|    2.211|         |         |         |
+XLXI_3/XLXI_10/XLXI_103/XLXN_1|    2.343|         |         |         |
+XLXI_3/XLXI_10/XLXI_104/XLXN_1|    2.304|         |         |         |
+XLXI_3/XLXI_10/XLXI_105/XLXN_1|    2.565|         |         |         |
+XLXI_3/XLXI_10/XLXI_107/XLXN_1|    2.388|         |         |         |
+XLXI_3/XLXI_10/XLXI_108/XLXN_1|    2.520|         |         |         |
+XLXI_3/XLXI_10/XLXI_109/XLXN_1|    2.259|         |         |         |
+XLXI_3/XLXI_10/XLXI_110/XLXN_1|    2.520|         |         |         |
+XLXI_3/XLXI_10/XLXI_111/XLXN_1|    2.343|         |         |         |
+XLXI_3/XLXI_10/XLXI_112/XLXN_1|    2.475|         |         |         |
+XLXI_3/XLXI_10/XLXI_113/XLXN_1|    2.045|         |         |         |
+XLXI_3/XLXI_10/XLXI_114/XLXN_1|    2.306|         |         |         |
+XLXI_3/XLXI_10/XLXI_115/XLXN_1|    2.129|         |         |         |
+XLXI_3/XLXI_10/XLXI_116/XLXN_1|    2.261|         |         |         |
+XLXI_3/XLXI_10/XLXI_117/XLXN_1|    2.129|         |         |         |
+XLXI_3/XLXI_10/XLXI_118/XLXN_1|    2.390|         |         |         |
+XLXI_3/XLXI_10/XLXI_119/XLXN_1|    2.213|         |         |         |
+XLXI_3/XLXI_10/XLXI_120/XLXN_1|    2.345|         |         |         |
+XLXI_3/XLXI_10/XLXI_121/XLXN_1|    2.306|         |         |         |
+XLXI_3/XLXI_10/XLXI_122/XLXN_1|    2.567|         |         |         |
+XLXI_3/XLXI_10/XLXI_123/XLXN_1|    2.390|         |         |         |
+XLXI_3/XLXI_10/XLXI_124/XLXN_1|    2.522|         |         |         |
+XLXI_3/XLXI_10/XLXI_127/XLXN_1|    2.345|         |         |         |
+XLXI_3/XLXI_10/XLXI_128/XLXN_1|    2.477|         |         |         |
+XLXI_3/XLXI_10/XLXI_129/XLXN_1|    1.503|         |         |         |
+XLXI_3/XLXI_10/XLXI_130/XLXN_1|    1.419|         |         |         |
+XLXI_3/XLXI_10/XLXI_131/XLXN_1|    1.690|         |         |         |
+XLXI_3/XLXI_10/XLXI_96/XLXN_1 |    2.043|         |         |         |
+XLXI_3/XLXI_10/XLXI_97/XLXN_1 |    2.304|         |         |         |
+XLXI_3/XLXI_10/XLXI_98/XLXN_1 |    2.127|         |         |         |
+XLXI_3/XLXI_10/XLXI_99/XLXN_1 |    2.259|         |         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_36/XLXN_1
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+XLXI_3/XLXI_10/XLXI_100/XLXN_1|    2.299|         |         |         |
+XLXI_3/XLXI_10/XLXI_101/XLXN_1|    2.560|         |         |         |
+XLXI_3/XLXI_10/XLXI_102/XLXN_1|    2.383|         |         |         |
+XLXI_3/XLXI_10/XLXI_103/XLXN_1|    2.515|         |         |         |
+XLXI_3/XLXI_10/XLXI_104/XLXN_1|    2.476|         |         |         |
+XLXI_3/XLXI_10/XLXI_105/XLXN_1|    2.737|         |         |         |
+XLXI_3/XLXI_10/XLXI_107/XLXN_1|    2.560|         |         |         |
+XLXI_3/XLXI_10/XLXI_108/XLXN_1|    2.692|         |         |         |
+XLXI_3/XLXI_10/XLXI_109/XLXN_1|    2.431|         |         |         |
+XLXI_3/XLXI_10/XLXI_110/XLXN_1|    2.692|         |         |         |
+XLXI_3/XLXI_10/XLXI_111/XLXN_1|    2.515|         |         |         |
+XLXI_3/XLXI_10/XLXI_112/XLXN_1|    2.647|         |         |         |
+XLXI_3/XLXI_10/XLXI_113/XLXN_1|    2.217|         |         |         |
+XLXI_3/XLXI_10/XLXI_114/XLXN_1|    2.478|         |         |         |
+XLXI_3/XLXI_10/XLXI_115/XLXN_1|    2.301|         |         |         |
+XLXI_3/XLXI_10/XLXI_116/XLXN_1|    2.433|         |         |         |
+XLXI_3/XLXI_10/XLXI_117/XLXN_1|    2.301|         |         |         |
+XLXI_3/XLXI_10/XLXI_118/XLXN_1|    2.562|         |         |         |
+XLXI_3/XLXI_10/XLXI_119/XLXN_1|    2.385|         |         |         |
+XLXI_3/XLXI_10/XLXI_120/XLXN_1|    2.517|         |         |         |
+XLXI_3/XLXI_10/XLXI_121/XLXN_1|    2.478|         |         |         |
+XLXI_3/XLXI_10/XLXI_122/XLXN_1|    2.739|         |         |         |
+XLXI_3/XLXI_10/XLXI_123/XLXN_1|    2.562|         |         |         |
+XLXI_3/XLXI_10/XLXI_124/XLXN_1|    2.694|         |         |         |
+XLXI_3/XLXI_10/XLXI_127/XLXN_1|    2.517|         |         |         |
+XLXI_3/XLXI_10/XLXI_128/XLXN_1|    2.649|         |         |         |
+XLXI_3/XLXI_10/XLXI_129/XLXN_1|    1.326|         |         |         |
+XLXI_3/XLXI_10/XLXI_130/XLXN_1|    1.242|         |         |         |
+XLXI_3/XLXI_10/XLXI_131/XLXN_1|    1.513|         |         |         |
+XLXI_3/XLXI_10/XLXI_96/XLXN_1 |    2.215|         |         |         |
+XLXI_3/XLXI_10/XLXI_97/XLXN_1 |    2.476|         |         |         |
+XLXI_3/XLXI_10/XLXI_98/XLXN_1 |    2.299|         |         |         |
+XLXI_3/XLXI_10/XLXI_99/XLXN_1 |    2.431|         |         |         |
+------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 15.56 secs
+Total CPU time to Xst completion: 15.60 secs
  
 --> 
 
-Total memory usage is 4657896 kilobytes
+Total memory usage is 4660156 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  163 (   0 filtered)
+Number of warnings :  162 (   0 filtered)
 Number of infos    :   68 (   0 filtered)
 

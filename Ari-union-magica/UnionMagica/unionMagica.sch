@@ -13,8 +13,8 @@
         <signal name="XLXN_3">
         </signal>
         <signal name="XLXN_11" />
-        <signal name="XLXN_14" />
-        <signal name="XLXN_15(15:0)" />
+        <signal name="CY" />
+        <signal name="W(15:0)" />
         <signal name="XLXN_16(10:0)" />
         <signal name="XLXN_33(10:0)" />
         <signal name="XLXN_13" />
@@ -28,8 +28,8 @@
         <signal name="XLXN_45" />
         <signal name="CLK" />
         <signal name="HOLD" />
-        <port polarity="Input" name="XLXN_14" />
-        <port polarity="Input" name="XLXN_15(15:0)" />
+        <port polarity="Input" name="CY" />
+        <port polarity="Input" name="W(15:0)" />
         <port polarity="Input" name="INPUT(13:0)" />
         <port polarity="Input" name="CLK" />
         <port polarity="Input" name="HOLD" />
@@ -88,8 +88,8 @@
             <blockpin signalname="XLXN_11" name="B13" />
             <blockpin signalname="XLXN_19" name="B12" />
             <blockpin signalname="XLXN_13" name="B11" />
-            <blockpin signalname="XLXN_14" name="CY" />
-            <blockpin signalname="XLXN_15(15:0)" name="W0to15(15:0)" />
+            <blockpin signalname="CY" name="CY" />
+            <blockpin signalname="W(15:0)" name="W0to15(15:0)" />
             <blockpin signalname="XLXN_43" name="pre_load" />
         </block>
         <block symbolname="pc_increment_module" name="XLXI_4">
@@ -135,10 +135,10 @@
             <wire x2="1056" y1="1136" y2="1200" x1="1056" />
             <wire x2="1072" y1="1200" y2="1200" x1="1056" />
         </branch>
-        <branch name="XLXN_14">
+        <branch name="CY">
             <wire x2="1072" y1="1392" y2="1392" x1="1040" />
         </branch>
-        <branch name="XLXN_15(15:0)">
+        <branch name="W(15:0)">
             <wire x2="1072" y1="1456" y2="1456" x1="1040" />
         </branch>
         <branch name="XLXN_16(10:0)">
@@ -161,8 +161,8 @@
         <branch name="INPUT(13:0)">
             <wire x2="416" y1="1008" y2="1008" x1="384" />
         </branch>
-        <iomarker fontsize="28" x="1040" y="1392" name="XLXN_14" orien="R180" />
-        <iomarker fontsize="28" x="1040" y="1456" name="XLXN_15(15:0)" orien="R180" />
+        <iomarker fontsize="28" x="1040" y="1392" name="CY" orien="R180" />
+        <iomarker fontsize="28" x="1040" y="1456" name="W(15:0)" orien="R180" />
         <iomarker fontsize="28" x="384" y="1008" name="INPUT(13:0)" orien="R180" />
         <instance x="1360" y="992" name="XLXI_4" orien="R0">
         </instance>

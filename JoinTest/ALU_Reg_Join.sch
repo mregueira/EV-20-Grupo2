@@ -19,10 +19,10 @@
         <signal name="XLXN_13(15:0)" />
         <signal name="XLXN_24(15:0)" />
         <signal name="W_Block1(15:0)" />
-        <signal name="XLXN_26(9:0)" />
+        <signal name="DAddr(9:0)" />
         <signal name="XLXN_27(15:0)" />
-        <signal name="XLXN_28" />
-        <signal name="XLXN_29" />
+        <signal name="MW" />
+        <signal name="MR" />
         <signal name="Y_X_Kmx_Sel" />
         <signal name="XLXN_31" />
         <signal name="XLXN_32" />
@@ -30,25 +30,26 @@
         <signal name="Shifter_Sel(0)" />
         <signal name="Shifter_Sel(1)" />
         <signal name="Shifter_Sel(1:0)" />
-        <signal name="CLK_RAM" />
-        <signal name="CLK_REGBANK" />
+        <signal name="CLK" />
         <signal name="ALUC_IN(3:0)" />
         <signal name="CY_IN" />
-        <signal name="CLK_LATCH" />
         <signal name="CY_OUT" />
         <signal name="SEL_A_RB(5:0)" />
         <signal name="SEL_B_RB(5:0)" />
         <signal name="C_SEL_RB(5:0)" />
+        <signal name="XLXN_36" />
+        <signal name="XLXN_37" />
+        <signal name="XLXN_38" />
         <port polarity="Input" name="Y_KMx_IN(15:0)" />
         <port polarity="Output" name="W_Block1(15:0)" />
-        <port polarity="Input" name="XLXN_26(9:0)" />
+        <port polarity="Input" name="DAddr(9:0)" />
+        <port polarity="Input" name="MW" />
+        <port polarity="Input" name="MR" />
         <port polarity="Input" name="Y_X_Kmx_Sel" />
         <port polarity="Input" name="Shifter_Sel(1:0)" />
-        <port polarity="Input" name="CLK_RAM" />
-        <port polarity="Input" name="CLK_REGBANK" />
+        <port polarity="Input" name="CLK" />
         <port polarity="Input" name="ALUC_IN(3:0)" />
         <port polarity="Input" name="CY_IN" />
-        <port polarity="Input" name="CLK_LATCH" />
         <port polarity="Output" name="CY_OUT" />
         <port polarity="Input" name="SEL_A_RB(5:0)" />
         <port polarity="Input" name="SEL_B_RB(5:0)" />
@@ -179,16 +180,16 @@
             <blockpin signalname="XLXN_10(15:0)" name="OUT_C(15:0)" />
         </block>
         <block symbolname="fd16ce" name="LatchA">
-            <blockpin signalname="CLK_LATCH" name="C" />
+            <blockpin signalname="CLK" name="C" />
             <blockpin signalname="XLXN_31" name="CE" />
-            <blockpin name="CLR" />
+            <blockpin signalname="XLXN_36" name="CLR" />
             <blockpin signalname="XLXN_6(15:0)" name="D(15:0)" />
             <blockpin signalname="XLXN_3(15:0)" name="Q(15:0)" />
         </block>
         <block symbolname="fd16ce" name="LatchB">
-            <blockpin signalname="CLK_LATCH" name="C" />
+            <blockpin signalname="CLK" name="C" />
             <blockpin signalname="XLXN_32" name="CE" />
-            <blockpin name="CLR" />
+            <blockpin signalname="XLXN_37" name="CLR" />
             <blockpin signalname="XLXN_5(15:0)" name="D(15:0)" />
             <blockpin signalname="XLXN_4(15:0)" name="Q(15:0)" />
         </block>
@@ -196,12 +197,12 @@
             <blockpin signalname="SEL_A_RB(5:0)" name="SEL_A(5:0)" />
             <blockpin signalname="SEL_B_RB(5:0)" name="SEL_B(5:0)" />
             <blockpin signalname="C_SEL_RB(5:0)" name="C_SEL(5:0)" />
-            <blockpin signalname="CLK_REGBANK" name="CLK" />
+            <blockpin signalname="CLK" name="CLK" />
             <blockpin name="IN0(15:0)" />
             <blockpin name="IN1(15:0)" />
             <blockpin signalname="XLXN_11(15:0)" name="FROM_C_LATCH(15:0)" />
-            <blockpin signalname="XLXN_29" name="MR" />
-            <blockpin signalname="XLXN_28" name="MW" />
+            <blockpin signalname="MR" name="MR" />
+            <blockpin signalname="MW" name="MW" />
             <blockpin signalname="XLXN_7(15:0)" name="TO_BUS_A(15:0)" />
             <blockpin signalname="XLXN_5(15:0)" name="TO_BUS_B(15:0)" />
             <blockpin signalname="W_Block1(15:0)" name="WORKING_REGISTER(15:0)" />
@@ -214,9 +215,9 @@
             <blockpin signalname="XLXN_6(15:0)" name="Y(15:0)" />
         </block>
         <block symbolname="fd16ce" name="LatchC">
-            <blockpin signalname="CLK_LATCH" name="C" />
+            <blockpin signalname="CLK" name="C" />
             <blockpin signalname="XLXN_33" name="CE" />
-            <blockpin name="CLR" />
+            <blockpin signalname="XLXN_38" name="CLR" />
             <blockpin signalname="XLXN_10(15:0)" name="D(15:0)" />
             <blockpin signalname="XLXN_11(15:0)" name="Q(15:0)" />
         </block>
@@ -227,10 +228,10 @@
             <blockpin signalname="XLXN_13(15:0)" name="G" />
         </block>
         <block symbolname="RAM_main" name="XLXI_27">
-            <blockpin signalname="CLK_RAM" name="CLK" />
-            <blockpin signalname="XLXN_28" name="Wr" />
-            <blockpin signalname="XLXN_29" name="Rd" />
-            <blockpin signalname="XLXN_26(9:0)" name="MemADDR(9:0)" />
+            <blockpin signalname="CLK" name="CLK" />
+            <blockpin signalname="MW" name="Wr" />
+            <blockpin signalname="MR" name="Rd" />
+            <blockpin signalname="DAddr(9:0)" name="MemADDR(9:0)" />
             <blockpin signalname="XLXN_27(15:0)" name="GND(15:0)" />
             <blockpin signalname="XLXN_24(15:0)" name="ToFromW(15:0)" />
         </block>
@@ -245,6 +246,15 @@
         </block>
         <block symbolname="vcc" name="XLXI_30">
             <blockpin signalname="XLXN_33" name="P" />
+        </block>
+        <block symbolname="gnd" name="XLXI_31">
+            <blockpin signalname="XLXN_36" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_32">
+            <blockpin signalname="XLXN_37" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_33">
+            <blockpin signalname="XLXN_38" name="G" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="7040" height="5440">
@@ -264,11 +274,6 @@
         </branch>
         <branch name="XLXN_4(15:0)">
             <wire x2="5008" y1="2240" y2="2240" x1="4656" />
-        </branch>
-        <branch name="XLXN_5(15:0)">
-            <wire x2="4080" y1="2048" y2="2048" x1="3344" />
-            <wire x2="4080" y1="2048" y2="2240" x1="4080" />
-            <wire x2="4272" y1="2240" y2="2240" x1="4080" />
         </branch>
         <instance x="2672" y="2432" name="XLXI_3" orien="R0">
         </instance>
@@ -316,13 +321,14 @@
             <wire x2="3440" y1="2208" y2="2208" x1="3344" />
         </branch>
         <iomarker fontsize="28" x="3440" y="2208" name="W_Block1(15:0)" orien="R0" />
-        <iomarker fontsize="28" x="2624" y="2752" name="XLXN_26(9:0)" orien="R180" />
+        <iomarker fontsize="28" x="2624" y="2752" name="DAddr(9:0)" orien="R180" />
         <instance x="2320" y="2752" name="GND2(15:0)" orien="R90" />
-        <branch name="XLXN_29">
-            <wire x2="2656" y1="2336" y2="2336" x1="2352" />
-            <wire x2="2672" y1="2336" y2="2336" x1="2656" />
-            <wire x2="2352" y1="2336" y2="2688" x1="2352" />
-            <wire x2="2768" y1="2688" y2="2688" x1="2352" />
+        <branch name="MR">
+            <wire x2="2240" y1="2480" y2="2480" x1="2160" />
+            <wire x2="2240" y1="2480" y2="2688" x1="2240" />
+            <wire x2="2768" y1="2688" y2="2688" x1="2240" />
+            <wire x2="2672" y1="2336" y2="2336" x1="2240" />
+            <wire x2="2240" y1="2336" y2="2480" x1="2240" />
         </branch>
         <branch name="Y_X_Kmx_Sel">
             <wire x2="3760" y1="1648" y2="1648" x1="3648" />
@@ -370,11 +376,12 @@
             <wire x2="2464" y1="2816" y2="2816" x1="2448" />
             <wire x2="2768" y1="2816" y2="2816" x1="2464" />
         </branch>
-        <branch name="XLXN_26(9:0)">
+        <branch name="DAddr(9:0)">
             <wire x2="2640" y1="2752" y2="2752" x1="2624" />
             <wire x2="2768" y1="2752" y2="2752" x1="2640" />
         </branch>
-        <branch name="XLXN_28">
+        <branch name="MW">
+            <wire x2="2448" y1="2400" y2="2400" x1="2400" />
             <wire x2="2656" y1="2400" y2="2400" x1="2448" />
             <wire x2="2672" y1="2400" y2="2400" x1="2656" />
             <wire x2="2448" y1="2400" y2="2624" x1="2448" />
@@ -382,14 +389,14 @@
         </branch>
         <instance x="2768" y="2848" name="XLXI_27" orien="R0">
         </instance>
-        <branch name="CLK_RAM">
+        <branch name="CLK">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2704" y="2560" type="branch" />
             <wire x2="2768" y1="2560" y2="2560" x1="2704" />
         </branch>
-        <iomarker fontsize="28" x="2704" y="2560" name="CLK_RAM" orien="R180" />
-        <branch name="CLK_REGBANK">
+        <branch name="CLK">
             <wire x2="2672" y1="2080" y2="2080" x1="2608" />
         </branch>
-        <iomarker fontsize="28" x="2608" y="2080" name="CLK_REGBANK" orien="R180" />
+        <iomarker fontsize="28" x="2608" y="2080" name="CLK" orien="R180" />
         <branch name="ALUC_IN(3:0)">
             <wire x2="5008" y1="2368" y2="2368" x1="4912" />
         </branch>
@@ -398,15 +405,15 @@
             <wire x2="5008" y1="2304" y2="2304" x1="4944" />
         </branch>
         <iomarker fontsize="28" x="4944" y="2304" name="CY_IN" orien="R180" />
-        <branch name="CLK_LATCH">
+        <branch name="CLK">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4208" y="1984" type="branch" />
             <wire x2="4272" y1="1984" y2="1984" x1="4208" />
         </branch>
-        <iomarker fontsize="28" x="4208" y="1984" name="CLK_LATCH" orien="R180" />
-        <branch name="CLK_LATCH">
+        <branch name="CLK">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4208" y="2368" type="branch" />
             <wire x2="4272" y1="2368" y2="2368" x1="4208" />
         </branch>
-        <branch name="CLK_LATCH">
+        <branch name="CLK">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="4752" y="2800" type="branch" />
             <wire x2="4752" y1="2800" y2="2800" x1="4656" />
         </branch>
@@ -426,5 +433,29 @@
         <iomarker fontsize="28" x="2608" y="1888" name="SEL_A_RB(5:0)" orien="R180" />
         <iomarker fontsize="28" x="2608" y="1952" name="SEL_B_RB(5:0)" orien="R180" />
         <iomarker fontsize="28" x="2608" y="2016" name="C_SEL_RB(5:0)" orien="R180" />
+        <instance x="4128" y="2640" name="XLXI_32" orien="R0" />
+        <branch name="XLXN_5(15:0)">
+            <wire x2="4080" y1="2048" y2="2048" x1="3344" />
+            <wire x2="4080" y1="2048" y2="2240" x1="4080" />
+            <wire x2="4240" y1="2240" y2="2240" x1="4080" />
+            <wire x2="4272" y1="2240" y2="2240" x1="4240" />
+        </branch>
+        <instance x="4128" y="2208" name="XLXI_31" orien="R0" />
+        <branch name="XLXN_36">
+            <wire x2="4192" y1="2032" y2="2080" x1="4192" />
+            <wire x2="4256" y1="2032" y2="2032" x1="4192" />
+            <wire x2="4256" y1="2032" y2="2080" x1="4256" />
+            <wire x2="4272" y1="2080" y2="2080" x1="4256" />
+        </branch>
+        <branch name="XLXN_37">
+            <wire x2="4272" y1="2464" y2="2464" x1="4192" />
+            <wire x2="4192" y1="2464" y2="2512" x1="4192" />
+        </branch>
+        <instance x="4880" y="2768" name="XLXI_33" orien="R270" />
+        <branch name="XLXN_38">
+            <wire x2="4752" y1="2704" y2="2704" x1="4656" />
+        </branch>
+        <iomarker fontsize="28" x="2160" y="2480" name="MR" orien="R180" />
+        <iomarker fontsize="28" x="2400" y="2400" name="MW" orien="R180" />
     </sheet>
 </drawing>

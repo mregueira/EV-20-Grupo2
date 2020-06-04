@@ -1,0 +1,100 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_Reg_Join_ALU_Reg_Join_sch_tb_isim_beh.exe -prj C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_Reg_Join_ALU_Reg_Join_sch_tb_beh.prj work.ALU_Reg_Join_ALU_Reg_Join_sch_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/reg_to_bus_1bit_sel.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux_bus16b_sel1b.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux1b_w_en.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux1b.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/reg_to_bus_2bit_sel.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux_bus16b_sel2b.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux2b_w_en.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/reg_to_bus_3bit_sel.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux_bus16b_sel3b.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux3b_w_en.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/reg_to_bus_4bit_sel.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux_bus16b_sel4b.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux4b_w_en.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/reg_to_bus_5bit_sel.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux_bus16b_sel5b.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux5b_w_en.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/reg_to_bus_6bit_sel.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux_bus16b_sel6b.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux6b_w_en.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/bidir_port.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/bloque_3.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/bloque2.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/RAM_internal.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/OR_Bus16.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/Mux4Bus16.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/Mux2Bus16.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/BiMux2Bus16.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/AND_Bus16.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/Shifter.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank_easy.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/RAM_main.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_Reg_Join.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/prueba3.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module GND
+Compiling module FD16CE_HXILINX_ALU_Reg_Join
+Compiling module VCC
+Compiling module D4_16E_HXILINX_ALU_Reg_Join
+Compiling module AND_Bus16
+Compiling module Mux4Bus16
+Compiling module OR_Bus16
+Compiling module Mux2Bus16
+Compiling module ADD16_HXILINX_ALU_Reg_Join
+Compiling module AND2
+Compiling module OR2
+Compiling module INV16_HXILINX_ALU_Reg_Join
+Compiling module INV
+Compiling module OR4
+Compiling module OR3
+Compiling module AND5
+Compiling module AND6_HXILINX_ALU_Reg_Join
+Compiling module ALU_main_MUSER_ALU_Reg_Join
+Compiling module Shifter
+Compiling module demux1b_w_en
+Compiling module demux1b
+Compiling module demux2b_w_en_MUSER_ALU_Reg_Join
+Compiling module demux3b_w_en_MUSER_ALU_Reg_Join
+Compiling module demux4b_w_en_MUSER_ALU_Reg_Join
+Compiling module demux5b_w_en_MUSER_ALU_Reg_Join
+Compiling module demux6b_w_en_MUSER_ALU_Reg_Join
+Compiling module reg_to_bus_1bit_sel
+Compiling module bidir_port
+Compiling module demux_bus16b_sel1b
+Compiling module demux_bus16b_sel2b_MUSER_ALU_Reg...
+Compiling module demux_bus16b_sel3b_MUSER_ALU_Reg...
+Compiling module demux_bus16b_sel4b_MUSER_ALU_Reg...
+Compiling module demux_bus16b_sel5b_MUSER_ALU_Reg...
+Compiling module demux_bus16b_sel6b_MUSER_ALU_Reg...
+Compiling module XOR2
+Compiling module bloque2_MUSER_ALU_Reg_Join
+Compiling module reg_to_bus_2bit_sel_MUSER_ALU_Re...
+Compiling module reg_to_bus_3bit_sel_MUSER_ALU_Re...
+Compiling module reg_to_bus_4bit_sel_MUSER_ALU_Re...
+Compiling module reg_to_bus_5bit_sel_MUSER_ALU_Re...
+Compiling module reg_to_bus_6bit_sel_MUSER_ALU_Re...
+Compiling module bloque_3_MUSER_ALU_Reg_Join
+Compiling module register_bank_MUSER_ALU_Reg_Join
+Compiling module register_bank_easy_MUSER_ALU_Reg...
+Compiling module RAM_internal
+Compiling module BiMux2Bus16
+Compiling module RAM_main_MUSER_ALU_Reg_Join
+Compiling module ALU_Reg_Join
+Compiling module ALU_Reg_Join_ALU_Reg_Join_sch_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\ALU_Reg_Join_ALU_Reg_Join_sch_tb_isim_beh.exe.sim\libPortability.dll".
+Compiled 50 Verilog Units
+Built simulation executable C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_Reg_Join_ALU_Reg_Join_sch_tb_isim_beh.exe
+Fuse Memory Usage: 32576 KB
+Fuse CPU Usage: 656 ms

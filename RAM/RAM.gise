@@ -104,6 +104,7 @@
     <transform xil_pn:end_ts="1591246952" xil_pn:in_ck="-2933106006030268215" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6960981076093438488" xil_pn:start_ts="1591246950">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="RAM_main_RAM_main_sch_tb_beh.prj"/>
@@ -116,6 +117,8 @@
     <transform xil_pn:end_ts="1591246952" xil_pn:in_ck="-1847896433893459480" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-9175118972759929109" xil_pn:start_ts="1591246952">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="RAM_main_RAM_main_sch_tb_isim_beh.wdb"/>

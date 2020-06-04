@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_Reg_Join_ALU_Reg_Join_sch_tb_isim_beh.exe" -prj "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_Reg_Join_ALU_Reg_Join_sch_tb_beh.prj" "work.ALU_Reg_Join_ALU_Reg_Join_sch_tb" "work.glbl" 

@@ -1,0 +1,176 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : demux4b_w_en.vf
+// /___/   /\     Timestamp : 06/04/2020 13:31:28
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux4b_w_en.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux4b_w_en.sch
+//Design Name: demux4b_w_en
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module demux2b_w_en_MUSER_demux4b_w_en(ENABLE, 
+                                       SEL, 
+                                       x, 
+                                       a0, 
+                                       a1, 
+                                       a2, 
+                                       a3);
+
+    input ENABLE;
+    input [1:0] SEL;
+    input x;
+   output a0;
+   output a1;
+   output a2;
+   output a3;
+   
+   wire XLXN_12;
+   wire XLXN_13;
+   
+   demux1b_w_en  XLXI_4 (.enable(ENABLE), 
+                        .sel(SEL[0]), 
+                        .x(XLXN_12), 
+                        .a0(a0), 
+                        .a1(a1));
+   demux1b_w_en  XLXI_5 (.enable(ENABLE), 
+                        .sel(SEL[0]), 
+                        .x(XLXN_13), 
+                        .a0(a2), 
+                        .a1(a3));
+   demux1b  XLXI_6 (.sel(SEL[1]), 
+                   .x(x), 
+                   .a0(XLXN_12), 
+                   .a1(XLXN_13));
+endmodule
+`timescale 1ns / 1ps
+
+module demux3b_w_en_MUSER_demux4b_w_en(ENABLE, 
+                                       SEL, 
+                                       x, 
+                                       a0, 
+                                       a1, 
+                                       a2, 
+                                       a3, 
+                                       a4, 
+                                       a5, 
+                                       a6, 
+                                       a7);
+
+    input ENABLE;
+    input [2:0] SEL;
+    input x;
+   output a0;
+   output a1;
+   output a2;
+   output a3;
+   output a4;
+   output a5;
+   output a6;
+   output a7;
+   
+   wire XLXN_10;
+   wire XLXN_11;
+   
+   demux2b_w_en_MUSER_demux4b_w_en  XLXI_1 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[1:0]), 
+                                           .x(XLXN_10), 
+                                           .a0(a0), 
+                                           .a1(a1), 
+                                           .a2(a2), 
+                                           .a3(a3));
+   demux2b_w_en_MUSER_demux4b_w_en  XLXI_2 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[1:0]), 
+                                           .x(XLXN_11), 
+                                           .a0(a4), 
+                                           .a1(a5), 
+                                           .a2(a6), 
+                                           .a3(a7));
+   demux1b  XLXI_3 (.sel(SEL[2]), 
+                   .x(x), 
+                   .a0(XLXN_10), 
+                   .a1(XLXN_11));
+endmodule
+`timescale 1ns / 1ps
+
+module demux4b_w_en(ENABLE, 
+                    SEL, 
+                    x, 
+                    a0, 
+                    a1, 
+                    a2, 
+                    a3, 
+                    a4, 
+                    a5, 
+                    a6, 
+                    a7, 
+                    a8, 
+                    a9, 
+                    a10, 
+                    a11, 
+                    a12, 
+                    a13, 
+                    a14, 
+                    a15);
+
+    input ENABLE;
+    input [3:0] SEL;
+    input x;
+   output a0;
+   output a1;
+   output a2;
+   output a3;
+   output a4;
+   output a5;
+   output a6;
+   output a7;
+   output a8;
+   output a9;
+   output a10;
+   output a11;
+   output a12;
+   output a13;
+   output a14;
+   output a15;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   
+   demux3b_w_en_MUSER_demux4b_w_en  XLXI_1 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[2:0]), 
+                                           .x(XLXN_1), 
+                                           .a0(a0), 
+                                           .a1(a1), 
+                                           .a2(a2), 
+                                           .a3(a3), 
+                                           .a4(a4), 
+                                           .a5(a5), 
+                                           .a6(a6), 
+                                           .a7(a7));
+   demux3b_w_en_MUSER_demux4b_w_en  XLXI_2 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[2:0]), 
+                                           .x(XLXN_2), 
+                                           .a0(a8), 
+                                           .a1(a9), 
+                                           .a2(a10), 
+                                           .a3(a11), 
+                                           .a4(a12), 
+                                           .a5(a13), 
+                                           .a6(a14), 
+                                           .a7(a15));
+   demux1b  XLXI_3 (.sel(SEL[3]), 
+                   .x(x), 
+                   .a0(XLXN_1), 
+                   .a1(XLXN_2));
+endmodule

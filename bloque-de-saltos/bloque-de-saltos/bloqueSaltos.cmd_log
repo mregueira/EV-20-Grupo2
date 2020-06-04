@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/bloque-de-saltos/bloque-de-saltos/bloqueSaltos.xst" -ofn "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/bloque-de-saltos/bloque-de-saltos/bloqueSaltos.syr" 
+xst -intstyle ise -ifn "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/bloque-de-saltos/bloque-de-saltos/bloqueSaltos.xst" -ofn "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/bloque-de-saltos/bloque-de-saltos/bloqueSaltos.syr" 
+xst -intstyle ise -ifn "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/bloque-de-saltos/bloque-de-saltos/bloqueSaltos.xst" -ofn "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/bloque-de-saltos/bloque-de-saltos/bloqueSaltos.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a200t-fbg484-3 bloqueSaltos.ngc bloqueSaltos.ngd  
+map -intstyle ise -p xc7a200t-fbg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o bloqueSaltos_map.ncd bloqueSaltos.ngd bloqueSaltos.pcf 
+par -w -intstyle ise -ol high -mt off bloqueSaltos_map.ncd bloqueSaltos.ncd bloqueSaltos.pcf 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/bloque-de-saltos/bloque-de-saltos/bloque-saltos.v -lang verilog -prj bloque-de-saltos -o bloqueSaltos.spl -module bloqueSaltos -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 bloqueSaltos.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/bloque-de-saltos/bloque-de-saltos/bloqueSaltos.sym 

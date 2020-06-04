@@ -1,0 +1,11 @@
+[Inputs]
+=instruction[13:0]=
+[Outputs]
+B11
+B12
+B13
+=D[11:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel combine_instruction
+

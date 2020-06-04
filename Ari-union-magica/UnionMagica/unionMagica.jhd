@@ -1,0 +1,9 @@
+MODULE unionMagica
+	SUBMODULE bloqueSaltos
+		INSTANCE XLXI_1
+	SUBMODULE pc_increment_module
+		INSTANCE XLXI_4
+	SUBMODULE combine_instruction
+		INSTANCE XLXI_5
+	SUBMODULE instruction_register
+		INSTANCE XLXI_11

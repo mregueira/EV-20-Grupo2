@@ -1,0 +1,6 @@
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/pc_increment_module.v -lang verilog -prj UnionMagica -o pc_increment_module.spl -module pc_increment_module -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 pc_increment_module.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/pc_increment_module.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/pc_increment_module.v -lang verilog -prj UnionMagica -o pc_increment_module.spl -module pc_increment_module -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w pc_increment_module.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/pc_increment_module.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/pc_increment_module.v -lang verilog -prj UnionMagica -o pc_increment_module.spl -module pc_increment_module -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w pc_increment_module.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/pc_increment_module.sym 

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/EV-20-Grupo2/shifter2/Shifter.v -lang verilog -prj shifter2 -o Shifter.spl -module Shifter -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Shifter.spl C:/EV-20-Grupo2/shifter2/Shifter.sym 

@@ -1,3 +1,0 @@
-MODULE new_sch
-	SUBMODULE register_bank_easy
-		INSTANCE XLXI_1

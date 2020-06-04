@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.28 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.28 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: ALU_main.prj
 
@@ -105,15 +105,15 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\OR_Bus16.v" into library work
+Analyzing Verilog file "C:\EV-20-Grupo2\ALU\OR_Bus16.v" into library work
 Parsing module <OR_Bus16>.
-Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\Mux4Bus16.v" into library work
+Analyzing Verilog file "C:\EV-20-Grupo2\ALU\Mux4Bus16.v" into library work
 Parsing module <Mux4Bus16>.
-Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\Mux2Bus16.v" into library work
+Analyzing Verilog file "C:\EV-20-Grupo2\ALU\Mux2Bus16.v" into library work
 Parsing module <Mux2Bus16>.
-Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\AND_Bus16.v" into library work
+Analyzing Verilog file "C:\EV-20-Grupo2\ALU\AND_Bus16.v" into library work
 Parsing module <AND_Bus16>.
-Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" into library work
+Analyzing Verilog file "C:\EV-20-Grupo2\ALU\ALU_main.vf" into library work
 Parsing module <INV16_HXILINX_ALU_main>.
 Parsing module <ADD16_HXILINX_ALU_main>.
 Parsing module <D4_16E_HXILINX_ALU_main>.
@@ -127,8 +127,8 @@ Parsing module <ALU_main>.
 Elaborating module <ALU_main>.
 
 Elaborating module <D4_16E_HXILINX_ALU_main>.
-WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" Line 226: Assignment to ZERO ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" Line 229: Assignment to CY_0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\EV-20-Grupo2\ALU\ALU_main.vf" Line 226: Assignment to ZERO ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\EV-20-Grupo2\ALU\ALU_main.vf" Line 229: Assignment to CY_0 ignored, since the identifier is never used
 
 Elaborating module <AND_Bus16>.
 
@@ -161,34 +161,34 @@ Elaborating module <AND6_HXILINX_ALU_main>.
 =========================================================================
 
 Synthesizing Unit <ALU_main>.
-    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf".
+    Related source file is "C:\EV-20-Grupo2\ALU\ALU_main.vf".
     Set property "HU_SET = ALUC_DECODER_0" for instance <ALUC_Decoder>.
     Set property "HU_SET = XLXI_1_1" for instance <XLXI_1>.
     Set property "HU_SET = XLXI_9_2" for instance <XLXI_9>.
     Set property "HU_SET = XLXI_10_3" for instance <XLXI_10>.
     Set property "HU_SET = XLXI_143_4" for instance <XLXI_143>.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" line 213: Output port <D8> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" line 213: Output port <D11> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" line 213: Output port <D15> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf" line 264: Output port <OFL> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\EV-20-Grupo2\ALU\ALU_main.vf" line 213: Output port <D8> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\EV-20-Grupo2\ALU\ALU_main.vf" line 213: Output port <D11> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\EV-20-Grupo2\ALU\ALU_main.vf" line 213: Output port <D15> of the instance <ALUC_Decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\EV-20-Grupo2\ALU\ALU_main.vf" line 264: Output port <OFL> of the instance <XLXI_1> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <ALU_main> synthesized.
 
 Synthesizing Unit <D4_16E_HXILINX_ALU_main>.
-    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf".
+    Related source file is "C:\EV-20-Grupo2\ALU\ALU_main.vf".
     Summary:
 	inferred  16 Multiplexer(s).
 Unit <D4_16E_HXILINX_ALU_main> synthesized.
 
 Synthesizing Unit <AND_Bus16>.
-    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\AND_Bus16.v".
+    Related source file is "C:\EV-20-Grupo2\ALU\AND_Bus16.v".
     Summary:
 	no macro.
 Unit <AND_Bus16> synthesized.
 
 Synthesizing Unit <Mux4Bus16>.
-    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\Mux4Bus16.v".
+    Related source file is "C:\EV-20-Grupo2\ALU\Mux4Bus16.v".
     Found 3-bit adder for signal <n0047> created at line 12.
     Found 1-bit 4-to-1 multiplexer for signal <_n0063> created at line 12.
     Found 1-bit 4-to-1 multiplexer for signal <_n0073> created at line 12.
@@ -229,19 +229,19 @@ WARNING:Xst:737 - Found 1-bit latch for signal <Y<15>>. Latches may be generated
 Unit <Mux4Bus16> synthesized.
 
 Synthesizing Unit <OR_Bus16>.
-    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\OR_Bus16.v".
+    Related source file is "C:\EV-20-Grupo2\ALU\OR_Bus16.v".
     Summary:
 	no macro.
 Unit <OR_Bus16> synthesized.
 
 Synthesizing Unit <Mux2Bus16>.
-    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\Mux2Bus16.v".
+    Related source file is "C:\EV-20-Grupo2\ALU\Mux2Bus16.v".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Mux2Bus16> synthesized.
 
 Synthesizing Unit <ADD16_HXILINX_ALU_main>.
-    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf".
+    Related source file is "C:\EV-20-Grupo2\ALU\ALU_main.vf".
     Found 17-bit adder for signal <n0019> created at line 46.
     Found 17-bit adder for signal <n0010> created at line 46.
     Summary:
@@ -249,13 +249,13 @@ Synthesizing Unit <ADD16_HXILINX_ALU_main>.
 Unit <ADD16_HXILINX_ALU_main> synthesized.
 
 Synthesizing Unit <INV16_HXILINX_ALU_main>.
-    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf".
+    Related source file is "C:\EV-20-Grupo2\ALU\ALU_main.vf".
     Summary:
 	no macro.
 Unit <INV16_HXILINX_ALU_main> synthesized.
 
 Synthesizing Unit <AND6_HXILINX_ALU_main>.
-    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\ALU\ALU_main.vf".
+    Related source file is "C:\EV-20-Grupo2\ALU\ALU_main.vf".
     Summary:
 	no macro.
 Unit <AND6_HXILINX_ALU_main> synthesized.
@@ -489,12 +489,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.61 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.55 secs
  
 --> 
 
-Total memory usage is 4641080 kilobytes
+Total memory usage is 4624632 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   34 (   0 filtered)

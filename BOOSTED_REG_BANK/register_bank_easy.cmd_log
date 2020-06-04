@@ -1,1 +1,7 @@
 sch2sym -intstyle ise -family artix7 -w -refsym register_bank_easy C:/EV-20-Grupo2/BOOSTED_REG_BANK/register_bank_easy.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/register_bank_easy.sym 
+xst -intstyle ise -ifn "C:/EV-20-Grupo2/BOOSTED_REG_BANK/register_bank_easy.xst" -ofn "C:/EV-20-Grupo2/BOOSTED_REG_BANK/register_bank_easy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm demux5b_w_en.bmm -p xc7a100t-csg324-3 register_bank_easy.ngc register_bank_easy.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o register_bank_easy_map.ncd register_bank_easy.ngd register_bank_easy.pcf 
+par -w -intstyle ise -ol high -mt off register_bank_easy_map.ncd register_bank_easy.ncd register_bank_easy.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml register_bank_easy.twx register_bank_easy.ncd -o register_bank_easy.twr register_bank_easy.pcf 
+sch2sym -intstyle ise -family artix7 -w -refsym register_bank_easy C:/EV-20-Grupo2/BOOSTED_REG_BANK/register_bank_easy.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/register_bank_easy.sym 

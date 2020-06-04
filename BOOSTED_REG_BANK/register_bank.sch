@@ -56,7 +56,6 @@
         <signal name="ENABLE_DEMUX_C" />
         <signal name="INPUT_DEMUX" />
         <signal name="MR" />
-        <signal name="FROM_WREG(15:0)" />
         <signal name="MW" />
         <signal name="R0(15:0)" />
         <signal name="R1(15:0)" />
@@ -123,7 +122,7 @@
         <signal name="MUXOUT1(15:0)" />
         <signal name="MUXAUX0(15:0)" />
         <signal name="MUXAUX1(15:0)" />
-        <signal name="MUXWORKREG(15:0)" />
+        <signal name="WORKING_REGISTER(15:0)" />
         <port polarity="Input" name="CLR" />
         <port polarity="Input" name="SEL_A(5:0)" />
         <port polarity="Input" name="SEL_B(5:0)" />
@@ -139,8 +138,8 @@
         <port polarity="Input" name="ENABLE_DEMUX_C" />
         <port polarity="Input" name="INPUT_DEMUX" />
         <port polarity="Input" name="MR" />
-        <port polarity="Input" name="FROM_WREG(15:0)" />
         <port polarity="Input" name="MW" />
+        <port polarity="Output" name="WORKING_REGISTER(15:0)" />
         <blockdef name="bloque2">
             <timestamp>2020-5-30T18:32:20</timestamp>
             <line x2="0" y1="32" y2="32" x1="64" />
@@ -393,7 +392,7 @@
             <blockpin signalname="TO_BUS_B(15:0)" name="TO_BUS_B(15:0)" />
             <blockpin signalname="MUXAUX0(15:0)" name="R32(15:0)" />
             <blockpin signalname="MUXAUX1(15:0)" name="R33(15:0)" />
-            <blockpin signalname="MUXWORKREG(15:0)" name="R34(15:0)" />
+            <blockpin signalname="WORKING_REGISTER(15:0)" name="R34(15:0)" />
         </block>
         <block symbolname="fd16ce" name="XLXI_18">
             <blockpin signalname="CLK" name="C" />
@@ -638,7 +637,7 @@
             <blockpin signalname="WR_WORK_REG" name="CE" />
             <blockpin signalname="CLR" name="CLR" />
             <blockpin signalname="WORK_REG(15:0)" name="D(15:0)" />
-            <blockpin signalname="MUXWORKREG(15:0)" name="Q(15:0)" />
+            <blockpin signalname="WORKING_REGISTER(15:0)" name="Q(15:0)" />
         </block>
         <block symbolname="bloque2" name="XLXI_1">
             <blockpin signalname="FROM_BUS(15:0)" name="FROM_BUS(15:0)" />
@@ -646,7 +645,7 @@
             <blockpin signalname="ENABLE_DEMUX_C" name="ENABLE" />
             <blockpin signalname="INPUT_DEMUX" name="WRITE_DEMUX" />
             <blockpin signalname="MR" name="MR" />
-            <blockpin signalname="FROM_WREG(15:0)" name="FROM_WREG(15:0)" />
+            <blockpin signalname="WORKING_REGISTER(15:0)" name="FROM_WREG(15:0)" />
             <blockpin signalname="MW" name="MW" />
             <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="TO_FROM_W(15:0)" name="TO_FROM_W(15:0)" />
@@ -1423,11 +1422,6 @@
             <wire x2="784" y1="4000" y2="4000" x1="768" />
         </branch>
         <iomarker fontsize="28" x="752" y="4000" name="MR" orien="R180" />
-        <branch name="FROM_WREG(15:0)">
-            <wire x2="768" y1="4704" y2="4704" x1="752" />
-            <wire x2="784" y1="4704" y2="4704" x1="768" />
-        </branch>
-        <iomarker fontsize="28" x="752" y="4704" name="FROM_WREG(15:0)" orien="R180" />
         <branch name="MW">
             <wire x2="768" y1="5408" y2="5408" x1="752" />
             <wire x2="784" y1="5408" y2="5408" x1="768" />
@@ -1907,7 +1901,7 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="3216" y="5264" type="branch" />
             <wire x2="3216" y1="5264" y2="5264" x1="3168" />
         </branch>
-        <branch name="MUXWORKREG(15:0)">
+        <branch name="WORKING_REGISTER(15:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="3216" y="5616" type="branch" />
             <wire x2="3216" y1="5616" y2="5616" x1="3168" />
         </branch>
@@ -1967,9 +1961,17 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4272" y="3376" type="branch" />
             <wire x2="4320" y1="3376" y2="3376" x1="4272" />
         </branch>
-        <branch name="MUXWORKREG(15:0)">
+        <branch name="WORKING_REGISTER(15:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4272" y="3440" type="branch" />
             <wire x2="4320" y1="3440" y2="3440" x1="4272" />
+        </branch>
+        <branch name="WORKING_REGISTER(15:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="656" y="4704" type="branch" />
+            <wire x2="784" y1="4704" y2="4704" x1="656" />
+        </branch>
+        <iomarker fontsize="28" x="464" y="4560" name="WORKING_REGISTER(15:0)" orien="R180" />
+        <branch name="WORKING_REGISTER(15:0)">
+            <wire x2="528" y1="4560" y2="4560" x1="464" />
         </branch>
     </sheet>
 </drawing>

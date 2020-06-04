@@ -11,7 +11,6 @@
         <signal name="TO_FROM_W(15:0)" />
         <signal name="SEL_A(5:0)" />
         <signal name="SEL_B(5:0)" />
-        <signal name="FROM_WREG(15:0)" />
         <signal name="C_SEL(5:0)" />
         <signal name="CLK" />
         <signal name="IN0(15:0)" />
@@ -21,12 +20,12 @@
         <signal name="MW" />
         <signal name="XLXN_1" />
         <signal name="XLXN_4" />
+        <signal name="WORKING_REGISTER(15:0)" />
         <port polarity="Output" name="TO_BUS_A(15:0)" />
         <port polarity="Output" name="TO_BUS_B(15:0)" />
         <port polarity="BiDirectional" name="TO_FROM_W(15:0)" />
         <port polarity="Input" name="SEL_A(5:0)" />
         <port polarity="Input" name="SEL_B(5:0)" />
-        <port polarity="Input" name="FROM_WREG(15:0)" />
         <port polarity="Input" name="C_SEL(5:0)" />
         <port polarity="Input" name="CLK" />
         <port polarity="Input" name="IN0(15:0)" />
@@ -34,10 +33,26 @@
         <port polarity="Input" name="FROM_C_LATCH(15:0)" />
         <port polarity="Input" name="MR" />
         <port polarity="Input" name="MW" />
+        <port polarity="Output" name="WORKING_REGISTER(15:0)" />
+        <blockdef name="gnd">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-64" y2="-96" x1="64" />
+            <line x2="52" y1="-48" y2="-48" x1="76" />
+            <line x2="60" y1="-32" y2="-32" x1="68" />
+            <line x2="40" y1="-64" y2="-64" x1="88" />
+            <line x2="64" y1="-64" y2="-80" x1="64" />
+            <line x2="64" y1="-128" y2="-96" x1="64" />
+        </blockdef>
+        <blockdef name="vcc">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-32" y2="-64" x1="64" />
+            <line x2="64" y1="0" y2="-32" x1="64" />
+            <line x2="32" y1="-64" y2="-64" x1="96" />
+        </blockdef>
         <blockdef name="register_bank">
-            <timestamp>2020-5-30T21:31:47</timestamp>
-            <rect width="64" x="0" y="20" height="24" />
-            <line x2="0" y1="32" y2="32" x1="64" />
+            <timestamp>2020-6-4T8:14:55</timestamp>
+            <rect width="64" x="496" y="84" height="24" />
+            <line x2="560" y1="96" y2="96" x1="496" />
             <line x2="0" y1="-864" y2="-864" x1="64" />
             <rect width="64" x="0" y="-812" height="24" />
             <line x2="0" y1="-800" y2="-800" x1="64" />
@@ -63,24 +78,15 @@
             <line x2="560" y1="-448" y2="-448" x1="496" />
             <rect width="64" x="496" y="-44" height="24" />
             <line x2="560" y1="-32" y2="-32" x1="496" />
-            <rect width="432" x="64" y="-896" height="960" />
+            <rect width="432" x="64" y="-896" height="1024" />
         </blockdef>
-        <blockdef name="gnd">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-64" y2="-96" x1="64" />
-            <line x2="52" y1="-48" y2="-48" x1="76" />
-            <line x2="60" y1="-32" y2="-32" x1="68" />
-            <line x2="40" y1="-64" y2="-64" x1="88" />
-            <line x2="64" y1="-64" y2="-80" x1="64" />
-            <line x2="64" y1="-128" y2="-96" x1="64" />
-        </blockdef>
-        <blockdef name="vcc">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-32" y2="-64" x1="64" />
-            <line x2="64" y1="0" y2="-32" x1="64" />
-            <line x2="32" y1="-64" y2="-64" x1="96" />
-        </blockdef>
-        <block symbolname="register_bank" name="XLXI_3">
+        <block symbolname="gnd" name="XLXI_8">
+            <blockpin signalname="XLXN_1" name="G" />
+        </block>
+        <block symbolname="vcc" name="XLXI_9">
+            <blockpin signalname="XLXN_4" name="P" />
+        </block>
+        <block symbolname="register_bank" name="XLXI_10">
             <blockpin signalname="XLXN_1" name="CLR" />
             <blockpin signalname="SEL_A(5:0)" name="SEL_A(5:0)" />
             <blockpin signalname="SEL_B(5:0)" name="SEL_B(5:0)" />
@@ -97,13 +103,7 @@
             <blockpin signalname="TO_FROM_W(15:0)" name="TO_FROM_W(15:0)" />
             <blockpin signalname="TO_BUS_A(15:0)" name="TO_BUS_A(15:0)" />
             <blockpin signalname="TO_BUS_B(15:0)" name="TO_BUS_B(15:0)" />
-            <blockpin signalname="FROM_WREG(15:0)" name="FROM_WREG(15:0)" />
-        </block>
-        <block symbolname="gnd" name="XLXI_8">
-            <blockpin signalname="XLXN_1" name="G" />
-        </block>
-        <block symbolname="vcc" name="XLXI_9">
-            <blockpin signalname="XLXN_4" name="P" />
+            <blockpin signalname="WORKING_REGISTER(15:0)" name="WORKING_REGISTER(15:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -127,10 +127,6 @@
             <wire x2="1664" y1="1136" y2="1136" x1="1632" />
         </branch>
         <iomarker fontsize="28" x="1632" y="1136" name="SEL_B(5:0)" orien="R180" />
-        <branch name="FROM_WREG(15:0)">
-            <wire x2="1664" y1="1904" y2="1904" x1="1632" />
-        </branch>
-        <iomarker fontsize="28" x="1632" y="1904" name="FROM_WREG(15:0)" orien="R180" />
         <branch name="C_SEL(5:0)">
             <wire x2="1664" y1="1520" y2="1520" x1="1632" />
         </branch>
@@ -151,8 +147,6 @@
             <wire x2="1664" y1="1456" y2="1456" x1="1632" />
         </branch>
         <iomarker fontsize="28" x="1632" y="1456" name="FROM_C_LATCH(15:0)" orien="R180" />
-        <instance x="1664" y="1872" name="XLXI_3" orien="R0">
-        </instance>
         <branch name="MR">
             <wire x2="1664" y1="1712" y2="1712" x1="1632" />
         </branch>
@@ -175,5 +169,11 @@
             <wire x2="1136" y1="1584" y2="1648" x1="1136" />
             <wire x2="1664" y1="1648" y2="1648" x1="1136" />
         </branch>
+        <branch name="WORKING_REGISTER(15:0)">
+            <wire x2="2256" y1="1968" y2="1968" x1="2224" />
+        </branch>
+        <iomarker fontsize="28" x="2256" y="1968" name="WORKING_REGISTER(15:0)" orien="R0" />
+        <instance x="1664" y="1872" name="XLXI_10" orien="R0">
+        </instance>
     </sheet>
 </drawing>

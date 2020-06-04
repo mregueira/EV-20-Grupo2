@@ -27,8 +27,7 @@ module bidir_port(
 	output [15:0] to_wreg
     );
 	 
-	reg to_wreg_reg;
-	reg data_reg;
+	
 	// Hay tres casos:
 	// 1) write from DATA to WORKING REG (mem_write = 1 , mem_read = 0)
 	// puede tardar bastante
@@ -39,6 +38,12 @@ module bidir_port(
 	// 3) do nothing  (mem_write = 1 , mem_read = 1 o mem_write = 0 , mem_read = 0 )
 	// a esto le puse z
 	
+	//Esto era para hacerlo sincrono pero si  
+	// MW y MR cambian con el clock... este bloque es sincrono
+	
+	/*
+	reg to_wreg_reg;
+	reg data_reg;
 	always @(posedge clk)begin 
 		to_wreg_reg = (mem_write && ! mem_read)? data : 16'bz ; // DATA => WREG
 		data_reg = (!mem_write && mem_read)? from_wreg : 16'bz; // WREG => DATA
@@ -46,5 +51,11 @@ module bidir_port(
 	
 	assign to_wreg = to_wreg_reg;
 	assign data = data_reg;
+	*/
+
+	// yo asumo que MR y MR no hacen cualquier cosa. Y estan sincronizadas con algo
+	
+	assign to_wreg = (mem_write && ! mem_read)? data : 16'bz ; // DATA => WREG
+	assign data = (!mem_write && mem_read)? from_wreg : 16'bz; // WREG => DATA
 	
 endmodule

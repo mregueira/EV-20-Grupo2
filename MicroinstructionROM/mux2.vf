@@ -1,0 +1,60 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mux2.vf
+// /___/   /\     Timestamp : 06/04/2020 18:24:28
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux2.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux2.sch
+//Design Name: mux2
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mux1_MUSER_mux2(constante, 
+                       hold, 
+                       muxin, 
+                       muxout);
+
+    input constante;
+    input hold;
+    input muxin;
+   output muxout;
+   
+   
+   MUXCY  XLXI_1 (.CI(constante), 
+                 .DI(muxin), 
+                 .S(hold), 
+                 .O(muxout));
+endmodule
+`timescale 1ns / 1ps
+
+module mux2(const, 
+            hold, 
+            muxin, 
+            muxout);
+
+    input [1:0] const;
+    input hold;
+    input [1:0] muxin;
+   output [1:0] muxout;
+   
+   
+   mux1_MUSER_mux2  XLXI_1 (.constante(const[0]), 
+                           .hold(hold), 
+                           .muxin(muxin[0]), 
+                           .muxout(muxout[0]));
+   mux1_MUSER_mux2  XLXI_2 (.constante(const[1]), 
+                           .hold(hold), 
+                           .muxin(muxin[1]), 
+                           .muxout(muxout[1]));
+endmodule

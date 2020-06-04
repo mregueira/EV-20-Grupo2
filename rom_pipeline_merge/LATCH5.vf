@@ -1,0 +1,82 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : LATCH5.vf
+// /___/   /\     Timestamp : 06/04/2020 17:14:28
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/rom_pipeline_merge/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/rom_pipeline_merge/LATCH5.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/rom_pipeline_merge/LATCH5.sch
+//Design Name: LATCH5
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LATCH4_MUSER_LATCH5(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [3:0] INPUT;
+   output [3:0] OUTPUT;
+   
+   
+   FDCE #( .INIT(1'b0) ) XLXI_8 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[0]), 
+                .Q(OUTPUT[0]));
+   FDCE #( .INIT(1'b0) ) XLXI_9 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[1]), 
+                .Q(OUTPUT[1]));
+   FDCE #( .INIT(1'b0) ) XLXI_10 (.C(CLK), 
+                 .CE(ENABLE), 
+                 .CLR(CLR), 
+                 .D(INPUT[2]), 
+                 .Q(OUTPUT[2]));
+   FDCE #( .INIT(1'b0) ) XLXI_12 (.C(CLK), 
+                 .CE(ENABLE), 
+                 .CLR(CLR), 
+                 .D(INPUT[3]), 
+                 .Q(OUTPUT[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH5(CLK, 
+              CLR, 
+              ENABLE, 
+              INPUT, 
+              OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [4:0] INPUT;
+   output [4:0] OUTPUT;
+   
+   
+   LATCH4_MUSER_LATCH5  XLXI_1 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(INPUT[3:0]), 
+                               .OUTPUT(OUTPUT[3:0]));
+   FDCE #( .INIT(1'b0) ) XLXI_4 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[4]), 
+                .Q(OUTPUT[4]));
+endmodule

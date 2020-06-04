@@ -1,0 +1,51 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MROM.vf
+// /___/   /\     Timestamp : 06/02/2020 17:41:32
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath "C:/Users/PC 64/Desktop/Luciano Games/IK Electronic Engineering/Electronica V/MicroinstructionROM/ipcore_dir" -intstyle ise -family artix7 -verilog "C:/Users/PC 64/Desktop/Luciano Games/IK Electronic Engineering/Electronica V/MicroinstructionROM/MROM.vf" -w "C:/Users/PC 64/Desktop/Luciano Games/IK Electronic Engineering/Electronica V/MicroinstructionROM/MROM.sch"
+//Design Name: MROM
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MROM(Bus_B, 
+            CLK_ROM, 
+            ROM_RESET, 
+            ALUC, 
+            B_Bus, 
+            C_Bus, 
+            KMx, 
+            MEM, 
+            SH, 
+            Ti);
+
+    input [6:0] Bus_B;
+    input CLK_ROM;
+    input ROM_RESET;
+   output [3:0] ALUC;
+   output [5:0] B_Bus;
+   output [5:0] C_Bus;
+   output KMx;
+   output [1:0] MEM;
+   output [1:0] SH;
+   output [6:0] Ti;
+   
+   
+   MicroinstructionROM  XLXI_7 (.a(Bus_B[6:0]), 
+                               .clk(CLK_ROM), 
+                               .qspo_rst(ROM_RESET), 
+                               .qspo({ALUC[3:0], SH[1:0], KMx, MEM[1:0], 
+         B_Bus[5:0], C_Bus[5:0], Ti[6:0]}));
+endmodule

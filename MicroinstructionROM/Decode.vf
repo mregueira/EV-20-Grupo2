@@ -1,0 +1,301 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Decode.vf
+// /___/   /\     Timestamp : 06/04/2020 18:24:20
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/Decode.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/Decode.sch
+//Design Name: Decode
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LATCH4_MUSER_Decode(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [3:0] INPUT;
+   output [3:0] OUTPUT;
+   
+   
+   FDCE #( .INIT(1'b0) ) XLXI_8 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[0]), 
+                .Q(OUTPUT[0]));
+   FDCE #( .INIT(1'b0) ) XLXI_9 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[1]), 
+                .Q(OUTPUT[1]));
+   FDCE #( .INIT(1'b0) ) XLXI_10 (.C(CLK), 
+                 .CE(ENABLE), 
+                 .CLR(CLR), 
+                 .D(INPUT[2]), 
+                 .Q(OUTPUT[2]));
+   FDCE #( .INIT(1'b0) ) XLXI_12 (.C(CLK), 
+                 .CE(ENABLE), 
+                 .CLR(CLR), 
+                 .D(INPUT[3]), 
+                 .Q(OUTPUT[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH5_MUSER_Decode(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [4:0] INPUT;
+   output [4:0] OUTPUT;
+   
+   
+   LATCH4_MUSER_Decode  XLXI_1 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(INPUT[3:0]), 
+                               .OUTPUT(OUTPUT[3:0]));
+   FDCE #( .INIT(1'b0) ) XLXI_4 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[4]), 
+                .Q(OUTPUT[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux1_MUSER_Decode(constante, 
+                         hold, 
+                         muxin, 
+                         muxout);
+
+    input constante;
+    input hold;
+    input muxin;
+   output muxout;
+   
+   
+   MUXCY  XLXI_1 (.CI(constante), 
+                 .DI(muxin), 
+                 .S(hold), 
+                 .O(muxout));
+endmodule
+`timescale 1ns / 1ps
+
+module mux2_MUSER_Decode(const, 
+                         hold, 
+                         muxin, 
+                         muxout);
+
+    input [1:0] const;
+    input hold;
+    input [1:0] muxin;
+   output [1:0] muxout;
+   
+   
+   mux1_MUSER_Decode  XLXI_1 (.constante(const[0]), 
+                             .hold(hold), 
+                             .muxin(muxin[0]), 
+                             .muxout(muxout[0]));
+   mux1_MUSER_Decode  XLXI_2 (.constante(const[1]), 
+                             .hold(hold), 
+                             .muxin(muxin[1]), 
+                             .muxout(muxout[1]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux4_MUSER_Decode(const, 
+                         hold, 
+                         muxin, 
+                         muxout);
+
+    input [3:0] const;
+    input hold;
+    input [3:0] muxin;
+   output [3:0] muxout;
+   
+   
+   mux2_MUSER_Decode  XLXI_1 (.const(const[1:0]), 
+                             .hold(hold), 
+                             .muxin(muxin[1:0]), 
+                             .muxout(muxout[1:0]));
+   mux2_MUSER_Decode  XLXI_2 (.const(const[3:2]), 
+                             .hold(hold), 
+                             .muxin(muxin[3:2]), 
+                             .muxout(muxout[3:2]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux5_MUSER_Decode(const, 
+                         hold, 
+                         muxin, 
+                         muxout);
+
+    input [4:0] const;
+    input hold;
+    input [4:0] muxin;
+   output [4:0] muxout;
+   
+   
+   mux4_MUSER_Decode  XLXI_1 (.const(const[3:0]), 
+                             .hold(hold), 
+                             .muxin(muxin[3:0]), 
+                             .muxout(muxout[3:0]));
+   mux1_MUSER_Decode  XLXI_3 (.constante(const[4]), 
+                             .hold(hold), 
+                             .muxin(muxin[4]), 
+                             .muxout(muxout[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH6_MUSER_Decode(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [5:0] INPUT;
+   output [5:0] OUTPUT;
+   
+   
+   LATCH5_MUSER_Decode  XLXI_1 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(INPUT[4:0]), 
+                               .OUTPUT(OUTPUT[4:0]));
+   FDCE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .CE(ENABLE), 
+                .CLR(CLR), 
+                .D(INPUT[5]), 
+                .Q(OUTPUT[5]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH10_MUSER_Decode(CLK, 
+                            CLR, 
+                            ENABLE, 
+                            INPUT, 
+                            OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [9:0] INPUT;
+   output [9:0] OUTPUT;
+   
+   
+   LATCH6_MUSER_Decode  XLXI_1 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(INPUT[5:0]), 
+                               .OUTPUT(OUTPUT[5:0]));
+   LATCH4_MUSER_Decode  XLXI_2 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(INPUT[9:6]), 
+                               .OUTPUT(OUTPUT[9:6]));
+endmodule
+`timescale 1ns / 1ps
+
+module Decode(cbusmir, 
+              CLK, 
+              instruction, 
+              ABUS, 
+              CBUS, 
+              DAdd);
+
+    input [5:0] cbusmir;
+    input CLK;
+    input [13:0] instruction;
+   output [4:0] ABUS;
+   output [5:0] CBUS;
+   output [9:0] DAdd;
+   
+   wire selector;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_120;
+   wire XLXN_121;
+   wire XLXN_135;
+   wire XLXN_136;
+   wire XLXN_147;
+   
+   assign XLXN_10 = 0;
+   assign XLXN_11 = 1;
+   assign XLXN_120 = 0;
+   assign XLXN_121 = 1;
+   assign XLXN_135 = 0;
+   assign XLXN_136 = 1;
+   assign XLXN_147 = 0;
+   AND3  XLXI_1 (.I0(XLXN_7), 
+                .I1(XLXN_6), 
+                .I2(instruction[11]), 
+                .O(XLXN_4));
+   AND4  XLXI_2 (.I0(XLXN_9), 
+                .I1(instruction[12]), 
+                .I2(instruction[11]), 
+                .I3(XLXN_8), 
+                .O(XLXN_5));
+   OR2  XLXI_3 (.I0(XLXN_5), 
+               .I1(XLXN_4), 
+               .O(XLXN_3));
+   FDCE #( .INIT(1'b0) ) XLXI_5 (.C(CLK), 
+                .CE(XLXN_11), 
+                .CLR(XLXN_10), 
+                .D(XLXN_3), 
+                .Q(selector));
+   INV  XLXI_6 (.I(instruction[12]), 
+               .O(XLXN_6));
+   INV  XLXI_7 (.I(instruction[13]), 
+               .O(XLXN_7));
+   INV  XLXI_8 (.I(instruction[10]), 
+               .O(XLXN_8));
+   INV  XLXI_9 (.I(instruction[13]), 
+               .O(XLXN_9));
+   LATCH10_MUSER_Decode  XLXI_24 (.CLK(CLK), 
+                                 .CLR(XLXN_120), 
+                                 .ENABLE(XLXN_121), 
+                                 .INPUT(instruction[9:0]), 
+                                 .OUTPUT(DAdd[9:0]));
+   mux1_MUSER_Decode  XLXI_30 (.constante(XLXN_147), 
+                              .hold(selector), 
+                              .muxin(cbusmir[5]), 
+                              .muxout(CBUS[5]));
+   mux5_MUSER_Decode  XLXI_31 (.const(instruction[9:5]), 
+                              .hold(selector), 
+                              .muxin(cbusmir[4:0]), 
+                              .muxout(CBUS[4:0]));
+   LATCH5_MUSER_Decode  XLXI_35 (.CLK(CLK), 
+                                .CLR(XLXN_135), 
+                                .ENABLE(XLXN_136), 
+                                .INPUT(instruction[4:0]), 
+                                .OUTPUT(ABUS[4:0]));
+endmodule

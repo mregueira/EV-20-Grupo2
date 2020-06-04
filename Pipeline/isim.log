@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\Martina\Desktop\EV-20-Grupo2\Pipeline\UC2_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/UC2_isim_beh.wdb 
+Running: C:\Users\Martina\Desktop\EV-20-Grupo2\Pipeline\MROM_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Martina/Desktop/EV-20-Grupo2/Pipeline/MROM_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -10,32 +10,11 @@ Time resolution is 1 ps
 # wave add /
 # run 10 us
 Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# isim force add /UC2/DecodeType 1111111 -radix bin
-# isim force add /UC2/OperandType 1111111 -radix bin
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: File MicroinstructionROM.mif referenced on C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v at line 50 cannot be opened for reading. Please ensure that this file is available in the current working directory.Finished circuit initialization process.
+# isim force add /MROM/ROM_RESET 0 -radix bin
+# isim force add /MROM/CLK_ROM 1 -radix bin -value 0 -radix bin -time 17500 ps -repeat 35 ns
+# isim force add /MROM/Bus_B 0110000 -radix bin
 # run 1.00us
-# isim force add /UC2/OperandType 0000000 -radix bin
-# isim force add /UC2/RetireType 1111111 -radix bin
-# run 1.00us
-# isim force add /UC2/RetireType 0000000 -radix bin
-# run 1.00us
-# isim force add /UC2/DecodeBusA 11111 -radix bin
-# isim force add /UC2/RetireBusC 011111 -radix bin
-# isim force add /UC2/RetireType 0001000 -radix bin
-# run 1.00us
-# isim force add /UC2/DecodeMem 00 -radix bin
-# isim force add /UC2/DecodeType 0000000 -radix bin
-# isim force add /UC2/ExecuteBusC 000000 -radix bin
-# isim force add /UC2/ExecuteType 0000000 -radix bin
-# isim force add /UC2/OperandBusC 000000 -radix bin
-# isim force add /UC2/OperandType 0000000 -radix bin
-# isim force add /UC2/RetireBusC 000000 -radix bin
-# isim force add /UC2/RetireType 0000000 -radix bin
-# run 1.00us
-# isim force add /UC2/ExecuteType 1111111 -radix bin
-# run 1.00us
-# isim force add /UC2/DecodeType 1111111 -radix bin
-# run 1.00us
-# isim force add /UC2/DecodeMem 01 -radix bin
-# isim force add /UC2/ExecuteType 0000001 -radix bin
+# isim force add /MROM/ROM_RESET 1 -radix bin
 # run 1.00us

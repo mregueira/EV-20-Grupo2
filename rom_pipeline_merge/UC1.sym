@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="UC1">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2020-5-31T21:32:53</timestamp>
+    <pin polarity="Input" x="0" y="-544" name="aluIN(3:0)" />
+    <pin polarity="Input" x="0" y="-480" name="shIN(1:0)" />
+    <pin polarity="Input" x="0" y="-416" name="kmxIN" />
+    <pin polarity="Input" x="0" y="-352" name="memIN(1:0)" />
+    <pin polarity="Input" x="0" y="-288" name="bbusIN(5:0)" />
+    <pin polarity="Input" x="0" y="-224" name="typeIN(6:0)" />
+    <pin polarity="Input" x="0" y="-160" name="cbusIN(5:0)" />
+    <pin polarity="Input" x="0" y="-96" name="abusIN(4:0)" />
+    <pin polarity="Input" x="0" y="-32" name="hold" />
+    <pin polarity="Output" x="448" y="-544" name="aluOUTuc1(3:0)" />
+    <pin polarity="Output" x="448" y="-480" name="shOUTuc1(1:0)" />
+    <pin polarity="Output" x="448" y="-416" name="kmxOUTuc1" />
+    <pin polarity="Output" x="448" y="-352" name="memOUTuc1(1:0)" />
+    <pin polarity="Output" x="448" y="-288" name="bbusOUTuc1(5:0)" />
+    <pin polarity="Output" x="448" y="-224" name="typeOUTuc1(6:0)" />
+    <pin polarity="Output" x="448" y="-160" name="cbusOUTuc1(5:0)" />
+    <pin polarity="Output" x="448" y="-96" name="abusOUTuc1(4:0)" />
+    <graph>
+        <rect width="320" x="64" y="-576" height="576" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="224" y="-584" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-544" type="pin aluIN(3:0)" />
+        <rect width="64" x="0" y="-556" height="24" />
+        <line x2="0" y1="-544" y2="-544" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-480" type="pin shIN(1:0)" />
+        <rect width="64" x="0" y="-492" height="24" />
+        <line x2="0" y1="-480" y2="-480" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin kmxIN" />
+        <line x2="0" y1="-416" y2="-416" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin memIN(1:0)" />
+        <rect width="64" x="0" y="-364" height="24" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin bbusIN(5:0)" />
+        <rect width="64" x="0" y="-300" height="24" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin typeIN(6:0)" />
+        <rect width="64" x="0" y="-236" height="24" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin cbusIN(5:0)" />
+        <rect width="64" x="0" y="-172" height="24" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin abusIN(4:0)" />
+        <rect width="64" x="0" y="-108" height="24" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin hold" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-544" type="pin aluOUTuc1(3:0)" />
+        <rect width="64" x="384" y="-556" height="24" />
+        <line x2="448" y1="-544" y2="-544" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-480" type="pin shOUTuc1(1:0)" />
+        <rect width="64" x="384" y="-492" height="24" />
+        <line x2="448" y1="-480" y2="-480" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-416" type="pin kmxOUTuc1" />
+        <line x2="448" y1="-416" y2="-416" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-352" type="pin memOUTuc1(1:0)" />
+        <rect width="64" x="384" y="-364" height="24" />
+        <line x2="448" y1="-352" y2="-352" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-288" type="pin bbusOUTuc1(5:0)" />
+        <rect width="64" x="384" y="-300" height="24" />
+        <line x2="448" y1="-288" y2="-288" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-224" type="pin typeOUTuc1(6:0)" />
+        <rect width="64" x="384" y="-236" height="24" />
+        <line x2="448" y1="-224" y2="-224" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-160" type="pin cbusOUTuc1(5:0)" />
+        <rect width="64" x="384" y="-172" height="24" />
+        <line x2="448" y1="-160" y2="-160" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-96" type="pin abusOUTuc1(4:0)" />
+        <rect width="64" x="384" y="-108" height="24" />
+        <line x2="448" y1="-96" y2="-96" x1="384" />
+    </graph>
+</symbol>

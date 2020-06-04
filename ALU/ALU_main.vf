@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ALU_main.vf
-// /___/   /\     Timestamp : 05/31/2020 14:32:17
+// /___/   /\     Timestamp : 06/04/2020 02:06:45
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/ALU/ALU_main.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/ALU/ALU_main.sch
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/EV-20-Grupo2/ALU/ALU_main.vf -w C:/EV-20-Grupo2/ALU/ALU_main.sch
 //Design Name: ALU_main
 //Device: artix7
 //Purpose:

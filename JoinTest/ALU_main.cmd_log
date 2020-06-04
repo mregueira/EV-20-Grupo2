@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.syr" 
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.syr" 
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.syr" 
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.syr" 
+sch2sym -intstyle ise -family artix7 -refsym ALU_main C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.sym 
+sch2sym -intstyle ise -family artix7 -refsym ALU_main C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.sym 
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.syr" 
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.syr" 
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.syr" 
+sch2sym -intstyle ise -family artix7 -refsym ALU_main C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_main.sym 

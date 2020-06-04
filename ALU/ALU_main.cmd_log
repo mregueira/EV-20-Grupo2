@@ -1,3 +1,8 @@
 xst -intstyle ise -ifn "C:/Users/Marcelo/ProyectosISE/ALU/ALU_main.xst" -ofn "C:/Users/Marcelo/ProyectosISE/ALU/ALU_main.syr" 
 xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/ALU/ALU_main.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/ALU/ALU_main.syr" 
 sch2sym -intstyle ise -family artix7 -refsym ALU_main C:/EV-20-Grupo2/ALU/ALU_main.sch C:/EV-20-Grupo2/ALU/ALU_main.sym 
+xst -intstyle ise -ifn "C:/EV-20-Grupo2/ALU/ALU_main.xst" -ofn "C:/EV-20-Grupo2/ALU/ALU_main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 ALU_main.ngc ALU_main.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ALU_main_map.ncd ALU_main.ngd ALU_main.pcf 
+par -w -intstyle ise -ol high -mt off ALU_main_map.ncd ALU_main.ncd ALU_main.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ALU_main.twx ALU_main.ncd -o ALU_main.twr ALU_main.pcf 

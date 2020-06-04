@@ -1,0 +1,24 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/RAM/RAM_main_RAM_main_sch_tb_isim_beh.exe -prj C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/RAM/RAM_main_RAM_main_sch_tb_beh.prj work.RAM_main_RAM_main_sch_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/RAM/RAM_internal.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/RAM/BiMux2Bus16.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/RAM/RAM_main.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/RAM/testSIMULA.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module RAM_internal
+Compiling module BiMux2Bus16
+Compiling module RAM_main
+Compiling module RAM_main_RAM_main_sch_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\RAM_main_RAM_main_sch_tb_isim_beh.exe.sim\libPortability.dll".
+Compiled 5 Verilog Units
+Built simulation executable C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/RAM/RAM_main_RAM_main_sch_tb_isim_beh.exe
+Fuse Memory Usage: 27612 KB
+Fuse CPU Usage: 311 ms

@@ -1,0 +1,44 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : test.vf
+// /___/   /\     Timestamp : 06/04/2020 01:35:27
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/test.vf -w C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/test.sch
+//Design Name: test
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module test(B11, 
+            B12, 
+            B13, 
+            CY, 
+            W0to15, 
+            pre_load);
+
+    input B11;
+    input B12;
+    input B13;
+    input CY;
+    input [15:0] W0to15;
+   output pre_load;
+   
+   
+   bloqueSaltos  XLXI_1 (.B11(B11), 
+                        .B12(B12), 
+                        .B13(B13), 
+                        .CY(CY), 
+                        .W0to15(W0to15[15:0]), 
+                        .pre_load(pre_load));
+endmodule

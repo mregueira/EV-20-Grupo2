@@ -1,0 +1,3 @@
+verilog work "RAM_internal.v"
+verilog work "BiMux2Bus16.v"
+verilog work "RAM_main.vf"

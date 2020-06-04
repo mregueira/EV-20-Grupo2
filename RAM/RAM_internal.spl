@@ -1,0 +1,12 @@
+[Inputs]
+clk
+wr_enb
+rd_enb
+=addr[9:0]=
+=data_in[15:0]=
+[Outputs]
+=data_out[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel RAM_internal
+

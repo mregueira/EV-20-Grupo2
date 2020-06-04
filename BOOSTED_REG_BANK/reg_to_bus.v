@@ -25,5 +25,5 @@ module reg_to_bus(
     output[15:0] TO_BUS
     );
 	
-	assign = SEL_BUS? R1:R0
+	assign TO_BUS = SEL_BUS? R1:R0
 endmodule

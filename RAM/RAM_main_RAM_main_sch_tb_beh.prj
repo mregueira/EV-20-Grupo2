@@ -1,0 +1,5 @@
+verilog work "RAM_internal.v"
+verilog work "BiMux2Bus16.v"
+verilog work "RAM_main.vf"
+verilog work "testSIMULA.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

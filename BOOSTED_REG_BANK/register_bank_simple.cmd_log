@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family artix7 -w -refsym register_bank_simple C:/EV-20-Grupo2/BOOSTED_REG_BANK/register_bank_simple.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/register_bank_simple.sym 

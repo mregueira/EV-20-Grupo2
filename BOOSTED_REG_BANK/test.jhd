@@ -5,5 +5,3 @@ MODULE test
 		INSTANCE XLXI_5
 	SUBMODULE gnd_for_testing
 		INSTANCE XLXI_7
-	SUBMODULE constants_for_test
-		INSTANCE XLXI_8

@@ -1,0 +1,5 @@
+verilog work "OR_Bus16.v"
+verilog work "Mux4Bus16.v"
+verilog work "Mux2Bus16.v"
+verilog work "AND_Bus16.v"
+verilog work "ALU_main.vf"

@@ -1,0 +1,3 @@
+MODULE register_bank_easy
+	SUBMODULE register_bank
+		INSTANCE XLXI_10

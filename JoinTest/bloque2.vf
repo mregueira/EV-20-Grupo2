@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : bloque2.vf
-// /___/   /\     Timestamp : 06/04/2020 13:31:46
+// /___/   /\     Timestamp : 06/04/2020 16:49:34
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/bloque2.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/bloque2.sch
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/EV-20-Grupo2/JoinTest/bloque2.vf -w C:/EV-20-Grupo2/JoinTest/bloque2.sch
 //Design Name: bloque2
 //Device: artix7
 //Purpose:
@@ -986,12 +986,10 @@ endmodule
 
 module bloque2(C, 
                CLK, 
-               ENABLE, 
                FROM_BUS, 
                FROM_WREG, 
                MR, 
                MW, 
-               WRITE_DEMUX, 
                AUX0, 
                AUX1, 
                IN_WORK_REG, 
@@ -1062,12 +1060,10 @@ module bloque2(C,
 
     input [5:0] C;
     input CLK;
-    input ENABLE;
     input [15:0] FROM_BUS;
     input [15:0] FROM_WREG;
     input MR;
     input MW;
-    input WRITE_DEMUX;
    output [15:0] AUX0;
    output [15:0] AUX1;
    output [15:0] IN_WORK_REG;
@@ -1141,10 +1137,12 @@ module bloque2(C,
    wire WR_WREG_C;
    wire XLXN_3;
    wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
    
-   demux6b_w_en_MUSER_bloque2  XLXI_8 (.ENABLE(ENABLE), 
+   demux6b_w_en_MUSER_bloque2  XLXI_8 (.ENABLE(XLXN_8), 
                                       .SEL(C[5:0]), 
-                                      .x(WRITE_DEMUX), 
+                                      .x(XLXN_7), 
                                       .WR0(WR0), 
                                       .WR1(WR1), 
                                       .WR2(WR2), 
@@ -1293,4 +1291,6 @@ module bloque2(C,
                  .O(XLXN_6));
    INV  XLXI_22 (.I(MR), 
                 .O(XLXN_3));
+   VCC  XLXI_23 (.P(XLXN_7));
+   VCC  XLXI_24 (.P(XLXN_8));
 endmodule

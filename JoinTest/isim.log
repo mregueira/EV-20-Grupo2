@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\JoinTest\ALU_Reg_Join_ALU_Reg_Join_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_Reg_Join_ALU_Reg_Join_sch_tb_isim_beh.wdb 
+Running: C:\EV-20-Grupo2\JoinTest\register_bank_easy_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/EV-20-Grupo2/JoinTest/register_bank_easy_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,136 +11,22 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 34 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_B_RB 34 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_A_RB 34 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/CY_IN 0 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/CY_IN 0 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN 4 -radix hex
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/CLK 1 -radix bin -value 0 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Shifter_Sel 0 -radix bin
-/ALU_Reg_Join_ALU_Reg_Join_sch_tb/Shifter_Sel: Array length and the input lengths are different
-
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_X_Kmx_Sel 1 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/DAddr 0 -radix hex
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/MW 0 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/MR 0 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 5 -radix unsigned
+# isim force add /register_bank_easy/FROM_C_LATCH 34 -radix unsigned
+# isim force add /register_bank_easy/FROM_C_LATCH 34 -radix unsigned
+# isim force add /register_bank_easy/C_SEL 0 -radix unsigned
+# isim force add /register_bank_easy/C_SEL 0 -radix unsigned
+# isim force add /register_bank_easy/CLK 1 -radix unsigned -value 0 -radix unsigned -time 50 ns -repeat 100 ns
+# isim force add /register_bank_easy/CLK 1 -radix unsigned -value 0 -radix unsigned -time 50 ns -repeat 100 ns
+# isim force add /register_bank_easy/MR 0 -radix unsigned
+# isim force add /register_bank_easy/MR 0 -radix unsigned
+# isim force add /register_bank_easy/MW 0 -radix unsigned
+# isim force add /register_bank_easy/MW 0 -radix unsigned
 # run 1.00us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN 0 -radix hex
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Shifter_Sel 0 -radix hex
+# isim force add /register_bank_easy/C_SEL 1 -radix unsigned
+# isim force add /register_bank_easy/C_SEL 1 -radix unsigned
 # run 1.00us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN 4 -radix hex
+# isim force add /register_bank_easy/C_SEL 2 -radix unsigned
+# isim force add /register_bank_easy/C_SEL 2 -radix unsigned
+# isim force add /register_bank_easy/FROM_C_LATCH 64 -radix unsigned
+# isim force add /register_bank_easy/FROM_C_LATCH 64 -radix unsigned
 # run 1.00us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN 13 -radix unsigned
-# run 0.50us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN 4 -radix unsigned
-# run 0.50us
-# run 0.50us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_A_RB 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_B_RB 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 7 -radix unsigned
-# run 0.50us
-# run 0.50us
-# restart
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 4 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/DAddr 0 -radix hex
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/MW 0 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/MR 0 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_X_Kmx_Sel 1 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Shifter_Sel 0 -radix bin
-/ALU_Reg_Join_ALU_Reg_Join_sch_tb/Shifter_Sel: Array length and the input lengths are different
-
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/CLK 1 -radix bin -value 0 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 4 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_X_Kmx_Sel 1 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Shifter_Sel 0 -radix bin
-/ALU_Reg_Join_ALU_Reg_Join_sch_tb/Shifter_Sel: Array length and the input lengths are different
-
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/CLK 1 -radix bin -value 0 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_A_RB 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_B_RB 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/CY_IN 0 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN 0 -radix unsigned
-# run 0.10us
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 0.10us
-# run 0.10us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 17 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN 4 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 34 -radix unsigned
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# restart
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 4 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/DAddr 0 -radix hex
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/MW 0 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/MR 0 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/MW 0 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_X_Kmx_Sel 1 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Shifter_Sel 0 -radix hex
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/CLK 1 -radix bin -value 0 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/CY_IN 0 -radix bin
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_A_RB 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_B_RB 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 0 -radix unsigned
-# run 0.10us
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 0.10us
-# run 0.10us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 20 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN 4 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 34 -radix unsigned
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 11 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_A_RB 35 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_B_RB 35 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_A_RB 35 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_B_RB 35 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 1 -radix unsigned
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 4 -radix unsigned
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 12 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 1 -radix unsigned
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 4 -radix unsigned
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 13 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 1 -radix unsigned
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB 0 -radix unsigned
-# isim force add /ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN 3 -radix unsigned
-# run 0.10us
-# run 0.10us
-# run 0.10us

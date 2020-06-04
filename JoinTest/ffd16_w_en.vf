@@ -1,0 +1,63 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ffd16_w_en.vf
+// /___/   /\     Timestamp : 06/04/2020 16:22:09
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/EV-20-Grupo2/JoinTest/ffd16_w_en.vf -w C:/EV-20-Grupo2/JoinTest/ffd16_w_en.sch
+//Design Name: ffd16_w_en
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module IFD16_HXILINX_ffd16_w_en(Q, C, D);
+
+   
+   output [15:0]      Q;
+
+   input 	      C;	
+   input  [15:0]      D;
+   
+   reg    [15:0]      Q;
+  
+    (* IOB = "TRUE" *)
+
+   always @(posedge C)
+     begin
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module ffd16_w_en(CLK, 
+                  D, 
+                  EN, 
+                  Q);
+
+    input CLK;
+    input [15:0] D;
+    input EN;
+   output [15:0] Q;
+   
+   wire XLXN_1;
+   
+   (* HU_SET = "XLXI_1_2" *) 
+   IFD16_HXILINX_ffd16_w_en  XLXI_1 (.C(XLXN_1), 
+                                    .D(D[15:0]), 
+                                    .Q(Q[15:0]));
+   AND2  XLXI_2 (.I0(CLK), 
+                .I1(EN), 
+                .O(XLXN_1));
+endmodule

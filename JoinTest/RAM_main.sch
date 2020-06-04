@@ -12,7 +12,6 @@
         <signal name="MemADDR(9:0)" />
         <signal name="XLXN_23(15:0)" />
         <signal name="ToFromW(15:0)" />
-        <signal name="XLXN_26" />
         <signal name="GND(15:0)" />
         <port polarity="Input" name="CLK" />
         <port polarity="Input" name="Wr" />

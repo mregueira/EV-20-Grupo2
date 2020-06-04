@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : demux_bus16b_sel3b.vf
-// /___/   /\     Timestamp : 06/04/2020 13:31:28
+// /___/   /\     Timestamp : 06/04/2020 16:22:45
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux_bus16b_sel3b.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/demux_bus16b_sel3b.sch
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/EV-20-Grupo2/JoinTest/demux_bus16b_sel3b.vf -w C:/EV-20-Grupo2/JoinTest/demux_bus16b_sel3b.sch
 //Design Name: demux_bus16b_sel3b
 //Device: artix7
 //Purpose:

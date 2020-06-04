@@ -1,0 +1,6 @@
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/EV-20-Grupo2/JoinTest/register_bank_easy.vf,-w,C:/EV-20-Grupo2/JoinTest/register_bank_easy.sch
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/EV-20-Grupo2/JoinTest/register_bank.vf,-w,C:/EV-20-Grupo2/JoinTest/register_bank.sch
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/EV-20-Grupo2/JoinTest/bloque2.vf,-w,C:/EV-20-Grupo2/JoinTest/bloque2.sch
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/EV-20-Grupo2/JoinTest/ALU_Reg_Join.vf,-w,C:/EV-20-Grupo2/JoinTest/ALU_Reg_Join.sch
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/EV-20-Grupo2/JoinTest/register_bank_easy.vf,-w,C:/EV-20-Grupo2/JoinTest/register_bank_easy.sch
+sch2hdl,-intstyle,ise,-family,artix7,-verilog,C:/EV-20-Grupo2/JoinTest/register_bank.vf,-w,C:/EV-20-Grupo2/JoinTest/register_bank.sch

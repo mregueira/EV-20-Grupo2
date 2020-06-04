@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : register_bank.vf
-// /___/   /\     Timestamp : 06/04/2020 13:31:44
+// /___/   /\     Timestamp : 06/04/2020 16:49:50
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank.sch
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/EV-20-Grupo2/JoinTest/register_bank.vf -w C:/EV-20-Grupo2/JoinTest/register_bank.sch
 //Design Name: register_bank
 //Device: artix7
 //Purpose:
@@ -20,27 +20,46 @@
 //
 `timescale 100 ps / 10 ps
 
-module FD16CE_HXILINX_register_bank(Q, C, CE, CLR, D);
+module IFD16_HXILINX_register_bank(Q, C, D);
 
    
    output [15:0]      Q;
 
    input 	      C;	
-   input 	      CE;	
-   input 	      CLR;	
    input  [15:0]      D;
    
    reg    [15:0]      Q;
-   
-   always @(posedge C or posedge CLR)
+  
+    (* IOB = "TRUE" *)
+
+   always @(posedge C)
      begin
-	if (CLR)
-	  Q <= 16'b0000_0000_0000_0000;
-	else if (CE)
           Q <= D;
      end
    
    
+endmodule
+`timescale 1ns / 1ps
+
+module ffd16_w_en_MUSER_register_bank(CLK, 
+                                      D, 
+                                      EN, 
+                                      Q);
+
+    input CLK;
+    input [15:0] D;
+    input EN;
+   output [15:0] Q;
+   
+   wire XLXN_1;
+   
+   (* HU_SET = "XLXI_1_9" *) 
+   IFD16_HXILINX_register_bank  XLXI_1 (.C(XLXN_1), 
+                                       .D(D[15:0]), 
+                                       .Q(Q[15:0]));
+   AND2  XLXI_2 (.I0(CLK), 
+                .I1(EN), 
+                .O(XLXN_1));
 endmodule
 `timescale 1ns / 1ps
 
@@ -1010,12 +1029,10 @@ endmodule
 
 module bloque2_MUSER_register_bank(C, 
                                    CLK, 
-                                   ENABLE, 
                                    FROM_BUS, 
                                    FROM_WREG, 
                                    MR, 
                                    MW, 
-                                   WRITE_DEMUX, 
                                    AUX0, 
                                    AUX1, 
                                    IN_WORK_REG, 
@@ -1086,12 +1103,10 @@ module bloque2_MUSER_register_bank(C,
 
     input [5:0] C;
     input CLK;
-    input ENABLE;
     input [15:0] FROM_BUS;
     input [15:0] FROM_WREG;
     input MR;
     input MW;
-    input WRITE_DEMUX;
    output [15:0] AUX0;
    output [15:0] AUX1;
    output [15:0] IN_WORK_REG;
@@ -1165,10 +1180,12 @@ module bloque2_MUSER_register_bank(C,
    wire WR_WREG_C;
    wire XLXN_3;
    wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
    
-   demux6b_w_en_MUSER_register_bank  XLXI_8 (.ENABLE(ENABLE), 
+   demux6b_w_en_MUSER_register_bank  XLXI_8 (.ENABLE(XLXN_8), 
                                             .SEL(C[5:0]), 
-                                            .x(WRITE_DEMUX), 
+                                            .x(XLXN_7), 
                                             .WR0(WR0), 
                                             .WR1(WR1), 
                                             .WR2(WR2), 
@@ -1317,6 +1334,8 @@ module bloque2_MUSER_register_bank(C,
                  .O(XLXN_6));
    INV  XLXI_22 (.I(MR), 
                 .O(XLXN_3));
+   VCC  XLXI_23 (.P(XLXN_7));
+   VCC  XLXI_24 (.P(XLXN_8));
 endmodule
 `timescale 1ns / 1ps
 
@@ -2009,12 +2028,8 @@ endmodule
 `timescale 1ns / 1ps
 
 module register_bank(C, 
-                     CE_DIN, 
                      CLK, 
-                     CLR, 
-                     ENABLE_DEMUX_C, 
                      FROM_BUS, 
-                     INPUT_DEMUX, 
                      IN0, 
                      IN1, 
                      MR, 
@@ -2027,12 +2042,8 @@ module register_bank(C,
                      TO_FROM_W);
 
     input [5:0] C;
-    input CE_DIN;
     input CLK;
-    input CLR;
-    input ENABLE_DEMUX_C;
     input [15:0] FROM_BUS;
-    input INPUT_DEMUX;
     input [15:0] IN0;
     input [15:0] IN1;
     input MR;
@@ -2144,18 +2155,17 @@ module register_bank(C,
    wire WR25;
    wire WR26;
    wire WR27;
+   wire XLXN_1;
    wire [15:0] WORKING_REGISTER_DUMMY;
    
    assign WORKING_REGISTER[15:0] = WORKING_REGISTER_DUMMY[15:0];
    bloque2_MUSER_register_bank  XLXI_1 (.C(C[5:0]), 
                                        .CLK(CLK), 
-                                       .ENABLE(ENABLE_DEMUX_C), 
                                        .FROM_BUS(FROM_BUS[15:0]), 
                                        
          .FROM_WREG(WORKING_REGISTER_DUMMY[15:0]), 
                                        .MR(MR), 
                                        .MW(MW), 
-                                       .WRITE_DEMUX(INPUT_DEMUX), 
                                        .AUX0(AUX0[15:0]), 
                                        .AUX1(AUX1[15:0]), 
                                        .IN_WORK_REG(WORK_REG[15:0]), 
@@ -2262,214 +2272,145 @@ module register_bank(C,
                                         .SEL_BUS_B(SEL_B[5:0]), 
                                         .TO_BUS_A(TO_BUS_A[15:0]), 
                                         .TO_BUS_B(TO_BUS_B[15:0]));
-   (* HU_SET = "XLXI_6_90" *) 
-   FD16CE_HXILINX_register_bank  XLXI_6 (.C(CLK), 
-                                        .CE(WR0), 
-                                        .CLR(CLR), 
-                                        .D(R0[15:0]), 
-                                        .Q(MUXR0[15:0]));
-   (* HU_SET = "XLXI_7_88" *) 
-   FD16CE_HXILINX_register_bank  XLXI_7 (.C(CLK), 
-                                        .CE(WR1), 
-                                        .CLR(CLR), 
-                                        .D(R1[15:0]), 
-                                        .Q(MUXR1[15:0]));
-   (* HU_SET = "XLXI_8_89" *) 
-   FD16CE_HXILINX_register_bank  XLXI_8 (.C(CLK), 
-                                        .CE(WR2), 
-                                        .CLR(CLR), 
-                                        .D(R2[15:0]), 
-                                        .Q(MUXR2[15:0]));
-   (* HU_SET = "XLXI_9_85" *) 
-   FD16CE_HXILINX_register_bank  XLXI_9 (.C(CLK), 
-                                        .CE(WR3), 
-                                        .CLR(CLR), 
-                                        .D(R3[15:0]), 
-                                        .Q(MUXR3[15:0]));
-   (* HU_SET = "XLXI_10_87" *) 
-   FD16CE_HXILINX_register_bank  XLXI_10 (.C(CLK), 
-                                         .CE(WR4), 
-                                         .CLR(CLR), 
-                                         .D(R4[15:0]), 
-                                         .Q(MUXR4[15:0]));
-   (* HU_SET = "XLXI_11_86" *) 
-   FD16CE_HXILINX_register_bank  XLXI_11 (.C(CLK), 
-                                         .CE(WR5), 
-                                         .CLR(CLR), 
-                                         .D(R5[15:0]), 
-                                         .Q(MUXR5[15:0]));
-   (* HU_SET = "XLXI_12_84" *) 
-   FD16CE_HXILINX_register_bank  XLXI_12 (.C(CLK), 
-                                         .CE(WR6), 
-                                         .CLR(CLR), 
-                                         .D(R6[15:0]), 
-                                         .Q(MUXR6[15:0]));
-   (* HU_SET = "XLXI_13_83" *) 
-   FD16CE_HXILINX_register_bank  XLXI_13 (.C(CLK), 
-                                         .CE(WR7), 
-                                         .CLR(CLR), 
-                                         .D(R7[15:0]), 
-                                         .Q(MUXR7[15:0]));
-   (* HU_SET = "XLXI_14_82" *) 
-   FD16CE_HXILINX_register_bank  XLXI_14 (.C(CLK), 
-                                         .CE(WR8), 
-                                         .CLR(CLR), 
-                                         .D(R8[15:0]), 
-                                         .Q(MUXR8[15:0]));
-   (* HU_SET = "XLXI_15_81" *) 
-   FD16CE_HXILINX_register_bank  XLXI_15 (.C(CLK), 
-                                         .CE(WR9), 
-                                         .CLR(CLR), 
-                                         .D(R9[15:0]), 
-                                         .Q(MUXR9[15:0]));
-   (* HU_SET = "XLXI_16_80" *) 
-   FD16CE_HXILINX_register_bank  XLXI_16 (.C(CLK), 
-                                         .CE(WR10), 
-                                         .CLR(CLR), 
-                                         .D(R10[15:0]), 
-                                         .Q(MUXR10[15:0]));
-   (* HU_SET = "XLXI_17_79" *) 
-   FD16CE_HXILINX_register_bank  XLXI_17 (.C(CLK), 
-                                         .CE(WR11), 
-                                         .CLR(CLR), 
-                                         .D(R11[15:0]), 
-                                         .Q(MUXR11[15:0]));
-   (* HU_SET = "XLXI_18_78" *) 
-   FD16CE_HXILINX_register_bank  XLXI_18 (.C(CLK), 
-                                         .CE(WR12), 
-                                         .CLR(CLR), 
-                                         .D(R12[15:0]), 
-                                         .Q(MUXR12[15:0]));
-   (* HU_SET = "XLXI_73_91" *) 
-   FD16CE_HXILINX_register_bank  XLXI_73 (.C(CLK), 
-                                         .CE(WR13), 
-                                         .CLR(CLR), 
-                                         .D(R13[15:0]), 
-                                         .Q(MUXR13[15:0]));
-   (* HU_SET = "XLXI_74_92" *) 
-   FD16CE_HXILINX_register_bank  XLXI_74 (.C(CLK), 
-                                         .CE(WR14), 
-                                         .CLR(CLR), 
-                                         .D(R14[15:0]), 
-                                         .Q(MUXR14[15:0]));
-   (* HU_SET = "XLXI_75_93" *) 
-   FD16CE_HXILINX_register_bank  XLXI_75 (.C(CLK), 
-                                         .CE(WR15), 
-                                         .CLR(CLR), 
-                                         .D(R15[15:0]), 
-                                         .Q(MUXR15[15:0]));
-   (* HU_SET = "XLXI_76_94" *) 
-   FD16CE_HXILINX_register_bank  XLXI_76 (.C(CLK), 
-                                         .CE(WR16), 
-                                         .CLR(CLR), 
-                                         .D(R16[15:0]), 
-                                         .Q(MUXR16[15:0]));
-   (* HU_SET = "XLXI_77_95" *) 
-   FD16CE_HXILINX_register_bank  XLXI_77 (.C(CLK), 
-                                         .CE(WR17), 
-                                         .CLR(CLR), 
-                                         .D(R17[15:0]), 
-                                         .Q(MUXR17[15:0]));
-   (* HU_SET = "XLXI_78_96" *) 
-   FD16CE_HXILINX_register_bank  XLXI_78 (.C(CLK), 
-                                         .CE(WR18), 
-                                         .CLR(CLR), 
-                                         .D(R18[15:0]), 
-                                         .Q(MUXR18[15:0]));
-   (* HU_SET = "XLXI_80_97" *) 
-   FD16CE_HXILINX_register_bank  XLXI_80 (.C(CLK), 
-                                         .CE(WR19), 
-                                         .CLR(CLR), 
-                                         .D(R19[15:0]), 
-                                         .Q(MUXR19[15:0]));
-   (* HU_SET = "XLXI_81_98" *) 
-   FD16CE_HXILINX_register_bank  XLXI_81 (.C(CLK), 
-                                         .CE(WR20), 
-                                         .CLR(CLR), 
-                                         .D(R20[15:0]), 
-                                         .Q(MUXR20[15:0]));
-   (* HU_SET = "XLXI_82_99" *) 
-   FD16CE_HXILINX_register_bank  XLXI_82 (.C(CLK), 
-                                         .CE(WR21), 
-                                         .CLR(CLR), 
-                                         .D(R21[15:0]), 
-                                         .Q(MUXR21[15:0]));
-   (* HU_SET = "XLXI_83_100" *) 
-   FD16CE_HXILINX_register_bank  XLXI_83 (.C(CLK), 
-                                         .CE(WR22), 
-                                         .CLR(CLR), 
-                                         .D(R22[15:0]), 
-                                         .Q(MUXR22[15:0]));
-   (* HU_SET = "XLXI_84_101" *) 
-   FD16CE_HXILINX_register_bank  XLXI_84 (.C(CLK), 
-                                         .CE(WR23), 
-                                         .CLR(CLR), 
-                                         .D(R23[15:0]), 
-                                         .Q(MUXR23[15:0]));
-   (* HU_SET = "XLXI_85_102" *) 
-   FD16CE_HXILINX_register_bank  XLXI_85 (.C(CLK), 
-                                         .CE(WR24), 
-                                         .CLR(CLR), 
-                                         .D(R24[15:0]), 
-                                         .Q(MUXR24[15:0]));
-   (* HU_SET = "XLXI_86_103" *) 
-   FD16CE_HXILINX_register_bank  XLXI_86 (.C(CLK), 
-                                         .CE(WR25), 
-                                         .CLR(CLR), 
-                                         .D(R25[15:0]), 
-                                         .Q(MUXR25[15:0]));
-   (* HU_SET = "XLXI_87_104" *) 
-   FD16CE_HXILINX_register_bank  XLXI_87 (.C(CLK), 
-                                         .CE(WR26), 
-                                         .CLR(CLR), 
-                                         .D(R26[15:0]), 
-                                         .Q(MUXR26[15:0]));
-   (* HU_SET = "XLXI_88_105" *) 
-   FD16CE_HXILINX_register_bank  XLXI_88 (.C(CLK), 
-                                         .CE(WR27), 
-                                         .CLR(CLR), 
-                                         .D(R27[15:0]), 
-                                         .Q(MUXR27[15:0]));
-   (* HU_SET = "XLXI_89_106" *) 
-   FD16CE_HXILINX_register_bank  XLXI_89 (.C(CLK), 
-                                         .CE(CE_DIN), 
-                                         .CLR(CLR), 
-                                         .D(IN0[15:0]), 
-                                         .Q(MUXIN0[15:0]));
-   (* HU_SET = "XLXI_90_107" *) 
-   FD16CE_HXILINX_register_bank  XLXI_90 (.C(CLK), 
-                                         .CE(CE_DIN), 
-                                         .CLR(CLR), 
-                                         .D(IN1[15:0]), 
-                                         .Q(MUXIN1[15:0]));
-   (* HU_SET = "XLXI_91_108" *) 
-   FD16CE_HXILINX_register_bank  XLXI_91 (.C(CLK), 
-                                         .CE(WOUT0), 
-                                         .CLR(CLR), 
-                                         .D(OUT0[15:0]), 
-                                         .Q(MUXOUT0[15:0]));
-   (* HU_SET = "XLXI_92_109" *) 
-   FD16CE_HXILINX_register_bank  XLXI_92 (.C(CLK), 
-                                         .CE(WOUT1), 
-                                         .CLR(CLR), 
-                                         .D(OUT1[15:0]), 
-                                         .Q(MUXOUT1[15:0]));
-   (* HU_SET = "XLXI_93_110" *) 
-   FD16CE_HXILINX_register_bank  XLXI_93 (.C(CLK), 
-                                         .CE(WAUX0), 
-                                         .CLR(CLR), 
-                                         .D(AUX0[15:0]), 
-                                         .Q(MUXAUX0[15:0]));
-   (* HU_SET = "XLXI_94_111" *) 
-   FD16CE_HXILINX_register_bank  XLXI_94 (.C(CLK), 
-                                         .CE(WAUX1), 
-                                         .CLR(CLR), 
-                                         .D(AUX1[15:0]), 
-                                         .Q(MUXAUX1[15:0]));
-   (* HU_SET = "XLXI_95_112" *) 
-   FD16CE_HXILINX_register_bank  XLXI_95 (.C(CLK), 
-                                         .CE(WR_WORK_REG), 
-                                         .CLR(CLR), 
-                                         .D(WORK_REG[15:0]), 
-                                         .Q(WORKING_REGISTER_DUMMY[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_96 (.CLK(CLK), 
+                                           .D(R0[15:0]), 
+                                           .EN(WR0), 
+                                           .Q(MUXR0[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_97 (.CLK(CLK), 
+                                           .D(R1[15:0]), 
+                                           .EN(WR1), 
+                                           .Q(MUXR1[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_98 (.CLK(CLK), 
+                                           .D(R2[15:0]), 
+                                           .EN(WR2), 
+                                           .Q(MUXR2[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_99 (.CLK(CLK), 
+                                           .D(R3[15:0]), 
+                                           .EN(WR3), 
+                                           .Q(MUXR3[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_100 (.CLK(CLK), 
+                                            .D(R4[15:0]), 
+                                            .EN(WR4), 
+                                            .Q(MUXR4[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_101 (.CLK(CLK), 
+                                            .D(R5[15:0]), 
+                                            .EN(WR5), 
+                                            .Q(MUXR5[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_102 (.CLK(CLK), 
+                                            .D(R6[15:0]), 
+                                            .EN(WR6), 
+                                            .Q(MUXR6[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_103 (.CLK(CLK), 
+                                            .D(R7[15:0]), 
+                                            .EN(WR7), 
+                                            .Q(MUXR7[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_104 (.CLK(CLK), 
+                                            .D(R8[15:0]), 
+                                            .EN(WR8), 
+                                            .Q(MUXR8[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_105 (.CLK(CLK), 
+                                            .D(R9[15:0]), 
+                                            .EN(WR9), 
+                                            .Q(MUXR9[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_107 (.CLK(CLK), 
+                                            .D(R10[15:0]), 
+                                            .EN(WR10), 
+                                            .Q(MUXR10[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_108 (.CLK(CLK), 
+                                            .D(R11[15:0]), 
+                                            .EN(WR11), 
+                                            .Q(MUXR11[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_109 (.CLK(CLK), 
+                                            .D(R12[15:0]), 
+                                            .EN(WR12), 
+                                            .Q(MUXR12[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_110 (.CLK(CLK), 
+                                            .D(R13[15:0]), 
+                                            .EN(WR13), 
+                                            .Q(MUXR13[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_111 (.CLK(CLK), 
+                                            .D(R14[15:0]), 
+                                            .EN(WR14), 
+                                            .Q(MUXR14[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_112 (.CLK(CLK), 
+                                            .D(R15[15:0]), 
+                                            .EN(WR15), 
+                                            .Q(MUXR15[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_113 (.CLK(CLK), 
+                                            .D(R16[15:0]), 
+                                            .EN(WR16), 
+                                            .Q(MUXR16[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_114 (.CLK(CLK), 
+                                            .D(R17[15:0]), 
+                                            .EN(WR17), 
+                                            .Q(MUXR17[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_115 (.CLK(CLK), 
+                                            .D(R18[15:0]), 
+                                            .EN(WR18), 
+                                            .Q(MUXR18[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_116 (.CLK(CLK), 
+                                            .D(R19[15:0]), 
+                                            .EN(WR19), 
+                                            .Q(MUXR19[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_117 (.CLK(CLK), 
+                                            .D(R20[15:0]), 
+                                            .EN(WR20), 
+                                            .Q(MUXR20[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_118 (.CLK(CLK), 
+                                            .D(R21[15:0]), 
+                                            .EN(WR21), 
+                                            .Q(MUXR21[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_119 (.CLK(CLK), 
+                                            .D(R22[15:0]), 
+                                            .EN(WR22), 
+                                            .Q(MUXR22[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_120 (.CLK(CLK), 
+                                            .D(R23[15:0]), 
+                                            .EN(WR23), 
+                                            .Q(MUXR23[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_121 (.CLK(CLK), 
+                                            .D(R24[15:0]), 
+                                            .EN(WR24), 
+                                            .Q(MUXR24[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_122 (.CLK(CLK), 
+                                            .D(R25[15:0]), 
+                                            .EN(WR25), 
+                                            .Q(MUXR25[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_123 (.CLK(CLK), 
+                                            .D(R26[15:0]), 
+                                            .EN(WR26), 
+                                            .Q(MUXR26[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_124 (.CLK(CLK), 
+                                            .D(R27[15:0]), 
+                                            .EN(WR27), 
+                                            .Q(MUXR27[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_125 (.CLK(CLK), 
+                                            .D(IN0[15:0]), 
+                                            .EN(XLXN_1), 
+                                            .Q(MUXIN0[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_126 (.CLK(CLK), 
+                                            .D(IN1[15:0]), 
+                                            .EN(XLXN_1), 
+                                            .Q(MUXIN1[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_127 (.CLK(CLK), 
+                                            .D(OUT0[15:0]), 
+                                            .EN(WOUT0), 
+                                            .Q(MUXOUT0[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_128 (.CLK(CLK), 
+                                            .D(OUT1[15:0]), 
+                                            .EN(WOUT1), 
+                                            .Q(MUXOUT1[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_129 (.CLK(CLK), 
+                                            .D(AUX0[15:0]), 
+                                            .EN(WAUX0), 
+                                            .Q(MUXAUX0[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_130 (.CLK(CLK), 
+                                            .D(AUX1[15:0]), 
+                                            .EN(WAUX1), 
+                                            .Q(MUXAUX1[15:0]));
+   ffd16_w_en_MUSER_register_bank  XLXI_131 (.CLK(CLK), 
+                                            .D(WORK_REG[15:0]), 
+                                            .EN(WR_WORK_REG), 
+                                            .Q(WORKING_REGISTER_DUMMY[15:0]));
+   VCC  XLXI_132 (.P(XLXN_1));
 endmodule

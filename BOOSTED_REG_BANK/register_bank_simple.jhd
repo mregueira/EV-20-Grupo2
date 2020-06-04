@@ -1,4 +1,4 @@
-MODULE test
+MODULE register_bank_simple
 	SUBMODULE register_bank
 		INSTANCE XLXI_3
 	SUBMODULE vcc_for_testing

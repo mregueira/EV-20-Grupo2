@@ -1,0 +1,14 @@
+[Inputs]
+CY
+=W0to15[15:0]=
+=B[13:0]=
+[Outputs]
+pre_load
+is_BSR
+is_RET
+=S[9:0]=
+=D[10:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel bloqueSaltos
+

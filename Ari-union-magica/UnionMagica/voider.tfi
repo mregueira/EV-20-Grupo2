@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+voider instance_name (
+    .is_load(is_load), 
+    .is_void(is_void), 
+    .clk(clk)
+    );
+
+

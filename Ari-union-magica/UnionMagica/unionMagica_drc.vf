@@ -1,0 +1,88 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : unionMagica_drc.vf
+// /___/   /\     Timestamp : 06/04/2020 19:58:22
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family artix7 -verilog unionMagica_drc.vf -w C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/unionMagica.sch
+//Design Name: unionMagica
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module unionMagica(CLK, 
+                   CY, 
+                   HOLD, 
+                   W, 
+                   INSTRUCTION, 
+                   PC);
+
+    input CLK;
+    input CY;
+    input HOLD;
+    input [15:0] W;
+   output [13:0] INSTRUCTION;
+   output [10:0] PC;
+   
+   wire B11;
+   wire B12;
+   wire B13;
+   wire [10:0] D;
+   wire increment;
+   wire load;
+   wire [13:0] RAM_DATA_OUT;
+   wire XLXN_75;
+   wire XLXN_76;
+   wire XLXN_79;
+   wire XLXN_100;
+   wire [10:0] PC_DUMMY;
+   wire [13:0] INSTRUCTION_DUMMY;
+   
+   assign INSTRUCTION[13:0] = INSTRUCTION_DUMMY[13:0];
+   assign PC[10:0] = PC_DUMMY[10:0];
+   bloqueSaltos  XLXI_1 (.B11(B11), 
+                        .B12(B12), 
+                        .B13(B13), 
+                        .CY(CY), 
+                        .W0to15(W[15:0]), 
+                        .pre_load(load));
+   pc_increment_module  XLXI_4 (.D(D[10:0]), 
+                               .increment(increment), 
+                               .load(load), 
+                               .Q(PC_DUMMY[10:0]));
+   combine_instruction  XLXI_5 (.instruction(INSTRUCTION_DUMMY[13:0]), 
+                               .B11(B11), 
+                               .B12(B12), 
+                               .B13(B13), 
+                               .D(D[10:0]));
+   AND2  XLXI_9 (.I0(CLK), 
+                .I1(XLXN_79), 
+                .O(increment));
+   VCC  XLXI_13 (.P(XLXN_75));
+   GND  XLXI_14 (.G(XLXN_76));
+   INV  XLXI_18 (.I(HOLD), 
+                .O(XLXN_79));
+   RAM_internal  XLXI_22 (.addr(PC_DUMMY[10:0]), 
+                         .clk(increment), 
+                         .data_in(), 
+                         .rd_enb(XLXN_75), 
+                         .wr_enb(XLXN_76), 
+                         .data_out(RAM_DATA_OUT[13:0]));
+   instruction_register_v2  XLXI_24 (.increment(increment), 
+                                    .in_ins(RAM_DATA_OUT[13:0]), 
+                                    .is_vid(XLXN_100), 
+                                    .out_ins(INSTRUCTION_DUMMY[13:0]));
+   voider  XLXI_25 (.clk(increment), 
+                   .is_load(load), 
+                   .is_void(XLXN_100));
+endmodule

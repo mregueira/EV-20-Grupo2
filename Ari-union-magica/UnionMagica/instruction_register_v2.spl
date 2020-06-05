@@ -1,0 +1,10 @@
+[Inputs]
+increment
+is_void
+=in_ins[13:0]=
+[Outputs]
+=out_ins[13:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel instruction_register_v2
+

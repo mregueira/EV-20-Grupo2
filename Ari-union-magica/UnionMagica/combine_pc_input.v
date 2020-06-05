@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module combine_instruction(
     input [13:0] instruction,
-    output [11:0] D,
+    output [10:0] D,
     output B11,
     output B12,
     output B13
@@ -30,5 +30,5 @@ module combine_instruction(
 	assign B11 = instruction[11];
 	assign B12 = instruction[12];
 	assign B13 = instruction[13];
-
+	
 endmodule

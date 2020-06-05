@@ -22,19 +22,44 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="UnionMagica.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="RAM_internal.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="RAM_internal.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="RAM_internal.tfi"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RAM_internal_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAM_internal_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="bloqueSaltos.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloqueSaltos.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="combine_instruction.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="combine_instruction.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="combine_instruction_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="combine_instruction_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="instruction_register.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="instruction_register.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="instruction_register_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="instruction_register_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="instruction_register_v2.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="instruction_register_v2.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="instruction_register_v2.tfi"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="instruction_register_v2_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="instruction_register_v2_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="pc_increment_module.spl"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="pc_increment_module.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="pc_increment_module_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="pc_increment_v2_module.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="pc_increment_v2_module.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="rest2.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="rest2.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="stack_manager.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="stack_manager.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="test.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="test.cmd_log"/>
     <file xil_pn:fileType="FILE_JHD" xil_pn:name="test.jhd"/>
@@ -59,6 +84,8 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="test_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="test_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="test_increment_module.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="test_increment_module.vf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_increment_module_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="test_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="test_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="test_map.ncd" xil_pn:subbranch="Map"/>
@@ -72,27 +99,144 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="test_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="test_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="test_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="unionMagica.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="unionMagica.cmd_log"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="unionMagica.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="unionMagica.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="unionMagica.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="unionMagica.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="unionMagica.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="unionMagica.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="unionMagica.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="unionMagica.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="unionMagica.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="unionMagica.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="unionMagica.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="unionMagica.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="unionMagica.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="unionMagica.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="unionMagica.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="unionMagica.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="unionMagica.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="unionMagica.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="unionMagica_beh.prj"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="unionMagica_drc.vf"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="unionMagica_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="unionMagica_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="unionMagica_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="unionMagica_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="unionMagica_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="unionMagica_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="unionMagica_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="unionMagica_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="unionMagica_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="unionMagica_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="unionMagica_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="unionMagica_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="unionMagica_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="unionMagica_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="unionMagica_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="unionMagica_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="voider.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="voider.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="voider.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="voider.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="voider.tfi"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="voider.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="voider_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="voider_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1591329014" xil_pn:name="TRANEXT_compLibraries2_virtex5" xil_pn:prop_ck="5438683702708918982" xil_pn:start_ts="1591329014">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1591293255" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1591293255">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1591334710" xil_pn:in_ck="-3224068085898375717" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1591334708">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../../RAM/RAM_internal.v"/>
+      <outfile xil_pn:name="bloqueSaltos.v"/>
+      <outfile xil_pn:name="combine_pc_input.v"/>
+      <outfile xil_pn:name="instruction_register.v"/>
+      <outfile xil_pn:name="instruction_register_v2.v"/>
+      <outfile xil_pn:name="pc_increment_v2.v"/>
+      <outfile xil_pn:name="rest2.v"/>
+      <outfile xil_pn:name="stack_manager.v"/>
+      <outfile xil_pn:name="voider.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1591334117" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1054714969480266533" xil_pn:start_ts="1591334117">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1591334713" xil_pn:in_ck="-3219924260214935272" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2744856522362599545" xil_pn:start_ts="1591334710">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="test_increment_module.vf"/>
+      <outfile xil_pn:name="unionMagica.vf"/>
+    </transform>
+    <transform xil_pn:end_ts="1591321071" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7730332587682064802" xil_pn:start_ts="1591321071">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1591334713" xil_pn:in_ck="-2321955565629782237" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591334713">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../../RAM/RAM_internal.v"/>
+      <outfile xil_pn:name="bloqueSaltos.v"/>
+      <outfile xil_pn:name="combine_pc_input.v"/>
+      <outfile xil_pn:name="instruction_register.v"/>
+      <outfile xil_pn:name="instruction_register_v2.v"/>
+      <outfile xil_pn:name="pc_increment_v2.v"/>
+      <outfile xil_pn:name="rest2.v"/>
+      <outfile xil_pn:name="stack_manager.v"/>
+      <outfile xil_pn:name="test_increment_module.vf"/>
+      <outfile xil_pn:name="unionMagica.vf"/>
+      <outfile xil_pn:name="voider.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1591334715" xil_pn:in_ck="-2321955565629782237" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2788502443985384020" xil_pn:start_ts="1591334713">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="unionMagica_beh.prj"/>
+      <outfile xil_pn:name="unionMagica_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1591334715" xil_pn:in_ck="5289568548148700766" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-9079952472917057137" xil_pn:start_ts="1591334715">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="unionMagica_isim_beh.wdb"/>
+    </transform>
     <transform xil_pn:end_ts="1591245326" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1591245326">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591251306" xil_pn:in_ck="-3219924260214935272" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-1142642082221025874" xil_pn:start_ts="1591251305">
+    <transform xil_pn:end_ts="1591332951" xil_pn:in_ck="-3219924260214935272" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="553354132462250105" xil_pn:start_ts="1591332949">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="test.vf"/>
+      <outfile xil_pn:name="unionMagica.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1591245328" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-4591472078237991721" xil_pn:start_ts="1591245328">
+    <transform xil_pn:end_ts="1591320492" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="7730332587682064802" xil_pn:start_ts="1591320492">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -100,7 +244,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591245328" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="4873880815104816208" xil_pn:start_ts="1591245328">
+    <transform xil_pn:end_ts="1591320492" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-1054714969480266533" xil_pn:start_ts="1591320492">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -109,64 +253,84 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1591245328" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-6244023330297636255" xil_pn:start_ts="1591245328">
+    <transform xil_pn:end_ts="1591321805" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-1930445909620938772" xil_pn:start_ts="1591321805">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1591251432" xil_pn:in_ck="-2665781399606132443" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-5751291310421632051" xil_pn:start_ts="1591251420">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
+    <transform xil_pn:end_ts="1591332959" xil_pn:in_ck="8886392331166129050" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-8050883250008226504" xil_pn:start_ts="1591332951">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="unionMagica.jhd"/>
+      <outfile xil_pn:name="unionMagica.lso"/>
+      <outfile xil_pn:name="unionMagica.ngc"/>
+      <outfile xil_pn:name="unionMagica.ngr"/>
+      <outfile xil_pn:name="unionMagica.prj"/>
+      <outfile xil_pn:name="unionMagica.syr"/>
+      <outfile xil_pn:name="unionMagica.xst"/>
+      <outfile xil_pn:name="unionMagica_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1591245339" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="123229027436183906" xil_pn:start_ts="1591245339">
+    <transform xil_pn:end_ts="1591321813" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5802750704926245075" xil_pn:start_ts="1591321813">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1591251439" xil_pn:in_ck="5078817563622" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-7336828663287441912" xil_pn:start_ts="1591251432">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1591332681" xil_pn:in_ck="7818970060269084823" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2702532530189350285" xil_pn:start_ts="1591332673">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="unionMagica.bld"/>
+      <outfile xil_pn:name="unionMagica.ngd"/>
+      <outfile xil_pn:name="unionMagica_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1591251471" xil_pn:in_ck="5078817563623" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-5426047299686429305" xil_pn:start_ts="1591251439">
+    <transform xil_pn:end_ts="1591332721" xil_pn:in_ck="-5153770630353123719" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-5426047299686429305" xil_pn:start_ts="1591332681">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="unionMagica.pcf"/>
+      <outfile xil_pn:name="unionMagica_map.map"/>
+      <outfile xil_pn:name="unionMagica_map.mrp"/>
+      <outfile xil_pn:name="unionMagica_map.ncd"/>
+      <outfile xil_pn:name="unionMagica_map.ngm"/>
+      <outfile xil_pn:name="unionMagica_map.xrpt"/>
+      <outfile xil_pn:name="unionMagica_summary.xml"/>
+      <outfile xil_pn:name="unionMagica_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1591251524" xil_pn:in_ck="6023078490662784640" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-1606420594950498392" xil_pn:start_ts="1591251471">
+    <transform xil_pn:end_ts="1591332753" xil_pn:in_ck="4809592958693952523" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-1606420594950498392" xil_pn:start_ts="1591332721">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="unionMagica.ncd"/>
+      <outfile xil_pn:name="unionMagica.pad"/>
+      <outfile xil_pn:name="unionMagica.par"/>
+      <outfile xil_pn:name="unionMagica.ptwx"/>
+      <outfile xil_pn:name="unionMagica.unroutes"/>
+      <outfile xil_pn:name="unionMagica.xpi"/>
+      <outfile xil_pn:name="unionMagica_pad.csv"/>
+      <outfile xil_pn:name="unionMagica_pad.txt"/>
+      <outfile xil_pn:name="unionMagica_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1591319079" xil_pn:in_ck="5078817563491" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1591319064">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1591251524" xil_pn:in_ck="5078817563491" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1591251504">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 

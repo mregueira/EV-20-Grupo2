@@ -1,0 +1,4 @@
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/rest2.v -lang verilog -prj UnionMagica -o rest2.spl -module rest2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w rest2.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/rest2.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/rest2.v -lang verilog -prj UnionMagica -o rest2.spl -module rest2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w rest2.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/rest2.sym 

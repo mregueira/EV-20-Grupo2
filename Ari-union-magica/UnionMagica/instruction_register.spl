@@ -1,8 +1,9 @@
 [Inputs]
 increment
-=instruction[14:0]=
+is_void
+=instruction[13:0]=
 [Outputs]
-=output_instruction[14:0]=
+=output_instruction[13:0]=
 [BiDir]
 [ATTRIBUTES]
 VeriModel instruction_register

@@ -1,0 +1,9 @@
+[Inputs]
+is_load
+clk
+[Outputs]
+is_void
+[BiDir]
+[ATTRIBUTES]
+VeriModel voider
+

@@ -5,13 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Ariel\Documents\GitHub\EV-20-Grupo2\Ari-union-magica\UnionMagica\bloque-saltos.v" Line 37: Assignment to <arg fmt="%s" index="1">case_ccy</arg> ignored, since the identifier is never used
+<msg type="error" file="HDLCompiler" num="1660" delta="new" >"C:\Users\Ariel\Documents\GitHub\EV-20-Grupo2\Ari-union-magica\UnionMagica\stack_manager.v" Line 46: Procedural assignment to a non-register <arg fmt="%s" index="1">out_val</arg> is not permitted, left-hand side should be reg/integer/time/genvar
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">W0to15&lt;14:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="error" file="HDLCompiler" num="1660" delta="new" >"C:\Users\Ariel\Documents\GitHub\EV-20-Grupo2\Ari-union-magica\UnionMagica\stack_manager.v" Line 46: Procedural assignment to a non-register <arg fmt="%s" index="1">out_val</arg> is not permitted, left-hand side should be reg/integer/time/genvar
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CY</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Ariel\Documents\GitHub\EV-20-Grupo2\Ari-union-magica\UnionMagica\stack_manager.v" Line 21: Module &lt;<arg fmt="%s" index="1">stack_manager</arg>&gt; ignored due to previous errors.
 </msg>
 
 </messages>

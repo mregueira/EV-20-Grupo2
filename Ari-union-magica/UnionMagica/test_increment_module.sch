@@ -19,24 +19,26 @@
         <port polarity="Input" name="D(11:0)" />
         <port polarity="Output" name="Q(11:0)" />
         <blockdef name="pc_increment_module">
-            <timestamp>2020-6-2T2:36:58</timestamp>
-            <rect width="256" x="64" y="-320" height="320" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <timestamp>2020-6-5T1:15:16</timestamp>
+            <line x2="0" y1="32" y2="32" x1="64" />
+            <line x2="0" y1="96" y2="96" x1="64" />
+            <line x2="0" y1="160" y2="160" x1="64" />
+            <rect width="64" x="0" y="212" height="24" />
+            <line x2="0" y1="224" y2="224" x1="64" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="320" y="-300" height="24" />
-            <line x2="384" y1="-288" y2="-288" x1="320" />
+            <rect width="256" x="64" y="-320" height="576" />
         </blockdef>
         <block symbolname="pc_increment_module" name="XLXI_1">
-            <blockpin signalname="clk" name="clk" />
-            <blockpin signalname="hold" name="hold" />
             <blockpin signalname="increment" name="increment" />
             <blockpin signalname="load" name="load" />
-            <blockpin signalname="D(11:0)" name="D(11:0)" />
-            <blockpin signalname="Q(11:0)" name="Q(11:0)" />
+            <blockpin name="is_BSR" />
+            <blockpin name="is_RET" />
+            <blockpin name="S" />
+            <blockpin signalname="D(11:0)" name="D(10:0)" />
+            <blockpin name="stack_in(10:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">

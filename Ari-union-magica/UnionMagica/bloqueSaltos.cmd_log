@@ -1,0 +1,10 @@
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/bloque-saltos.v -lang verilog -prj UnionMagica -o bloqueSaltos.spl -module bloqueSaltos -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w bloqueSaltos.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/bloqueSaltos.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/bloque-saltos.v -lang verilog -prj UnionMagica -o bloqueSaltos.spl -module bloqueSaltos -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w bloqueSaltos.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/bloqueSaltos.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/bloqueSaltos.v -lang verilog -prj UnionMagica -o bloqueSaltos.spl -module bloqueSaltos -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w bloqueSaltos.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/bloqueSaltos.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/bloqueSaltos.v -lang verilog -prj UnionMagica -o bloqueSaltos.spl -module bloqueSaltos -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w bloqueSaltos.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/bloqueSaltos.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/bloqueSaltos.v -lang verilog -prj UnionMagica -o bloqueSaltos.spl -module bloqueSaltos -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w bloqueSaltos.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/bloqueSaltos.sym 

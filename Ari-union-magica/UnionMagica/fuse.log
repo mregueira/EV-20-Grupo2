@@ -1,0 +1,35 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/unionMagica_isim_beh.exe -prj C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/unionMagica_beh.prj work.unionMagica work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/../../RAM/RAM_internal.v" into library work
+Analyzing Verilog file "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/voider.v" into library work
+Analyzing Verilog file "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.v" into library work
+Analyzing Verilog file "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/rest2.v" into library work
+Analyzing Verilog file "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/pc_increment_v2.v" into library work
+Analyzing Verilog file "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/instruction_register_v2.v" into library work
+Analyzing Verilog file "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/bloqueSaltos.v" into library work
+Analyzing Verilog file "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/unionMagica.vf" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module AND2
+Compiling module VCC
+Compiling module GND
+Compiling module INV
+Compiling module RAM_internal
+Compiling module instruction_register_v2
+Compiling module voider
+Compiling module pc_increment_v2_module
+Compiling module bloqueSaltos
+Compiling module stack_manager
+Compiling module rest2
+Compiling module unionMagica
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 13 Verilog Units
+Built simulation executable C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/unionMagica_isim_beh.exe
+Fuse Memory Usage: 28096 KB
+Fuse CPU Usage: 374 ms

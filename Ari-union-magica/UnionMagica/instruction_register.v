@@ -19,16 +19,18 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module instruction_register(
-    input [14:0] instruction,
+    input [13:0] instruction,
 	 input increment,
-    output [14:0] output_instruction
+	 input is_void,
+    output [13:0] output_instruction
     );
-	reg aux[14:0];
+	reg [13:0]aux;
 	
 	always @(posedge increment) begin
-		aux <= intruction;
+		aux <= instruction;
 	end
 	
-	assign output_instruction = aux;
-
+	for (digit=0;digit <13;digit=digit+1) begin
+		assign output_instruction[digit] = is_void & aux[digit];
+	end
 endmodule

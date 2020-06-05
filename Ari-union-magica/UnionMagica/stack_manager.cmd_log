@@ -1,0 +1,18 @@
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.v -lang verilog -prj UnionMagica -o stack_manager.spl -module stack_manager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w stack_manager.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.v -lang verilog -prj UnionMagica -o stack_manager.spl -module stack_manager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w stack_manager.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.v -lang verilog -prj UnionMagica -o stack_manager.spl -module stack_manager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w stack_manager.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.v -lang verilog -prj UnionMagica -o stack_manager.spl -module stack_manager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w stack_manager.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.v -lang verilog -prj UnionMagica -o stack_manager.spl -module stack_manager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w stack_manager.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.v -lang verilog -prj UnionMagica -o stack_manager.spl -module stack_manager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w stack_manager.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.v -lang verilog -prj UnionMagica -o stack_manager.spl -module stack_manager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w stack_manager.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.v -lang verilog -prj UnionMagica -o stack_manager.spl -module stack_manager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w stack_manager.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.v -lang verilog -prj UnionMagica -o stack_manager.spl -module stack_manager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w stack_manager.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/stack_manager.sym 

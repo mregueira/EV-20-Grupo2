@@ -19,23 +19,30 @@
         <port polarity="Input" name="W0to15(15:0)" />
         <port polarity="Output" name="pre_load" />
         <blockdef name="bloqueSaltos">
-            <timestamp>2020-6-4T3:51:1</timestamp>
-            <rect width="256" x="64" y="-320" height="320" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <timestamp>2020-6-5T1:35:35</timestamp>
+            <rect width="64" x="320" y="212" height="24" />
+            <line x2="384" y1="224" y2="224" x1="320" />
+            <rect width="64" x="320" y="276" height="24" />
+            <line x2="384" y1="288" y2="288" x1="320" />
+            <rect width="64" x="0" y="20" height="24" />
+            <line x2="0" y1="32" y2="32" x1="64" />
+            <line x2="384" y1="32" y2="32" x1="320" />
+            <line x2="384" y1="96" y2="96" x1="320" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="384" y1="-288" y2="-288" x1="320" />
+            <rect width="256" x="64" y="-320" height="640" />
         </blockdef>
         <block symbolname="bloqueSaltos" name="XLXI_1">
-            <blockpin signalname="B13" name="B13" />
-            <blockpin signalname="B12" name="B12" />
-            <blockpin signalname="B11" name="B11" />
             <blockpin signalname="CY" name="CY" />
             <blockpin signalname="W0to15(15:0)" name="W0to15(15:0)" />
+            <blockpin name="B(13:0)" />
             <blockpin signalname="pre_load" name="pre_load" />
+            <blockpin name="is_BSR" />
+            <blockpin name="is_RET" />
+            <blockpin name="S(9:0)" />
+            <blockpin name="D(10:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">

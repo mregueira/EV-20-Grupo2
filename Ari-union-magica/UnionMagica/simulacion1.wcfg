@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/unionMagica_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="unionMagica" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/unionMagica/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/CY" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CY</obj_property>
+      <obj_property name="ObjectShortName">CY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/HOLD" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">HOLD</obj_property>
+      <obj_property name="ObjectShortName">HOLD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/W" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">W[15:0]</obj_property>
+      <obj_property name="ObjectShortName">W[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/INSTRUCTION" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">INSTRUCTION[13:0]</obj_property>
+      <obj_property name="ObjectShortName">INSTRUCTION[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/PC" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PC[10:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[10:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/B11" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">B11</obj_property>
+      <obj_property name="ObjectShortName">B11</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/B12" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">B12</obj_property>
+      <obj_property name="ObjectShortName">B12</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/B13" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">B13</obj_property>
+      <obj_property name="ObjectShortName">B13</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/D" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">D[10:0]</obj_property>
+      <obj_property name="ObjectShortName">D[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/increment" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">increment</obj_property>
+      <obj_property name="ObjectShortName">increment</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/load" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">load</obj_property>
+      <obj_property name="ObjectShortName">load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/RAM_DATA_OUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RAM_DATA_OUT[13:0]</obj_property>
+      <obj_property name="ObjectShortName">RAM_DATA_OUT[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/XLXN_75" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">XLXN_75</obj_property>
+      <obj_property name="ObjectShortName">XLXN_75</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/XLXN_76" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">XLXN_76</obj_property>
+      <obj_property name="ObjectShortName">XLXN_76</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/XLXN_79" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">XLXN_79</obj_property>
+      <obj_property name="ObjectShortName">XLXN_79</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/PC_DUMMY" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PC_DUMMY[10:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_DUMMY[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unionMagica/INSTRUCTION_DUMMY" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">INSTRUCTION_DUMMY[13:0]</obj_property>
+      <obj_property name="ObjectShortName">INSTRUCTION_DUMMY[13:0]</obj_property>
+   </wvobject>
+</wave_config>

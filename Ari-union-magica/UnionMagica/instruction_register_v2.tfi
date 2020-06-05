@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+instruction_register_v2 instance_name (
+    .increment(increment), 
+    .in_ins(in_ins), 
+    .out_ins(out_ins)
+    );
+
+

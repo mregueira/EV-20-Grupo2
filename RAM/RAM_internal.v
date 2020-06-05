@@ -30,6 +30,8 @@ initial begin // para pruebas setear la memoria
 	mem[6] = 14'b00000010000000; // clear carry
 	mem[7] = 14'b00000010000000; // clear carry
 	mem[8] = 14'b01110000000100; // branch to subroutine (8+4=12)
+	
+	
 	mem[9] = 14'b00000000000000;
 	mem[10] = 14'b10000000000001; // branch to 0
 	mem[11] = 14'b00000000000000;

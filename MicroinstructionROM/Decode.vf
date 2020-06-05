@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Decode.vf
-// /___/   /\     Timestamp : 06/04/2020 18:24:20
+// /___/   /\     Timestamp : 06/04/2020 23:33:08
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -18,6 +18,27 @@
 //    This verilog netlist is translated from an ECS schematic.It can be 
 //    synthesized and simulated, but it should not be modified. 
 //
+`timescale 100 ps / 10 ps
+
+module IFD_HXILINX_Decode(Q, C, D);
+   
+   output             Q;
+
+   input 	      C;	
+   input              D;
+   
+   parameter INIT = 1'b0;
+   (* IOB = "TRUE" *) 
+
+   reg                Q = INIT;
+
+   always @(posedge C)
+     begin
+          Q <= D;
+     end
+   
+   
+endmodule
 `timescale 1ns / 1ps
 
 module LATCH4_MUSER_Decode(CLK, 
@@ -166,6 +187,28 @@ module mux5_MUSER_Decode(const,
 endmodule
 `timescale 1ns / 1ps
 
+module fdce1_MUSER_Decode(chipEnable, 
+                          clk, 
+                          d, 
+                          q);
+
+    input chipEnable;
+    input clk;
+    input d;
+   output q;
+   
+   wire XLXN_1;
+   
+   (* HU_SET = "XLXI_1_15" *) 
+   IFD_HXILINX_Decode #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
+                              .D(d), 
+                              .Q(q));
+   AND2  XLXI_2 (.I0(chipEnable), 
+                .I1(clk), 
+                .O(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
 module LATCH6_MUSER_Decode(CLK, 
                            CLR, 
                            ENABLE, 
@@ -233,28 +276,49 @@ module Decode(cbusmir,
    output [9:0] DAdd;
    
    wire selector;
-   wire XLXN_3;
    wire XLXN_4;
    wire XLXN_5;
    wire XLXN_6;
    wire XLXN_7;
    wire XLXN_8;
    wire XLXN_9;
-   wire XLXN_10;
    wire XLXN_11;
    wire XLXN_120;
    wire XLXN_121;
    wire XLXN_135;
    wire XLXN_136;
    wire XLXN_147;
+   wire XLXN_157;
+   wire XLXN_158;
+   wire XLXN_162;
+   wire XLXN_163;
+   wire [4:0] XLXN_165;
+   wire [9:0] XLXN_167;
+   wire XLXN_183;
+   wire XLXN_190;
+   wire XLXN_192;
+   wire [4:0] XLXN_201;
+   wire [4:0] XLXN_202;
+   wire XLXN_204;
+   wire XLXN_205;
+   wire XLXN_209;
+   wire XLXN_210;
    
-   assign XLXN_10 = 0;
    assign XLXN_11 = 1;
    assign XLXN_120 = 0;
    assign XLXN_121 = 1;
    assign XLXN_135 = 0;
    assign XLXN_136 = 1;
    assign XLXN_147 = 0;
+   assign XLXN_157 = 0;
+   assign XLXN_158 = 1;
+   assign XLXN_162 = 0;
+   assign XLXN_163 = 1;
+   assign XLXN_192 = 1;
+   assign XLXN_204 = 0;
+   assign XLXN_205 = 1;
+   assign XLXN_209 = 1;
+   assign XLXN_210 = 0;
    AND3  XLXI_1 (.I0(XLXN_7), 
                 .I1(XLXN_6), 
                 .I2(instruction[11]), 
@@ -266,12 +330,7 @@ module Decode(cbusmir,
                 .O(XLXN_5));
    OR2  XLXI_3 (.I0(XLXN_5), 
                .I1(XLXN_4), 
-               .O(XLXN_3));
-   FDCE #( .INIT(1'b0) ) XLXI_5 (.C(CLK), 
-                .CE(XLXN_11), 
-                .CLR(XLXN_10), 
-                .D(XLXN_3), 
-                .Q(selector));
+               .O(XLXN_183));
    INV  XLXI_6 (.I(instruction[12]), 
                .O(XLXN_6));
    INV  XLXI_7 (.I(instruction[13]), 
@@ -283,19 +342,47 @@ module Decode(cbusmir,
    LATCH10_MUSER_Decode  XLXI_24 (.CLK(CLK), 
                                  .CLR(XLXN_120), 
                                  .ENABLE(XLXN_121), 
-                                 .INPUT(instruction[9:0]), 
+                                 .INPUT(XLXN_167[9:0]), 
                                  .OUTPUT(DAdd[9:0]));
    mux1_MUSER_Decode  XLXI_30 (.constante(XLXN_147), 
                               .hold(selector), 
                               .muxin(cbusmir[5]), 
                               .muxout(CBUS[5]));
-   mux5_MUSER_Decode  XLXI_31 (.const(instruction[9:5]), 
+   mux5_MUSER_Decode  XLXI_31 (.const(XLXN_201[4:0]), 
                               .hold(selector), 
                               .muxin(cbusmir[4:0]), 
                               .muxout(CBUS[4:0]));
    LATCH5_MUSER_Decode  XLXI_35 (.CLK(CLK), 
                                 .CLR(XLXN_135), 
                                 .ENABLE(XLXN_136), 
-                                .INPUT(instruction[4:0]), 
+                                .INPUT(XLXN_165[4:0]), 
                                 .OUTPUT(ABUS[4:0]));
+   LATCH10_MUSER_Decode  XLXI_44 (.CLK(CLK), 
+                                 .CLR(XLXN_157), 
+                                 .ENABLE(XLXN_158), 
+                                 .INPUT(instruction[9:0]), 
+                                 .OUTPUT(XLXN_167[9:0]));
+   LATCH5_MUSER_Decode  XLXI_45 (.CLK(CLK), 
+                                .CLR(XLXN_162), 
+                                .ENABLE(XLXN_163), 
+                                .INPUT(instruction[4:0]), 
+                                .OUTPUT(XLXN_165[4:0]));
+   fdce1_MUSER_Decode  XLXI_50 (.chipEnable(XLXN_11), 
+                               .clk(CLK), 
+                               .d(XLXN_190), 
+                               .q(selector));
+   fdce1_MUSER_Decode  XLXI_58 (.chipEnable(XLXN_192), 
+                               .clk(CLK), 
+                               .d(XLXN_183), 
+                               .q(XLXN_190));
+   LATCH5_MUSER_Decode  XLXI_69 (.CLK(CLK), 
+                                .CLR(XLXN_204), 
+                                .ENABLE(XLXN_205), 
+                                .INPUT(XLXN_202[4:0]), 
+                                .OUTPUT(XLXN_201[4:0]));
+   LATCH5_MUSER_Decode  XLXI_70 (.CLK(CLK), 
+                                .CLR(XLXN_210), 
+                                .ENABLE(XLXN_209), 
+                                .INPUT(instruction[9:5]), 
+                                .OUTPUT(XLXN_202[4:0]));
 endmodule

@@ -52,6 +52,8 @@
         <signal name="XLXN_80" />
         <signal name="instruction(13:0)" />
         <signal name="cbusrom(5:0)" />
+        <signal name="XLXN_81" />
+        <signal name="XLXN_82" />
         <port polarity="Input" name="CLK2" />
         <port polarity="Input" name="ALU(3:0)" />
         <port polarity="Input" name="SH(1:0)" />
@@ -247,7 +249,7 @@
             <line x2="432" y1="-32" y2="-32" x1="368" />
         </blockdef>
         <block symbolname="inv" name="XLXI_7">
-            <blockpin signalname="HOLD" name="I" />
+            <blockpin signalname="XLXN_82" name="I" />
             <blockpin signalname="XLXN_2" name="O" />
         </block>
         <block symbolname="constant" name="XLXI_8">
@@ -267,7 +269,7 @@
             <blockpin signalname="TYPEaUC1(6:0)" name="typeIN(6:0)" />
             <blockpin signalname="CBUSaUC1(5:0)" name="cbusIN(5:0)" />
             <blockpin signalname="ABUSaUC1(4:0)" name="abusIN(4:0)" />
-            <blockpin signalname="HOLD" name="hold" />
+            <blockpin signalname="XLXN_81" name="hold" />
             <blockpin signalname="ALUop(3:0)" name="aluOUTuc1(3:0)" />
             <blockpin signalname="SHop(1:0)" name="shOUTuc1(1:0)" />
             <blockpin signalname="KMXOUT" name="kmxOUTuc1" />
@@ -400,6 +402,22 @@
             <blockpin signalname="DAdd(9:0)" name="DAdd(9:0)" />
             <blockpin signalname="CBUS(5:0)" name="CBUS(5:0)" />
             <blockpin signalname="ABUS(4:0)" name="ABUS(4:0)" />
+        </block>
+        <block symbolname="constant" name="XLXI_33">
+            <attr value="0" name="CValue">
+                <trait delete="all:1 sym:0" />
+                <trait editname="all:1 sch:0" />
+                <trait valuetype="BitVector 32 Hexadecimal" />
+            </attr>
+            <blockpin signalname="XLXN_81" name="O" />
+        </block>
+        <block symbolname="constant" name="XLXI_34">
+            <attr value="0" name="CValue">
+                <trait delete="all:1 sym:0" />
+                <trait editname="all:1 sch:0" />
+                <trait valuetype="BitVector 32 Hexadecimal" />
+            </attr>
+            <blockpin signalname="XLXN_82" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -603,14 +621,6 @@
         <branch name="CBUSaUC1(5:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1024" y="976" type="branch" />
             <wire x2="1024" y1="976" y2="976" x1="944" />
-        </branch>
-        <branch name="HOLD">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1600" y="720" type="branch" />
-            <wire x2="1632" y1="720" y2="720" x1="1600" />
-        </branch>
-        <branch name="HOLD">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="224" y="336" type="branch" />
-            <wire x2="240" y1="336" y2="336" x1="224" />
         </branch>
         <branch name="MEM(1:0)">
             <wire x2="336" y1="1072" y2="1072" x1="256" />
@@ -817,5 +827,15 @@
         <iomarker fontsize="28" x="272" y="1600" name="ALU(3:0)" orien="R180" />
         <iomarker fontsize="28" x="272" y="1696" name="SH(1:0)" orien="R180" />
         <iomarker fontsize="28" x="240" y="1808" name="CLK2" orien="R180" />
+        <branch name="XLXN_81">
+            <wire x2="1632" y1="720" y2="720" x1="1600" />
+        </branch>
+        <instance x="1456" y="688" name="XLXI_33" orien="R0">
+        </instance>
+        <instance x="80" y="304" name="XLXI_34" orien="R0">
+        </instance>
+        <branch name="XLXN_82">
+            <wire x2="240" y1="336" y2="336" x1="224" />
+        </branch>
     </sheet>
 </drawing>

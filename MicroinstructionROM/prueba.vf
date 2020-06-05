@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : prueba.vf
-// /___/   /\     Timestamp : 06/04/2020 23:33:19
+// /___/   /\     Timestamp : 06/05/2020 00:27:05
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -53,7 +53,7 @@ module fdce1_MUSER_prueba(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_19" *) 
+   (* HU_SET = "XLXI_1_26" *) 
    IFD_HXILINX_prueba #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                               .D(d), 
                               .Q(q));

@@ -26,7 +26,7 @@ static int ng1[] = {0, 0};
 
 
 
-static void Cont_1168_0(char *t0)
+static void Cont_1156_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -51,7 +51,7 @@ LAB0:    t1 = (t0 + 5248U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(1168, ng0);
+LAB2:    xsi_set_current_line(1156, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 5632);
     t4 = (t3 + 56U);
@@ -79,7 +79,7 @@ LAB1:    return;
 
 extern void work_m_00000000004200314715_3853250356_init()
 {
-	static char *pe[] = {(void *)Cont_1168_0};
+	static char *pe[] = {(void *)Cont_1156_0};
 	xsi_register_didat("work_m_00000000004200314715_3853250356", "isim/merge_isim_beh.exe.sim/work/m_00000000004200314715_3853250356.didat");
 	xsi_register_executes(pe);
 }

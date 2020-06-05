@@ -12,3 +12,103 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
 Finished circuit initialization process.
+# isim force add /merge/clk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /merge/instruction 01100000101010 -radix bin
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# restart
+# isim force add /merge/clk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /merge/instruction 01101000001010 -radix bin
+# run 0.1us
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# restart
+# isim force add /merge/clk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /merge/instruction 01101011100011 -radix bin
+# run 0.1us
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# restart
+# isim force add /merge/clk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /merge/instruction 01100100101001 -radix bin
+# run 0.1us
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# restart
+# isim force add /merge/clk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /merge/instruction 01100000101010 -radix bin
+# run 0.1us
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+# run 0.1us
+# run 0.1us
+# restart
+# isim force add /merge/clk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /merge/instruction 01101101010001 -radix bin
+# run 0.1us
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# restart
+# isim force add /merge/clk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /merge/instruction 01100101010100 -radix bin
+# run 0.02us
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us
+# run 0.02us

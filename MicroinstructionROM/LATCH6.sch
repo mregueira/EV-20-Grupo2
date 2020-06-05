@@ -31,18 +31,13 @@
             <rect width="64" x="320" y="-236" height="24" />
             <line x2="384" y1="-224" y2="-224" x1="320" />
         </blockdef>
-        <blockdef name="fdce">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-128" y2="-128" x1="0" />
-            <line x2="64" y1="-192" y2="-192" x1="0" />
-            <line x2="64" y1="-32" y2="-32" x1="0" />
-            <line x2="64" y1="-256" y2="-256" x1="0" />
-            <line x2="320" y1="-256" y2="-256" x1="384" />
-            <line x2="80" y1="-112" y2="-128" x1="64" />
-            <line x2="64" y1="-128" y2="-144" x1="80" />
-            <line x2="192" y1="-64" y2="-32" x1="192" />
-            <line x2="64" y1="-32" y2="-32" x1="192" />
-            <rect width="256" x="64" y="-320" height="256" />
+        <blockdef name="fdce1">
+            <timestamp>2020-6-4T23:3:18</timestamp>
+            <rect width="256" x="64" y="-192" height="192" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
         </blockdef>
         <block symbolname="LATCH5" name="XLXI_1">
             <blockpin signalname="CLK" name="CLK" />
@@ -51,12 +46,11 @@
             <blockpin signalname="INPUT(4:0)" name="INPUT(4:0)" />
             <blockpin signalname="OUTPUT(4:0)" name="OUTPUT(4:0)" />
         </block>
-        <block symbolname="fdce" name="XLXI_3">
-            <blockpin signalname="CLK" name="C" />
-            <blockpin signalname="ENABLE" name="CE" />
-            <blockpin signalname="CLR" name="CLR" />
-            <blockpin signalname="INPUT(5)" name="D" />
-            <blockpin signalname="OUTPUT(5)" name="Q" />
+        <block symbolname="fdce1" name="XLXI_4">
+            <blockpin signalname="CLK" name="clk" />
+            <blockpin signalname="ENABLE" name="chipEnable" />
+            <blockpin signalname="INPUT(5)" name="d" />
+            <blockpin signalname="OUTPUT(5)" name="q" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -106,15 +100,6 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1376" y="1232" type="branch" />
             <wire x2="1456" y1="1232" y2="1232" x1="1376" />
         </branch>
-        <branch name="CLK">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1376" y="1312" type="branch" />
-            <wire x2="1456" y1="1312" y2="1312" x1="1376" />
-            <wire x2="1456" y1="1296" y2="1312" x1="1456" />
-        </branch>
-        <branch name="CLR">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1376" y="1392" type="branch" />
-            <wire x2="1456" y1="1392" y2="1392" x1="1376" />
-        </branch>
         <branch name="OUTPUT(5)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1936" y="1168" type="branch" />
             <wire x2="1936" y1="1168" y2="1168" x1="1840" />
@@ -123,6 +108,12 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2000" y="592" type="branch" />
             <wire x2="2000" y1="592" y2="592" x1="1808" />
         </branch>
-        <instance x="1456" y="1424" name="XLXI_3" orien="R0" />
+        <instance x="1456" y="1328" name="XLXI_4" orien="R0">
+        </instance>
+        <branch name="CLK">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1360" y="1312" type="branch" />
+            <wire x2="1456" y1="1312" y2="1312" x1="1360" />
+            <wire x2="1456" y1="1296" y2="1312" x1="1456" />
+        </branch>
     </sheet>
 </drawing>

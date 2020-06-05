@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : fdce1.vf
-// /___/   /\     Timestamp : 06/04/2020 23:32:54
+// /___/   /\     Timestamp : 06/05/2020 00:26:14
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -53,7 +53,7 @@ module fdce1(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_9" *) 
+   (* HU_SET = "XLXI_1_3" *) 
    IFD_HXILINX_fdce1 #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                              .D(d), 
                              .Q(q));

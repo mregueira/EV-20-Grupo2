@@ -16,25 +16,19 @@
         <port polarity="Input" name="ENABLE" />
         <port polarity="Input" name="INPUT" />
         <port polarity="Output" name="OUTPUT" />
-        <blockdef name="fdce">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-128" y2="-128" x1="0" />
-            <line x2="64" y1="-192" y2="-192" x1="0" />
-            <line x2="64" y1="-32" y2="-32" x1="0" />
-            <line x2="64" y1="-256" y2="-256" x1="0" />
-            <line x2="320" y1="-256" y2="-256" x1="384" />
-            <line x2="80" y1="-112" y2="-128" x1="64" />
-            <line x2="64" y1="-128" y2="-144" x1="80" />
-            <line x2="192" y1="-64" y2="-32" x1="192" />
-            <line x2="64" y1="-32" y2="-32" x1="192" />
-            <rect width="256" x="64" y="-320" height="256" />
+        <blockdef name="fdce1">
+            <timestamp>2020-6-4T23:3:18</timestamp>
+            <rect width="256" x="64" y="-192" height="192" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
         </blockdef>
-        <block symbolname="fdce" name="XLXI_3">
-            <blockpin signalname="CLK" name="C" />
-            <blockpin signalname="ENABLE" name="CE" />
-            <blockpin signalname="CLR" name="CLR" />
-            <blockpin signalname="INPUT" name="D" />
-            <blockpin signalname="OUTPUT" name="Q" />
+        <block symbolname="fdce1" name="XLXI_4">
+            <blockpin signalname="CLK" name="clk" />
+            <blockpin signalname="ENABLE" name="chipEnable" />
+            <blockpin signalname="INPUT" name="d" />
+            <blockpin signalname="OUTPUT" name="q" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -46,7 +40,6 @@
         </branch>
         <branch name="ENABLE">
             <wire x2="576" y1="1440" y2="1440" x1="256" />
-            <wire x2="576" y1="1440" y2="1456" x1="576" />
         </branch>
         <branch name="INPUT">
             <wire x2="704" y1="1632" y2="1632" x1="288" />
@@ -70,22 +63,16 @@
             <wire x2="1280" y1="1296" y2="1296" x1="1088" />
             <wire x2="1296" y1="1296" y2="1296" x1="1280" />
         </branch>
-        <branch name="CLR">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1200" y="1392" type="branch" />
-            <wire x2="1168" y1="1376" y2="1392" x1="1168" />
-            <wire x2="1200" y1="1392" y2="1392" x1="1168" />
-            <wire x2="1296" y1="1392" y2="1392" x1="1200" />
-        </branch>
         <branch name="OUTPUT">
-            <attrtext style="alignment:SOFT-TCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1168" type="branch" />
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1168" type="branch" />
             <wire x2="1824" y1="1168" y2="1168" x1="1680" />
-            <wire x2="1824" y1="1152" y2="1168" x1="1824" />
         </branch>
         <iomarker fontsize="28" x="224" y="1008" name="CLK" orien="R180" />
         <iomarker fontsize="28" x="240" y="1232" name="CLR" orien="R180" />
         <iomarker fontsize="28" x="2496" y="1264" name="OUTPUT" orien="R0" />
         <iomarker fontsize="28" x="288" y="1632" name="INPUT" orien="R180" />
         <iomarker fontsize="28" x="256" y="1440" name="ENABLE" orien="R180" />
-        <instance x="1296" y="1424" name="XLXI_3" orien="R0" />
+        <instance x="1296" y="1328" name="XLXI_4" orien="R0">
+        </instance>
     </sheet>
 </drawing>

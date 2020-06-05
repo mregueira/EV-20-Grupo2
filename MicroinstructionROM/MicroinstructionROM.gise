@@ -111,7 +111,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591324401" xil_pn:in_ck="-3842647680633625684" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7252195739520166242" xil_pn:start_ts="1591324348">
+    <transform xil_pn:end_ts="1591327649" xil_pn:in_ck="-3842647680633625684" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7252195739520166242" xil_pn:start_ts="1591327568">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="COMPARADOR5.vf"/>
@@ -146,7 +146,7 @@
       <outfile xil_pn:name="ipcore_dir/MicroinstructionROM.ngc"/>
       <outfile xil_pn:name="ipcore_dir/MicroinstructionROM.v"/>
     </transform>
-    <transform xil_pn:end_ts="1591324401" xil_pn:in_ck="6931862529999758583" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591324401">
+    <transform xil_pn:end_ts="1591327649" xil_pn:in_ck="6931862529999758583" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591327649">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="COMPARADOR5.vf"/>
@@ -176,9 +176,12 @@
       <outfile xil_pn:name="toOperand.vf"/>
       <outfile xil_pn:name="toRetire.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1591324409" xil_pn:in_ck="6931862529999758583" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1081809024549742646" xil_pn:start_ts="1591324401">
+    <transform xil_pn:end_ts="1591327659" xil_pn:in_ck="6931862529999758583" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1081809024549742646" xil_pn:start_ts="1591327649">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
@@ -186,9 +189,13 @@
       <outfile xil_pn:name="merge_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1591324410" xil_pn:in_ck="839808853301342620" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8364998625973394425" xil_pn:start_ts="1591324409">
+    <transform xil_pn:end_ts="1591327659" xil_pn:in_ck="839808853301342620" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8364998625973394425" xil_pn:start_ts="1591327659">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="merge_isim_beh.wdb"/>

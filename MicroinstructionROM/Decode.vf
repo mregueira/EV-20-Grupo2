@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Decode.vf
-// /___/   /\     Timestamp : 06/04/2020 23:33:08
+// /___/   /\     Timestamp : 06/05/2020 00:27:16
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -41,6 +41,28 @@ module IFD_HXILINX_Decode(Q, C, D);
 endmodule
 `timescale 1ns / 1ps
 
+module fdce1_MUSER_Decode(chipEnable, 
+                          clk, 
+                          d, 
+                          q);
+
+    input chipEnable;
+    input clk;
+    input d;
+   output q;
+   
+   wire XLXN_1;
+   
+   (* HU_SET = "XLXI_1_30" *) 
+   IFD_HXILINX_Decode #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
+                              .D(d), 
+                              .Q(q));
+   AND2  XLXI_2 (.I0(chipEnable), 
+                .I1(clk), 
+                .O(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
 module LATCH4_MUSER_Decode(CLK, 
                            CLR, 
                            ENABLE, 
@@ -54,26 +76,22 @@ module LATCH4_MUSER_Decode(CLK,
    output [3:0] OUTPUT;
    
    
-   FDCE #( .INIT(1'b0) ) XLXI_8 (.C(CLK), 
-                .CE(ENABLE), 
-                .CLR(CLR), 
-                .D(INPUT[0]), 
-                .Q(OUTPUT[0]));
-   FDCE #( .INIT(1'b0) ) XLXI_9 (.C(CLK), 
-                .CE(ENABLE), 
-                .CLR(CLR), 
-                .D(INPUT[1]), 
-                .Q(OUTPUT[1]));
-   FDCE #( .INIT(1'b0) ) XLXI_10 (.C(CLK), 
-                 .CE(ENABLE), 
-                 .CLR(CLR), 
-                 .D(INPUT[2]), 
-                 .Q(OUTPUT[2]));
-   FDCE #( .INIT(1'b0) ) XLXI_12 (.C(CLK), 
-                 .CE(ENABLE), 
-                 .CLR(CLR), 
-                 .D(INPUT[3]), 
-                 .Q(OUTPUT[3]));
+   fdce1_MUSER_Decode  XLXI_13 (.chipEnable(ENABLE), 
+                               .clk(CLK), 
+                               .d(INPUT[0]), 
+                               .q(OUTPUT[0]));
+   fdce1_MUSER_Decode  XLXI_14 (.chipEnable(ENABLE), 
+                               .clk(CLK), 
+                               .d(INPUT[1]), 
+                               .q(OUTPUT[1]));
+   fdce1_MUSER_Decode  XLXI_15 (.chipEnable(ENABLE), 
+                               .clk(CLK), 
+                               .d(INPUT[2]), 
+                               .q(OUTPUT[2]));
+   fdce1_MUSER_Decode  XLXI_16 (.chipEnable(ENABLE), 
+                               .clk(CLK), 
+                               .d(INPUT[3]), 
+                               .q(OUTPUT[3]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -95,11 +113,10 @@ module LATCH5_MUSER_Decode(CLK,
                                .ENABLE(ENABLE), 
                                .INPUT(INPUT[3:0]), 
                                .OUTPUT(OUTPUT[3:0]));
-   FDCE #( .INIT(1'b0) ) XLXI_4 (.C(CLK), 
-                .CE(ENABLE), 
-                .CLR(CLR), 
-                .D(INPUT[4]), 
-                .Q(OUTPUT[4]));
+   fdce1_MUSER_Decode  XLXI_5 (.chipEnable(ENABLE), 
+                              .clk(CLK), 
+                              .d(INPUT[4]), 
+                              .q(OUTPUT[4]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -187,28 +204,6 @@ module mux5_MUSER_Decode(const,
 endmodule
 `timescale 1ns / 1ps
 
-module fdce1_MUSER_Decode(chipEnable, 
-                          clk, 
-                          d, 
-                          q);
-
-    input chipEnable;
-    input clk;
-    input d;
-   output q;
-   
-   wire XLXN_1;
-   
-   (* HU_SET = "XLXI_1_15" *) 
-   IFD_HXILINX_Decode #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
-                              .D(d), 
-                              .Q(q));
-   AND2  XLXI_2 (.I0(chipEnable), 
-                .I1(clk), 
-                .O(XLXN_1));
-endmodule
-`timescale 1ns / 1ps
-
 module LATCH6_MUSER_Decode(CLK, 
                            CLR, 
                            ENABLE, 
@@ -227,11 +222,10 @@ module LATCH6_MUSER_Decode(CLK,
                                .ENABLE(ENABLE), 
                                .INPUT(INPUT[4:0]), 
                                .OUTPUT(OUTPUT[4:0]));
-   FDCE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
-                .CE(ENABLE), 
-                .CLR(CLR), 
-                .D(INPUT[5]), 
-                .Q(OUTPUT[5]));
+   fdce1_MUSER_Decode  XLXI_4 (.chipEnable(ENABLE), 
+                              .clk(CLK), 
+                              .d(INPUT[5]), 
+                              .q(OUTPUT[5]));
 endmodule
 `timescale 1ns / 1ps
 

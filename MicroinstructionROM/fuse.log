@@ -6,6 +6,7 @@ Determining compilation order of HDL files
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir/MicroinstructionROM.v" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux1.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux2.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/fdce1.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux4.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH4.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux5.vf" into library work
@@ -17,7 +18,6 @@ Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionRO
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH7.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH2.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH10.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/fdce1.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/COMPARADOR5.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/UC2.vf" into library work
 Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/UC1.vf" into library work
@@ -39,7 +39,9 @@ Compiling module mux5_MUSER_merge
 Compiling module mux6_MUSER_merge
 Compiling module mux7_MUSER_merge
 Compiling module UC1_MUSER_merge
-Compiling module FDCE
+Compiling module IFD_HXILINX_merge
+Compiling module AND2
+Compiling module fdce1_MUSER_merge
 Compiling module LATCH4_MUSER_merge
 Compiling module LATCH1_MUSER_merge
 Compiling module LATCH2_MUSER_merge
@@ -52,7 +54,6 @@ Compiling module INV
 Compiling module LATCH10_MUSER_merge
 Compiling module toOperand_MUSER_merge
 Compiling module OR2
-Compiling module AND2
 Compiling module AND3
 Compiling module OR3
 Compiling module XOR2
@@ -60,8 +61,6 @@ Compiling module AND4
 Compiling module COMPARADOR5_MUSER_merge
 Compiling module OR6_HXILINX_merge
 Compiling module UC2_MUSER_merge
-Compiling module IFD_HXILINX_merge
-Compiling module fdce1_MUSER_merge
 Compiling module Decode_MUSER_merge
 Compiling module Tuberia_MUSER_merge
 Compiling module DIST_MEM_GEN_V7_2(C_FAMILY="arti...
@@ -70,8 +69,8 @@ Compiling module MROM_MUSER_merge
 Compiling module merge
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 14 sub-compilation(s) to finish...
-Compiled 38 Verilog Units
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 37 Verilog Units
 Built simulation executable C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_isim_beh.exe
-Fuse Memory Usage: 31516 KB
-Fuse CPU Usage: 1014 ms
+Fuse Memory Usage: 31464 KB
+Fuse CPU Usage: 1515 ms

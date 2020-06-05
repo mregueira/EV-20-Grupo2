@@ -1,0 +1,191 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : LATCH7.vf
+// /___/   /\     Timestamp : 06/05/2020 00:26:50
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH7.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH7.sch
+//Design Name: LATCH7
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module IFD_HXILINX_LATCH7(Q, C, D);
+   
+   output             Q;
+
+   input 	      C;	
+   input              D;
+   
+   parameter INIT = 1'b0;
+   (* IOB = "TRUE" *) 
+
+   reg                Q = INIT;
+
+   always @(posedge C)
+     begin
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module fdce1_MUSER_LATCH7(chipEnable, 
+                          clk, 
+                          d, 
+                          q);
+
+    input chipEnable;
+    input clk;
+    input d;
+   output q;
+   
+   wire XLXN_1;
+   
+   (* HU_SET = "XLXI_1_20" *) 
+   IFD_HXILINX_LATCH7 #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
+                              .D(d), 
+                              .Q(q));
+   AND2  XLXI_2 (.I0(chipEnable), 
+                .I1(clk), 
+                .O(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH1_MUSER_LATCH7(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input INPUT;
+   output OUTPUT;
+   
+   
+   fdce1_MUSER_LATCH7  XLXI_4 (.chipEnable(ENABLE), 
+                              .clk(CLK), 
+                              .d(INPUT), 
+                              .q(OUTPUT));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH4_MUSER_LATCH7(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [3:0] INPUT;
+   output [3:0] OUTPUT;
+   
+   
+   fdce1_MUSER_LATCH7  XLXI_13 (.chipEnable(ENABLE), 
+                               .clk(CLK), 
+                               .d(INPUT[0]), 
+                               .q(OUTPUT[0]));
+   fdce1_MUSER_LATCH7  XLXI_14 (.chipEnable(ENABLE), 
+                               .clk(CLK), 
+                               .d(INPUT[1]), 
+                               .q(OUTPUT[1]));
+   fdce1_MUSER_LATCH7  XLXI_15 (.chipEnable(ENABLE), 
+                               .clk(CLK), 
+                               .d(INPUT[2]), 
+                               .q(OUTPUT[2]));
+   fdce1_MUSER_LATCH7  XLXI_16 (.chipEnable(ENABLE), 
+                               .clk(CLK), 
+                               .d(INPUT[3]), 
+                               .q(OUTPUT[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH5_MUSER_LATCH7(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [4:0] INPUT;
+   output [4:0] OUTPUT;
+   
+   
+   LATCH4_MUSER_LATCH7  XLXI_1 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(INPUT[3:0]), 
+                               .OUTPUT(OUTPUT[3:0]));
+   fdce1_MUSER_LATCH7  XLXI_5 (.chipEnable(ENABLE), 
+                              .clk(CLK), 
+                              .d(INPUT[4]), 
+                              .q(OUTPUT[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH6_MUSER_LATCH7(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [5:0] INPUT;
+   output [5:0] OUTPUT;
+   
+   
+   LATCH5_MUSER_LATCH7  XLXI_1 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(INPUT[4:0]), 
+                               .OUTPUT(OUTPUT[4:0]));
+   fdce1_MUSER_LATCH7  XLXI_4 (.chipEnable(ENABLE), 
+                              .clk(CLK), 
+                              .d(INPUT[5]), 
+                              .q(OUTPUT[5]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH7(CLK, 
+              CLR, 
+              ENABLE, 
+              INPUT, 
+              OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [6:0] INPUT;
+   output [6:0] OUTPUT;
+   
+   
+   LATCH6_MUSER_LATCH7  XLXI_1 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(INPUT[5:0]), 
+                               .OUTPUT(OUTPUT[5:0]));
+   LATCH1_MUSER_LATCH7  XLXI_2 (.CLK(CLK), 
+                               .CLR(CLR), 
+                               .ENABLE(ENABLE), 
+                               .INPUT(INPUT[6]), 
+                               .OUTPUT(OUTPUT[6]));
+endmodule

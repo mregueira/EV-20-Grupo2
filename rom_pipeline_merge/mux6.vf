@@ -1,0 +1,82 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mux6.vf
+// /___/   /\     Timestamp : 06/04/2020 17:15:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/rom_pipeline_merge/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/rom_pipeline_merge/mux6.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/rom_pipeline_merge/mux6.sch
+//Design Name: mux6
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mux1_MUSER_mux6(constante, 
+                       hold, 
+                       muxin, 
+                       muxout);
+
+    input constante;
+    input hold;
+    input muxin;
+   output muxout;
+   
+   
+   MUXCY  XLXI_1 (.CI(constante), 
+                 .DI(muxin), 
+                 .S(hold), 
+                 .O(muxout));
+endmodule
+`timescale 1ns / 1ps
+
+module mux5_MUSER_mux6(const, 
+                       hold, 
+                       muxin, 
+                       muxout);
+
+    input [4:0] const;
+    input hold;
+    input [4:0] muxin;
+   output [4:0] muxout;
+   
+   
+   mux4  XLXI_1 (.const(const[3:0]), 
+                .hold(hold), 
+                .muxin(muxin[3:0]), 
+                .muxout(muxout[3:0]));
+   mux1_MUSER_mux6  XLXI_3 (.constante(const[4]), 
+                           .hold(hold), 
+                           .muxin(muxin[4]), 
+                           .muxout(muxout[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux6(const, 
+            hold, 
+            muxin, 
+            muxout);
+
+    input [5:0] const;
+    input hold;
+    input [5:0] muxin;
+   output [5:0] muxout;
+   
+   
+   mux5_MUSER_mux6  XLXI_1 (.const(const[4:0]), 
+                           .hold(hold), 
+                           .muxin(muxin[4:0]), 
+                           .muxout(muxout[4:0]));
+   mux1_MUSER_mux6  XLXI_2 (.constante(const[5]), 
+                           .hold(hold), 
+                           .muxin(muxin[5]), 
+                           .muxout(muxout[5]));
+endmodule

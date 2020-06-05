@@ -46,3 +46,5 @@ select figure at 2571 1402 8 -branches -sn=1
 select figure at 2083 1402 8 -branches -sn=1
 select figure at 1853 1453 8 -branches -sn=1
 select figure at 1700 1426 8 -branches -sn=1
+undo
+select figure at 2606 1670 8 -branches -sn=1

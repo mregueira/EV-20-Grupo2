@@ -1,20 +1,76 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/PC 64/Desktop/Luciano Games/IK Electronic Engineering/Electronica V/MicroinstructionROM/MROM_isim_beh.exe -prj C:/Users/PC 64/Desktop/Luciano Games/IK Electronic Engineering/Electronica V/MicroinstructionROM/MROM_beh.prj work.MROM work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_isim_beh.exe -prj C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_beh.prj work.merge work.glbl 
 ISim P.20131013 (signature 0x7708f090)
-Number of CPUs detected in this system: 3
-Turning on mult-threading, number of parallel sub-compilation jobs: 6 
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/PC 64/Desktop/Luciano Games/IK Electronic Engineering/Electronica V/MicroinstructionROM/ipcore_dir/MicroinstructionROM.v" into library work
-Analyzing Verilog file "C:/Users/PC 64/Desktop/Luciano Games/IK Electronic Engineering/Electronica V/MicroinstructionROM/MROM.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir/MicroinstructionROM.v" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux1.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux2.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/fdce1.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux4.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH4.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux5.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH5.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux6.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH6.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH1.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux7.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH7.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH2.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH10.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/COMPARADOR5.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/UC2.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/UC1.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/toRetire.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/toOperand.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/toExecute.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/Decode.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/Tuberia.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.vf" into library work
+Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge.vf" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
+Compiling module MUXCY
+Compiling module mux1_MUSER_merge
+Compiling module mux2_MUSER_merge
+Compiling module mux4_MUSER_merge
+Compiling module mux5_MUSER_merge
+Compiling module mux6_MUSER_merge
+Compiling module mux7_MUSER_merge
+Compiling module UC1_MUSER_merge
+Compiling module IFD_HXILINX_merge
+Compiling module AND2
+Compiling module fdce1_MUSER_merge
+Compiling module LATCH4_MUSER_merge
+Compiling module LATCH1_MUSER_merge
+Compiling module LATCH2_MUSER_merge
+Compiling module LATCH5_MUSER_merge
+Compiling module LATCH6_MUSER_merge
+Compiling module LATCH7_MUSER_merge
+Compiling module toExecute_MUSER_merge
+Compiling module toRetire_MUSER_merge
+Compiling module INV
+Compiling module LATCH10_MUSER_merge
+Compiling module toOperand_MUSER_merge
+Compiling module OR2
+Compiling module AND3
+Compiling module OR3
+Compiling module XOR2
+Compiling module AND4
+Compiling module COMPARADOR5_MUSER_merge
+Compiling module OR6_HXILINX_merge
+Compiling module UC2_MUSER_merge
+Compiling module Decode_MUSER_merge
+Compiling module Tuberia_MUSER_merge
 Compiling module DIST_MEM_GEN_V7_2(C_FAMILY="arti...
 Compiling module MicroinstructionROM
-Compiling module MROM
+Compiling module MROM_MUSER_merge
+Compiling module merge
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 4 Verilog Units
-Built simulation executable C:/Users/PC 64/Desktop/Luciano Games/IK Electronic Engineering/Electronica V/MicroinstructionROM/MROM_isim_beh.exe
-Fuse Memory Usage: 29620 KB
-Fuse CPU Usage: 827 ms
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 37 Verilog Units
+Built simulation executable C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_isim_beh.exe
+Fuse Memory Usage: 31464 KB
+Fuse CPU Usage: 1515 ms

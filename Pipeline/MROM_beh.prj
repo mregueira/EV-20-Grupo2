@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/MicroinstructionROM.v"
+verilog work "MROM.vf"
+verilog work "COMP4.vf"
+verilog work "COMP5.vf"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

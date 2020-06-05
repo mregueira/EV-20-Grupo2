@@ -35,8 +35,6 @@
         <signal name="R27(15:0)" />
         <signal name="FROM_BUS(15:0)" />
         <signal name="C(5:0)" />
-        <signal name="ENABLE" />
-        <signal name="WRITE_DEMUX" />
         <signal name="WR0" />
         <signal name="WR1" />
         <signal name="WR2" />
@@ -86,6 +84,8 @@
         <signal name="MW" />
         <signal name="XLXN_3" />
         <signal name="XLXN_6" />
+        <signal name="XLXN_7" />
+        <signal name="XLXN_8" />
         <port polarity="Output" name="R1(15:0)" />
         <port polarity="Output" name="R2(15:0)" />
         <port polarity="Output" name="R3(15:0)" />
@@ -115,8 +115,6 @@
         <port polarity="Output" name="R27(15:0)" />
         <port polarity="Input" name="FROM_BUS(15:0)" />
         <port polarity="Input" name="C(5:0)" />
-        <port polarity="Input" name="ENABLE" />
-        <port polarity="Input" name="WRITE_DEMUX" />
         <port polarity="Output" name="WR0" />
         <port polarity="Output" name="WR1" />
         <port polarity="Output" name="WR2" />
@@ -424,9 +422,15 @@
             <line x2="64" y1="0" y2="-64" x1="64" />
             <circle r="16" cx="144" cy="-32" />
         </blockdef>
+        <blockdef name="vcc">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-32" y2="-64" x1="64" />
+            <line x2="64" y1="0" y2="-32" x1="64" />
+            <line x2="32" y1="-64" y2="-64" x1="96" />
+        </blockdef>
         <block symbolname="demux6b_w_en" name="XLXI_8">
-            <blockpin signalname="ENABLE" name="ENABLE" />
-            <blockpin signalname="WRITE_DEMUX" name="x" />
+            <blockpin signalname="XLXN_8" name="ENABLE" />
+            <blockpin signalname="XLXN_7" name="x" />
             <blockpin signalname="C(5:0)" name="SEL(5:0)" />
             <blockpin signalname="WR0" name="WR0" />
             <blockpin signalname="WR1" name="WR1" />
@@ -589,6 +593,12 @@
             <blockpin signalname="MR" name="I" />
             <blockpin signalname="XLXN_3" name="O" />
         </block>
+        <block symbolname="vcc" name="XLXI_23">
+            <blockpin signalname="XLXN_7" name="P" />
+        </block>
+        <block symbolname="vcc" name="XLXI_24">
+            <blockpin signalname="XLXN_8" name="P" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="7040" height="5440">
         <branch name="R1(15:0)">
@@ -707,102 +717,123 @@
         </branch>
         <instance x="2224" y="4592" name="XLXI_8" orien="R0">
         </instance>
-        <branch name="ENABLE">
-            <wire x2="2224" y1="528" y2="528" x1="2192" />
-        </branch>
-        <iomarker fontsize="28" x="2192" y="528" name="ENABLE" orien="R180" />
         <iomarker fontsize="28" x="1584" y="2464" name="R27(15:0)" orien="R0" />
-        <branch name="WRITE_DEMUX">
-            <wire x2="2224" y1="2544" y2="2544" x1="2192" />
-        </branch>
-        <iomarker fontsize="28" x="2192" y="2544" name="WRITE_DEMUX" orien="R180" />
         <branch name="C(5:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2176" y="4560" type="branch" />
-            <wire x2="2224" y1="4560" y2="4560" x1="2176" />
+            <wire x2="2192" y1="4560" y2="4560" x1="2176" />
+            <wire x2="2224" y1="4560" y2="4560" x1="2192" />
         </branch>
         <branch name="WR0">
-            <wire x2="2656" y1="528" y2="528" x1="2608" />
+            <wire x2="2640" y1="528" y2="528" x1="2608" />
+            <wire x2="2656" y1="528" y2="528" x1="2640" />
         </branch>
         <branch name="WR1">
-            <wire x2="2656" y1="592" y2="592" x1="2608" />
+            <wire x2="2640" y1="592" y2="592" x1="2608" />
+            <wire x2="2656" y1="592" y2="592" x1="2640" />
         </branch>
         <branch name="WR2">
-            <wire x2="2656" y1="656" y2="656" x1="2608" />
+            <wire x2="2640" y1="656" y2="656" x1="2608" />
+            <wire x2="2656" y1="656" y2="656" x1="2640" />
         </branch>
         <branch name="WR3">
-            <wire x2="2656" y1="720" y2="720" x1="2608" />
+            <wire x2="2640" y1="720" y2="720" x1="2608" />
+            <wire x2="2656" y1="720" y2="720" x1="2640" />
         </branch>
         <branch name="WR4">
-            <wire x2="2656" y1="784" y2="784" x1="2608" />
+            <wire x2="2640" y1="784" y2="784" x1="2608" />
+            <wire x2="2656" y1="784" y2="784" x1="2640" />
         </branch>
         <branch name="WR5">
-            <wire x2="2656" y1="848" y2="848" x1="2608" />
+            <wire x2="2640" y1="848" y2="848" x1="2608" />
+            <wire x2="2656" y1="848" y2="848" x1="2640" />
         </branch>
         <branch name="WR6">
-            <wire x2="2656" y1="912" y2="912" x1="2608" />
+            <wire x2="2640" y1="912" y2="912" x1="2608" />
+            <wire x2="2656" y1="912" y2="912" x1="2640" />
         </branch>
         <branch name="WR7">
-            <wire x2="2656" y1="976" y2="976" x1="2608" />
+            <wire x2="2640" y1="976" y2="976" x1="2608" />
+            <wire x2="2656" y1="976" y2="976" x1="2640" />
         </branch>
         <branch name="WR8">
-            <wire x2="2656" y1="1040" y2="1040" x1="2608" />
+            <wire x2="2640" y1="1040" y2="1040" x1="2608" />
+            <wire x2="2656" y1="1040" y2="1040" x1="2640" />
         </branch>
         <branch name="WR9">
-            <wire x2="2656" y1="1104" y2="1104" x1="2608" />
+            <wire x2="2640" y1="1104" y2="1104" x1="2608" />
+            <wire x2="2656" y1="1104" y2="1104" x1="2640" />
         </branch>
         <branch name="WR10">
-            <wire x2="2656" y1="1168" y2="1168" x1="2608" />
+            <wire x2="2640" y1="1168" y2="1168" x1="2608" />
+            <wire x2="2656" y1="1168" y2="1168" x1="2640" />
         </branch>
         <branch name="WR11">
-            <wire x2="2656" y1="1232" y2="1232" x1="2608" />
+            <wire x2="2640" y1="1232" y2="1232" x1="2608" />
+            <wire x2="2656" y1="1232" y2="1232" x1="2640" />
         </branch>
         <branch name="WR12">
-            <wire x2="2656" y1="1296" y2="1296" x1="2608" />
+            <wire x2="2640" y1="1296" y2="1296" x1="2608" />
+            <wire x2="2656" y1="1296" y2="1296" x1="2640" />
         </branch>
         <branch name="WR13">
-            <wire x2="2656" y1="1360" y2="1360" x1="2608" />
+            <wire x2="2640" y1="1360" y2="1360" x1="2608" />
+            <wire x2="2656" y1="1360" y2="1360" x1="2640" />
         </branch>
         <branch name="WR14">
-            <wire x2="2656" y1="1424" y2="1424" x1="2608" />
+            <wire x2="2640" y1="1424" y2="1424" x1="2608" />
+            <wire x2="2656" y1="1424" y2="1424" x1="2640" />
         </branch>
         <branch name="WR15">
-            <wire x2="2656" y1="1488" y2="1488" x1="2608" />
+            <wire x2="2640" y1="1488" y2="1488" x1="2608" />
+            <wire x2="2656" y1="1488" y2="1488" x1="2640" />
         </branch>
         <branch name="WR16">
-            <wire x2="2656" y1="1552" y2="1552" x1="2608" />
+            <wire x2="2640" y1="1552" y2="1552" x1="2608" />
+            <wire x2="2656" y1="1552" y2="1552" x1="2640" />
         </branch>
         <branch name="WR17">
-            <wire x2="2656" y1="1616" y2="1616" x1="2608" />
+            <wire x2="2640" y1="1616" y2="1616" x1="2608" />
+            <wire x2="2656" y1="1616" y2="1616" x1="2640" />
         </branch>
         <branch name="WR18">
-            <wire x2="2656" y1="1680" y2="1680" x1="2608" />
+            <wire x2="2640" y1="1680" y2="1680" x1="2608" />
+            <wire x2="2656" y1="1680" y2="1680" x1="2640" />
         </branch>
         <branch name="WR19">
-            <wire x2="2656" y1="1744" y2="1744" x1="2608" />
+            <wire x2="2640" y1="1744" y2="1744" x1="2608" />
+            <wire x2="2656" y1="1744" y2="1744" x1="2640" />
         </branch>
         <branch name="WR20">
-            <wire x2="2656" y1="1808" y2="1808" x1="2608" />
+            <wire x2="2640" y1="1808" y2="1808" x1="2608" />
+            <wire x2="2656" y1="1808" y2="1808" x1="2640" />
         </branch>
         <branch name="WR21">
-            <wire x2="2656" y1="1872" y2="1872" x1="2608" />
+            <wire x2="2640" y1="1872" y2="1872" x1="2608" />
+            <wire x2="2656" y1="1872" y2="1872" x1="2640" />
         </branch>
         <branch name="WR22">
-            <wire x2="2656" y1="1936" y2="1936" x1="2608" />
+            <wire x2="2640" y1="1936" y2="1936" x1="2608" />
+            <wire x2="2656" y1="1936" y2="1936" x1="2640" />
         </branch>
         <branch name="WR23">
-            <wire x2="2656" y1="2000" y2="2000" x1="2608" />
+            <wire x2="2640" y1="2000" y2="2000" x1="2608" />
+            <wire x2="2656" y1="2000" y2="2000" x1="2640" />
         </branch>
         <branch name="WR24">
-            <wire x2="2656" y1="2064" y2="2064" x1="2608" />
+            <wire x2="2640" y1="2064" y2="2064" x1="2608" />
+            <wire x2="2656" y1="2064" y2="2064" x1="2640" />
         </branch>
         <branch name="WR25">
-            <wire x2="2656" y1="2128" y2="2128" x1="2608" />
+            <wire x2="2640" y1="2128" y2="2128" x1="2608" />
+            <wire x2="2656" y1="2128" y2="2128" x1="2640" />
         </branch>
         <branch name="WR26">
-            <wire x2="2656" y1="2192" y2="2192" x1="2608" />
+            <wire x2="2640" y1="2192" y2="2192" x1="2608" />
+            <wire x2="2656" y1="2192" y2="2192" x1="2640" />
         </branch>
         <branch name="WR27">
-            <wire x2="2656" y1="2256" y2="2256" x1="2608" />
+            <wire x2="2640" y1="2256" y2="2256" x1="2608" />
+            <wire x2="2656" y1="2256" y2="2256" x1="2640" />
         </branch>
         <branch name="OUTPORT0(15:0)">
             <wire x2="1584" y1="2656" y2="2656" x1="1552" />
@@ -849,16 +880,20 @@
         <iomarker fontsize="28" x="2656" y="2192" name="WR26" orien="R0" />
         <iomarker fontsize="28" x="2656" y="2256" name="WR27" orien="R0" />
         <branch name="WOUTPORT0">
-            <wire x2="2656" y1="2448" y2="2448" x1="2608" />
+            <wire x2="2640" y1="2448" y2="2448" x1="2608" />
+            <wire x2="2656" y1="2448" y2="2448" x1="2640" />
         </branch>
         <branch name="WOUTPORT1">
-            <wire x2="2656" y1="2512" y2="2512" x1="2608" />
+            <wire x2="2640" y1="2512" y2="2512" x1="2608" />
+            <wire x2="2656" y1="2512" y2="2512" x1="2640" />
         </branch>
         <branch name="WAUX0">
-            <wire x2="2656" y1="2576" y2="2576" x1="2608" />
+            <wire x2="2640" y1="2576" y2="2576" x1="2608" />
+            <wire x2="2656" y1="2576" y2="2576" x1="2640" />
         </branch>
         <branch name="WAUX1">
-            <wire x2="2656" y1="2640" y2="2640" x1="2608" />
+            <wire x2="2640" y1="2640" y2="2640" x1="2608" />
+            <wire x2="2656" y1="2640" y2="2640" x1="2640" />
         </branch>
         <iomarker fontsize="28" x="2656" y="2448" name="WOUTPORT0" orien="R0" />
         <iomarker fontsize="28" x="2656" y="2512" name="WOUTPORT1" orien="R0" />
@@ -899,7 +934,8 @@
         <iomarker fontsize="28" x="1952" y="464" name="WR_WORK_REG" orien="R0" />
         <branch name="WR_WREG_C">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2656" y="2704" type="branch" />
-            <wire x2="2656" y1="2704" y2="2704" x1="2608" />
+            <wire x2="2640" y1="2704" y2="2704" x1="2608" />
+            <wire x2="2656" y1="2704" y2="2704" x1="2640" />
         </branch>
         <branch name="WR_WREG_C">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1552" y="432" type="branch" />
@@ -946,5 +982,17 @@
             <wire x2="1392" y1="176" y2="496" x1="1392" />
             <wire x2="1664" y1="496" y2="496" x1="1392" />
         </branch>
+        <branch name="XLXN_7">
+            <wire x2="2128" y1="2464" y2="2480" x1="2128" />
+            <wire x2="2128" y1="2480" y2="2544" x1="2128" />
+            <wire x2="2224" y1="2544" y2="2544" x1="2128" />
+        </branch>
+        <instance x="2064" y="2464" name="XLXI_23" orien="R0" />
+        <branch name="XLXN_8">
+            <wire x2="2208" y1="752" y2="752" x1="2096" />
+            <wire x2="2224" y1="528" y2="528" x1="2208" />
+            <wire x2="2208" y1="528" y2="752" x1="2208" />
+        </branch>
+        <instance x="2032" y="752" name="XLXI_24" orien="R0" />
     </sheet>
 </drawing>

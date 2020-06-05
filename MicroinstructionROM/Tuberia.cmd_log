@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family artix7 -refsym Tuberia C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/Tuberia.sch C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/Tuberia.sym 
+sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog Tuberia_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/Tuberia.sch 

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/ALU_Reg_Join_ALU_Reg_Join_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="ALU_Reg_Join_ALU_Reg_Join_sch_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/W_Block1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">W_Block1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">W_Block1[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/CY_OUT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CY_OUT</obj_property>
+      <obj_property name="ObjectShortName">CY_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_KMx_IN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Y_KMx_IN[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Y_KMx_IN[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/DAddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DAddr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">DAddr[9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/MW" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MW</obj_property>
+      <obj_property name="ObjectShortName">MW</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/MR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MR</obj_property>
+      <obj_property name="ObjectShortName">MR</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/Y_X_Kmx_Sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Y_X_Kmx_Sel</obj_property>
+      <obj_property name="ObjectShortName">Y_X_Kmx_Sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/Shifter_Sel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Shifter_Sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Shifter_Sel[1:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/ALUC_IN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALUC_IN[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUC_IN[3:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/CY_IN" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CY_IN</obj_property>
+      <obj_property name="ObjectShortName">CY_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_A_RB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SEL_A_RB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_A_RB[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/SEL_B_RB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SEL_B_RB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_B_RB[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_Reg_Join_ALU_Reg_Join_sch_tb/C_SEL_RB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">C_SEL_RB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">C_SEL_RB[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+</wave_config>

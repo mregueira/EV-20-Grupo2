@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family artix7 -refsym MROM C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.sch C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym MROM C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.sch C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym MROM C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.sch C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym MROM C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.sch C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.sym 

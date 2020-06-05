@@ -1,0 +1,286 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : reg_to_bus_5bit_sel.vf
+// /___/   /\     Timestamp : 06/04/2020 16:22:10
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/EV-20-Grupo2/JoinTest/reg_to_bus_5bit_sel.vf -w C:/EV-20-Grupo2/JoinTest/reg_to_bus_5bit_sel.sch
+//Design Name: reg_to_bus_5bit_sel
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module reg_to_bus_2bit_sel_MUSER_reg_to_bus_5bit_sel(R0, 
+                                                     R1, 
+                                                     R2, 
+                                                     R3, 
+                                                     SEL, 
+                                                     TO_BUS_Z);
+
+    input [15:0] R0;
+    input [15:0] R1;
+    input [15:0] R2;
+    input [15:0] R3;
+    input [1:0] SEL;
+   output [15:0] TO_BUS_Z;
+   
+   wire [15:0] XLXN_5;
+   wire [15:0] XLXN_6;
+   
+   reg_to_bus_1bit_sel  XLXI_1 (.R0(R0[15:0]), 
+                               .R1(R1[15:0]), 
+                               .SEL_BUS(SEL[0]), 
+                               .TO_BUS(XLXN_5[15:0]));
+   reg_to_bus_1bit_sel  XLXI_2 (.R0(R2[15:0]), 
+                               .R1(R3[15:0]), 
+                               .SEL_BUS(SEL[0]), 
+                               .TO_BUS(XLXN_6[15:0]));
+   reg_to_bus_1bit_sel  XLXI_3 (.R0(XLXN_5[15:0]), 
+                               .R1(XLXN_6[15:0]), 
+                               .SEL_BUS(SEL[1]), 
+                               .TO_BUS(TO_BUS_Z[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module reg_to_bus_3bit_sel_MUSER_reg_to_bus_5bit_sel(R0, 
+                                                     R1, 
+                                                     R2, 
+                                                     R3, 
+                                                     R4, 
+                                                     R5, 
+                                                     R6, 
+                                                     R7, 
+                                                     SEL_B, 
+                                                     TO_BUS_3B);
+
+    input [15:0] R0;
+    input [15:0] R1;
+    input [15:0] R2;
+    input [15:0] R3;
+    input [15:0] R4;
+    input [15:0] R5;
+    input [15:0] R6;
+    input [15:0] R7;
+    input [2:0] SEL_B;
+   output [15:0] TO_BUS_3B;
+   
+   wire [15:0] XLXN_1;
+   wire [15:0] XLXN_2;
+   
+   reg_to_bus_1bit_sel  XLXI_4 (.R0(XLXN_1[15:0]), 
+                               .R1(XLXN_2[15:0]), 
+                               .SEL_BUS(SEL_B[2]), 
+                               .TO_BUS(TO_BUS_3B[15:0]));
+   reg_to_bus_2bit_sel_MUSER_reg_to_bus_5bit_sel  XLXI_7 (.R0(R0[15:0]), 
+                                                         .R1(R1[15:0]), 
+                                                         .R2(R2[15:0]), 
+                                                         .R3(R3[15:0]), 
+                                                         .SEL(SEL_B[1:0]), 
+                                                         
+         .TO_BUS_Z(XLXN_1[15:0]));
+   reg_to_bus_2bit_sel_MUSER_reg_to_bus_5bit_sel  XLXI_8 (.R0(R4[15:0]), 
+                                                         .R1(R5[15:0]), 
+                                                         .R2(R6[15:0]), 
+                                                         .R3(R7[15:0]), 
+                                                         .SEL(SEL_B[1:0]), 
+                                                         
+         .TO_BUS_Z(XLXN_2[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module reg_to_bus_4bit_sel_MUSER_reg_to_bus_5bit_sel(R0, 
+                                                     R1, 
+                                                     R2, 
+                                                     R3, 
+                                                     R4, 
+                                                     R5, 
+                                                     R6, 
+                                                     R7, 
+                                                     R8, 
+                                                     R9, 
+                                                     R10, 
+                                                     R11, 
+                                                     R12, 
+                                                     R13, 
+                                                     R14, 
+                                                     R15, 
+                                                     SEL_4B, 
+                                                     TO_BUS_X);
+
+    input [15:0] R0;
+    input [15:0] R1;
+    input [15:0] R2;
+    input [15:0] R3;
+    input [15:0] R4;
+    input [15:0] R5;
+    input [15:0] R6;
+    input [15:0] R7;
+    input [15:0] R8;
+    input [15:0] R9;
+    input [15:0] R10;
+    input [15:0] R11;
+    input [15:0] R12;
+    input [15:0] R13;
+    input [15:0] R14;
+    input [15:0] R15;
+    input [3:0] SEL_4B;
+   output [15:0] TO_BUS_X;
+   
+   wire [15:0] XLXN_1;
+   wire [15:0] XLXN_2;
+   
+   reg_to_bus_3bit_sel_MUSER_reg_to_bus_5bit_sel  XLXI_2 (.R0(R0[15:0]), 
+                                                         .R1(R1[15:0]), 
+                                                         .R2(R2[15:0]), 
+                                                         .R3(R3[15:0]), 
+                                                         .R4(R4[15:0]), 
+                                                         .R5(R5[15:0]), 
+                                                         .R6(R6[15:0]), 
+                                                         .R7(R7[15:0]), 
+                                                         .SEL_B(SEL_4B[2:0]), 
+                                                         
+         .TO_BUS_3B(XLXN_1[15:0]));
+   reg_to_bus_3bit_sel_MUSER_reg_to_bus_5bit_sel  XLXI_3 (.R0(R8[15:0]), 
+                                                         .R1(R9[15:0]), 
+                                                         .R2(R10[15:0]), 
+                                                         .R3(R11[15:0]), 
+                                                         .R4(R12[15:0]), 
+                                                         .R5(R13[15:0]), 
+                                                         .R6(R14[15:0]), 
+                                                         .R7(R15[15:0]), 
+                                                         .SEL_B(SEL_4B[2:0]), 
+                                                         
+         .TO_BUS_3B(XLXN_2[15:0]));
+   reg_to_bus_1bit_sel  XLXI_4 (.R0(XLXN_1[15:0]), 
+                               .R1(XLXN_2[15:0]), 
+                               .SEL_BUS(SEL_4B[3]), 
+                               .TO_BUS(TO_BUS_X[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module reg_to_bus_5bit_sel(R0, 
+                           R1, 
+                           R2, 
+                           R3, 
+                           R4, 
+                           R5, 
+                           R6, 
+                           R7, 
+                           R8, 
+                           R9, 
+                           R10, 
+                           R11, 
+                           R12, 
+                           R13, 
+                           R14, 
+                           R15, 
+                           R16, 
+                           R17, 
+                           R18, 
+                           R19, 
+                           R20, 
+                           R21, 
+                           R22, 
+                           R23, 
+                           R24, 
+                           R25, 
+                           R26, 
+                           R27, 
+                           R28, 
+                           R29, 
+                           R30, 
+                           R31, 
+                           SEL_5B, 
+                           TO_BUS);
+
+    input [15:0] R0;
+    input [15:0] R1;
+    input [15:0] R2;
+    input [15:0] R3;
+    input [15:0] R4;
+    input [15:0] R5;
+    input [15:0] R6;
+    input [15:0] R7;
+    input [15:0] R8;
+    input [15:0] R9;
+    input [15:0] R10;
+    input [15:0] R11;
+    input [15:0] R12;
+    input [15:0] R13;
+    input [15:0] R14;
+    input [15:0] R15;
+    input [15:0] R16;
+    input [15:0] R17;
+    input [15:0] R18;
+    input [15:0] R19;
+    input [15:0] R20;
+    input [15:0] R21;
+    input [15:0] R22;
+    input [15:0] R23;
+    input [15:0] R24;
+    input [15:0] R25;
+    input [15:0] R26;
+    input [15:0] R27;
+    input [15:0] R28;
+    input [15:0] R29;
+    input [15:0] R30;
+    input [15:0] R31;
+    input [4:0] SEL_5B;
+   output [15:0] TO_BUS;
+   
+   wire [15:0] XLXN_1;
+   wire [15:0] XLXN_2;
+   
+   reg_to_bus_4bit_sel_MUSER_reg_to_bus_5bit_sel  XLXI_1 (.R0(R0[15:0]), 
+                                                         .R1(R1[15:0]), 
+                                                         .R2(R2[15:0]), 
+                                                         .R3(R3[15:0]), 
+                                                         .R4(R4[15:0]), 
+                                                         .R5(R5[15:0]), 
+                                                         .R6(R6[15:0]), 
+                                                         .R7(R7[15:0]), 
+                                                         .R8(R8[15:0]), 
+                                                         .R9(R9[15:0]), 
+                                                         .R10(R10[15:0]), 
+                                                         .R11(R11[15:0]), 
+                                                         .R12(R12[15:0]), 
+                                                         .R13(R13[15:0]), 
+                                                         .R14(R14[15:0]), 
+                                                         .R15(R15[15:0]), 
+                                                         .SEL_4B(SEL_5B[3:0]), 
+                                                         
+         .TO_BUS_X(XLXN_1[15:0]));
+   reg_to_bus_4bit_sel_MUSER_reg_to_bus_5bit_sel  XLXI_2 (.R0(R16[15:0]), 
+                                                         .R1(R17[15:0]), 
+                                                         .R2(R18[15:0]), 
+                                                         .R3(R19[15:0]), 
+                                                         .R4(R20[15:0]), 
+                                                         .R5(R21[15:0]), 
+                                                         .R6(R22[15:0]), 
+                                                         .R7(R23[15:0]), 
+                                                         .R8(R24[15:0]), 
+                                                         .R9(R25[15:0]), 
+                                                         .R10(R26[15:0]), 
+                                                         .R11(R27[15:0]), 
+                                                         .R12(R28[15:0]), 
+                                                         .R13(R29[15:0]), 
+                                                         .R14(R30[15:0]), 
+                                                         .R15(R31[15:0]), 
+                                                         .SEL_4B(SEL_5B[3:0]), 
+                                                         
+         .TO_BUS_X(XLXN_2[15:0]));
+   reg_to_bus_1bit_sel  XLXI_3 (.R0(XLXN_1[15:0]), 
+                               .R1(XLXN_2[15:0]), 
+                               .SEL_BUS(SEL_5B[4]), 
+                               .TO_BUS(TO_BUS[15:0]));
+endmodule

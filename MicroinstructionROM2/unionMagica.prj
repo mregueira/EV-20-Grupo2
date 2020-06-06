@@ -1,0 +1,8 @@
+verilog work "voider.v"
+verilog work "stack_manager.v"
+verilog work "rest2.v"
+verilog work "RAM_internal.v"
+verilog work "pc_increment_v2.v"
+verilog work "instruction_register_v2.v"
+verilog work "bloqueSaltos.v"
+verilog work "unionMagica.vf"

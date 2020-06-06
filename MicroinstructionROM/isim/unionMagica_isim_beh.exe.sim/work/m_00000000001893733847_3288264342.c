@@ -21,11 +21,11 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM2/unionMagica.vf";
+static const char *ng0 = "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/unionMagica.vf";
 
 
 
-static void Cont_54_0(char *t0)
+static void Cont_56_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -44,17 +44,17 @@ static void Cont_54_0(char *t0)
     unsigned int t15;
     char *t16;
 
-LAB0:    t1 = (t0 + 5408U);
+LAB0:    t1 = (t0 + 5568U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(54, ng0);
-    t2 = (t0 + 4248U);
+LAB2:    xsi_set_current_line(56, ng0);
+    t2 = (t0 + 4408U);
     t3 = *((char **)t2);
-    t2 = (t0 + 6072);
+    t2 = (t0 + 6232);
     t4 = (t2 + 56U);
     t5 = *((char **)t4);
     t6 = (t5 + 56U);
@@ -73,13 +73,13 @@ LAB2:    xsi_set_current_line(54, ng0);
     t15 = *((unsigned int *)t13);
     *((unsigned int *)t13) = (t15 | t9);
     xsi_driver_vfirst_trans(t2, 0, 0);
-    t16 = (t0 + 5976);
+    t16 = (t0 + 6136);
     *((int *)t16) = 1;
 
 LAB1:    return;
 }
 
-static void Cont_55_1(char *t0)
+static void Cont_57_1(char *t0)
 {
     char t3[8];
     char *t1;
@@ -107,15 +107,15 @@ static void Cont_55_1(char *t0)
     unsigned int t24;
     char *t25;
 
-LAB0:    t1 = (t0 + 5656U);
+LAB0:    t1 = (t0 + 5816U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(55, ng0);
-    t2 = (t0 + 4088U);
+LAB2:    xsi_set_current_line(57, ng0);
+    t2 = (t0 + 4248U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
     t2 = (t3 + 4);
@@ -130,7 +130,7 @@ LAB2:    xsi_set_current_line(55, ng0);
     *((unsigned int *)t3) = (t10 & 16383U);
     t11 = *((unsigned int *)t2);
     *((unsigned int *)t2) = (t11 & 16383U);
-    t12 = (t0 + 6136);
+    t12 = (t0 + 6296);
     t13 = (t12 + 56U);
     t14 = *((char **)t13);
     t15 = (t14 + 56U);
@@ -149,16 +149,16 @@ LAB2:    xsi_set_current_line(55, ng0);
     t24 = *((unsigned int *)t22);
     *((unsigned int *)t22) = (t24 | t18);
     xsi_driver_vfirst_trans(t12, 0, 13);
-    t25 = (t0 + 5992);
+    t25 = (t0 + 6152);
     *((int *)t25) = 1;
 
 LAB1:    return;
 }
 
 
-extern void work_m_00000000003818800341_3288264342_init()
+extern void work_m_00000000001893733847_3288264342_init()
 {
-	static char *pe[] = {(void *)Cont_54_0,(void *)Cont_55_1};
-	xsi_register_didat("work_m_00000000003818800341_3288264342", "isim/unionMagica_isim_beh.exe.sim/work/m_00000000003818800341_3288264342.didat");
+	static char *pe[] = {(void *)Cont_56_0,(void *)Cont_57_1};
+	xsi_register_didat("work_m_00000000001893733847_3288264342", "isim/unionMagica_isim_beh.exe.sim/work/m_00000000001893733847_3288264342.didat");
 	xsi_register_executes(pe);
 }

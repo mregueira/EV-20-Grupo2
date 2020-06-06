@@ -1,0 +1,8 @@
+sch2sym -intstyle ise -family artix7 -refsym register_bank_easy C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank_easy.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank_easy.sym 
+sch2sym -intstyle ise -family artix7 -refsym register_bank_easy C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank_easy.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank_easy.sym 
+sch2sym -intstyle ise -family artix7 -refsym register_bank_easy C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank_easy.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank_easy.sym 
+sch2sym -intstyle ise -family artix7 -refsym register_bank_easy C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank_easy.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/register_bank_easy.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym register_bank_easy C:/EV-20-Grupo2/JoinTest/register_bank_easy.sch C:/EV-20-Grupo2/JoinTest/register_bank_easy.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym register_bank_easy C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/register_bank_easy.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/register_bank_easy.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym register_bank_easy C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/register_bank_easy.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/register_bank_easy.sym 
+sch2hdl -intstyle ise -family artix7 -verilog register_bank_easy_drc.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/register_bank_easy.sch 

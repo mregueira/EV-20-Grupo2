@@ -1,0 +1,356 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ALU_main.vf
+// /___/   /\     Timestamp : 06/06/2020 19:00:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_main.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_main.sch
+//Design Name: ALU_main
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module INV16_HXILINX_ALU_main (O, I);
+    
+
+   output [15:0] O;
+
+   input  [15:0] I;
+
+assign O = ~I;
+endmodule
+`timescale  100 ps / 10 ps
+
+module ADD16_HXILINX_ALU_main (CO, OFL, S, A, B, CI);
+
+   
+   output 	       CO;
+   output 	       OFL;
+   output [15:0]       S;
+
+   input  [15:0]       A;
+   input  [15:0]       B;
+   input               CI;
+
+
+   assign   {CO, S} = A + B + CI;
+   assign   OFL     = (A[15]&B[15]&(~S[15])) | ((~A[15])&(~B[15])&S[15]); 
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module D4_16E_HXILINX_ALU_main (D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, A0, A1, A2, A3, E);
+    
+
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+   output D4;
+   output D5;
+   output D6;
+   output D7;
+   output D8;
+   output D9;
+   output D10;
+   output D11;
+   output D12;
+   output D13;
+   output D14;
+   output D15;
+
+   input  A0;
+   input  A1;
+   input  A2;
+   input  A3;
+   input  E;
+  
+   reg D0;
+   reg D1;
+   reg D2;
+   reg D3;
+   reg D4;
+   reg D5;
+   reg D6;
+   reg D7;
+   reg D8;
+   reg D9;
+   reg D10;
+   reg D11;
+   reg D12;
+   reg D13;
+   reg D14;
+   reg D15;
+
+      always @ (A0 or A1 or A2 or A3 or E)
+      begin
+         if(!E)
+           {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0000_0000;
+        else
+        begin
+           case({A3,A2,A1,A0})
+             4'b0000 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0000_0001;
+             4'b0001 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0000_0010;
+             4'b0010 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0000_0100;
+             4'b0011 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0000_1000;
+             4'b0100 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0001_0000;
+             4'b0101 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0010_0000;
+             4'b0110 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0100_0000;
+             4'b0111 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_1000_0000;
+             4'b1000 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0001_0000_0000;
+             4'b1001 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0010_0000_0000;
+             4'b1010 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0100_0000_0000;
+             4'b1011 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_1000_0000_0000;
+             4'b1100 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0001_0000_0000_0000;
+             4'b1101 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0010_0000_0000_0000;
+             4'b1110 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0100_0000_0000_0000;
+             4'b1111 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b1000_0000_0000_0000;
+          endcase
+        end
+     end 
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module AND6_HXILINX_ALU_main (O, I0, I1, I2, I3, I4, I5);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+
+assign O = I0 && I1 && I2 && I3 && I4 && I5;
+
+endmodule
+`timescale 1ns / 1ps
+
+module ALU_main(A, 
+                ALUC, 
+                B, 
+                CY, 
+                GND, 
+                VCC, 
+                CO, 
+                Z);
+
+    input [15:0] A;
+    input [3:0] ALUC;
+    input [15:0] B;
+    input CY;
+    input [15:0] GND;
+    input [15:0] VCC;
+   output CO;
+   output [15:0] Z;
+   
+   wire [15:0] AdderOut;
+   wire A_AND_B;
+   wire A_m_B;
+   wire A_OR_B;
+   wire A_p_B;
+   wire A_p_B_p_CY;
+   wire A_SEL_1;
+   wire A_SEL_2;
+   wire B_SEL_1;
+   wire B_SEL_2;
+   wire CO_A;
+   wire CO_B;
+   wire CY_EN;
+   wire CY_0;
+   wire CY_1;
+   wire m_B;
+   wire Not_A;
+   wire Not_B;
+   wire ONE;
+   wire OP_SEL_1;
+   wire OP_SEL_2;
+   wire OUT_1b;
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire [15:0] XLXN_5;
+   wire [15:0] XLXN_6;
+   wire [15:0] XLXN_7;
+   wire [15:0] XLXN_8;
+   wire [15:0] XLXN_37;
+   wire [15:0] XLXN_38;
+   wire [15:0] XLXN_40;
+   wire [15:0] XLXN_143;
+   wire XLXN_215;
+   wire XLXN_216;
+   wire XLXN_222;
+   wire XLXN_291;
+   wire XLXN_292;
+   wire XLXN_293;
+   wire XLXN_295;
+   wire XLXN_343;
+   wire XLXN_344;
+   wire XLXN_345;
+   wire XLXN_346;
+   wire XLXN_347;
+   wire XLXN_348;
+   wire ZERO;
+   wire _A;
+   wire _B;
+   wire _0xFFFF;
+   
+   (* HU_SET = "ALUC_Decoder_7" *) 
+   D4_16E_HXILINX_ALU_main  ALUC_Decoder (.A0(ALUC[0]), 
+                                         .A1(ALUC[1]), 
+                                         .A2(ALUC[2]), 
+                                         .A3(ALUC[3]), 
+                                         .E(VCC[0]), 
+                                         .D0(_A), 
+                                         .D1(_B), 
+                                         .D2(Not_A), 
+                                         .D3(Not_B), 
+                                         .D4(A_p_B), 
+                                         .D5(A_p_B_p_CY), 
+                                         .D6(A_OR_B), 
+                                         .D7(A_AND_B), 
+                                         .D8(ZERO), 
+                                         .D9(ONE), 
+                                         .D10(_0xFFFF), 
+                                         .D11(CY_0), 
+                                         .D12(CY_1), 
+                                         .D13(A_m_B), 
+                                         .D14(m_B), 
+                                         .D15());
+   AND_Bus16  A_AND_B_OP (.IN_0(A[15:0]), 
+                         .IN_1(B[15:0]), 
+                         .Y(XLXN_37[15:0]));
+   Mux4Bus16  A_MUX (.IN_0(A[15:0]), 
+                    .IN_1(XLXN_8[15:0]), 
+                    .IN_2(GND[15:0]), 
+                    .IN_3(VCC[15:0]), 
+                    .S_0(A_SEL_2), 
+                    .S_1(A_SEL_1), 
+                    .Y(XLXN_5[15:0]));
+   OR_Bus16  A_OR_B_OP (.IN_0(A[15:0]), 
+                       .IN_1(B[15:0]), 
+                       .Y(XLXN_40[15:0]));
+   Mux2Bus16  B_MUX0 (.IN_0(B[15:0]), 
+                     .IN_1(XLXN_143[15:0]), 
+                     .S(B_SEL_1), 
+                     .Y(XLXN_7[15:0]));
+   Mux2Bus16  B_MUX1 (.IN_0(XLXN_7[15:0]), 
+                     .IN_1(GND[15:0]), 
+                     .S(B_SEL_2), 
+                     .Y(XLXN_6[15:0]));
+   Mux2Bus16  LOGIC_MUX0 (.IN_0(XLXN_37[15:0]), 
+                         .IN_1(XLXN_40[15:0]), 
+                         .S(OP_SEL_1), 
+                         .Y(XLXN_38[15:0]));
+   Mux2Bus16  LOGIC_MUX1 (.IN_0(XLXN_38[15:0]), 
+                         .IN_1(AdderOut[15:0]), 
+                         .S(OP_SEL_2), 
+                         .Y(Z[15:0]));
+   (* HU_SET = "XLXI_1_8" *) 
+   ADD16_HXILINX_ALU_main  XLXI_1 (.A(XLXN_5[15:0]), 
+                                  .B(XLXN_6[15:0]), 
+                                  .CI(XLXN_2), 
+                                  .CO(XLXN_3), 
+                                  .OFL(), 
+                                  .S(AdderOut[15:0]));
+   AND2  XLXI_2 (.I0(XLXN_1), 
+                .I1(CY_EN), 
+                .O(XLXN_2));
+   OR2  XLXI_3 (.I0(OUT_1b), 
+               .I1(CY), 
+               .O(XLXN_1));
+   AND2  XLXI_5 (.I0(CO_A), 
+                .I1(XLXN_3), 
+                .O(XLXN_4));
+   OR2  XLXI_6 (.I0(CO_B), 
+               .I1(XLXN_4), 
+               .O(CO));
+   (* HU_SET = "XLXI_9_9" *) 
+   INV16_HXILINX_ALU_main  XLXI_9 (.I(A[15:0]), 
+                                  .O(XLXN_8[15:0]));
+   (* HU_SET = "XLXI_10_10" *) 
+   INV16_HXILINX_ALU_main  XLXI_10 (.I(B[15:0]), 
+                                   .O(XLXN_143[15:0]));
+   OR2  XLXI_86 (.I0(A_p_B_p_CY), 
+                .I1(A_p_B), 
+                .O(CO_A));
+   OR2  XLXI_87 (.I0(CY_1), 
+                .I1(CY_1), 
+                .O(CO_B));
+   OR2  XLXI_88 (.I0(A_OR_B), 
+                .I1(A_OR_B), 
+                .O(OP_SEL_1));
+   AND2  XLXI_89 (.I0(XLXN_216), 
+                 .I1(XLXN_215), 
+                 .O(OP_SEL_2));
+   INV  XLXI_90 (.I(A_OR_B), 
+                .O(XLXN_215));
+   INV  XLXI_91 (.I(A_AND_B), 
+                .O(XLXN_216));
+   INV  XLXI_92 (.I(_A), 
+                .O(XLXN_222));
+   INV  XLXI_93 (.I(Not_A), 
+                .O(XLXN_291));
+   INV  XLXI_94 (.I(A_p_B), 
+                .O(XLXN_292));
+   INV  XLXI_95 (.I(A_p_B_p_CY), 
+                .O(XLXN_293));
+   OR2  XLXI_104 (.I0(_0xFFFF), 
+                 .I1(Not_A), 
+                 .O(A_SEL_2));
+   INV  XLXI_106 (.I(_B), 
+                 .O(XLXN_343));
+   INV  XLXI_107 (.I(Not_B), 
+                 .O(XLXN_344));
+   INV  XLXI_108 (.I(A_p_B), 
+                 .O(XLXN_345));
+   INV  XLXI_109 (.I(A_p_B_p_CY), 
+                 .O(XLXN_346));
+   OR4  XLXI_118 (.I0(m_B), 
+                 .I1(A_m_B), 
+                 .I2(ONE), 
+                 .I3(A_p_B_p_CY), 
+                 .O(CY_EN));
+   OR3  XLXI_119 (.I0(m_B), 
+                 .I1(A_m_B), 
+                 .I2(ONE), 
+                 .O(OUT_1b));
+   AND5  XLXI_124 (.I0(XLXN_295), 
+                  .I1(XLXN_293), 
+                  .I2(XLXN_292), 
+                  .I3(XLXN_291), 
+                  .I4(XLXN_222), 
+                  .O(A_SEL_1));
+   INV  XLXI_125 (.I(A_m_B), 
+                 .O(XLXN_295));
+   OR3  XLXI_126 (.I0(m_B), 
+                 .I1(A_m_B), 
+                 .I2(Not_B), 
+                 .O(B_SEL_1));
+   INV  XLXI_141 (.I(A_m_B), 
+                 .O(XLXN_347));
+   INV  XLXI_142 (.I(m_B), 
+                 .O(XLXN_348));
+   (* HU_SET = "XLXI_143_11" *) 
+   AND6_HXILINX_ALU_main  XLXI_143 (.I0(XLXN_348), 
+                                   .I1(XLXN_347), 
+                                   .I2(XLXN_346), 
+                                   .I3(XLXN_345), 
+                                   .I4(XLXN_344), 
+                                   .I5(XLXN_343), 
+                                   .O(B_SEL_2));
+endmodule

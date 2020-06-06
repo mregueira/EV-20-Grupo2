@@ -1,0 +1,10 @@
+[Inputs]
+S0
+S1
+=IN_Z[15:0]=
+[Outputs]
+=OUT_C[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Shifter
+

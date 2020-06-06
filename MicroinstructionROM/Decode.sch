@@ -568,12 +568,12 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1184" y="1088" type="branch" />
             <wire x2="1232" y1="1088" y2="1088" x1="1184" />
         </branch>
-        <instance x="896" y="1248" name="XLXI_63" orien="R0">
-        </instance>
         <branch name="XLXN_192">
-            <wire x2="1072" y1="1280" y2="1280" x1="1040" />
-            <wire x2="1072" y1="1024" y2="1280" x1="1072" />
-            <wire x2="1232" y1="1024" y2="1024" x1="1072" />
+            <wire x2="1232" y1="1024" y2="1024" x1="1216" />
+            <wire x2="1216" y1="1024" y2="1200" x1="1216" />
+            <wire x2="1904" y1="1200" y2="1200" x1="1216" />
+            <wire x2="1904" y1="1200" y2="1328" x1="1904" />
+            <wire x2="1904" y1="1328" y2="1328" x1="1840" />
         </branch>
         <instance x="2640" y="336" name="XLXI_31" orien="R0">
         </instance>
@@ -654,6 +654,8 @@
         <instance x="912" y="592" name="XLXI_74" orien="R0">
         </instance>
         <instance x="1104" y="528" name="XLXI_73" orien="R0">
+        </instance>
+        <instance x="1696" y="1296" name="XLXI_63" orien="R0">
         </instance>
     </sheet>
 </drawing>

@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family artix7 -refsym unionMagica C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM2/unionMagica.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM2/unionMagica.sym 
+sch2sym -intstyle ise -family artix7 -refsym unionMagica C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM2/unionMagica.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM2/unionMagica.sym 
+sch2sym -intstyle ise -family artix7 -refsym unionMagica C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM2/unionMagica.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM2/unionMagica.sym 
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM2/unionMagica.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM2/unionMagica.syr" 

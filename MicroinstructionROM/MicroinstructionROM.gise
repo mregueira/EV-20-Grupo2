@@ -47,6 +47,8 @@
       <branch xil_pn:name="BehavioralSim"/>
     </file>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="MROM_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="RAM_internal.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="RAM_internal.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Tuberia.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Tuberia.vf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="Tuberia_drc.vf"/>
@@ -55,10 +57,13 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="UC1.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="UC2.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="UC2.vf"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloqueSaltos.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="fdce1.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="fdce1.vf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="fdce1_drc.vf"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="instruction_register_v2.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/MicroinstructionROM.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="ipcore_dir/MicroinstructionROM.v" xil_pn:origination="imported">
       <branch xil_pn:name="Implementation"/>
@@ -86,8 +91,11 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux6.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux7.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux7.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="pc_increment_v2_module.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="prueba.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="prueba_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="rest2.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="stack_manager.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="toExecute.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="toExecute.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="toOperand.sym" xil_pn:origination="imported"/>
@@ -95,7 +103,30 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="toOperand_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="toRetire.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="toRetire.vf"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="unionMagica.cmd_log"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="unionMagica.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="unionMagica.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="unionMagica.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="unionMagica.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="unionMagica.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="unionMagica.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="unionMagica.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="unionMagica.syr"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="unionMagica.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="unionMagica.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="unionMagica_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="unionMagica_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="unionMagica_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="unionMagica_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="unionMagica_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="unionMagica_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="voider.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
@@ -103,15 +134,22 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591124188" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1591124188">
+    <transform xil_pn:end_ts="1591466385" xil_pn:in_ck="5921364367671884138" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1591466385">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RAM_internal.v"/>
+      <outfile xil_pn:name="bloqueSaltos.v"/>
+      <outfile xil_pn:name="instruction_register_v2.v"/>
+      <outfile xil_pn:name="pc_increment_v2.v"/>
+      <outfile xil_pn:name="rest2.v"/>
+      <outfile xil_pn:name="stack_manager.v"/>
+      <outfile xil_pn:name="voider.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1591466385" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1054714969480266533" xil_pn:start_ts="1591466385">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591313231" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6700499123704972416" xil_pn:start_ts="1591313231">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1591327649" xil_pn:in_ck="-3842647680633625684" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7252195739520166242" xil_pn:start_ts="1591327568">
+    <transform xil_pn:end_ts="1591466388" xil_pn:in_ck="8293139558081631512" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2744856522362599545" xil_pn:start_ts="1591466385">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="COMPARADOR5.vf"/>
@@ -135,18 +173,18 @@
       <outfile xil_pn:name="mux5.vf"/>
       <outfile xil_pn:name="mux6.vf"/>
       <outfile xil_pn:name="mux7.vf"/>
-      <outfile xil_pn:name="prueba.vf"/>
       <outfile xil_pn:name="toExecute.vf"/>
       <outfile xil_pn:name="toOperand.vf"/>
       <outfile xil_pn:name="toRetire.vf"/>
+      <outfile xil_pn:name="unionMagica.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1591304002" xil_pn:in_ck="8454449423382601073" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-6993014044535335635" xil_pn:start_ts="1591304002">
+    <transform xil_pn:end_ts="1591466388" xil_pn:in_ck="8454449423382601073" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6068587622437226920" xil_pn:start_ts="1591466388">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/MicroinstructionROM.ngc"/>
       <outfile xil_pn:name="ipcore_dir/MicroinstructionROM.v"/>
     </transform>
-    <transform xil_pn:end_ts="1591327649" xil_pn:in_ck="6931862529999758583" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591327649">
+    <transform xil_pn:end_ts="1591466388" xil_pn:in_ck="-5469409328819888010" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591466388">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="COMPARADOR5.vf"/>
@@ -159,10 +197,13 @@
       <outfile xil_pn:name="LATCH6.vf"/>
       <outfile xil_pn:name="LATCH7.vf"/>
       <outfile xil_pn:name="MROM.vf"/>
+      <outfile xil_pn:name="RAM_internal.v"/>
       <outfile xil_pn:name="Tuberia.vf"/>
       <outfile xil_pn:name="UC1.vf"/>
       <outfile xil_pn:name="UC2.vf"/>
+      <outfile xil_pn:name="bloqueSaltos.v"/>
       <outfile xil_pn:name="fdce1.vf"/>
+      <outfile xil_pn:name="instruction_register_v2.v"/>
       <outfile xil_pn:name="ipcore_dir/MicroinstructionROM.v"/>
       <outfile xil_pn:name="merge.vf"/>
       <outfile xil_pn:name="mux1.vf"/>
@@ -171,67 +212,84 @@
       <outfile xil_pn:name="mux5.vf"/>
       <outfile xil_pn:name="mux6.vf"/>
       <outfile xil_pn:name="mux7.vf"/>
+      <outfile xil_pn:name="pc_increment_v2.v"/>
       <outfile xil_pn:name="prueba.vf"/>
+      <outfile xil_pn:name="rest2.v"/>
+      <outfile xil_pn:name="stack_manager.v"/>
       <outfile xil_pn:name="toExecute.vf"/>
       <outfile xil_pn:name="toOperand.vf"/>
       <outfile xil_pn:name="toRetire.vf"/>
+      <outfile xil_pn:name="unionMagica.vf"/>
+      <outfile xil_pn:name="voider.v"/>
     </transform>
-    <transform xil_pn:end_ts="1591327659" xil_pn:in_ck="6931862529999758583" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1081809024549742646" xil_pn:start_ts="1591327649">
+    <transform xil_pn:end_ts="1591466393" xil_pn:in_ck="-5469409328819888010" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2788502443985384020" xil_pn:start_ts="1591466388">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="merge_beh.prj"/>
-      <outfile xil_pn:name="merge_isim_beh.exe"/>
+      <outfile xil_pn:name="unionMagica_beh.prj"/>
+      <outfile xil_pn:name="unionMagica_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1591327659" xil_pn:in_ck="839808853301342620" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8364998625973394425" xil_pn:start_ts="1591327659">
+    <transform xil_pn:end_ts="1591466393" xil_pn:in_ck="-7381189046861317705" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-9079952472917057137" xil_pn:start_ts="1591466393">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="merge_isim_beh.wdb"/>
+      <outfile xil_pn:name="unionMagica_isim_beh.wdb"/>
     </transform>
-    <transform xil_pn:end_ts="1591280096" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1591280096">
+    <transform xil_pn:end_ts="1591466348" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1591466348">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591280101" xil_pn:in_ck="3390705276359" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-3735987800430683127" xil_pn:start_ts="1591280096">
-      <status xil_pn:value="FailedRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="MROM.vf"/>
-    </transform>
-    <transform xil_pn:end_ts="1591280101" xil_pn:in_ck="8454449423382601073" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="1974116765247242968" xil_pn:start_ts="1591280101">
+    <transform xil_pn:end_ts="1591466351" xil_pn:in_ck="8293139558081631512" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="553354132462250105" xil_pn:start_ts="1591466348">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="unionMagica.vf"/>
+    </transform>
+    <transform xil_pn:end_ts="1591466351" xil_pn:in_ck="8454449423382601073" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6068587622437226920" xil_pn:start_ts="1591466351">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/MicroinstructionROM.ngc"/>
       <outfile xil_pn:name="ipcore_dir/MicroinstructionROM.v"/>
     </transform>
-    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
+    <transform xil_pn:end_ts="1591466351" xil_pn:in_ck="2295669865982567936" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1591466351">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591280101" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="2280535096895158955" xil_pn:start_ts="1591280101">
+    <transform xil_pn:end_ts="1591466351" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-1054714969480266533" xil_pn:start_ts="1591466351">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1591466351" xil_pn:in_ck="2295669865982567936" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1591466351">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1591466351" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-3592190874865776654" xil_pn:start_ts="1591466351">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1591466374" xil_pn:in_ck="-391048872886452159" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-2830104341453681858" xil_pn:start_ts="1591466351">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="unionMagica.jhd"/>
+      <outfile xil_pn:name="unionMagica.lso"/>
+      <outfile xil_pn:name="unionMagica.ngc"/>
+      <outfile xil_pn:name="unionMagica.ngr"/>
+      <outfile xil_pn:name="unionMagica.prj"/>
+      <outfile xil_pn:name="unionMagica.stx"/>
+      <outfile xil_pn:name="unionMagica.syr"/>
+      <outfile xil_pn:name="unionMagica.xst"/>
+      <outfile xil_pn:name="unionMagica_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
     </transform>
   </transforms>
 

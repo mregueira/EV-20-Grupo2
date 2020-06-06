@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM2/unionMagica_isim_beh.exe" -prj "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM2/unionMagica_beh.prj" "work.unionMagica" "work.glbl" 

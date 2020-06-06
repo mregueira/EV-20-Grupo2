@@ -1,0 +1,250 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : merge.vf
+// /___/   /\     Timestamp : 06/06/2020 14:54:46
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM2/merge.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM2/merge.sch
+//Design Name: merge
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Tuberia_MUSER_merge(ALU, 
+                           BBUS, 
+                           cbusrom, 
+                           CLK2, 
+                           instruction, 
+                           KMX, 
+                           MEM, 
+                           SH, 
+                           TYPEIN, 
+                           ABUSOUT, 
+                           ALUOUT, 
+                           BBUSOUT, 
+                           CBUSOUT, 
+                           DAddOUT, 
+                           HOLD, 
+                           KMXOUT, 
+                           MEMOUT, 
+                           SHOUT, 
+                           TYPEOUT);
+
+    input [3:0] ALU;
+    input [5:0] BBUS;
+    input [5:0] cbusrom;
+    input CLK2;
+    input [13:0] instruction;
+    input KMX;
+    input [1:0] MEM;
+    input [1:0] SH;
+    input [6:0] TYPEIN;
+   output [4:0] ABUSOUT;
+   output [3:0] ALUOUT;
+   output [5:0] BBUSOUT;
+   output [5:0] CBUSOUT;
+   output [9:0] DAddOUT;
+   output HOLD;
+   output KMXOUT;
+   output [1:0] MEMOUT;
+   output [1:0] SHOUT;
+   output [6:0] TYPEOUT;
+   
+   wire [4:0] ABUS;
+   wire [4:0] ABUSaUC1;
+   wire [3:0] ALUaUC1;
+   wire [3:0] ALUop;
+   wire [5:0] BBUSaUC1;
+   wire [5:0] CBUS;
+   wire [5:0] CBUSaUC1;
+   wire [5:0] CBUSexec;
+   wire [5:0] CBUSop;
+   wire [9:0] DAdd;
+   wire KMXaUC1;
+   wire [1:0] MEMaUC1;
+   wire [1:0] SHaUC1;
+   wire [1:0] SHop;
+   wire [6:0] TYPEaUC1;
+   wire [6:0] TYPEexec;
+   wire [6:0] TYPEop;
+   wire XLXN_2;
+   wire XLXN_11;
+   wire XLXN_49;
+   wire XLXN_50;
+   wire XLXN_60;
+   wire XLXN_61;
+   wire XLXN_77;
+   wire XLXN_83;
+   wire XLXN_84;
+   wire [6:0] TYPEOUT_DUMMY;
+   wire [5:0] CBUSOUT_DUMMY;
+   wire HOLD_DUMMY;
+   
+   assign XLXN_11 = 0;
+   assign XLXN_49 = 0;
+   assign XLXN_50 = 1;
+   assign XLXN_60 = 0;
+   assign XLXN_61 = 1;
+   assign XLXN_84 = 1;
+   assign CBUSOUT[5:0] = CBUSOUT_DUMMY[5:0];
+   assign HOLD = HOLD_DUMMY;
+   assign TYPEOUT[6:0] = TYPEOUT_DUMMY[6:0];
+   UC1  XLXI_4 (.abusIN(ABUSaUC1[4:0]), 
+               .aluIN(ALUaUC1[3:0]), 
+               .bbusIN(BBUSaUC1[5:0]), 
+               .cbusIN(CBUSaUC1[5:0]), 
+               .hold(HOLD_DUMMY), 
+               .kmxIN(KMXaUC1), 
+               .memIN(MEMaUC1[1:0]), 
+               .shIN(SHaUC1[1:0]), 
+               .typeIN(TYPEaUC1[6:0]), 
+               .abusOUTuc1(ABUSOUT[4:0]), 
+               .aluOUTuc1(ALUop[3:0]), 
+               .bbusOUTuc1(BBUSOUT[5:0]), 
+               .cbusOUTuc1(CBUSop[5:0]), 
+               .kmxOUTuc1(KMXOUT), 
+               .memOUTuc1(MEMOUT[1:0]), 
+               .shOUTuc1(SHop[1:0]), 
+               .typeOUTuc1(TYPEop[6:0]));
+   toExecute  XLXI_5 (.aluIN(ALUop[3:0]), 
+                     .cbusIN(CBUSop[5:0]), 
+                     .CLK(CLK2), 
+                     .CLR(XLXN_49), 
+                     .ENABLE(XLXN_50), 
+                     .shIN(SHop[1:0]), 
+                     .typeIN(TYPEop[6:0]), 
+                     .aluOUTexec(ALUOUT[3:0]), 
+                     .cbusOUTexec(CBUSexec[5:0]), 
+                     .shOUTexec(SHOUT[1:0]), 
+                     .typeOUTexec(TYPEexec[6:0]));
+   toRetire  XLXI_6 (.cbusIN(CBUSexec[5:0]), 
+                    .CLK(CLK2), 
+                    .CLR(XLXN_60), 
+                    .ENABLE(XLXN_61), 
+                    .typeIN(TYPEexec[6:0]), 
+                    .cbusOUTret(CBUSOUT_DUMMY[5:0]), 
+                    .typeOUTret(TYPEOUT_DUMMY[6:0]));
+   INV  XLXI_7 (.I(HOLD_DUMMY), 
+               .O(XLXN_2));
+   toOperand  XLXI_14 (.abusIN(ABUS[4:0]), 
+                      .aluIN(ALU[3:0]), 
+                      .bbusIN(BBUS[5:0]), 
+                      .cbusIN(CBUS[5:0]), 
+                      .CLK(CLK2), 
+                      .CLR(XLXN_11), 
+                      .DAddIN(DAdd[9:0]), 
+                      .ENABLE(XLXN_2), 
+                      .kmxIN(KMX), 
+                      .memIN(MEM[1:0]), 
+                      .shIN(SH[1:0]), 
+                      .typeIN(TYPEIN[6:0]), 
+                      .abusOUT(ABUSaUC1[4:0]), 
+                      .aluOUT(ALUaUC1[3:0]), 
+                      .bbusOUT(BBUSaUC1[5:0]), 
+                      .cbusOUT(CBUSaUC1[5:0]), 
+                      .DAddOUT(DAddOUT[9:0]), 
+                      .kmxOUT(KMXaUC1), 
+                      .memOUT(MEMaUC1[1:0]), 
+                      .shOUT(SHaUC1[1:0]), 
+                      .typeOUT(TYPEaUC1[6:0]));
+   UC2  XLXI_17 (.DecodeBusA(ABUS[4:0]), 
+                .DecodeMem(MEM[1:0]), 
+                .DecodeType(TYPEIN[6:0]), 
+                .ExecuteBusC(CBUSexec[5:0]), 
+                .ExecuteType(TYPEexec[6:0]), 
+                .OperandBusC(CBUSop[5:0]), 
+                .OperandType(TYPEop[6:0]), 
+                .RetireBusC(CBUSOUT_DUMMY[5:0]), 
+                .RetireType(TYPEOUT_DUMMY[6:0]), 
+                .hold(XLXN_77));
+   INV  XLXI_26 (.I(CLK2), 
+                .O(XLXN_83));
+   Decode  XLXI_32 (.cbusmir(cbusrom[5:0]), 
+                   .CLK(CLK2), 
+                   .instruction(instruction[13:0]), 
+                   .ABUS(ABUS[4:0]), 
+                   .CBUS(CBUS[5:0]), 
+                   .DAdd(DAdd[9:0]));
+   fdce1  XLXI_33 (.chipEnable(XLXN_84), 
+                  .clk(XLXN_83), 
+                  .d(XLXN_77), 
+                  .q(HOLD_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module merge(clk, 
+             instruction, 
+             abus_out, 
+             alu_out, 
+             bbus_out, 
+             cbus_out, 
+             DAdd_out, 
+             hold, 
+             kmx_out, 
+             mem_out, 
+             sh_out, 
+             type_out);
+
+    input clk;
+    input [13:0] instruction;
+   output [4:0] abus_out;
+   output [3:0] alu_out;
+   output [5:0] bbus_out;
+   output [5:0] cbus_out;
+   output [9:0] DAdd_out;
+   output hold;
+   output kmx_out;
+   output [1:0] mem_out;
+   output [1:0] sh_out;
+   output [6:0] type_out;
+   
+   wire [3:0] alu;
+   wire [5:0] bbus;
+   wire [5:0] cbus;
+   wire kmx;
+   wire [1:0] mem;
+   wire [1:0] sh;
+   wire [6:0] Ti;
+   wire XLXN_30;
+   
+   assign XLXN_30 = 0;
+   Tuberia_MUSER_merge  XLXI_2 (.ALU(alu[3:0]), 
+                               .BBUS(bbus[5:0]), 
+                               .cbusrom(cbus[5:0]), 
+                               .CLK2(clk), 
+                               .instruction(instruction[13:0]), 
+                               .KMX(kmx), 
+                               .MEM(mem[1:0]), 
+                               .SH(sh[1:0]), 
+                               .TYPEIN(Ti[6:0]), 
+                               .ABUSOUT(abus_out[4:0]), 
+                               .ALUOUT(alu_out[3:0]), 
+                               .BBUSOUT(bbus_out[5:0]), 
+                               .CBUSOUT(cbus_out[5:0]), 
+                               .DAddOUT(DAdd_out[9:0]), 
+                               .HOLD(hold), 
+                               .KMXOUT(kmx_out), 
+                               .MEMOUT(mem_out[1:0]), 
+                               .SHOUT(sh_out[1:0]), 
+                               .TYPEOUT(type_out[6:0]));
+   MROM  XLXI_3 (.Bus_B(instruction[13:7]), 
+                .CLK_ROM(clk), 
+                .ROM_RESET(XLXN_30), 
+                .ALUC(alu[3:0]), 
+                .B_Bus(bbus[5:0]), 
+                .C_Bus(cbus[5:0]), 
+                .KMx(kmx), 
+                .MEM(mem[1:0]), 
+                .SH(sh[1:0]), 
+                .Ti(Ti[6:0]));
+endmodule

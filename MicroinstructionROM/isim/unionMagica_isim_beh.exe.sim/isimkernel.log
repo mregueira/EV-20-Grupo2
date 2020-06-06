@@ -1,0 +1,30 @@
+Command line:
+   unionMagica_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  2038
+
+Sat Jun 06 14:59:56 2020
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 846.111 Meg
+
+ Total Signals          : 79
+ Total Nets             : 155
+ Total Signal Drivers   : 39
+ Total Blocks           : 13
+ Total Primitive Blocks : 12
+ Total Processes        : 46
+ Total Traceable Variables  : 29
+ Total Scalar Nets and Variables : 14746
+Total Line Count : 101
+Total Line Count : 101
+
+ Total Simulation Time: 0.34375 sec
+
+ Current Memory Usage: 688.824 Meg
+
+Sat Jun 06 15:04:38 2020
+

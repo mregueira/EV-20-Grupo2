@@ -6,13 +6,13 @@
 // /___/  \  /    Vendor: Xilinx 
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
-//  /   /         Filename : merge.vf
-// /___/   /\     Timestamp : 06/06/2020 14:54:46
+//  /   /         Filename : Tuberia.vf
+// /___/   /\     Timestamp : 06/06/2020 14:54:20
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM2/merge.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM2/merge.sch
-//Design Name: merge
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM2/Tuberia.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM2/Tuberia.sch
+//Design Name: Tuberia
 //Device: artix7
 //Purpose:
 //    This verilog netlist is translated from an ECS schematic.It can be 
@@ -20,25 +20,25 @@
 //
 `timescale 1ns / 1ps
 
-module Tuberia_MUSER_merge(ALU, 
-                           BBUS, 
-                           cbusrom, 
-                           CLK2, 
-                           instruction, 
-                           KMX, 
-                           MEM, 
-                           SH, 
-                           TYPEIN, 
-                           ABUSOUT, 
-                           ALUOUT, 
-                           BBUSOUT, 
-                           CBUSOUT, 
-                           DAddOUT, 
-                           HOLD, 
-                           KMXOUT, 
-                           MEMOUT, 
-                           SHOUT, 
-                           TYPEOUT);
+module Tuberia(ALU, 
+               BBUS, 
+               cbusrom, 
+               CLK2, 
+               instruction, 
+               KMX, 
+               MEM, 
+               SH, 
+               TYPEIN, 
+               ABUSOUT, 
+               ALUOUT, 
+               BBUSOUT, 
+               CBUSOUT, 
+               DAddOUT, 
+               HOLD, 
+               KMXOUT, 
+               MEMOUT, 
+               SHOUT, 
+               TYPEOUT);
 
     input [3:0] ALU;
     input [5:0] BBUS;
@@ -179,72 +179,4 @@ module Tuberia_MUSER_merge(ALU,
                   .clk(XLXN_83), 
                   .d(XLXN_77), 
                   .q(HOLD_DUMMY));
-endmodule
-`timescale 1ns / 1ps
-
-module merge(clk, 
-             instruction, 
-             abus_out, 
-             alu_out, 
-             bbus_out, 
-             cbus_out, 
-             DAdd_out, 
-             hold, 
-             kmx_out, 
-             mem_out, 
-             sh_out, 
-             type_out);
-
-    input clk;
-    input [13:0] instruction;
-   output [4:0] abus_out;
-   output [3:0] alu_out;
-   output [5:0] bbus_out;
-   output [5:0] cbus_out;
-   output [9:0] DAdd_out;
-   output hold;
-   output kmx_out;
-   output [1:0] mem_out;
-   output [1:0] sh_out;
-   output [6:0] type_out;
-   
-   wire [3:0] alu;
-   wire [5:0] bbus;
-   wire [5:0] cbus;
-   wire kmx;
-   wire [1:0] mem;
-   wire [1:0] sh;
-   wire [6:0] Ti;
-   wire XLXN_30;
-   
-   assign XLXN_30 = 0;
-   Tuberia_MUSER_merge  XLXI_2 (.ALU(alu[3:0]), 
-                               .BBUS(bbus[5:0]), 
-                               .cbusrom(cbus[5:0]), 
-                               .CLK2(clk), 
-                               .instruction(instruction[13:0]), 
-                               .KMX(kmx), 
-                               .MEM(mem[1:0]), 
-                               .SH(sh[1:0]), 
-                               .TYPEIN(Ti[6:0]), 
-                               .ABUSOUT(abus_out[4:0]), 
-                               .ALUOUT(alu_out[3:0]), 
-                               .BBUSOUT(bbus_out[5:0]), 
-                               .CBUSOUT(cbus_out[5:0]), 
-                               .DAddOUT(DAdd_out[9:0]), 
-                               .HOLD(hold), 
-                               .KMXOUT(kmx_out), 
-                               .MEMOUT(mem_out[1:0]), 
-                               .SHOUT(sh_out[1:0]), 
-                               .TYPEOUT(type_out[6:0]));
-   MROM  XLXI_3 (.Bus_B(instruction[13:7]), 
-                .CLK_ROM(clk), 
-                .ROM_RESET(XLXN_30), 
-                .ALUC(alu[3:0]), 
-                .B_Bus(bbus[5:0]), 
-                .C_Bus(cbus[5:0]), 
-                .KMx(kmx), 
-                .MEM(mem[1:0]), 
-                .SH(sh[1:0]), 
-                .Ti(Ti[6:0]));
 endmodule

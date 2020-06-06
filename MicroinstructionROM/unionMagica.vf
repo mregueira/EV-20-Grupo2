@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : unionMagica.vf
-// /___/   /\     Timestamp : 06/06/2020 14:02:03
+// /___/   /\     Timestamp : 06/06/2020 14:59:10
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -60,12 +60,6 @@ module unionMagica(CLK,
    GND  XLXI_14 (.G(XLXN_76));
    INV  XLXI_18 (.I(HOLD), 
                 .O(XLXN_79));
-   RAM_internal  XLXI_22 (.addr(), 
-                         .clk(increment_DUMMY), 
-                         .data_in(), 
-                         .rd_enb(XLXN_75), 
-                         .wr_enb(XLXN_76), 
-                         .data_out());
    instruction_register_v2  XLXI_30 (.increment(increment_DUMMY), 
                                     .in_ins(RAM_DATA_OUT[13:0]), 
                                     .is_void(is_void), 
@@ -96,4 +90,10 @@ module unionMagica(CLK,
                           .out_val(STACK_IN[10:0]));
    rest2  XLXI_47 (.in_val(XLXN_146[10:0]), 
                   .out_val(PC[10:0]));
+   RAM_internal  XLXI_49 (.addr(XLXN_146[10:0]), 
+                         .clk(increment_DUMMY), 
+                         .data_in(), 
+                         .rd_enb(XLXN_75), 
+                         .wr_enb(XLXN_76), 
+                         .data_out(RAM_DATA_OUT[13:0]));
 endmodule

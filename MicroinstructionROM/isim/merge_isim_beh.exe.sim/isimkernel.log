@@ -2,14 +2,14 @@ Command line:
    merge_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  2672
+     -socket  2030
 
-Fri Jun 05 00:27:41 2020
+Sat Jun 06 14:55:58 2020
 
 
  Elaboration Time: 0.109375 sec
 
- Current Memory Usage: 858.722 Meg
+ Current Memory Usage: 858.73 Meg
 
  Total Signals          : 2355
  Total Nets             : 891
@@ -20,16 +20,10 @@ Fri Jun 05 00:27:41 2020
  Total Traceable Variables  : 348
  Total Scalar Nets and Variables : 10225
 Total Line Count : 824
-Total Line Count : 824
-Total Line Count : 824
-Total Line Count : 824
-Total Line Count : 824
-Total Line Count : 824
-Total Line Count : 824
 
- Total Simulation Time: 2.42188 sec
+ Total Simulation Time: 0.125 sec
 
- Current Memory Usage: 386.863 Meg
+ Current Memory Usage: 858.73 Meg
 
-Fri Jun 05 01:14:19 2020
+Sat Jun 06 14:56:03 2020
 

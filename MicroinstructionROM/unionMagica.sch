@@ -82,19 +82,6 @@
             <line x2="64" y1="0" y2="-64" x1="64" />
             <circle r="16" cx="144" cy="-32" />
         </blockdef>
-        <blockdef name="RAM_internal">
-            <timestamp>2020-6-4T21:32:6</timestamp>
-            <rect width="304" x="64" y="-320" height="320" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <rect width="64" x="0" y="-108" height="24" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="368" y="-300" height="24" />
-            <line x2="432" y1="-288" y2="-288" x1="368" />
-        </blockdef>
         <blockdef name="voider">
             <timestamp>2020-6-4T23:48:46</timestamp>
             <rect width="256" x="64" y="-128" height="128" />
@@ -147,6 +134,19 @@
             <rect width="64" x="320" y="-44" height="24" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
+        <blockdef name="RAM_internal">
+            <timestamp>2020-6-6T17:58:0</timestamp>
+            <rect width="304" x="64" y="-320" height="320" />
+            <line x2="0" y1="-288" y2="-288" x1="64" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <rect width="64" x="0" y="-108" height="24" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="368" y="-300" height="24" />
+            <line x2="432" y1="-288" y2="-288" x1="368" />
+        </blockdef>
         <block symbolname="and2" name="XLXI_9">
             <blockpin signalname="CLK" name="I0" />
             <blockpin signalname="XLXN_79" name="I1" />
@@ -161,14 +161,6 @@
         <block symbolname="inv" name="XLXI_18">
             <blockpin signalname="HOLD" name="I" />
             <blockpin signalname="XLXN_79" name="O" />
-        </block>
-        <block symbolname="RAM_internal" name="XLXI_22">
-            <blockpin signalname="increment" name="clk" />
-            <blockpin signalname="XLXN_76" name="wr_enb" />
-            <blockpin signalname="XLXN_75" name="rd_enb" />
-            <blockpin signalname="XLXN_146(10:0)" name="addr(9:0)" />
-            <blockpin name="data_in(15:0)" />
-            <blockpin signalname="RAM_DATA_OUT(13:0)" name="data_out(15:0)" />
         </block>
         <block symbolname="instruction_register_v2" name="XLXI_30">
             <blockpin signalname="increment" name="increment" />
@@ -211,6 +203,14 @@
         <block symbolname="rest2" name="XLXI_47">
             <blockpin signalname="XLXN_146(10:0)" name="in_val(10:0)" />
             <blockpin signalname="PC(10:0)" name="out_val(10:0)" />
+        </block>
+        <block symbolname="RAM_internal" name="XLXI_49">
+            <blockpin signalname="increment" name="clk" />
+            <blockpin signalname="XLXN_76" name="wr_enb" />
+            <blockpin signalname="XLXN_75" name="rd_enb" />
+            <blockpin signalname="XLXN_146(10:0)" name="addr(10:0)" />
+            <blockpin name="data_in(13:0)" />
+            <blockpin signalname="RAM_DATA_OUT(13:0)" name="data_out(13:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -373,7 +373,7 @@
             <wire x2="1904" y1="16" y2="576" x1="1904" />
             <wire x2="1920" y1="576" y2="576" x1="1904" />
         </branch>
-        <instance x="1920" y="800" name="XLXI_22" orien="R0">
+        <instance x="1920" y="800" name="XLXI_49" orien="R0">
         </instance>
     </sheet>
 </drawing>

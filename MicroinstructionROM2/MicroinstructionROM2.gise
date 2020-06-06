@@ -27,6 +27,7 @@
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="RAM_internal.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="RAM_internal.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Tuberia.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Tuberia.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="UC1.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="UC2.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -36,6 +37,7 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="instruction_register_v2.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="merge.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="pc_increment_v2_module.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="rest2.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="stack_manager.sym" xil_pn:origination="imported"/>
@@ -70,6 +72,7 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1591465741" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1591465741">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1591465741" xil_pn:in_ck="5921364367671884138" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1591465741">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -82,13 +85,15 @@
       <outfile xil_pn:name="stack_manager.v"/>
       <outfile xil_pn:name="voider.v"/>
     </transform>
-    <transform xil_pn:end_ts="1591465741" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1054714969480266533" xil_pn:start_ts="1591465741">
+    <transform xil_pn:end_ts="1591466058" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6700499123704972416" xil_pn:start_ts="1591466058">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591465743" xil_pn:in_ck="3697681428828344306" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2744856522362599545" xil_pn:start_ts="1591465741">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1591466087" xil_pn:in_ck="3697681428828344306" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7252195739520166242" xil_pn:start_ts="1591466083">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Tuberia.vf"/>
+      <outfile xil_pn:name="merge.vf"/>
       <outfile xil_pn:name="unionMagica.vf"/>
     </transform>
     <transform xil_pn:end_ts="1591465743" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6068587622437226920" xil_pn:start_ts="1591465743">
@@ -98,6 +103,10 @@
     <transform xil_pn:end_ts="1591465743" xil_pn:in_ck="-1265537112172256897" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591465743">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="RAM_internal.v"/>
       <outfile xil_pn:name="bloqueSaltos.v"/>
       <outfile xil_pn:name="instruction_register_v2.v"/>
@@ -110,6 +119,8 @@
     <transform xil_pn:end_ts="1591465746" xil_pn:in_ck="-1265537112172256897" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2788502443985384020" xil_pn:start_ts="1591465743">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="unionMagica_beh.prj"/>
@@ -117,13 +128,17 @@
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
     <transform xil_pn:end_ts="1591465746" xil_pn:in_ck="2361042613390424794" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-9079952472917057137" xil_pn:start_ts="1591465746">
-      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="unionMagica_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1591465357" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1591465357">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1591465688" xil_pn:in_ck="3697681428828344306" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="553354132462250105" xil_pn:start_ts="1591465686">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -154,7 +169,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="unionMagica.jhd"/>
       <outfile xil_pn:name="unionMagica.lso"/>
       <outfile xil_pn:name="unionMagica.ngc"/>

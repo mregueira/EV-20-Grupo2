@@ -1,0 +1,512 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : demux6b_w_en.vf
+// /___/   /\     Timestamp : 06/06/2020 16:27:18
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux6b_w_en.vf -w C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux6b_w_en.sch
+//Design Name: demux6b_w_en
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module demux2b_w_en_MUSER_demux6b_w_en(ENABLE, 
+                                       SEL, 
+                                       x, 
+                                       a0, 
+                                       a1, 
+                                       a2, 
+                                       a3);
+
+    input ENABLE;
+    input [1:0] SEL;
+    input x;
+   output a0;
+   output a1;
+   output a2;
+   output a3;
+   
+   wire XLXN_12;
+   wire XLXN_13;
+   
+   demux1b_w_en  XLXI_4 (.enable(ENABLE), 
+                        .sel(SEL[0]), 
+                        .x(XLXN_12), 
+                        .a0(a0), 
+                        .a1(a1));
+   demux1b_w_en  XLXI_5 (.enable(ENABLE), 
+                        .sel(SEL[0]), 
+                        .x(XLXN_13), 
+                        .a0(a2), 
+                        .a1(a3));
+   demux1b  XLXI_6 (.sel(SEL[1]), 
+                   .x(x), 
+                   .a0(XLXN_12), 
+                   .a1(XLXN_13));
+endmodule
+`timescale 1ns / 1ps
+
+module demux3b_w_en_MUSER_demux6b_w_en(ENABLE, 
+                                       SEL, 
+                                       x, 
+                                       a0, 
+                                       a1, 
+                                       a2, 
+                                       a3, 
+                                       a4, 
+                                       a5, 
+                                       a6, 
+                                       a7);
+
+    input ENABLE;
+    input [2:0] SEL;
+    input x;
+   output a0;
+   output a1;
+   output a2;
+   output a3;
+   output a4;
+   output a5;
+   output a6;
+   output a7;
+   
+   wire XLXN_10;
+   wire XLXN_11;
+   
+   demux2b_w_en_MUSER_demux6b_w_en  XLXI_1 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[1:0]), 
+                                           .x(XLXN_10), 
+                                           .a0(a0), 
+                                           .a1(a1), 
+                                           .a2(a2), 
+                                           .a3(a3));
+   demux2b_w_en_MUSER_demux6b_w_en  XLXI_2 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[1:0]), 
+                                           .x(XLXN_11), 
+                                           .a0(a4), 
+                                           .a1(a5), 
+                                           .a2(a6), 
+                                           .a3(a7));
+   demux1b  XLXI_3 (.sel(SEL[2]), 
+                   .x(x), 
+                   .a0(XLXN_10), 
+                   .a1(XLXN_11));
+endmodule
+`timescale 1ns / 1ps
+
+module demux4b_w_en_MUSER_demux6b_w_en(ENABLE, 
+                                       SEL, 
+                                       x, 
+                                       a0, 
+                                       a1, 
+                                       a2, 
+                                       a3, 
+                                       a4, 
+                                       a5, 
+                                       a6, 
+                                       a7, 
+                                       a8, 
+                                       a9, 
+                                       a10, 
+                                       a11, 
+                                       a12, 
+                                       a13, 
+                                       a14, 
+                                       a15);
+
+    input ENABLE;
+    input [3:0] SEL;
+    input x;
+   output a0;
+   output a1;
+   output a2;
+   output a3;
+   output a4;
+   output a5;
+   output a6;
+   output a7;
+   output a8;
+   output a9;
+   output a10;
+   output a11;
+   output a12;
+   output a13;
+   output a14;
+   output a15;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   
+   demux3b_w_en_MUSER_demux6b_w_en  XLXI_1 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[2:0]), 
+                                           .x(XLXN_1), 
+                                           .a0(a0), 
+                                           .a1(a1), 
+                                           .a2(a2), 
+                                           .a3(a3), 
+                                           .a4(a4), 
+                                           .a5(a5), 
+                                           .a6(a6), 
+                                           .a7(a7));
+   demux3b_w_en_MUSER_demux6b_w_en  XLXI_2 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[2:0]), 
+                                           .x(XLXN_2), 
+                                           .a0(a8), 
+                                           .a1(a9), 
+                                           .a2(a10), 
+                                           .a3(a11), 
+                                           .a4(a12), 
+                                           .a5(a13), 
+                                           .a6(a14), 
+                                           .a7(a15));
+   demux1b  XLXI_3 (.sel(SEL[3]), 
+                   .x(x), 
+                   .a0(XLXN_1), 
+                   .a1(XLXN_2));
+endmodule
+`timescale 1ns / 1ps
+
+module demux5b_w_en_MUSER_demux6b_w_en(ENABLE, 
+                                       SEL, 
+                                       X, 
+                                       a0, 
+                                       a1, 
+                                       a2, 
+                                       a3, 
+                                       a4, 
+                                       a5, 
+                                       a6, 
+                                       a7, 
+                                       a8, 
+                                       a9, 
+                                       a10, 
+                                       a11, 
+                                       a12, 
+                                       a13, 
+                                       a14, 
+                                       a15, 
+                                       a16, 
+                                       a17, 
+                                       a18, 
+                                       a19, 
+                                       a20, 
+                                       a21, 
+                                       a22, 
+                                       a23, 
+                                       a24, 
+                                       a25, 
+                                       a26, 
+                                       a27, 
+                                       a28, 
+                                       a29, 
+                                       a30, 
+                                       a31);
+
+    input ENABLE;
+    input [4:0] SEL;
+    input X;
+   output a0;
+   output a1;
+   output a2;
+   output a3;
+   output a4;
+   output a5;
+   output a6;
+   output a7;
+   output a8;
+   output a9;
+   output a10;
+   output a11;
+   output a12;
+   output a13;
+   output a14;
+   output a15;
+   output a16;
+   output a17;
+   output a18;
+   output a19;
+   output a20;
+   output a21;
+   output a22;
+   output a23;
+   output a24;
+   output a25;
+   output a26;
+   output a27;
+   output a28;
+   output a29;
+   output a30;
+   output a31;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   
+   demux4b_w_en_MUSER_demux6b_w_en  XLXI_1 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[3:0]), 
+                                           .x(XLXN_1), 
+                                           .a0(a0), 
+                                           .a1(a1), 
+                                           .a2(a2), 
+                                           .a3(a3), 
+                                           .a4(a4), 
+                                           .a5(a5), 
+                                           .a6(a6), 
+                                           .a7(a7), 
+                                           .a8(a8), 
+                                           .a9(a9), 
+                                           .a10(a10), 
+                                           .a11(a11), 
+                                           .a12(a12), 
+                                           .a13(a13), 
+                                           .a14(a14), 
+                                           .a15(a15));
+   demux4b_w_en_MUSER_demux6b_w_en  XLXI_2 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[3:0]), 
+                                           .x(XLXN_2), 
+                                           .a0(a16), 
+                                           .a1(a17), 
+                                           .a2(a18), 
+                                           .a3(a19), 
+                                           .a4(a20), 
+                                           .a5(a21), 
+                                           .a6(a22), 
+                                           .a7(a23), 
+                                           .a8(a24), 
+                                           .a9(a25), 
+                                           .a10(a26), 
+                                           .a11(a27), 
+                                           .a12(a28), 
+                                           .a13(a29), 
+                                           .a14(a30), 
+                                           .a15(a31));
+   demux1b  XLXI_3 (.sel(SEL[4]), 
+                   .x(X), 
+                   .a0(XLXN_1), 
+                   .a1(XLXN_2));
+endmodule
+`timescale 1ns / 1ps
+
+module demux6b_w_en(ENABLE, 
+                    SEL, 
+                    x, 
+                    WR0, 
+                    WR1, 
+                    WR2, 
+                    WR3, 
+                    WR4, 
+                    WR5, 
+                    WR6, 
+                    WR7, 
+                    WR8, 
+                    WR9, 
+                    WR10, 
+                    WR11, 
+                    WR12, 
+                    WR13, 
+                    WR14, 
+                    WR15, 
+                    WR16, 
+                    WR17, 
+                    WR18, 
+                    WR19, 
+                    WR20, 
+                    WR21, 
+                    WR22, 
+                    WR23, 
+                    WR24, 
+                    WR25, 
+                    WR26, 
+                    WR27, 
+                    WR28, 
+                    WR29, 
+                    WR30, 
+                    WR31, 
+                    WR32, 
+                    WR33, 
+                    WR34, 
+                    WR35, 
+                    WR36, 
+                    WR37, 
+                    WR38, 
+                    WR39, 
+                    WR40, 
+                    WR41, 
+                    WR42, 
+                    WR43, 
+                    WR44, 
+                    WR45, 
+                    WR46, 
+                    WR47, 
+                    WR48, 
+                    WR49, 
+                    WR50, 
+                    WR51, 
+                    WR52, 
+                    WR53, 
+                    WR54, 
+                    WR55, 
+                    WR56, 
+                    WR57, 
+                    WR58, 
+                    WR59, 
+                    WR60, 
+                    WR61, 
+                    WR62, 
+                    WR63);
+
+    input ENABLE;
+    input [5:0] SEL;
+    input x;
+   output WR0;
+   output WR1;
+   output WR2;
+   output WR3;
+   output WR4;
+   output WR5;
+   output WR6;
+   output WR7;
+   output WR8;
+   output WR9;
+   output WR10;
+   output WR11;
+   output WR12;
+   output WR13;
+   output WR14;
+   output WR15;
+   output WR16;
+   output WR17;
+   output WR18;
+   output WR19;
+   output WR20;
+   output WR21;
+   output WR22;
+   output WR23;
+   output WR24;
+   output WR25;
+   output WR26;
+   output WR27;
+   output WR28;
+   output WR29;
+   output WR30;
+   output WR31;
+   output WR32;
+   output WR33;
+   output WR34;
+   output WR35;
+   output WR36;
+   output WR37;
+   output WR38;
+   output WR39;
+   output WR40;
+   output WR41;
+   output WR42;
+   output WR43;
+   output WR44;
+   output WR45;
+   output WR46;
+   output WR47;
+   output WR48;
+   output WR49;
+   output WR50;
+   output WR51;
+   output WR52;
+   output WR53;
+   output WR54;
+   output WR55;
+   output WR56;
+   output WR57;
+   output WR58;
+   output WR59;
+   output WR60;
+   output WR61;
+   output WR62;
+   output WR63;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   
+   demux5b_w_en_MUSER_demux6b_w_en  XLXI_1 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[4:0]), 
+                                           .X(XLXN_1), 
+                                           .a0(WR0), 
+                                           .a1(WR1), 
+                                           .a2(WR2), 
+                                           .a3(WR3), 
+                                           .a4(WR4), 
+                                           .a5(WR5), 
+                                           .a6(WR6), 
+                                           .a7(WR7), 
+                                           .a8(WR8), 
+                                           .a9(WR9), 
+                                           .a10(WR10), 
+                                           .a11(WR11), 
+                                           .a12(WR12), 
+                                           .a13(WR13), 
+                                           .a14(WR14), 
+                                           .a15(WR15), 
+                                           .a16(WR16), 
+                                           .a17(WR17), 
+                                           .a18(WR18), 
+                                           .a19(WR19), 
+                                           .a20(WR20), 
+                                           .a21(WR21), 
+                                           .a22(WR22), 
+                                           .a23(WR23), 
+                                           .a24(WR24), 
+                                           .a25(WR25), 
+                                           .a26(WR26), 
+                                           .a27(WR27), 
+                                           .a28(WR28), 
+                                           .a29(WR29), 
+                                           .a30(WR30), 
+                                           .a31(WR31));
+   demux5b_w_en_MUSER_demux6b_w_en  XLXI_2 (.ENABLE(ENABLE), 
+                                           .SEL(SEL[4:0]), 
+                                           .X(XLXN_2), 
+                                           .a0(WR32), 
+                                           .a1(WR33), 
+                                           .a2(WR34), 
+                                           .a3(WR35), 
+                                           .a4(WR36), 
+                                           .a5(WR37), 
+                                           .a6(WR38), 
+                                           .a7(WR39), 
+                                           .a8(WR40), 
+                                           .a9(WR41), 
+                                           .a10(WR42), 
+                                           .a11(WR43), 
+                                           .a12(WR44), 
+                                           .a13(WR45), 
+                                           .a14(WR46), 
+                                           .a15(WR47), 
+                                           .a16(WR48), 
+                                           .a17(WR49), 
+                                           .a18(WR50), 
+                                           .a19(WR51), 
+                                           .a20(WR52), 
+                                           .a21(WR53), 
+                                           .a22(WR54), 
+                                           .a23(WR55), 
+                                           .a24(WR56), 
+                                           .a25(WR57), 
+                                           .a26(WR58), 
+                                           .a27(WR59), 
+                                           .a28(WR60), 
+                                           .a29(WR61), 
+                                           .a30(WR62), 
+                                           .a31(WR63));
+   demux1b  XLXI_3 (.sel(SEL[5]), 
+                   .x(x), 
+                   .a0(XLXN_1), 
+                   .a1(XLXN_2));
+endmodule

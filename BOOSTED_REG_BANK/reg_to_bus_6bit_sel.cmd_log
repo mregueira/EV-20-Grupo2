@@ -1,1 +1,0 @@
-sch2sym -intstyle ise -family artix7 -w -refsym reg_to_bus_6bit_sel C:/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_6bit_sel.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_6bit_sel.sym 

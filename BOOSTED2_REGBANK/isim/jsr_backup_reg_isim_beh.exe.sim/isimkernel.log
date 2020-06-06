@@ -1,0 +1,30 @@
+Command line:
+   jsr_backup_reg_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  63367
+
+Sat Jun 06 17:08:07 2020
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 5159.52 Meg
+
+ Total Signals          : 298
+ Total Nets             : 520
+ Total Signal Drivers   : 57
+ Total Blocks           : 57
+ Total Primitive Blocks : 39
+ Total Processes        : 66
+ Total Traceable Variables  : 26
+ Total Scalar Nets and Variables : 728
+Total Line Count : 74
+Total Line Count : 74
+
+ Total Simulation Time: 0.921875 sec
+
+ Current Memory Usage: 5006.43 Meg
+
+Sat Jun 06 17:20:53 2020
+

@@ -1,5 +1,0 @@
-sch2sym -intstyle ise -family artix7 -w -refsym test C:/EV-20-Grupo2/BOOSTED_REG_BANK/test.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/test.sym 
-sch2sym -intstyle ise -family artix7 -w -refsym test C:/EV-20-Grupo2/BOOSTED_REG_BANK/test.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/test.sym 
-sch2hdl -intstyle ise -family artix7 -verilog test_drc.vf -w C:/EV-20-Grupo2/BOOSTED_REG_BANK/test.sch 
-sch2hdl -intstyle ise -family artix7 -verilog test_drc.vf -w C:/EV-20-Grupo2/BOOSTED_REG_BANK/test.sch 
-sch2hdl -intstyle ise -family artix7 -verilog test_drc.vf -w C:/EV-20-Grupo2/BOOSTED_REG_BANK/test.sch 

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank_easy_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="register_bank_easy" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/register_bank_easy/CLK" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+      <obj_property name="label">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/C_SEL" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">C_SEL[5:0]</obj_property>
+      <obj_property name="ObjectShortName">C_SEL[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/FROM_C_LATCH" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">FROM_C_LATCH[15:0]</obj_property>
+      <obj_property name="ObjectShortName">FROM_C_LATCH[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/LEVEL" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LEVEL[2:0]</obj_property>
+      <obj_property name="ObjectShortName">LEVEL[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/MR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MR</obj_property>
+      <obj_property name="ObjectShortName">MR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/MW" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MW</obj_property>
+      <obj_property name="ObjectShortName">MW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/XLXI_14/XLXI_133/XLXI_1/Q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/XLXI_14/XLXI_133/XLXI_2/Q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/XLXI_14/XLXI_133/XLXI_3/Q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/XLXI_14/XLXI_133/XLXI_4/Q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/XLXI_14/XLXI_133/XLXI_10/Q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/XLXI_14/XLXI_133/XLXI_11/Q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/XLXI_14/XLXI_133/XLXI_12/Q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/XLXI_14/XLXI_133/XLXI_13/Q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_easy/XLXI_14/XLXI_133/OUT_R" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">OUT_R[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OUT_R[15:0]</obj_property>
+   </wvobject>
+</wave_config>

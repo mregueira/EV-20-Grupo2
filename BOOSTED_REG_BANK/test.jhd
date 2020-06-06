@@ -1,7 +1,0 @@
-MODULE test
-	SUBMODULE register_bank
-		INSTANCE XLXI_3
-	SUBMODULE vcc_for_testing
-		INSTANCE XLXI_5
-	SUBMODULE gnd_for_testing
-		INSTANCE XLXI_7

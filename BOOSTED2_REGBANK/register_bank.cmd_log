@@ -1,0 +1,6 @@
+sch2sym -intstyle ise -family artix7 -refsym register_bank C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.sch C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.sym 
+sch2sym -intstyle ise -family artix7 -refsym register_bank C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.sch C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym register_bank C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.sch C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.sym 
+sch2hdl -intstyle ise -family artix7 -verilog register_bank_drc.vf -w C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.sch 
+sch2sym -intstyle ise -family artix7 -w -refsym register_bank C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.sch C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym register_bank C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.sch C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.sym 

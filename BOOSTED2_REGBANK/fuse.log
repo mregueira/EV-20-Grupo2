@@ -1,0 +1,72 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank_easy_isim_beh.exe -prj C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank_easy_beh.prj work.register_bank_easy work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/reg_to_bus_1bit_sel.v" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux_bus16b_sel1b.v" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux1b_w_en.v" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux1b.v" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/reg_to_bus_2bit_sel.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux_bus16b_sel2b.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux2b_w_en.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/reg_to_bus_3bit_sel.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux_bus16b_sel3b.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux3b_w_en.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/reg_to_bus_4bit_sel.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux_bus16b_sel4b.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux4b_w_en.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/reg_to_bus_5bit_sel.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux_bus16b_sel5b.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux5b_w_en.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/reg_to_bus_6bit_sel.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/ffd16_w_en.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux_bus16b_sel6b.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/demux6b_w_en.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/bidir_port.v" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/jsr_backup_reg.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/bloque_3.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/bloque2.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank.vf" into library work
+Analyzing Verilog file "C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank_easy.vf" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module demux1b_w_en
+Compiling module demux1b
+Compiling module demux2b_w_en_MUSER_register_bank...
+Compiling module demux3b_w_en_MUSER_register_bank...
+Compiling module demux4b_w_en_MUSER_register_bank...
+Compiling module demux5b_w_en_MUSER_register_bank...
+Compiling module demux6b_w_en_MUSER_register_bank...
+Compiling module reg_to_bus_1bit_sel
+Compiling module bidir_port
+Compiling module demux_bus16b_sel1b
+Compiling module demux_bus16b_sel2b_MUSER_registe...
+Compiling module demux_bus16b_sel3b_MUSER_registe...
+Compiling module demux_bus16b_sel4b_MUSER_registe...
+Compiling module demux_bus16b_sel5b_MUSER_registe...
+Compiling module demux_bus16b_sel6b_MUSER_registe...
+Compiling module XOR2
+Compiling module AND2
+Compiling module INV
+Compiling module VCC
+Compiling module bloque2_MUSER_register_bank_easy
+Compiling module reg_to_bus_2bit_sel_MUSER_regist...
+Compiling module reg_to_bus_3bit_sel_MUSER_regist...
+Compiling module reg_to_bus_4bit_sel_MUSER_regist...
+Compiling module reg_to_bus_5bit_sel_MUSER_regist...
+Compiling module reg_to_bus_6bit_sel_MUSER_regist...
+Compiling module bloque_3_MUSER_register_bank_eas...
+Compiling module IFD16_HXILINX_register_bank_easy
+Compiling module ffd16_w_en_MUSER_register_bank_e...
+Compiling module jsr_backup_reg_MUSER_register_ba...
+Compiling module register_bank_MUSER_register_ban...
+Compiling module register_bank_easy
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 25 sub-compilation(s) to finish...
+Compiled 32 Verilog Units
+Built simulation executable C:/EV-20-Grupo2/BOOSTED2_REGBANK/register_bank_easy_isim_beh.exe
+Fuse Memory Usage: 31272 KB
+Fuse CPU Usage: 687 ms

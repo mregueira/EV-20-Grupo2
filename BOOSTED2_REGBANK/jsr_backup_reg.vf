@@ -1,0 +1,402 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : jsr_backup_reg.vf
+// /___/   /\     Timestamp : 06/06/2020 17:06:58
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/EV-20-Grupo2/BOOSTED2_REGBANK/jsr_backup_reg.vf -w C:/EV-20-Grupo2/BOOSTED2_REGBANK/jsr_backup_reg.sch
+//Design Name: jsr_backup_reg
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module IFD16_HXILINX_jsr_backup_reg(Q, C, D);
+
+   
+   output [15:0]      Q;
+
+   input 	      C;	
+   input  [15:0]      D;
+   
+   reg    [15:0]      Q;
+  
+    (* IOB = "TRUE" *)
+
+   always @(posedge C)
+     begin
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module reg_to_bus_2bit_sel_MUSER_jsr_backup_reg(R0, 
+                                                R1, 
+                                                R2, 
+                                                R3, 
+                                                SEL, 
+                                                TO_BUS_Z);
+
+    input [15:0] R0;
+    input [15:0] R1;
+    input [15:0] R2;
+    input [15:0] R3;
+    input [1:0] SEL;
+   output [15:0] TO_BUS_Z;
+   
+   wire [15:0] XLXN_5;
+   wire [15:0] XLXN_6;
+   
+   reg_to_bus_1bit_sel  XLXI_1 (.R0(R0[15:0]), 
+                               .R1(R1[15:0]), 
+                               .SEL_BUS(SEL[0]), 
+                               .TO_BUS(XLXN_5[15:0]));
+   reg_to_bus_1bit_sel  XLXI_2 (.R0(R2[15:0]), 
+                               .R1(R3[15:0]), 
+                               .SEL_BUS(SEL[0]), 
+                               .TO_BUS(XLXN_6[15:0]));
+   reg_to_bus_1bit_sel  XLXI_3 (.R0(XLXN_5[15:0]), 
+                               .R1(XLXN_6[15:0]), 
+                               .SEL_BUS(SEL[1]), 
+                               .TO_BUS(TO_BUS_Z[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module reg_to_bus_3bit_sel_MUSER_jsr_backup_reg(R0, 
+                                                R1, 
+                                                R2, 
+                                                R3, 
+                                                R4, 
+                                                R5, 
+                                                R6, 
+                                                R7, 
+                                                SEL_B, 
+                                                TO_BUS_3B);
+
+    input [15:0] R0;
+    input [15:0] R1;
+    input [15:0] R2;
+    input [15:0] R3;
+    input [15:0] R4;
+    input [15:0] R5;
+    input [15:0] R6;
+    input [15:0] R7;
+    input [2:0] SEL_B;
+   output [15:0] TO_BUS_3B;
+   
+   wire [15:0] XLXN_1;
+   wire [15:0] XLXN_2;
+   
+   reg_to_bus_1bit_sel  XLXI_4 (.R0(XLXN_1[15:0]), 
+                               .R1(XLXN_2[15:0]), 
+                               .SEL_BUS(SEL_B[2]), 
+                               .TO_BUS(TO_BUS_3B[15:0]));
+   reg_to_bus_2bit_sel_MUSER_jsr_backup_reg  XLXI_7 (.R0(R0[15:0]), 
+                                                    .R1(R1[15:0]), 
+                                                    .R2(R2[15:0]), 
+                                                    .R3(R3[15:0]), 
+                                                    .SEL(SEL_B[1:0]), 
+                                                    .TO_BUS_Z(XLXN_1[15:0]));
+   reg_to_bus_2bit_sel_MUSER_jsr_backup_reg  XLXI_8 (.R0(R4[15:0]), 
+                                                    .R1(R5[15:0]), 
+                                                    .R2(R6[15:0]), 
+                                                    .R3(R7[15:0]), 
+                                                    .SEL(SEL_B[1:0]), 
+                                                    .TO_BUS_Z(XLXN_2[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module demux2b_w_en_MUSER_jsr_backup_reg(ENABLE, 
+                                         SEL, 
+                                         x, 
+                                         a0, 
+                                         a1, 
+                                         a2, 
+                                         a3);
+
+    input ENABLE;
+    input [1:0] SEL;
+    input x;
+   output a0;
+   output a1;
+   output a2;
+   output a3;
+   
+   wire XLXN_12;
+   wire XLXN_13;
+   
+   demux1b_w_en  XLXI_4 (.enable(ENABLE), 
+                        .sel(SEL[0]), 
+                        .x(XLXN_12), 
+                        .a0(a0), 
+                        .a1(a1));
+   demux1b_w_en  XLXI_5 (.enable(ENABLE), 
+                        .sel(SEL[0]), 
+                        .x(XLXN_13), 
+                        .a0(a2), 
+                        .a1(a3));
+   demux1b  XLXI_6 (.sel(SEL[1]), 
+                   .x(x), 
+                   .a0(XLXN_12), 
+                   .a1(XLXN_13));
+endmodule
+`timescale 1ns / 1ps
+
+module demux3b_w_en_MUSER_jsr_backup_reg(ENABLE, 
+                                         SEL, 
+                                         x, 
+                                         a0, 
+                                         a1, 
+                                         a2, 
+                                         a3, 
+                                         a4, 
+                                         a5, 
+                                         a6, 
+                                         a7);
+
+    input ENABLE;
+    input [2:0] SEL;
+    input x;
+   output a0;
+   output a1;
+   output a2;
+   output a3;
+   output a4;
+   output a5;
+   output a6;
+   output a7;
+   
+   wire XLXN_10;
+   wire XLXN_11;
+   
+   demux2b_w_en_MUSER_jsr_backup_reg  XLXI_1 (.ENABLE(ENABLE), 
+                                             .SEL(SEL[1:0]), 
+                                             .x(XLXN_10), 
+                                             .a0(a0), 
+                                             .a1(a1), 
+                                             .a2(a2), 
+                                             .a3(a3));
+   demux2b_w_en_MUSER_jsr_backup_reg  XLXI_2 (.ENABLE(ENABLE), 
+                                             .SEL(SEL[1:0]), 
+                                             .x(XLXN_11), 
+                                             .a0(a4), 
+                                             .a1(a5), 
+                                             .a2(a6), 
+                                             .a3(a7));
+   demux1b  XLXI_3 (.sel(SEL[2]), 
+                   .x(x), 
+                   .a0(XLXN_10), 
+                   .a1(XLXN_11));
+endmodule
+`timescale 1ns / 1ps
+
+module ffd16_w_en_MUSER_jsr_backup_reg(CLK, 
+                                       D, 
+                                       EN, 
+                                       Q);
+
+    input CLK;
+    input [15:0] D;
+    input EN;
+   output [15:0] Q;
+   
+   wire XLXN_1;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   IFD16_HXILINX_jsr_backup_reg  XLXI_1 (.C(XLXN_1), 
+                                        .D(D[15:0]), 
+                                        .Q(Q[15:0]));
+   AND2  XLXI_2 (.I0(CLK), 
+                .I1(EN), 
+                .O(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
+module demux_bus16b_sel2b_MUSER_jsr_backup_reg(FROM_BUS, 
+                                               SEL_BUS, 
+                                               R0, 
+                                               R1, 
+                                               R2, 
+                                               R3);
+
+    input [15:0] FROM_BUS;
+    input [1:0] SEL_BUS;
+   output [15:0] R0;
+   output [15:0] R1;
+   output [15:0] R2;
+   output [15:0] R3;
+   
+   wire [15:0] XLXN_3;
+   wire [15:0] XLXN_4;
+   
+   demux_bus16b_sel1b  XLXI_1 (.FROM_BUS(XLXN_4[15:0]), 
+                              .SEL_BUS(SEL_BUS[0]), 
+                              .R0(R0[15:0]), 
+                              .R1(R1[15:0]));
+   demux_bus16b_sel1b  XLXI_2 (.FROM_BUS(XLXN_3[15:0]), 
+                              .SEL_BUS(SEL_BUS[0]), 
+                              .R0(R2[15:0]), 
+                              .R1(R3[15:0]));
+   demux_bus16b_sel1b  XLXI_3 (.FROM_BUS(FROM_BUS[15:0]), 
+                              .SEL_BUS(SEL_BUS[1]), 
+                              .R0(XLXN_4[15:0]), 
+                              .R1(XLXN_3[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module demux_bus16b_sel3b_MUSER_jsr_backup_reg(FROM_BUS, 
+                                               SEL_BUS, 
+                                               R0, 
+                                               R1, 
+                                               R2, 
+                                               R3, 
+                                               R4, 
+                                               R5, 
+                                               R6, 
+                                               R7);
+
+    input [15:0] FROM_BUS;
+    input [2:0] SEL_BUS;
+   output [15:0] R0;
+   output [15:0] R1;
+   output [15:0] R2;
+   output [15:0] R3;
+   output [15:0] R4;
+   output [15:0] R5;
+   output [15:0] R6;
+   output [15:0] R7;
+   
+   wire [15:0] XLXN_1;
+   wire [15:0] XLXN_2;
+   
+   demux_bus16b_sel2b_MUSER_jsr_backup_reg  XLXI_1 (.FROM_BUS(XLXN_1[15:0]), 
+                                                   .SEL_BUS(SEL_BUS[1:0]), 
+                                                   .R0(R0[15:0]), 
+                                                   .R1(R1[15:0]), 
+                                                   .R2(R2[15:0]), 
+                                                   .R3(R3[15:0]));
+   demux_bus16b_sel2b_MUSER_jsr_backup_reg  XLXI_2 (.FROM_BUS(XLXN_2[15:0]), 
+                                                   .SEL_BUS(SEL_BUS[1:0]), 
+                                                   .R0(R4[15:0]), 
+                                                   .R1(R5[15:0]), 
+                                                   .R2(R6[15:0]), 
+                                                   .R3(R7[15:0]));
+   demux_bus16b_sel1b  XLXI_3 (.FROM_BUS(FROM_BUS[15:0]), 
+                              .SEL_BUS(SEL_BUS[2]), 
+                              .R0(XLXN_1[15:0]), 
+                              .R1(XLXN_2[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module jsr_backup_reg(CLK, 
+                      IN_R, 
+                      LEVEL, 
+                      OUT_R);
+
+    input CLK;
+    input [15:0] IN_R;
+    input [2:0] LEVEL;
+   output [15:0] OUT_R;
+   
+   wire [15:0] OUTFF0;
+   wire [15:0] OUTFF1;
+   wire [15:0] OUTFF2;
+   wire [15:0] OUTFF3;
+   wire [15:0] OUTFF4;
+   wire [15:0] OUTFF5;
+   wire [15:0] OUTFF6;
+   wire [15:0] OUTFF7;
+   wire W0;
+   wire W1;
+   wire W2;
+   wire W3;
+   wire W4;
+   wire W5;
+   wire W6;
+   wire W7;
+   wire [15:0] XLXN_3;
+   wire [15:0] XLXN_4;
+   wire [15:0] XLXN_5;
+   wire [15:0] XLXN_6;
+   wire [15:0] XLXN_7;
+   wire [15:0] XLXN_8;
+   wire [15:0] XLXN_9;
+   wire [15:0] XLXN_10;
+   wire XLXN_12;
+   
+   ffd16_w_en_MUSER_jsr_backup_reg  XLXI_1 (.CLK(CLK), 
+                                           .D(XLXN_3[15:0]), 
+                                           .EN(W0), 
+                                           .Q(OUTFF0[15:0]));
+   ffd16_w_en_MUSER_jsr_backup_reg  XLXI_2 (.CLK(CLK), 
+                                           .D(XLXN_4[15:0]), 
+                                           .EN(W1), 
+                                           .Q(OUTFF1[15:0]));
+   ffd16_w_en_MUSER_jsr_backup_reg  XLXI_3 (.CLK(CLK), 
+                                           .D(XLXN_5[15:0]), 
+                                           .EN(W2), 
+                                           .Q(OUTFF2[15:0]));
+   ffd16_w_en_MUSER_jsr_backup_reg  XLXI_4 (.CLK(CLK), 
+                                           .D(XLXN_6[15:0]), 
+                                           .EN(W3), 
+                                           .Q(OUTFF3[15:0]));
+   demux_bus16b_sel3b_MUSER_jsr_backup_reg  XLXI_5 (.FROM_BUS(IN_R[15:0]), 
+                                                   .SEL_BUS(LEVEL[2:0]), 
+                                                   .R0(XLXN_3[15:0]), 
+                                                   .R1(XLXN_4[15:0]), 
+                                                   .R2(XLXN_5[15:0]), 
+                                                   .R3(XLXN_6[15:0]), 
+                                                   .R4(XLXN_7[15:0]), 
+                                                   .R5(XLXN_8[15:0]), 
+                                                   .R6(XLXN_9[15:0]), 
+                                                   .R7(XLXN_10[15:0]));
+   ffd16_w_en_MUSER_jsr_backup_reg  XLXI_10 (.CLK(CLK), 
+                                            .D(XLXN_7[15:0]), 
+                                            .EN(W4), 
+                                            .Q(OUTFF4[15:0]));
+   ffd16_w_en_MUSER_jsr_backup_reg  XLXI_11 (.CLK(CLK), 
+                                            .D(XLXN_8[15:0]), 
+                                            .EN(W5), 
+                                            .Q(OUTFF5[15:0]));
+   ffd16_w_en_MUSER_jsr_backup_reg  XLXI_12 (.CLK(CLK), 
+                                            .D(XLXN_9[15:0]), 
+                                            .EN(W6), 
+                                            .Q(OUTFF6[15:0]));
+   ffd16_w_en_MUSER_jsr_backup_reg  XLXI_13 (.CLK(CLK), 
+                                            .D(XLXN_10[15:0]), 
+                                            .EN(W7), 
+                                            .Q(OUTFF7[15:0]));
+   demux3b_w_en_MUSER_jsr_backup_reg  XLXI_14 (.ENABLE(XLXN_12), 
+                                              .SEL(LEVEL[2:0]), 
+                                              .x(XLXN_12), 
+                                              .a0(W0), 
+                                              .a1(W1), 
+                                              .a2(W2), 
+                                              .a3(W3), 
+                                              .a4(W4), 
+                                              .a5(W5), 
+                                              .a6(W6), 
+                                              .a7(W7));
+   VCC  XLXI_15 (.P(XLXN_12));
+   reg_to_bus_3bit_sel_MUSER_jsr_backup_reg  XLXI_16 (.R0(OUTFF0[15:0]), 
+                                                     .R1(OUTFF1[15:0]), 
+                                                     .R2(OUTFF2[15:0]), 
+                                                     .R3(OUTFF3[15:0]), 
+                                                     .R4(OUTFF4[15:0]), 
+                                                     .R5(OUTFF5[15:0]), 
+                                                     .R6(OUTFF6[15:0]), 
+                                                     .R7(OUTFF7[15:0]), 
+                                                     .SEL_B(LEVEL[2:0]), 
+                                                     .TO_BUS_3B(OUT_R[15:0]));
+endmodule

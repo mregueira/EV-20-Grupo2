@@ -1,3 +1,0 @@
-MODULE testing_file_rb
-	SUBMODULE register_bank_simple
-		INSTANCE XLXI_1

@@ -1,2 +1,0 @@
-sch2hdl -intstyle ise -family artix7 -verilog reg_to_bus_4bit_sel_drc.vf -w C:/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_4bit_sel.sch 
-sch2sym -intstyle ise -family artix7 -w -refsym reg_to_bus_4bit_sel C:/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_4bit_sel.sch C:/EV-20-Grupo2/BOOSTED_REG_BANK/reg_to_bus_4bit_sel.sym 

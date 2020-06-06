@@ -1,6 +1,0 @@
-vhdtdtfi -lib work C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux1b_w_en.v -lang verilog -prj BOOSTED_REG_BANK -o demux1b_w_en.spl -module demux1b_w_en -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family artix7 -w demux1b_w_en.spl C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux1b_w_en.sym 
-vhdtdtfi -lib work C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux1b_w_en.v -lang verilog -prj BOOSTED_REG_BANK -o demux1b_w_en.spl -module demux1b_w_en -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family artix7 -w demux1b_w_en.spl C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux1b_w_en.sym 
-vhdtdtfi -lib work C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux1b_w_en.v -lang verilog -prj BOOSTED_REG_BANK -o demux1b_w_en.spl -module demux1b_w_en -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family artix7 -w demux1b_w_en.spl C:/EV-20-Grupo2/BOOSTED_REG_BANK/demux1b_w_en.sym 

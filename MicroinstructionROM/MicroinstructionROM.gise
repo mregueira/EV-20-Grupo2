@@ -88,6 +88,7 @@
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="merge_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux1.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux1.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux10.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux2.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux2.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux4.sym" xil_pn:origination="imported"/>
@@ -157,6 +158,9 @@
     <transform xil_pn:end_ts="1591482189" xil_pn:in_ck="-2224939860056432946" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4910758401759208184" xil_pn:start_ts="1591482091">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="COMPARADOR5.vf"/>
       <outfile xil_pn:name="Decode.vf"/>
       <outfile xil_pn:name="LATCH1.vf"/>
@@ -193,61 +197,33 @@
     <transform xil_pn:end_ts="1591482190" xil_pn:in_ck="-1913613206976984351" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591482189">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="COMPARADOR5.vf"/>
-      <outfile xil_pn:name="Decode.vf"/>
-      <outfile xil_pn:name="LATCH1.vf"/>
-      <outfile xil_pn:name="LATCH10.vf"/>
-      <outfile xil_pn:name="LATCH2.vf"/>
-      <outfile xil_pn:name="LATCH4.vf"/>
-      <outfile xil_pn:name="LATCH5.vf"/>
-      <outfile xil_pn:name="LATCH6.vf"/>
-      <outfile xil_pn:name="LATCH7.vf"/>
-      <outfile xil_pn:name="MROM.vf"/>
-      <outfile xil_pn:name="RAM_internal.v"/>
-      <outfile xil_pn:name="Tuberia.vf"/>
-      <outfile xil_pn:name="UC1.vf"/>
-      <outfile xil_pn:name="UC2.vf"/>
-      <outfile xil_pn:name="bloqueSaltos.v"/>
-      <outfile xil_pn:name="fdce1.vf"/>
-      <outfile xil_pn:name="instruction_register_v2.v"/>
-      <outfile xil_pn:name="ipcore_dir/MicroinstructionROM.v"/>
-      <outfile xil_pn:name="merge.vf"/>
-      <outfile xil_pn:name="merge_conIR.vf"/>
-      <outfile xil_pn:name="mux1.vf"/>
-      <outfile xil_pn:name="mux2.vf"/>
-      <outfile xil_pn:name="mux4.vf"/>
-      <outfile xil_pn:name="mux5.vf"/>
-      <outfile xil_pn:name="mux6.vf"/>
-      <outfile xil_pn:name="mux7.vf"/>
-      <outfile xil_pn:name="pc_increment_v2.v"/>
-      <outfile xil_pn:name="rest2.v"/>
-      <outfile xil_pn:name="stack_manager.v"/>
-      <outfile xil_pn:name="toExecute.vf"/>
-      <outfile xil_pn:name="toOperand.vf"/>
-      <outfile xil_pn:name="toRetire.vf"/>
-      <outfile xil_pn:name="unionMagica.vf"/>
-      <outfile xil_pn:name="voider.v"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1591482200" xil_pn:in_ck="-1913613206976984351" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2612061573882033814" xil_pn:start_ts="1591482190">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="merge_conIR_beh.prj"/>
-      <outfile xil_pn:name="merge_conIR_isim_beh.exe"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1591482200" xil_pn:in_ck="8925862317925762970" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4769201849980058797" xil_pn:start_ts="1591482200">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="merge_conIR_isim_beh.wdb"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1591466348" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1591466348">
       <status xil_pn:value="SuccessfullyRun"/>

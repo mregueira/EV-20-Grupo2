@@ -27,6 +27,7 @@
         <signal name="hold" />
         <signal name="cbus_out(5:0)" />
         <signal name="type_out(6:0)" />
+        <signal name="JUMP" />
         <port polarity="Input" name="instruction(13:0)" />
         <port polarity="Input" name="clk" />
         <port polarity="Output" name="DAdd_out(9:0)" />
@@ -39,9 +40,10 @@
         <port polarity="Output" name="hold" />
         <port polarity="Output" name="cbus_out(5:0)" />
         <port polarity="Output" name="type_out(6:0)" />
+        <port polarity="Input" name="JUMP" />
         <blockdef name="Tuberia">
-            <timestamp>2020-6-4T19:47:42</timestamp>
-            <rect width="336" x="64" y="-640" height="640" />
+            <timestamp>2020-6-6T23:43:13</timestamp>
+            <line x2="0" y1="32" y2="32" x1="64" />
             <line x2="0" y1="-608" y2="-608" x1="64" />
             <rect width="64" x="0" y="-556" height="24" />
             <line x2="0" y1="-544" y2="-544" x1="64" />
@@ -76,6 +78,7 @@
             <rect width="64" x="400" y="-108" height="24" />
             <line x2="464" y1="-96" y2="-96" x1="400" />
             <line x2="464" y1="-32" y2="-32" x1="400" />
+            <rect width="336" x="64" y="-640" height="704" />
         </blockdef>
         <blockdef name="MROM">
             <timestamp>2020-6-4T20:57:57</timestamp>
@@ -123,6 +126,7 @@
             <blockpin signalname="cbus_out(5:0)" name="CBUSOUT(5:0)" />
             <blockpin signalname="type_out(6:0)" name="TYPEOUT(6:0)" />
             <blockpin signalname="hold" name="HOLD" />
+            <blockpin signalname="JUMP" name="JUMP" />
         </block>
         <block symbolname="MROM" name="XLXI_3">
             <blockpin signalname="instruction(13:7)" name="Bus_B(6:0)" />
@@ -321,5 +325,13 @@
         <iomarker fontsize="28" x="3184" y="1136" name="cbus_out(5:0)" orien="R0" />
         <iomarker fontsize="28" x="3120" y="1184" name="type_out(6:0)" orien="R0" />
         <iomarker fontsize="28" x="3088" y="1264" name="hold" orien="R0" />
+        <branch name="JUMP">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2128" y="1296" type="branch" />
+            <wire x2="2176" y1="1296" y2="1296" x1="2128" />
+        </branch>
+        <branch name="JUMP">
+            <wire x2="528" y1="512" y2="512" x1="384" />
+        </branch>
+        <iomarker fontsize="28" x="384" y="512" name="JUMP" orien="R180" />
     </sheet>
 </drawing>

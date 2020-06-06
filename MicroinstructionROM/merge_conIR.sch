@@ -23,6 +23,7 @@
         <signal name="XLXN_34(10:0)" />
         <signal name="XLXN_35" />
         <signal name="CLK" />
+        <signal name="XLXN_36" />
         <port polarity="Input" name="CY" />
         <port polarity="Input" name="W(15:0)" />
         <port polarity="Output" name="DAdd_out(9:0)" />
@@ -53,8 +54,8 @@
             <rect width="256" x="64" y="-256" height="768" />
         </blockdef>
         <blockdef name="merge">
-            <timestamp>2020-6-6T19:19:21</timestamp>
-            <rect width="336" x="64" y="-640" height="640" />
+            <timestamp>2020-6-6T23:44:36</timestamp>
+            <line x2="0" y1="32" y2="32" x1="64" />
             <rect width="64" x="0" y="-620" height="24" />
             <line x2="0" y1="-608" y2="-608" x1="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
@@ -76,6 +77,7 @@
             <line x2="464" y1="-96" y2="-96" x1="400" />
             <rect width="64" x="400" y="-44" height="24" />
             <line x2="464" y1="-32" y2="-32" x1="400" />
+            <rect width="336" x="64" y="-640" height="704" />
         </blockdef>
         <block symbolname="unionMagica" name="XLXI_1">
             <blockpin signalname="CY" name="CY" />
@@ -100,6 +102,7 @@
             <blockpin signalname="hold" name="hold" />
             <blockpin signalname="cbus_out(5:0)" name="cbus_out(5:0)" />
             <blockpin signalname="type_out(6:0)" name="type_out(6:0)" />
+            <blockpin signalname="XLXN_36" name="JUMP" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -198,5 +201,8 @@
         <iomarker fontsize="28" x="2656" y="1248" name="hold" orien="R0" />
         <iomarker fontsize="28" x="2656" y="1312" name="cbus_out(5:0)" orien="R0" />
         <iomarker fontsize="28" x="2656" y="1376" name="type_out(6:0)" orien="R0" />
+        <branch name="XLXN_36">
+            <wire x2="1584" y1="1440" y2="1440" x1="1536" />
+        </branch>
     </sheet>
 </drawing>

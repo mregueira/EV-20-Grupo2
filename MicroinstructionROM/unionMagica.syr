@@ -1,0 +1,552 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.36 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.36 secs
+ 
+--> Reading design: unionMagica.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "unionMagica.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "unionMagica"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : unionMagica
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\voider.v" into library work
+Parsing module <voider>.
+Analyzing Verilog file "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\stack_manager.v" into library work
+Parsing module <stack_manager>.
+Analyzing Verilog file "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\rest2.v" into library work
+Parsing module <rest2>.
+Analyzing Verilog file "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\RAM_internal.v" into library work
+Parsing module <RAM_internal>.
+Analyzing Verilog file "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\pc_increment_v2.v" into library work
+Parsing module <pc_increment_v2_module>.
+Analyzing Verilog file "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\instruction_register_v2.v" into library work
+Parsing module <instruction_register_v2>.
+Analyzing Verilog file "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\bloqueSaltos.v" into library work
+Parsing module <bloqueSaltos>.
+Analyzing Verilog file "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\unionMagica.vf" into library work
+Parsing module <unionMagica>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <unionMagica>.
+
+Elaborating module <AND2>.
+
+Elaborating module <VCC>.
+
+Elaborating module <GND>.
+
+Elaborating module <INV>.
+
+Elaborating module <RAM_internal>.
+
+Elaborating module <instruction_register_v2>.
+
+Elaborating module <voider>.
+
+Elaborating module <pc_increment_v2_module>.
+WARNING:HDLCompiler:413 - "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\pc_increment_v2.v" Line 42: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\pc_increment_v2.v" Line 48: Result of 12-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <bloqueSaltos>.
+
+Elaborating module <stack_manager>.
+WARNING:HDLCompiler:413 - "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\stack_manager.v" Line 34: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\stack_manager.v" Line 35: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\stack_manager.v" Line 39: Result of 32-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <rest2>.
+WARNING:HDLCompiler:413 - "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\rest2.v" Line 26: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:634 - "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\unionMagica.vf" Line 43: Net <RAM_DATA_OUT[13]> does not have a driver.
+WARNING:HDLCompiler:552 - "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\unionMagica.vf" Line 63: Input port addr[10] is not connected on this instance
+WARNING:Xst:2972 - "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\unionMagica.vf" line 63. All outputs of instance <XLXI_22> of block <RAM_internal> are unconnected in block <unionMagica>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <unionMagica>.
+    Related source file is "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\unionMagica.vf".
+WARNING:Xst:2898 - Port 'addr', unconnected in block instance 'XLXI_22', is tied to GND.
+WARNING:Xst:2898 - Port 'data_in', unconnected in block instance 'XLXI_22', is tied to GND.
+INFO:Xst:3210 - "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\unionMagica.vf" line 63: Output port <data_out> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <RAM_DATA_OUT> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <unionMagica> synthesized.
+
+Synthesizing Unit <instruction_register_v2>.
+    Related source file is "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\instruction_register_v2.v".
+    WARNING:Xst:2404 -  FFs/Latches <aux<13:0>> (without init value) have a constant value of 0 in block <instruction_register_v2>.
+    Summary:
+	no macro.
+Unit <instruction_register_v2> synthesized.
+
+Synthesizing Unit <voider>.
+    Related source file is "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\voider.v".
+    Found 1-bit register for signal <is_void>.
+    Found 3-bit register for signal <cnt>.
+    Found 3-bit comparator greater for signal <GND_8_o_cnt[2]_LessThan_5_o> created at line 35
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <voider> synthesized.
+
+Synthesizing Unit <pc_increment_v2_module>.
+    Related source file is "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\pc_increment_v2.v".
+    Found 11-bit register for signal <pc>.
+    Found 12-bit adder for signal <n0023> created at line 42.
+    Found 11-bit adder for signal <pc[10]_GND_9_o_add_3_OUT> created at line 48.
+    Found 11-bit subtractor for signal <GND_9_o_GND_9_o_sub_3_OUT<10:0>> created at line 42.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+Unit <pc_increment_v2_module> synthesized.
+
+Synthesizing Unit <bloqueSaltos>.
+    Related source file is "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\bloqueSaltos.v".
+WARNING:Xst:647 - Input <W0to15<14:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <bloqueSaltos> synthesized.
+
+Synthesizing Unit <stack_manager>.
+    Related source file is "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\stack_manager.v".
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <stack>, simulation mismatch.
+    Found 3x11-bit dual-port RAM <Mram_stack> for signal <stack>.
+    Found 3-bit register for signal <level>.
+    Found 4-bit subtractor for signal <n0015> created at line 43.
+    Found 3-bit adder for signal <level[2]_GND_11_o_add_1_OUT> created at line 34.
+    Found 11-bit subtractor for signal <GND_11_o_GND_11_o_sub_3_OUT<10:0>> created at line 35.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <stack_manager> synthesized.
+
+Synthesizing Unit <rest2>.
+    Related source file is "C:\Users\Martina\Desktop\EV-20-Grupo2\MicroinstructionROM\rest2.v".
+    Found 11-bit subtractor for signal <out_val> created at line 23.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <rest2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 3x11-bit dual-port RAM                                : 1
+# Adders/Subtractors                                   : 6
+ 11-bit addsub                                         : 1
+ 11-bit subtractor                                     : 2
+ 12-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 11-bit register                                       : 1
+ 3-bit register                                        : 2
+# Comparators                                          : 1
+ 3-bit comparator greater                              : 1
+# Multiplexers                                         : 7
+ 11-bit 2-to-1 multiplexer                             : 6
+ 3-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <cnt_0> has a constant value of 0 in block <XLXI_32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt_1> has a constant value of 0 in block <XLXI_32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt_2> has a constant value of 0 in block <XLXI_32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <level_0> has a constant value of 0 in block <XLXI_46>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <level_1> has a constant value of 0 in block <XLXI_46>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <level_2> has a constant value of 0 in block <XLXI_46>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <stack_manager>.
+The following registers are absorbed into counter <level>: 1 register on signal <level>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_stack> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 3-word x 11-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <store>         | high     |
+    |     addrA          | connected to signal <level<1:0>>    |          |
+    |     diA            | connected to signal <GND_11_o_GND_11_o_sub_3_OUT> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 3-word x 11-bit                     |          |
+    |     addrB          | connected to signal <n0015<1:0>>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <stack_manager> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 3x11-bit dual-port distributed RAM                    : 1
+# Adders/Subtractors                                   : 5
+ 11-bit adder                                          : 1
+ 11-bit addsub                                         : 1
+ 11-bit subtractor                                     : 2
+ 3-bit subtractor                                      : 1
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 15
+ Flip-Flops                                            : 15
+# Comparators                                          : 1
+ 3-bit comparator greater                              : 1
+# Multiplexers                                         : 6
+ 11-bit 2-to-1 multiplexer                             : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <cnt_0> has a constant value of 0 in block <voider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cnt_2> has a constant value of 0 in block <voider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_32/cnt_1> has a constant value of 0 in block <unionMagica>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_32/is_void> has a constant value of 0 in block <unionMagica>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_46/level_0> has a constant value of 0 in block <unionMagica>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_46/level_1> has a constant value of 0 in block <unionMagica>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <XLXI_46/level_2> of sequential type is unconnected in block <unionMagica>.
+
+Optimizing unit <unionMagica> ...
+
+Optimizing unit <pc_increment_v2_module> ...
+WARNING:Xst:2677 - Node <XLXI_46/Mram_stack2> of sequential type is unconnected in block <unionMagica>.
+WARNING:Xst:2677 - Node <XLXI_46/Mram_stack1> of sequential type is unconnected in block <unionMagica>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block unionMagica, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 11
+ Flip-Flops                                            : 11
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : unionMagica.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 46
+#      AND2                        : 1
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 10
+#      LUT2                        : 2
+#      LUT3                        : 2
+#      LUT4                        : 2
+#      LUT5                        : 2
+#      LUT6                        : 2
+#      MUXCY                       : 10
+#      XORCY                       : 11
+# FlipFlops/Latches                : 11
+#      FD                          : 11
+# IO Buffers                       : 28
+#      IBUF                        : 2
+#      OBUF                        : 26
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              11  out of  126800     0%  
+ Number of Slice LUTs:                   23  out of  63400     0%  
+    Number used as Logic:                23  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     23
+   Number with an unused Flip Flop:      12  out of     23    52%  
+   Number with an unused LUT:             0  out of     23     0%  
+   Number of fully used LUT-FF pairs:    11  out of     23    47%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          45
+ Number of bonded IOBs:                  28  out of    210    13%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+increment_OBUF(XLXI_9:O)           | NONE(*)(XLXI_44/pc_10) | 11    |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.701ns (Maximum Frequency: 588.062MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 2.126ns
+   Maximum combinational path delay: 1.911ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'increment_OBUF'
+  Clock period: 1.701ns (frequency: 588.062MHz)
+  Total number of paths / destination ports: 121 / 11
+-------------------------------------------------------------------------
+Delay:               1.701ns (Levels of Logic = 11)
+  Source:            XLXI_44/pc_1 (FF)
+  Destination:       XLXI_44/pc_10 (FF)
+  Source Clock:      increment_OBUF rising
+  Destination Clock: increment_OBUF rising
+
+  Data Path: XLXI_44/pc_1 to XLXI_44/pc_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.361   0.327  XLXI_44/pc_1 (XLXI_44/pc_1)
+     LUT1:I0->O            1   0.097   0.000  XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<1>_rt (XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<1>_rt)
+     MUXCY:S->O            1   0.353   0.000  XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<1> (XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<2> (XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<3> (XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<4> (XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<5> (XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<6> (XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<7> (XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<8> (XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<8>)
+     MUXCY:CI->O           0   0.023   0.000  XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<9> (XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_cy<9>)
+     XORCY:CI->O           1   0.370   0.000  XLXI_44/Mmux_pc[10]_GND_9_o_mux_6_OUT_rs_xor<10> (XLXI_44/pc[10]_GND_9_o_mux_6_OUT<10>)
+     FD:D                      0.008          XLXI_44/pc_10
+    ----------------------------------------
+    Total                      1.701ns (1.373ns logic, 0.327ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'increment_OBUF'
+  Total number of paths / destination ports: 56 / 11
+-------------------------------------------------------------------------
+Offset:              2.126ns (Levels of Logic = 3)
+  Source:            XLXI_44/pc_2 (FF)
+  Destination:       PC<10> (PAD)
+  Source Clock:      increment_OBUF rising
+
+  Data Path: XLXI_44/pc_2 to PC<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.361   0.721  XLXI_44/pc_2 (XLXI_44/pc_2)
+     LUT6:I0->O            4   0.097   0.570  XLXI_47/Msub_out_val_cy<6>11 (XLXI_47/Msub_out_val_cy<6>)
+     LUT5:I1->O            1   0.097   0.279  XLXI_47/Msub_out_val_xor<10>11 (PC_10_OBUF)
+     OBUF:I->O                 0.000          PC_10_OBUF (PC<10>)
+    ----------------------------------------
+    Total                      2.126ns (0.555ns logic, 1.571ns route)
+                                       (26.1% logic, 73.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Delay:               1.911ns (Levels of Logic = 4)
+  Source:            HOLD (PAD)
+  Destination:       increment (PAD)
+
+  Data Path: HOLD to increment
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.279  HOLD_IBUF (HOLD_IBUF)
+     INV:I->O              1   0.511   0.683  XLXI_18 (XLXN_79)
+     AND2:I1->O           12   0.107   0.330  XLXI_9 (increment_OBUF)
+     OBUF:I->O                 0.000          increment_OBUF (increment)
+    ----------------------------------------
+    Total                      1.911ns (0.619ns logic, 1.292ns route)
+                                       (32.4% logic, 67.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock increment_OBUF
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+increment_OBUF |    1.701|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.83 secs
+ 
+--> 
+
+Total memory usage is 413456 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   30 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

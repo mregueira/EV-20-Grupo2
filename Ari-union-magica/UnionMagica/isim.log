@@ -11,3 +11,14 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+<<<<<<< HEAD
+=======
+# restart
+# isim force add /unionMagica/CLK 0 -radix bin -value 1 -radix bin -time 5 ps -repeat 10 ps
+# isim force add /unionMagica/CLK 0 -radix bin -value 1 -radix bin -time 5 ps -repeat 10 ps
+# isim force add /unionMagica/HOLD 0 -radix bin
+# isim force add /unionMagica/HOLD 0 -radix bin
+# run 1000ps
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+>>>>>>> e6d2bf96b1047e4b02076fc7833bece77cb1894f

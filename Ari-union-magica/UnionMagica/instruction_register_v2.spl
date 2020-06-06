@@ -1,8 +1,9 @@
 [Inputs]
 increment
 is_void
-=in_ins[13:0]=
+=in_ins[21:0]=
 [Outputs]
+=out_ins_completa[21:0]=
 =out_ins[13:0]=
 [BiDir]
 [ATTRIBUTES]

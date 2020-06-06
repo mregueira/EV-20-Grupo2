@@ -21,33 +21,38 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
+<<<<<<< HEAD
 static const char *ng0 = "C:/EV-20-Grupo2/RAM/RAM_internal.v";
 static unsigned int ng1[] = {128U, 0U};
+=======
+static const char *ng0 = "C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/RAM/RAM_internal.v";
+static unsigned int ng1[] = {32768U, 0U};
+>>>>>>> e6d2bf96b1047e4b02076fc7833bece77cb1894f
 static int ng2[] = {0, 0};
 static int ng3[] = {1, 0};
 static int ng4[] = {2, 0};
-static unsigned int ng5[] = {8198U, 0U};
+static unsigned int ng5[] = {2098688U, 0U};
 static int ng6[] = {3, 0};
 static int ng7[] = {4, 0};
 static int ng8[] = {5, 0};
 static int ng9[] = {6, 0};
 static int ng10[] = {7, 0};
-static unsigned int ng11[] = {7172U, 0U};
+static unsigned int ng11[] = {1836032U, 0U};
 static int ng12[] = {8, 0};
 static unsigned int ng13[] = {0U, 0U};
 static int ng14[] = {9, 0};
-static unsigned int ng15[] = {8193U, 0U};
+static unsigned int ng15[] = {2097408U, 0U};
 static int ng16[] = {10, 0};
 static int ng17[] = {11, 0};
 static int ng18[] = {12, 0};
 static int ng19[] = {13, 0};
-static unsigned int ng20[] = {7354U, 0U};
+static unsigned int ng20[] = {1882624U, 0U};
 static int ng21[] = {14, 0};
 static int ng22[] = {15, 0};
 static int ng23[] = {16, 0};
 static int ng24[] = {17, 0};
 static int ng25[] = {18, 0};
-static unsigned int ng26[] = {384U, 0U};
+static unsigned int ng26[] = {98304U, 0U};
 static int ng27[] = {19, 0};
 static int ng28[] = {200, 0};
 static int ng29[] = {201, 0};
@@ -184,9 +189,9 @@ LAB11:    xsi_set_current_line(20, ng0);
     t19 = *((char **)t18);
     t20 = (t0 + 1936U);
     t21 = *((char **)t20);
-    xsi_vlog_generic_get_array_select_value(t13, 14, t11, t16, t19, 2, 1, t21, 11, 2);
+    xsi_vlog_generic_get_array_select_value(t13, 22, t11, t16, t19, 2, 1, t21, 11, 2);
     t20 = (t0 + 2496);
-    xsi_vlogvar_wait_assign_value(t20, t13, 0, 0, 14, 0LL);
+    xsi_vlogvar_wait_assign_value(t20, t13, 0, 0, 22, 0LL);
     goto LAB13;
 
 }

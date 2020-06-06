@@ -1,3 +1,0 @@
-MODULE MROM
-	SUBMODULE MicroinstructionROM
-		INSTANCE XLXI_7

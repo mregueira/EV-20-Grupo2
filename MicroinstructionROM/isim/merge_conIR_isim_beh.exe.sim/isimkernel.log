@@ -1,0 +1,30 @@
+Command line:
+   merge_conIR_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  2309
+
+Sat Jun 06 19:23:22 2020
+
+
+ Elaboration Time: 0.125 sec
+
+ Current Memory Usage: 858.73 Meg
+
+ Total Signals          : 2438
+ Total Nets             : 1055
+ Total Signal Drivers   : 451
+ Total Blocks           : 609
+ Total Primitive Blocks : 343
+ Total Processes        : 624
+ Total Traceable Variables  : 359
+ Total Scalar Nets and Variables : 33108
+Total Line Count : 934
+Total Line Count : 934
+
+ Total Simulation Time: 0.421875 sec
+
+ Current Memory Usage: 1016.02 Meg
+
+Sat Jun 06 19:40:58 2020
+

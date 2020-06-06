@@ -49,7 +49,6 @@
         <signal name="XLXN_77" />
         <signal name="instruction(13:0)" />
         <signal name="cbusrom(5:0)" />
-        <signal name="XLXN_83" />
         <signal name="XLXN_84" />
         <port polarity="Input" name="CLK2" />
         <port polarity="Input" name="ALU(3:0)" />
@@ -381,14 +380,10 @@
             <blockpin signalname="ABUS(4:0)" name="ABUS(4:0)" />
         </block>
         <block symbolname="fdce1" name="XLXI_33">
-            <blockpin signalname="XLXN_83" name="clk" />
+            <blockpin signalname="CLK2" name="clk" />
             <blockpin signalname="XLXN_84" name="chipEnable" />
             <blockpin signalname="XLXN_77" name="d" />
             <blockpin signalname="HOLD" name="q" />
-        </block>
-        <block symbolname="inv" name="XLXI_26">
-            <blockpin signalname="CLK2" name="I" />
-            <blockpin signalname="XLXN_83" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -781,13 +776,11 @@
         </instance>
         <branch name="CLK2">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2016" y="1984" type="branch" />
-            <wire x2="2016" y1="1984" y2="1984" x1="1952" />
-        </branch>
-        <instance x="1952" y="1952" name="XLXI_26" orien="R180" />
-        <branch name="XLXN_83">
             <wire x2="1632" y1="1840" y2="1840" x1="1616" />
             <wire x2="1616" y1="1840" y2="1984" x1="1616" />
             <wire x2="1728" y1="1984" y2="1984" x1="1616" />
+            <wire x2="1952" y1="1984" y2="1984" x1="1728" />
+            <wire x2="2016" y1="1984" y2="1984" x1="1952" />
         </branch>
         <instance x="1616" y="2256" name="XLXI_25" orien="M270">
         </instance>

@@ -1,0 +1,29 @@
+Command line:
+   RAM_internal_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  2186
+
+Sat Jun 06 16:45:39 2020
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 846.61 Meg
+
+ Total Signals          : 18
+ Total Nets             : 71
+ Total Signal Drivers   : 6
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 9
+ Total Traceable Variables  : 23
+ Total Scalar Nets and Variables : 22797
+Total Line Count : 48
+
+ Total Simulation Time: 0.125 sec
+
+ Current Memory Usage: 846.61 Meg
+
+Sat Jun 06 16:45:53 2020
+

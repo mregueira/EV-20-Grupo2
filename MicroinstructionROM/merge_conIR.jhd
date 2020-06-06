@@ -1,0 +1,5 @@
+MODULE merge_conIR
+	SUBMODULE unionMagica
+		INSTANCE XLXI_1
+	SUBMODULE merge
+		INSTANCE XLXI_2

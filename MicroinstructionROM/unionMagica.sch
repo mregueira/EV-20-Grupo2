@@ -24,15 +24,7 @@
         <signal name="XLXN_146(10:0)" />
         <signal name="W(15:0)" />
         <signal name="pre_load" />
-        <signal name="XLXN_147" />
-        <signal name="XLXN_148(15:0)" />
-        <signal name="XLXN_149(13:0)" />
-        <signal name="XLXN_150" />
-        <signal name="XLXN_151" />
         <signal name="INSTRUCTION_EXTENDIDA(21:0)" />
-        <signal name="XLXN_153" />
-        <signal name="XLXN_154" />
-        <signal name="XLXN_155" />
         <signal name="XLXN_156(21:0)" />
         <port polarity="Input" name="CY" />
         <port polarity="Input" name="CLK" />
@@ -147,7 +139,7 @@
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="RAM_internal">
-            <timestamp>2020-6-6T18:29:12</timestamp>
+            <timestamp>2020-6-6T19:44:39</timestamp>
             <rect width="304" x="64" y="-320" height="320" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />

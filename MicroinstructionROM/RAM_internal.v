@@ -22,10 +22,10 @@ always@(posedge clk) begin
 end
 initial begin // para pruebas setear la memoria
 	mem[0] = 22'b0000001000000000000000; // clear carry
-	mem[1] = 22'b0000001000000000000000; // clear carry
-	mem[2] = 22'b0000001000000000000000; // clear carry
-	mem[3] = 22'b1000000000011000000000; // jump to 6
-	mem[4] = 22'b0000001000000000000000; // clear carry
+	mem[1] = 22'b0000010000000000000000; // set carry
+	mem[2] = 22'b1110000000000000000000; // jump if carry a PC = 0
+	mem[3] = 22'b0000000000000000000000; // complemento w 
+	mem[4] = 22'b0000000000000000000000; // complemento w
 	mem[5] = 22'b0000001000000000000000; // clear carry
 	mem[6] = 22'b0000001000000000000000; // clear carry
 	mem[7] = 22'b0000001000000000000000; // clear carry

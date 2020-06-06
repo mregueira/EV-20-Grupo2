@@ -1,0 +1,1 @@
+sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog merge_conIR_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_conIR.sch 

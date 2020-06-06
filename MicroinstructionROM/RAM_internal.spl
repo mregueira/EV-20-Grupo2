@@ -3,9 +3,9 @@ clk
 wr_enb
 rd_enb
 =addr[10:0]=
-=data_in[13:0]=
+=data_in[21:0]=
 [Outputs]
-=data_out[13:0]=
+=data_out[21:0]=
 [BiDir]
 [ATTRIBUTES]
 VeriModel RAM_internal

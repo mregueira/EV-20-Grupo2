@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Decode.vf
-// /___/   /\     Timestamp : 06/05/2020 00:27:16
+// /___/   /\     Timestamp : 06/06/2020 19:22:41
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -53,7 +53,7 @@ module fdce1_MUSER_Decode(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_30" *) 
+   (* HU_SET = "XLXI_1_28" *) 
    IFD_HXILINX_Decode #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                               .D(d), 
                               .Q(q));

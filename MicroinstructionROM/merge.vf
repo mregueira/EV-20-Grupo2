@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : merge.vf
-// /___/   /\     Timestamp : 06/05/2020 00:27:02
+// /___/   /\     Timestamp : 06/06/2020 19:22:59
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -101,7 +101,7 @@ module fdce1_MUSER_merge(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_23" *) 
+   (* HU_SET = "XLXI_1_39" *) 
    IFD_HXILINX_merge #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                              .D(d), 
                              .Q(q));
@@ -556,7 +556,7 @@ module UC2_MUSER_merge(DecodeBusA,
    COMPARADOR5_MUSER_merge  XLXI_29 (.a(DecodeBusA[4:0]), 
                                     .b(RetireBusC[4:0]), 
                                     .iguales(XLXN_43));
-   (* HU_SET = "XLXI_30_24" *) 
+   (* HU_SET = "XLXI_30_40" *) 
    OR6_HXILINX_merge  XLXI_30 (.I0(XLXN_78), 
                               .I1(XLXN_49), 
                               .I2(XLXN_48), 
@@ -564,7 +564,7 @@ module UC2_MUSER_merge(DecodeBusA,
                               .I4(XLXN_46), 
                               .I5(XLXN_60), 
                               .O(hold));
-   (* HU_SET = "XLXI_41_25" *) 
+   (* HU_SET = "XLXI_41_41" *) 
    OR6_HXILINX_merge  XLXI_41 (.I0(RetireType[1]), 
                               .I1(RetireType[0]), 
                               .I2(ExecuteType[1]), 
@@ -1020,7 +1020,6 @@ module Tuberia_MUSER_merge(ALU,
    wire XLXN_60;
    wire XLXN_61;
    wire XLXN_77;
-   wire XLXN_83;
    wire XLXN_84;
    wire [6:0] TYPEOUT_DUMMY;
    wire [5:0] CBUSOUT_DUMMY;
@@ -1103,8 +1102,6 @@ module Tuberia_MUSER_merge(ALU,
                             .RetireBusC(CBUSOUT_DUMMY[5:0]), 
                             .RetireType(TYPEOUT_DUMMY[6:0]), 
                             .hold(XLXN_77));
-   INV  XLXI_26 (.I(CLK2), 
-                .O(XLXN_83));
    Decode_MUSER_merge  XLXI_32 (.cbusmir(cbusrom[5:0]), 
                                .CLK(CLK2), 
                                .instruction(instruction[13:0]), 
@@ -1112,7 +1109,7 @@ module Tuberia_MUSER_merge(ALU,
                                .CBUS(CBUS[5:0]), 
                                .DAdd(DAdd[9:0]));
    fdce1_MUSER_merge  XLXI_33 (.chipEnable(XLXN_84), 
-                              .clk(XLXN_83), 
+                              .clk(CLK2), 
                               .d(XLXN_77), 
                               .q(HOLD_DUMMY));
 endmodule

@@ -14,3 +14,9 @@ vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/RAM/RAM_internal
 spl2sym -intstyle ise -family artix7 -w RAM_internal.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/RAM_internal.sym 
 vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/RAM/RAM_internal.v -lang verilog -prj UnionMagica -o RAM_internal.spl -module RAM_internal -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
 spl2sym -intstyle ise -family artix7 -w RAM_internal.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/RAM_internal.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/RAM/RAM_internal.v -lang verilog -prj UnionMagica -o RAM_internal.spl -module RAM_internal -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w RAM_internal.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/RAM_internal.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/RAM/RAM_internal.v -lang verilog -prj UnionMagica -o RAM_internal.spl -module RAM_internal -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w RAM_internal.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/RAM_internal.sym 
+vhdtdtfi -lib work C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/RAM/RAM_internal.v -lang verilog -prj UnionMagica -o RAM_internal.spl -module RAM_internal -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w RAM_internal.spl C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/RAM_internal.sym 

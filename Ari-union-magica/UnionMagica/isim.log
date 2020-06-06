@@ -14,9 +14,8 @@ Finished circuit initialization process.
 # restart
 # isim force add /unionMagica/CLK 0 -radix bin -value 1 -radix bin -time 5 ps -repeat 10 ps
 # isim force add /unionMagica/CLK 0 -radix bin -value 1 -radix bin -time 5 ps -repeat 10 ps
-# isim force add /unionMagica/CY 0 -radix bin
 # isim force add /unionMagica/HOLD 0 -radix bin
-# isim force add /unionMagica/W 0000000000000000 -radix bin
+# isim force add /unionMagica/HOLD 0 -radix bin
 # run 1000ps
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.

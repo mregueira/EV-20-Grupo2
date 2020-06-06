@@ -18,18 +18,17 @@ Compiling module AND2
 Compiling module VCC
 Compiling module GND
 Compiling module INV
-Compiling module RAM_internal
-Compiling module instruction_register_v2
 Compiling module voider
 Compiling module pc_increment_v2_module
 Compiling module bloqueSaltos
 Compiling module stack_manager
 Compiling module rest2
+Compiling module RAM_internal
+Compiling module instruction_register_v2
 Compiling module unionMagica
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 Compiled 13 Verilog Units
 Built simulation executable C:/Users/Ariel/Documents/GitHub/EV-20-Grupo2/Ari-union-magica/UnionMagica/unionMagica_isim_beh.exe
-Fuse Memory Usage: 28096 KB
-Fuse CPU Usage: 374 ms
+Fuse Memory Usage: 28780 KB
+Fuse CPU Usage: 390 ms

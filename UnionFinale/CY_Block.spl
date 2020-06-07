@@ -1,0 +1,10 @@
+[Inputs]
+CY_out
+CLK_CY
+=ALUC[3:0]=
+[Outputs]
+CY
+[BiDir]
+[ATTRIBUTES]
+VeriModel CY_Block
+

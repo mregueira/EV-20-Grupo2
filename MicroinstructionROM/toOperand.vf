@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : toOperand.vf
-// /___/   /\     Timestamp : 06/07/2020 00:37:56
+// /___/   /\     Timestamp : 06/07/2020 18:08:18
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/toOperand.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/toOperand.sch
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/toOperand.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/toOperand.sch
 //Design Name: toOperand
 //Device: artix7
 //Purpose:
@@ -53,7 +53,7 @@ module fdce1_MUSER_toOperand(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_36" *) 
+   (* HU_SET = "XLXI_1_30" *) 
    IFD_HXILINX_toOperand #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                                  .D(d), 
                                  .Q(q));

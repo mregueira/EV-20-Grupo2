@@ -1,50 +1,124 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_conIR_isim_beh.exe -prj C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_conIR_beh.prj work.merge_conIR work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main_isim_beh.exe -prj C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main_beh.prj work.CPU_main work.glbl 
 ISim P.20131013 (signature 0x7708f090)
-Number of CPUs detected in this system: 4
-Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux1.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux2.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/fdce1.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux4.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH4.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux5.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH5.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux6.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH6.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH1.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux7.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/mux10.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH7.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH2.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH10.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/COMPARADOR5.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/UC2.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/UC1.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/toRetire.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/toOperand.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/toExecute.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir/MicroinstructionROMv2.v" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/Decode.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/voider.v" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/Tuberia.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/stack_manager.v" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/rest2.v" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/RAM_internal.v" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/pc_increment_v2.v" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/instruction_register_v2.v" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/bloqueSaltos.v" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/unionMagica.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge.vf" into library work
-Analyzing Verilog file "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_conIR.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/reg_to_bus_1bit_sel.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/mux1.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux_bus16b_sel1b.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux1b_w_en.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux1b.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/reg_to_bus_2bit_sel.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/mux2.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/fdce1.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux_bus16b_sel2b.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux2b_w_en.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/reg_to_bus_3bit_sel.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/mux4.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/LATCH4.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux_bus16b_sel3b.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux3b_w_en.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/reg_to_bus_4bit_sel.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/mux5.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/LATCH5.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux_bus16b_sel4b.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux4b_w_en.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/reg_to_bus_5bit_sel.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/mux6.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/LATCH6.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/LATCH1.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux_bus16b_sel5b.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux5b_w_en.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/reg_to_bus_6bit_sel.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/mux7.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/mux10.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/LATCH7.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/LATCH2.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/LATCH10.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ffd16_w_en.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux_bus16b_sel6b.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/demux6b_w_en.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/COMPARADOR5.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/bidir_port.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/UC2.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/UC1.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/toRetire.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/toOperand.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/toExecute.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/jsr_backup_reg.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir/MicroinstructionROMv2.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/Decode.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/bloque_3.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/bloque2.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/voider.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/Tuberia.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/stack_manager.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/rest2.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/register_bank.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/RAM_internal_Marce.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/RAM_internal.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/pc_increment_v2.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/OR_Bus16.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/Mux4Bus16.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/Mux2Bus16.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/MROM.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/instruction_register_v2.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/bloqueSaltos.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/BiMux2Bus16.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/AND_Bus16.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/unionMagica.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/Shifter.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/register_bank_easy.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/RAM_main.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ALU_main.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CY_Block.v" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ALU_Reg_Join.vf" into library work
+Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main.vf" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module AND2
-Compiling module VCC
 Compiling module GND
+Compiling module CY_Block
+Compiling module IFD_HXILINX_CPU_main
+Compiling module AND2
+Compiling module fdce1_MUSER_CPU_main
+Compiling module LATCH4_MUSER_CPU_main
+Compiling module LATCH1_MUSER_CPU_main
+Compiling module LATCH2_MUSER_CPU_main
+Compiling module LATCH5_MUSER_CPU_main
+Compiling module LATCH6_MUSER_CPU_main
+Compiling module LATCH7_MUSER_CPU_main
+Compiling module toExecute_MUSER_CPU_main
+Compiling module toRetire_MUSER_CPU_main
 Compiling module INV
+Compiling module LATCH10_MUSER_CPU_main
+Compiling module toOperand_MUSER_CPU_main
+Compiling module OR2
+Compiling module AND3
+Compiling module OR3
+Compiling module XOR2
+Compiling module AND4
+Compiling module COMPARADOR5_MUSER_CPU_main
+Compiling module OR6_HXILINX_CPU_main
+Compiling module UC2_MUSER_CPU_main
+Compiling module MUXCY
+Compiling module mux1_MUSER_CPU_main
+Compiling module mux2_MUSER_CPU_main
+Compiling module mux4_MUSER_CPU_main
+Compiling module mux5_MUSER_CPU_main
+Compiling module Decode_MUSER_CPU_main
+Compiling module mux6_MUSER_CPU_main
+Compiling module mux7_MUSER_CPU_main
+Compiling module mux10_MUSER_CPU_main
+Compiling module UC1_MUSER_CPU_main
+Compiling module Tuberia_MUSER_CPU_main
+Compiling module DIST_MEM_GEN_V7_2(C_FAMILY="arti...
+Compiling module MicroinstructionROMv2
+Compiling module MROM_MUSER_CPU_main
+Compiling module merge_MUSER_CPU_main
+Compiling module VCC
 Compiling module voider
 Compiling module pc_increment_v2_module
 Compiling module bloqueSaltos
@@ -52,47 +126,56 @@ Compiling module stack_manager
 Compiling module rest2
 Compiling module RAM_internal
 Compiling module instruction_register_v2
-Compiling module unionMagica_MUSER_merge_conIR
-Compiling module IFD_HXILINX_merge_conIR
-Compiling module fdce1_MUSER_merge_conIR
-Compiling module LATCH4_MUSER_merge_conIR
-Compiling module LATCH1_MUSER_merge_conIR
-Compiling module LATCH2_MUSER_merge_conIR
-Compiling module LATCH5_MUSER_merge_conIR
-Compiling module LATCH6_MUSER_merge_conIR
-Compiling module LATCH7_MUSER_merge_conIR
-Compiling module toExecute_MUSER_merge_conIR
-Compiling module toRetire_MUSER_merge_conIR
-Compiling module LATCH10_MUSER_merge_conIR
-Compiling module toOperand_MUSER_merge_conIR
-Compiling module OR2
-Compiling module AND3
-Compiling module OR3
-Compiling module XOR2
-Compiling module AND4
-Compiling module COMPARADOR5_MUSER_merge_conIR
-Compiling module OR6_HXILINX_merge_conIR
-Compiling module UC2_MUSER_merge_conIR
-Compiling module MUXCY
-Compiling module mux1_MUSER_merge_conIR
-Compiling module mux2_MUSER_merge_conIR
-Compiling module mux4_MUSER_merge_conIR
-Compiling module mux5_MUSER_merge_conIR
-Compiling module Decode_MUSER_merge_conIR
-Compiling module mux6_MUSER_merge_conIR
-Compiling module mux7_MUSER_merge_conIR
-Compiling module mux10_MUSER_merge_conIR
-Compiling module UC1_MUSER_merge_conIR
-Compiling module Tuberia_MUSER_merge_conIR
-Compiling module DIST_MEM_GEN_V7_2(C_FAMILY="arti...
-Compiling module MicroinstructionROMv2
-Compiling module MROM_MUSER_merge_conIR
-Compiling module merge_MUSER_merge_conIR
-Compiling module merge_conIR
+Compiling module unionMagica_MUSER_CPU_main
+Compiling module merge_conIR_MUSER_CPU_main
+Compiling module D4_16E_HXILINX_CPU_main
+Compiling module AND_Bus16
+Compiling module Mux4Bus16
+Compiling module OR_Bus16
+Compiling module Mux2Bus16
+Compiling module ADD16_HXILINX_CPU_main
+Compiling module INV16_HXILINX_CPU_main
+Compiling module OR4
+Compiling module AND5
+Compiling module AND6_HXILINX_CPU_main
+Compiling module ALU_main_MUSER_CPU_main
+Compiling module Shifter
+Compiling module BiMux2Bus16
+Compiling module RAM_internal_Marce
+Compiling module RAM_main_MUSER_CPU_main
+Compiling module IFD16_HXILINX_CPU_main
+Compiling module ffd16_w_en_MUSER_CPU_main
+Compiling module demux1b_w_en
+Compiling module demux1b
+Compiling module demux2b_w_en_MUSER_CPU_main
+Compiling module demux3b_w_en_MUSER_CPU_main
+Compiling module demux4b_w_en_MUSER_CPU_main
+Compiling module demux5b_w_en_MUSER_CPU_main
+Compiling module demux6b_w_en_MUSER_CPU_main
+Compiling module reg_to_bus_1bit_sel
+Compiling module bidir_port
+Compiling module demux_bus16b_sel1b
+Compiling module demux_bus16b_sel2b_MUSER_CPU_mai...
+Compiling module demux_bus16b_sel3b_MUSER_CPU_mai...
+Compiling module demux_bus16b_sel4b_MUSER_CPU_mai...
+Compiling module demux_bus16b_sel5b_MUSER_CPU_mai...
+Compiling module demux_bus16b_sel6b_MUSER_CPU_mai...
+Compiling module bloque2_MUSER_CPU_main
+Compiling module reg_to_bus_2bit_sel_MUSER_CPU_ma...
+Compiling module reg_to_bus_3bit_sel_MUSER_CPU_ma...
+Compiling module reg_to_bus_4bit_sel_MUSER_CPU_ma...
+Compiling module reg_to_bus_5bit_sel_MUSER_CPU_ma...
+Compiling module reg_to_bus_6bit_sel_MUSER_CPU_ma...
+Compiling module bloque_3_MUSER_CPU_main
+Compiling module jsr_backup_reg_MUSER_CPU_main
+Compiling module register_bank_MUSER_CPU_main
+Compiling module register_bank_easy_MUSER_CPU_mai...
+Compiling module ALU_Reg_Join_MUSER_CPU_main
+Compiling module CPU_main
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 8 sub-compilation(s) to finish...
-Compiled 49 Verilog Units
-Built simulation executable C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_conIR_isim_beh.exe
-Fuse Memory Usage: 32084 KB
-Fuse CPU Usage: 1484 ms
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\CPU_main_isim_beh.exe.sim\libPortability.dll".
+Compiled 94 Verilog Units
+Built simulation executable C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main_isim_beh.exe
+Fuse Memory Usage: 38000 KB
+Fuse CPU Usage: 1749 ms

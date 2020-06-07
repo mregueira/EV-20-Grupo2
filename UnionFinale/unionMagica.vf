@@ -1,0 +1,109 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : unionMagica.vf
+// /___/   /\     Timestamp : 06/07/2020 17:22:32
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/unionMagica.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/unionMagica.sch
+//Design Name: unionMagica
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module unionMagica(CLK, 
+                   CY, 
+                   HOLD, 
+                   W, 
+                   increment, 
+                   INSTRUCTION, 
+                   INSTRUCTION_EXTENDIDA, 
+                   is_void, 
+                   levels_Out, 
+                   PC);
+
+    input CLK;
+    input CY;
+    input HOLD;
+    input [15:0] W;
+   output increment;
+   output [13:0] INSTRUCTION;
+   output [21:0] INSTRUCTION_EXTENDIDA;
+   output is_void;
+   output [2:0] levels_Out;
+   output [10:0] PC;
+   
+   wire [10:0] D;
+   wire load;
+   wire pre_load;
+   wire [9:0] S;
+   wire [10:0] STACK_IN;
+   wire store;
+   wire XLXN_75;
+   wire XLXN_76;
+   wire XLXN_79;
+   wire [10:0] XLXN_146;
+   wire [21:0] XLXN_156;
+   wire is_void_DUMMY;
+   wire [13:0] INSTRUCTION_DUMMY;
+   wire increment_DUMMY;
+   
+   assign increment = increment_DUMMY;
+   assign INSTRUCTION[13:0] = INSTRUCTION_DUMMY[13:0];
+   assign is_void = is_void_DUMMY;
+   AND2  XLXI_9 (.I0(CLK), 
+                .I1(XLXN_79), 
+                .O(increment_DUMMY));
+   VCC  XLXI_13 (.P(XLXN_75));
+   GND  XLXI_14 (.G(XLXN_76));
+   INV  XLXI_18 (.I(HOLD), 
+                .O(XLXN_79));
+   voider  XLXI_32 (.clk(increment_DUMMY), 
+                   .is_load(pre_load), 
+                   .is_void(is_void_DUMMY));
+   pc_increment_v2_module  XLXI_44 (.D(D[10:0]), 
+                                   .increment(increment_DUMMY), 
+                                   .is_BSR(store), 
+                                   .is_RET(load), 
+                                   .load(pre_load), 
+                                   .S(S[9:0]), 
+                                   .stack_in(STACK_IN[10:0]), 
+                                   .Q(XLXN_146[10:0]));
+   bloqueSaltos  XLXI_45 (.B(INSTRUCTION_DUMMY[13:0]), 
+                         .CY(CY), 
+                         .W0to15(W[15:0]), 
+                         .D(D[10:0]), 
+                         .is_BSR(store), 
+                         .is_RET(load), 
+                         .pre_load(pre_load), 
+                         .S(S[9:0]));
+   stack_manager  XLXI_46 (.clk(increment_DUMMY), 
+                          .in_val(XLXN_146[10:0]), 
+                          .load(load), 
+                          .store(store), 
+                          .level_out(levels_Out[2:0]), 
+                          .out_val(STACK_IN[10:0]));
+   rest2  XLXI_47 (.in_val(XLXN_146[10:0]), 
+                  .out_val(PC[10:0]));
+   RAM_internal  XLXI_50 (.addr(), 
+                         .clk(increment_DUMMY), 
+                         .data_in(), 
+                         .rd_enb(XLXN_75), 
+                         .wr_enb(XLXN_76), 
+                         .data_out());
+   instruction_register_v2  XLXI_52 (.increment(increment_DUMMY), 
+                                    .in_ins(XLXN_156[21:0]), 
+                                    .is_void(is_void_DUMMY), 
+                                    .out_ins(INSTRUCTION_DUMMY[13:0]), 
+                                    
+         .out_ins_completa(INSTRUCTION_EXTENDIDA[21:0]));
+endmodule

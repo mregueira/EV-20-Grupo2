@@ -8,28 +8,28 @@
 <msg type="info" file="sim" num="172" delta="old" >Generating IP...
 </msg>
 
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Unable to find C:\Users\PC 64\Desktop\Luciano Games\IK Electronic</arg>
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Unable to find C:\Users\PC</arg>
 </msg>
 
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Engineering\Electronica V\MicroinstructionROM\Microinstructions.coe</arg>
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   64\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\Microinstructions.coe</arg>
 </msg>
 
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Coregen is looking for C:\Users\PC 64\Desktop\Luciano Games\IK Electronic</arg>
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Coregen is looking for C:\Users\PC</arg>
 </msg>
 
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Engineering\Electronica V\MicroinstructionROM\Microinstructions.coe</arg>
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   64\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\Microinstructions.coe</arg>
 </msg>
 
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Unable to find C:\Users\PC 64\Desktop\Luciano Games\IK Electronic</arg>
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Unable to find C:\Users\PC</arg>
 </msg>
 
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Engineering\Electronica V\MicroinstructionROM\Microinstructions.coe</arg>
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   64\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\Microinstructions.coe</arg>
 </msg>
 
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Coregen is looking for C:\Users\PC 64\Desktop\Luciano Games\IK Electronic</arg>
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Coregen is looking for C:\Users\PC</arg>
 </msg>
 
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Engineering\Electronica V\MicroinstructionROM\Microinstructions.coe</arg>
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   64\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\Microinstructions.coe</arg>
 </msg>
 
 <msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">An invalid core configuration has been detected during</arg>

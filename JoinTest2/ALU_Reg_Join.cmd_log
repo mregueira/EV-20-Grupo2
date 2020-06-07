@@ -5,3 +5,5 @@ xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest/
 xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_Reg_Join.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_Reg_Join.syr" 
 xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_Reg_Join.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_Reg_Join.syr" 
 sch2sym -intstyle ise -family artix7 -w -refsym ALU_Reg_Join C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_Reg_Join.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_Reg_Join.sym 
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_Reg_Join.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_Reg_Join.syr" 
+sch2sym -intstyle ise -family artix7 -w -refsym ALU_Reg_Join C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_Reg_Join.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/JoinTest2/ALU_Reg_Join.sym 

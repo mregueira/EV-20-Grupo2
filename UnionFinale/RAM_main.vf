@@ -1,0 +1,50 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : RAM_main.vf
+// /___/   /\     Timestamp : 06/07/2020 17:22:46
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/RAM_main.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/RAM_main.sch
+//Design Name: RAM_main
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module RAM_main(CLK, 
+                GND, 
+                MemADDR, 
+                Rd, 
+                Wr, 
+                ToFromW);
+
+    input CLK;
+    input [15:0] GND;
+    input [9:0] MemADDR;
+    input Rd;
+    input Wr;
+    inout [15:0] ToFromW;
+   
+   wire [15:0] XLXN_23;
+   
+   RAM_internal  XLXI_1 (.addr(MemADDR[9:0]), 
+                        .clk(CLK), 
+                        .data_in(ToFromW[15:0]), 
+                        .rd_enb(Rd), 
+                        .wr_enb(Wr), 
+                        .data_out(XLXN_23[15:0]));
+   BiMux2Bus16  XLXI_2 (.HiZ(Wr), 
+                       .IN_0(XLXN_23[15:0]), 
+                       .IN_1(GND[15:0]), 
+                       .S(Wr), 
+                       .Y(ToFromW[15:0]));
+endmodule

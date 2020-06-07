@@ -1,0 +1,47 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MROM.vf
+// /___/   /\     Timestamp : 06/07/2020 17:22:37
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/MROM.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/MROM.sch
+//Design Name: MROM
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MROM(Bus_B, 
+            ALUC, 
+            B_Bus, 
+            C_Bus, 
+            KMx, 
+            MEM, 
+            SH, 
+            Ti);
+
+    input [6:0] Bus_B;
+   output [3:0] ALUC;
+   output [5:0] B_Bus;
+   output [5:0] C_Bus;
+   output KMx;
+   output [1:0] MEM;
+   output [1:0] SH;
+   output [6:0] Ti;
+   
+   wire [6:0] Bus_B_DUMMY;
+   
+   assign Bus_B_DUMMY[6:0] = Bus_B[6:0];
+   MicroinstructionROMv2  XLXI_9 (.a(Bus_B_DUMMY[6:0]), 
+                                 .spo({ALUC[3:0], SH[1:0], KMx, MEM[1:0], 
+         B_Bus[5:0], C_Bus[5:0], Ti[6:0]}));
+endmodule

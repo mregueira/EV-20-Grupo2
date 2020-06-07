@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : fdce1.vf
-// /___/   /\     Timestamp : 06/07/2020 00:36:50
+// /___/   /\     Timestamp : 06/07/2020 18:08:02
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/fdce1.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/fdce1.sch
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/fdce1.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/fdce1.sch
 //Design Name: fdce1
 //Device: artix7
 //Purpose:
@@ -53,7 +53,7 @@ module fdce1(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_5" *) 
+   (* HU_SET = "XLXI_1_19" *) 
    IFD_HXILINX_fdce1 #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                              .D(d), 
                              .Q(q));

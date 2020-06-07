@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ALU_main.vf
-// /___/   /\     Timestamp : 06/06/2020 19:00:21
+// /___/   /\     Timestamp : 06/07/2020 14:50:57
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -209,7 +209,7 @@ module ALU_main(A,
    wire _B;
    wire _0xFFFF;
    
-   (* HU_SET = "ALUC_Decoder_7" *) 
+   (* HU_SET = "ALUC_Decoder_0" *) 
    D4_16E_HXILINX_ALU_main  ALUC_Decoder (.A0(ALUC[0]), 
                                          .A1(ALUC[1]), 
                                          .A2(ALUC[2]), 
@@ -260,7 +260,7 @@ module ALU_main(A,
                          .IN_1(AdderOut[15:0]), 
                          .S(OP_SEL_2), 
                          .Y(Z[15:0]));
-   (* HU_SET = "XLXI_1_8" *) 
+   (* HU_SET = "XLXI_1_1" *) 
    ADD16_HXILINX_ALU_main  XLXI_1 (.A(XLXN_5[15:0]), 
                                   .B(XLXN_6[15:0]), 
                                   .CI(XLXN_2), 
@@ -279,10 +279,10 @@ module ALU_main(A,
    OR2  XLXI_6 (.I0(CO_B), 
                .I1(XLXN_4), 
                .O(CO));
-   (* HU_SET = "XLXI_9_9" *) 
+   (* HU_SET = "XLXI_9_2" *) 
    INV16_HXILINX_ALU_main  XLXI_9 (.I(A[15:0]), 
                                   .O(XLXN_8[15:0]));
-   (* HU_SET = "XLXI_10_10" *) 
+   (* HU_SET = "XLXI_10_3" *) 
    INV16_HXILINX_ALU_main  XLXI_10 (.I(B[15:0]), 
                                    .O(XLXN_143[15:0]));
    OR2  XLXI_86 (.I0(A_p_B_p_CY), 
@@ -345,7 +345,7 @@ module ALU_main(A,
                  .O(XLXN_347));
    INV  XLXI_142 (.I(m_B), 
                  .O(XLXN_348));
-   (* HU_SET = "XLXI_143_11" *) 
+   (* HU_SET = "XLXI_143_4" *) 
    AND6_HXILINX_ALU_main  XLXI_143 (.I0(XLXN_348), 
                                    .I1(XLXN_347), 
                                    .I2(XLXN_346), 

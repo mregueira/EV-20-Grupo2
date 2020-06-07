@@ -1,0 +1,4 @@
+vhdtdtfi -lib work C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/RAM_internal_Marce.v -lang verilog -prj MicroinstructionROM -o RAM_internal_Marce.spl -module RAM_internal_Marce -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w RAM_internal_Marce.spl C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/RAM_internal_Marce.sym 
+vhdtdtfi -lib work C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/RAM_internal_Marce.v -lang verilog -prj MicroinstructionROM -o RAM_internal_Marce.spl -module RAM_internal_Marce -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w RAM_internal_Marce.spl C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/RAM_internal_Marce.sym 

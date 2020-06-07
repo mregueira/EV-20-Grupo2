@@ -1,1 +1,5 @@
 sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog merge_conIR_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_conIR.sch 
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.syr" 
+sch2sym -intstyle ise -family artix7 -w -refsym merge_conIR C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym merge_conIR C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym merge_conIR C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.sch C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.sym 

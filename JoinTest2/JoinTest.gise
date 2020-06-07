@@ -39,8 +39,8 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_Reg_Join_ALU_Reg_Join_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU_Reg_Join_ALU_Reg_Join_sch_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ALU_Reg_Join_ALU_Reg_Join_sch_tb_isim_beh.wdb"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_Reg_Join_ALU_Reg_Join_sch_tb_stx_beh.prj"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_Reg_Join_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_Reg_Join_ALU_Reg_Join_sch_tb_stx_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_Reg_Join_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="ALU_Reg_Join_envsettings.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU_Reg_Join_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ALU_Reg_Join_isim_beh.wdb"/>
@@ -241,6 +241,8 @@
     <transform xil_pn:end_ts="1591480868" xil_pn:in_ck="-3578738753619391330" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5456022138211903580" xil_pn:start_ts="1591480806">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_Reg_Join.vf"/>
       <outfile xil_pn:name="ALU_main.vf"/>
       <outfile xil_pn:name="RAM_main.vf"/>
@@ -273,6 +275,10 @@
     <transform xil_pn:end_ts="1591480868" xil_pn:in_ck="-8698020994179389372" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591480868">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_Reg_Join.vf"/>
       <outfile xil_pn:name="ALU_main.vf"/>
       <outfile xil_pn:name="AND_Bus16.v"/>
@@ -314,7 +320,10 @@
     <transform xil_pn:end_ts="1591480873" xil_pn:in_ck="-8698020994179389372" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5704425561895372018" xil_pn:start_ts="1591480868">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_Reg_Join_beh.prj"/>
       <outfile xil_pn:name="ALU_Reg_Join_isim_beh.exe"/>
@@ -326,6 +335,7 @@
     <transform xil_pn:end_ts="1591480873" xil_pn:in_ck="-1929777438452892530" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6424935641811534997" xil_pn:start_ts="1591480873">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_Reg_Join_isim_beh.wdb"/>
@@ -336,13 +346,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591478440" xil_pn:in_ck="-3578738753619391330" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5262677913076227996" xil_pn:start_ts="1591478407">
+    <transform xil_pn:end_ts="1591552320" xil_pn:in_ck="-3578738753619391330" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5262677913076227996" xil_pn:start_ts="1591552255">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_Reg_Join.vf"/>
       <outfile xil_pn:name="ALU_main.vf"/>
       <outfile xil_pn:name="RAM_main.vf"/>
@@ -383,22 +389,15 @@
     <transform xil_pn:end_ts="1591301976" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1591301976">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1591301976" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-3199006475718817067" xil_pn:start_ts="1591301976">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1591478459" xil_pn:in_ck="-2071600981153214577" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="7179259787621256449" xil_pn:start_ts="1591478440">
+    <transform xil_pn:end_ts="1591552339" xil_pn:in_ck="-2071600981153214577" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="7179259787621256449" xil_pn:start_ts="1591552320">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_Reg_Join.jhd"/>
       <outfile xil_pn:name="ALU_Reg_Join.lso"/>
       <outfile xil_pn:name="ALU_Reg_Join.ngc"/>
@@ -408,6 +407,8 @@
       <outfile xil_pn:name="ALU_Reg_Join.syr"/>
       <outfile xil_pn:name="ALU_Reg_Join.xst"/>
       <outfile xil_pn:name="ALU_Reg_Join_ALU_Reg_Join_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="ALU_Reg_Join_ALU_Reg_Join_sch_tb_stx_beh.prj"/>
+      <outfile xil_pn:name="ALU_Reg_Join_beh.prj"/>
       <outfile xil_pn:name="ALU_Reg_Join_xst.xrpt"/>
       <outfile xil_pn:name="ALU_main.ngr"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -418,7 +419,6 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
   </transforms>
 

@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : merge_conIR.vf
-// /___/   /\     Timestamp : 06/07/2020 00:37:32
+// /___/   /\     Timestamp : 06/07/2020 18:08:34
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_conIR.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_conIR.sch
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.sch
 //Design Name: merge_conIR
 //Device: artix7
 //Purpose:
@@ -58,6 +58,95 @@ module IFD_HXILINX_merge_conIR(Q, C, D);
 endmodule
 `timescale 1ns / 1ps
 
+module unionMagica_MUSER_merge_conIR(CLK, 
+                                     CY, 
+                                     HOLD, 
+                                     W, 
+                                     increment, 
+                                     INSTRUCTION, 
+                                     INSTRUCTION_EXTENDIDA, 
+                                     is_void, 
+                                     levels_Out, 
+                                     PC);
+
+    input CLK;
+    input CY;
+    input HOLD;
+    input [15:0] W;
+   output increment;
+   output [13:0] INSTRUCTION;
+   output [21:0] INSTRUCTION_EXTENDIDA;
+   output is_void;
+   output [2:0] levels_Out;
+   output [10:0] PC;
+   
+   wire [10:0] D;
+   wire load;
+   wire pre_load;
+   wire [9:0] S;
+   wire [10:0] STACK_IN;
+   wire store;
+   wire XLXN_75;
+   wire XLXN_76;
+   wire XLXN_79;
+   wire [10:0] XLXN_146;
+   wire [21:0] XLXN_156;
+   wire is_void_DUMMY;
+   wire [13:0] INSTRUCTION_DUMMY;
+   wire increment_DUMMY;
+   
+   assign increment = increment_DUMMY;
+   assign INSTRUCTION[13:0] = INSTRUCTION_DUMMY[13:0];
+   assign is_void = is_void_DUMMY;
+   AND2  XLXI_9 (.I0(CLK), 
+                .I1(XLXN_79), 
+                .O(increment_DUMMY));
+   VCC  XLXI_13 (.P(XLXN_75));
+   GND  XLXI_14 (.G(XLXN_76));
+   INV  XLXI_18 (.I(HOLD), 
+                .O(XLXN_79));
+   voider  XLXI_32 (.clk(increment_DUMMY), 
+                   .is_load(pre_load), 
+                   .is_void(is_void_DUMMY));
+   pc_increment_v2_module  XLXI_44 (.D(D[10:0]), 
+                                   .increment(increment_DUMMY), 
+                                   .is_BSR(store), 
+                                   .is_RET(load), 
+                                   .load(pre_load), 
+                                   .S(S[9:0]), 
+                                   .stack_in(STACK_IN[10:0]), 
+                                   .Q(XLXN_146[10:0]));
+   bloqueSaltos  XLXI_45 (.B(INSTRUCTION_DUMMY[13:0]), 
+                         .CY(CY), 
+                         .W0to15(W[15:0]), 
+                         .D(D[10:0]), 
+                         .is_BSR(store), 
+                         .is_RET(load), 
+                         .pre_load(pre_load), 
+                         .S(S[9:0]));
+   stack_manager  XLXI_46 (.clk(increment_DUMMY), 
+                          .in_val(XLXN_146[10:0]), 
+                          .load(load), 
+                          .store(store), 
+                          .level_out(levels_Out[2:0]), 
+                          .out_val(STACK_IN[10:0]));
+   rest2  XLXI_47 (.in_val(XLXN_146[10:0]), 
+                  .out_val(PC[10:0]));
+   RAM_internal  XLXI_50 (.addr(XLXN_146[10:0]), 
+                         .clk(increment_DUMMY), 
+                         .data_in(), 
+                         .rd_enb(XLXN_75), 
+                         .wr_enb(XLXN_76), 
+                         .data_out(XLXN_156[21:0]));
+   instruction_register_v2  XLXI_52 (.increment(increment_DUMMY), 
+                                    .in_ins(XLXN_156[21:0]), 
+                                    .is_void(is_void_DUMMY), 
+                                    .out_ins(INSTRUCTION_DUMMY[13:0]), 
+                                    
+         .out_ins_completa(INSTRUCTION_EXTENDIDA[21:0]));
+endmodule
+`timescale 1ns / 1ps
+
 module MROM_MUSER_merge_conIR(Bus_B, 
                               ALUC, 
                               B_Bus, 
@@ -97,7 +186,7 @@ module fdce1_MUSER_merge_conIR(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_25" *) 
+   (* HU_SET = "XLXI_1_42" *) 
    IFD_HXILINX_merge_conIR #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                                    .D(d), 
                                    .Q(q));
@@ -572,7 +661,7 @@ module UC2_MUSER_merge_conIR(DecodeBusA,
    COMPARADOR5_MUSER_merge_conIR  XLXI_29 (.a(DecodeBusA[4:0]), 
                                           .b(RetireBusC[4:0]), 
                                           .iguales(XLXN_43));
-   (* HU_SET = "XLXI_30_26" *) 
+   (* HU_SET = "XLXI_30_43" *) 
    OR6_HXILINX_merge_conIR  XLXI_30 (.I0(XLXN_78), 
                                     .I1(XLXN_49), 
                                     .I2(XLXN_48), 
@@ -580,7 +669,7 @@ module UC2_MUSER_merge_conIR(DecodeBusA,
                                     .I4(XLXN_46), 
                                     .I5(XLXN_60), 
                                     .O(hold));
-   (* HU_SET = "XLXI_41_27" *) 
+   (* HU_SET = "XLXI_41_44" *) 
    OR6_HXILINX_merge_conIR  XLXI_41 (.I0(RetireType[1]), 
                                     .I1(RetireType[0]), 
                                     .I2(ExecuteType[1]), 
@@ -1160,92 +1249,6 @@ module merge_MUSER_merge_conIR(clk,
 endmodule
 `timescale 1ns / 1ps
 
-module unionMagica_MUSER_merge_conIR(CLK, 
-                                     CY, 
-                                     HOLD, 
-                                     W, 
-                                     increment, 
-                                     INSTRUCTION, 
-                                     INSTRUCTION_EXTENDIDA, 
-                                     is_void, 
-                                     PC);
-
-    input CLK;
-    input CY;
-    input HOLD;
-    input [15:0] W;
-   output increment;
-   output [13:0] INSTRUCTION;
-   output [21:0] INSTRUCTION_EXTENDIDA;
-   output is_void;
-   output [10:0] PC;
-   
-   wire [10:0] D;
-   wire load;
-   wire pre_load;
-   wire [9:0] S;
-   wire [10:0] STACK_IN;
-   wire store;
-   wire XLXN_75;
-   wire XLXN_76;
-   wire XLXN_79;
-   wire [10:0] XLXN_146;
-   wire [21:0] XLXN_156;
-   wire is_void_DUMMY;
-   wire [13:0] INSTRUCTION_DUMMY;
-   wire increment_DUMMY;
-   
-   assign increment = increment_DUMMY;
-   assign INSTRUCTION[13:0] = INSTRUCTION_DUMMY[13:0];
-   assign is_void = is_void_DUMMY;
-   AND2  XLXI_9 (.I0(CLK), 
-                .I1(XLXN_79), 
-                .O(increment_DUMMY));
-   VCC  XLXI_13 (.P(XLXN_75));
-   GND  XLXI_14 (.G(XLXN_76));
-   INV  XLXI_18 (.I(HOLD), 
-                .O(XLXN_79));
-   voider  XLXI_32 (.clk(increment_DUMMY), 
-                   .is_load(pre_load), 
-                   .is_void(is_void_DUMMY));
-   pc_increment_v2_module  XLXI_44 (.D(D[10:0]), 
-                                   .increment(increment_DUMMY), 
-                                   .is_BSR(store), 
-                                   .is_RET(load), 
-                                   .load(pre_load), 
-                                   .S(S[9:0]), 
-                                   .stack_in(STACK_IN[10:0]), 
-                                   .Q(XLXN_146[10:0]));
-   bloqueSaltos  XLXI_45 (.B(INSTRUCTION_DUMMY[13:0]), 
-                         .CY(CY), 
-                         .W0to15(W[15:0]), 
-                         .D(D[10:0]), 
-                         .is_BSR(store), 
-                         .is_RET(load), 
-                         .pre_load(pre_load), 
-                         .S(S[9:0]));
-   stack_manager  XLXI_46 (.clk(increment_DUMMY), 
-                          .in_val(XLXN_146[10:0]), 
-                          .load(load), 
-                          .store(store), 
-                          .out_val(STACK_IN[10:0]));
-   rest2  XLXI_47 (.in_val(XLXN_146[10:0]), 
-                  .out_val(PC[10:0]));
-   RAM_internal  XLXI_50 (.addr(XLXN_146[10:0]), 
-                         .clk(increment_DUMMY), 
-                         .data_in(), 
-                         .rd_enb(XLXN_75), 
-                         .wr_enb(XLXN_76), 
-                         .data_out(XLXN_156[21:0]));
-   instruction_register_v2  XLXI_52 (.increment(increment_DUMMY), 
-                                    .in_ins(XLXN_156[21:0]), 
-                                    .is_void(is_void_DUMMY), 
-                                    .out_ins(INSTRUCTION_DUMMY[13:0]), 
-                                    
-         .out_ins_completa(INSTRUCTION_EXTENDIDA[21:0]));
-endmodule
-`timescale 1ns / 1ps
-
 module merge_conIR(CLK, 
                    CY, 
                    W, 
@@ -1254,11 +1257,11 @@ module merge_conIR(CLK,
                    bbus_out, 
                    cbus_out, 
                    DAdd_out, 
-                   hold, 
+                   INST_EXTEND, 
                    kmx_out, 
+                   levels_out, 
                    mem_out, 
-                   sh_out, 
-                   type_out);
+                   sh_out);
 
     input CLK;
     input CY;
@@ -1268,40 +1271,39 @@ module merge_conIR(CLK,
    output [5:0] bbus_out;
    output [5:0] cbus_out;
    output [9:0] DAdd_out;
-   output hold;
+   output [21:0] INST_EXTEND;
    output kmx_out;
+   output [2:0] levels_out;
    output [1:0] mem_out;
    output [1:0] sh_out;
-   output [6:0] type_out;
    
+   wire hold;
+   wire [6:0] type_out;
    wire [13:0] XLXN_32;
-   wire [21:0] XLXN_33;
-   wire [10:0] XLXN_34;
-   wire XLXN_35;
-   wire XLXN_36;
-   wire hold_DUMMY;
+   wire XLXN_49;
    
-   assign hold = hold_DUMMY;
-   unionMagica_MUSER_merge_conIR  XLXI_1 (.CLK(CLK), 
-                                         .CY(CY), 
-                                         .HOLD(hold_DUMMY), 
-                                         .W(W[15:0]), 
-                                         .increment(XLXN_35), 
-                                         .INSTRUCTION(XLXN_32[13:0]), 
-                                         .INSTRUCTION_EXTENDIDA(XLXN_33[21:0]), 
-                                         .is_void(XLXN_36), 
-                                         .PC(XLXN_34[10:0]));
    merge_MUSER_merge_conIR  XLXI_2 (.clk(CLK), 
                                    .instruction(XLXN_32[13:0]), 
-                                   .JUMP(XLXN_36), 
+                                   .JUMP(XLXN_49), 
                                    .abus_out(abus_out[4:0]), 
                                    .alu_out(alu_out[3:0]), 
                                    .bbus_out(bbus_out[5:0]), 
                                    .cbus_out(cbus_out[5:0]), 
                                    .DAdd_out(DAdd_out[9:0]), 
-                                   .hold(hold_DUMMY), 
+                                   .hold(hold), 
                                    .kmx_out(kmx_out), 
                                    .mem_out(mem_out[1:0]), 
                                    .sh_out(sh_out[1:0]), 
                                    .type_out(type_out[6:0]));
+   unionMagica_MUSER_merge_conIR  XLXI_4 (.CLK(CLK), 
+                                         .CY(CY), 
+                                         .HOLD(hold), 
+                                         .W(W[15:0]), 
+                                         .increment(), 
+                                         .INSTRUCTION(XLXN_32[13:0]), 
+                                         
+         .INSTRUCTION_EXTENDIDA(INST_EXTEND[21:0]), 
+                                         .is_void(XLXN_49), 
+                                         .levels_Out(levels_out[2:0]), 
+                                         .PC());
 endmodule

@@ -1,0 +1,15 @@
+MODULE unionMagica
+	SUBMODULE bloqueSaltos
+		INSTANCE XLXI_45
+	SUBMODULE voider
+		INSTANCE XLXI_32
+	SUBMODULE instruction_register_v2
+		INSTANCE XLXI_52
+	SUBMODULE stack_manager
+		INSTANCE XLXI_46
+	SUBMODULE pc_increment_v2_module
+		INSTANCE XLXI_44
+	SUBMODULE rest2
+		INSTANCE XLXI_47
+	SUBMODULE RAM_internal
+		INSTANCE XLXI_50

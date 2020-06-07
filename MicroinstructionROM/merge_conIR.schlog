@@ -1,6 +1,0 @@
-select figure at 1298 1575 8 -branches -sn=1
-select figure at 1259 1519 8 -branches -sn=1
-select figure at 1242 1536 8 -branches -sn=1
-select figure at 1237 1553 8 -branches -sn=1
-select figure at 1237 1553 8 -branches -sn=1
-select figure at 1237 1553 8 -branches -all -sn=1

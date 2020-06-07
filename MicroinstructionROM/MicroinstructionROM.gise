@@ -22,25 +22,63 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="MicroinstructionROM.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ALU_Reg_Join.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ALU_Reg_Join.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ALU_main.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ALU_main.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="AND_Bus16.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="BiMux2Bus16.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="COMPARADOR5.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="COMPARADOR5.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="COMPARADOR5.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="CPU_main.vf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CPU_main_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="CPU_main_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="CPU_main_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="CY_Block.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Decode.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Decode.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="Decode.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="LATCH1.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH1.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH1.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="LATCH10.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH10.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH10.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="LATCH2.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH2.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH2.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="LATCH4.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH4.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH4.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="LATCH4_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="LATCH5.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH5.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH5.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="LATCH6.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH6.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH6.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="LATCH7.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH7.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="LATCH7.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="MROM.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="MROM.vf">
       <branch xil_pn:name="Implementation"/>
@@ -49,22 +87,78 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MROM_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="MROM_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="MROM_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Mux2Bus16.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Mux4Bus16.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="OR_Bus16.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAM_internal.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="RAM_internal.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RAM_internal.stx"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="RAM_internal.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RAM_internal.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAM_internal_Marce.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="RAM_internal_Marce.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RAM_internal_Marce.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="RAM_internal_Marce.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RAM_internal_Marce.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RAM_internal_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="RAM_main.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="RAM_main.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Shifter.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Tuberia.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Tuberia.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="Tuberia.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="Tuberia_drc.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Tuberia_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="UC1.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="UC1.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="UC1.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="UC2.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="UC2.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="UC2.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bidir_port.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloque2.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="bloque2.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloqueSaltos.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloque_3.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="bloque_3.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux1b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux1b_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux2b_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux2b_w_en.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux3b_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux3b_w_en.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux4b_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux4b_w_en.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux5b_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux5b_w_en.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux6b_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux6b_w_en.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel1b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel2b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux_bus16b_sel2b.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel3b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux_bus16b_sel3b.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel4b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux_bus16b_sel4b.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel5b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux_bus16b_sel5b.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="demux_bus16b_sel6b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="demux_bus16b_sel6b.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="fdce1.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="fdce1.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="fdce1.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="fdce1_drc.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ffd16_w_en.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ffd16_w_en.vf"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="instruction_register_v2.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/MicroinstructionROM.sym" xil_pn:origination="imported"/>
@@ -77,43 +171,109 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="jsr_backup_reg.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="jsr_backup_reg.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="merge.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="merge.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="merge.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="merge_beh.prj"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="merge_conIR.vf"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="merge_conIR_beh.prj"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="merge_conIR.cmd_log"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="merge_conIR.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="merge_conIR.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="merge_conIR.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="merge_conIR.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="merge_conIR.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="merge_conIR.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="merge_conIR.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="merge_conIR.syr"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="merge_conIR.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="merge_conIR.xst"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="merge_conIR_drc.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="merge_conIR_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="merge_conIR_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="merge_conIR_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="merge_conIR_xst.xrpt"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="merge_drc.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="merge_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="merge_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux1.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux1.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux1.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux10.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux10.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux10.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux2.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux2.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux2.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux4.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux4.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux4.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux5.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux5.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux5.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux6.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux6.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux6.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux7.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux7.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux7.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="pc_increment_v2_module.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="prueba.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="prueba_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_1bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_2bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="reg_to_bus_2bit_sel.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_3bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="reg_to_bus_3bit_sel.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_4bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="reg_to_bus_4bit_sel.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_5bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="reg_to_bus_5bit_sel.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_to_bus_6bit_sel.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="reg_to_bus_6bit_sel.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="register_bank.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="register_bank.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="register_bank_easy.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="register_bank_easy.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="rest2.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="stack_manager.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="stack_manager.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="stack_manager.stx"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="stack_manager.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="stack_manager.xst"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="toExecute.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="toExecute.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="toExecute.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="toOperand.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="toOperand.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="toOperand.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="toOperand_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="toRetire.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="toRetire.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="toRetire.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="unionMagica.cmd_log"/>
     <file xil_pn:fileType="FILE_JHD" xil_pn:name="unionMagica.jhd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="unionMagica.lso"/>
@@ -143,25 +303,41 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591500998" xil_pn:in_ck="5921364367671884138" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1591500962">
+    <transform xil_pn:end_ts="1591564060" xil_pn:in_ck="-3124268327462633540" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1591564060">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="AND_Bus16.v"/>
+      <outfile xil_pn:name="BiMux2Bus16.v"/>
+      <outfile xil_pn:name="CY_Block.v"/>
+      <outfile xil_pn:name="Mux2Bus16.v"/>
+      <outfile xil_pn:name="Mux4Bus16.v"/>
+      <outfile xil_pn:name="OR_Bus16.v"/>
       <outfile xil_pn:name="RAM_internal.v"/>
+      <outfile xil_pn:name="RAM_internal_Marce.v"/>
+      <outfile xil_pn:name="Shifter.v"/>
+      <outfile xil_pn:name="bidir_port.v"/>
       <outfile xil_pn:name="bloqueSaltos.v"/>
+      <outfile xil_pn:name="demux1b.v"/>
+      <outfile xil_pn:name="demux1b_w_en.v"/>
+      <outfile xil_pn:name="demux_bus16b_sel1b.v"/>
       <outfile xil_pn:name="instruction_register_v2.v"/>
       <outfile xil_pn:name="pc_increment_v2.v"/>
+      <outfile xil_pn:name="reg_to_bus_1bit_sel.v"/>
       <outfile xil_pn:name="rest2.v"/>
       <outfile xil_pn:name="stack_manager.v"/>
       <outfile xil_pn:name="voider.v"/>
     </transform>
-    <transform xil_pn:end_ts="1591490804" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5148297343930577114" xil_pn:start_ts="1591490804">
+    <transform xil_pn:end_ts="1591564360" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4563065071840311332" xil_pn:start_ts="1591564360">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591501084" xil_pn:in_ck="3901557102760300117" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4910758401759208184" xil_pn:start_ts="1591500998">
+    <transform xil_pn:end_ts="1591564435" xil_pn:in_ck="1694191026050805958" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1778475400987570950" xil_pn:start_ts="1591564360">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU_Reg_Join.vf"/>
+      <outfile xil_pn:name="ALU_main.vf"/>
       <outfile xil_pn:name="COMPARADOR5.vf"/>
+      <outfile xil_pn:name="CPU_main.vf"/>
       <outfile xil_pn:name="Decode.vf"/>
       <outfile xil_pn:name="LATCH1.vf"/>
       <outfile xil_pn:name="LATCH10.vf"/>
@@ -171,10 +347,25 @@
       <outfile xil_pn:name="LATCH6.vf"/>
       <outfile xil_pn:name="LATCH7.vf"/>
       <outfile xil_pn:name="MROM.vf"/>
+      <outfile xil_pn:name="RAM_main.vf"/>
       <outfile xil_pn:name="Tuberia.vf"/>
       <outfile xil_pn:name="UC1.vf"/>
       <outfile xil_pn:name="UC2.vf"/>
+      <outfile xil_pn:name="bloque2.vf"/>
+      <outfile xil_pn:name="bloque_3.vf"/>
+      <outfile xil_pn:name="demux2b_w_en.vf"/>
+      <outfile xil_pn:name="demux3b_w_en.vf"/>
+      <outfile xil_pn:name="demux4b_w_en.vf"/>
+      <outfile xil_pn:name="demux5b_w_en.vf"/>
+      <outfile xil_pn:name="demux6b_w_en.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel2b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel3b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel4b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel5b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel6b.vf"/>
       <outfile xil_pn:name="fdce1.vf"/>
+      <outfile xil_pn:name="ffd16_w_en.vf"/>
+      <outfile xil_pn:name="jsr_backup_reg.vf"/>
       <outfile xil_pn:name="merge.vf"/>
       <outfile xil_pn:name="merge_conIR.vf"/>
       <outfile xil_pn:name="mux1.vf"/>
@@ -184,21 +375,34 @@
       <outfile xil_pn:name="mux5.vf"/>
       <outfile xil_pn:name="mux6.vf"/>
       <outfile xil_pn:name="mux7.vf"/>
+      <outfile xil_pn:name="reg_to_bus_2bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_3bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_4bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_5bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_6bit_sel.vf"/>
+      <outfile xil_pn:name="register_bank.vf"/>
+      <outfile xil_pn:name="register_bank_easy.vf"/>
       <outfile xil_pn:name="toExecute.vf"/>
       <outfile xil_pn:name="toOperand.vf"/>
       <outfile xil_pn:name="toRetire.vf"/>
       <outfile xil_pn:name="unionMagica.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1591492652" xil_pn:in_ck="4789002235237076234" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-5833348679139075833" xil_pn:start_ts="1591492652">
+    <transform xil_pn:end_ts="1591564127" xil_pn:in_ck="4789002235237076234" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-3717781646536664023" xil_pn:start_ts="1591564127">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/MicroinstructionROMv2.ngc"/>
       <outfile xil_pn:name="ipcore_dir/MicroinstructionROMv2.v"/>
     </transform>
-    <transform xil_pn:end_ts="1591501084" xil_pn:in_ck="-8051776702071980917" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591501084">
+    <transform xil_pn:end_ts="1591564435" xil_pn:in_ck="-5837332839873844772" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591564435">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU_Reg_Join.vf"/>
+      <outfile xil_pn:name="ALU_main.vf"/>
+      <outfile xil_pn:name="AND_Bus16.v"/>
+      <outfile xil_pn:name="BiMux2Bus16.v"/>
       <outfile xil_pn:name="COMPARADOR5.vf"/>
+      <outfile xil_pn:name="CPU_main.vf"/>
+      <outfile xil_pn:name="CY_Block.v"/>
       <outfile xil_pn:name="Decode.vf"/>
       <outfile xil_pn:name="LATCH1.vf"/>
       <outfile xil_pn:name="LATCH10.vf"/>
@@ -208,15 +412,38 @@
       <outfile xil_pn:name="LATCH6.vf"/>
       <outfile xil_pn:name="LATCH7.vf"/>
       <outfile xil_pn:name="MROM.vf"/>
+      <outfile xil_pn:name="Mux2Bus16.v"/>
+      <outfile xil_pn:name="Mux4Bus16.v"/>
+      <outfile xil_pn:name="OR_Bus16.v"/>
       <outfile xil_pn:name="RAM_internal.v"/>
+      <outfile xil_pn:name="RAM_internal_Marce.v"/>
+      <outfile xil_pn:name="RAM_main.vf"/>
+      <outfile xil_pn:name="Shifter.v"/>
       <outfile xil_pn:name="Tuberia.vf"/>
       <outfile xil_pn:name="UC1.vf"/>
       <outfile xil_pn:name="UC2.vf"/>
+      <outfile xil_pn:name="bidir_port.v"/>
+      <outfile xil_pn:name="bloque2.vf"/>
       <outfile xil_pn:name="bloqueSaltos.v"/>
+      <outfile xil_pn:name="bloque_3.vf"/>
+      <outfile xil_pn:name="demux1b.v"/>
+      <outfile xil_pn:name="demux1b_w_en.v"/>
+      <outfile xil_pn:name="demux2b_w_en.vf"/>
+      <outfile xil_pn:name="demux3b_w_en.vf"/>
+      <outfile xil_pn:name="demux4b_w_en.vf"/>
+      <outfile xil_pn:name="demux5b_w_en.vf"/>
+      <outfile xil_pn:name="demux6b_w_en.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel1b.v"/>
+      <outfile xil_pn:name="demux_bus16b_sel2b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel3b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel4b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel5b.vf"/>
+      <outfile xil_pn:name="demux_bus16b_sel6b.vf"/>
       <outfile xil_pn:name="fdce1.vf"/>
+      <outfile xil_pn:name="ffd16_w_en.vf"/>
       <outfile xil_pn:name="instruction_register_v2.v"/>
       <outfile xil_pn:name="ipcore_dir/MicroinstructionROM.v"/>
-      <outfile xil_pn:name="ipcore_dir/MicroinstructionROMv2.v"/>
+      <outfile xil_pn:name="jsr_backup_reg.vf"/>
       <outfile xil_pn:name="merge.vf"/>
       <outfile xil_pn:name="merge_conIR.vf"/>
       <outfile xil_pn:name="mux1.vf"/>
@@ -227,6 +454,14 @@
       <outfile xil_pn:name="mux6.vf"/>
       <outfile xil_pn:name="mux7.vf"/>
       <outfile xil_pn:name="pc_increment_v2.v"/>
+      <outfile xil_pn:name="reg_to_bus_1bit_sel.v"/>
+      <outfile xil_pn:name="reg_to_bus_2bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_3bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_4bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_5bit_sel.vf"/>
+      <outfile xil_pn:name="reg_to_bus_6bit_sel.vf"/>
+      <outfile xil_pn:name="register_bank.vf"/>
+      <outfile xil_pn:name="register_bank_easy.vf"/>
       <outfile xil_pn:name="rest2.v"/>
       <outfile xil_pn:name="stack_manager.v"/>
       <outfile xil_pn:name="toExecute.vf"/>
@@ -235,26 +470,29 @@
       <outfile xil_pn:name="unionMagica.vf"/>
       <outfile xil_pn:name="voider.v"/>
     </transform>
-    <transform xil_pn:end_ts="1591501095" xil_pn:in_ck="-8051776702071980917" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2612061573882033814" xil_pn:start_ts="1591501084">
+    <transform xil_pn:end_ts="1591564444" xil_pn:in_ck="-176865042821346207" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7847335935401572718" xil_pn:start_ts="1591564435">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="CPU_main_beh.prj"/>
+      <outfile xil_pn:name="CPU_main_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="merge_conIR_beh.prj"/>
-      <outfile xil_pn:name="merge_conIR_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1591501095" xil_pn:in_ck="8925862317925762970" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4769201849980058797" xil_pn:start_ts="1591501095">
+    <transform xil_pn:end_ts="1591564444" xil_pn:in_ck="-4462188806409885163" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7140848473042310063" xil_pn:start_ts="1591564444">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="CPU_main_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="merge_conIR_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1591466348" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1591466348">
       <status xil_pn:value="SuccessfullyRun"/>

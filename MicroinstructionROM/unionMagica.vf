@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : unionMagica.vf
-// /___/   /\     Timestamp : 06/07/2020 00:36:51
+// /___/   /\     Timestamp : 06/07/2020 18:08:01
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/unionMagica.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/unionMagica.sch
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/unionMagica.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/unionMagica.sch
 //Design Name: unionMagica
 //Device: artix7
 //Purpose:
@@ -28,6 +28,7 @@ module unionMagica(CLK,
                    INSTRUCTION, 
                    INSTRUCTION_EXTENDIDA, 
                    is_void, 
+                   levels_Out, 
                    PC);
 
     input CLK;
@@ -38,6 +39,7 @@ module unionMagica(CLK,
    output [13:0] INSTRUCTION;
    output [21:0] INSTRUCTION_EXTENDIDA;
    output is_void;
+   output [2:0] levels_Out;
    output [10:0] PC;
    
    wire [10:0] D;
@@ -88,6 +90,7 @@ module unionMagica(CLK,
                           .in_val(XLXN_146[10:0]), 
                           .load(load), 
                           .store(store), 
+                          .level_out(levels_Out[2:0]), 
                           .out_val(STACK_IN[10:0]));
    rest2  XLXI_47 (.in_val(XLXN_146[10:0]), 
                   .out_val(PC[10:0]));

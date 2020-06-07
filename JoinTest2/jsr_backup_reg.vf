@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : jsr_backup_reg.vf
-// /___/   /\     Timestamp : 06/06/2020 19:00:43
+// /___/   /\     Timestamp : 06/07/2020 14:51:54
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -213,7 +213,7 @@ module ffd16_w_en_MUSER_jsr_backup_reg(CLK,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_15" *) 
+   (* HU_SET = "XLXI_1_23" *) 
    IFD16_HXILINX_jsr_backup_reg  XLXI_1 (.C(XLXN_1), 
                                         .D(D[15:0]), 
                                         .Q(Q[15:0]));

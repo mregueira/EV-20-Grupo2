@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : register_bank_easy.vf
-// /___/   /\     Timestamp : 06/06/2020 19:01:06
+// /___/   /\     Timestamp : 06/07/2020 14:51:53
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -215,7 +215,7 @@ module ffd16_w_en_MUSER_register_bank_easy(CLK,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_23" *) 
+   (* HU_SET = "XLXI_1_22" *) 
    IFD16_HXILINX_register_bank_easy  XLXI_1 (.C(XLXN_1), 
                                             .D(D[15:0]), 
                                             .Q(Q[15:0]));

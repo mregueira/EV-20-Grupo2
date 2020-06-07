@@ -26,6 +26,7 @@
         <signal name="pre_load" />
         <signal name="INSTRUCTION_EXTENDIDA(21:0)" />
         <signal name="XLXN_156(21:0)" />
+        <signal name="levels_Out(2:0)" />
         <port polarity="Input" name="CY" />
         <port polarity="Input" name="CLK" />
         <port polarity="Output" name="INSTRUCTION(13:0)" />
@@ -35,6 +36,7 @@
         <port polarity="Output" name="PC(10:0)" />
         <port polarity="Input" name="W(15:0)" />
         <port polarity="Output" name="INSTRUCTION_EXTENDIDA(21:0)" />
+        <port polarity="Output" name="levels_Out(2:0)" />
         <blockdef name="bloqueSaltos">
             <timestamp>2020-6-5T1:35:35</timestamp>
             <rect width="64" x="320" y="212" height="24" />
@@ -105,8 +107,9 @@
             <rect width="256" x="64" y="-128" height="1088" />
         </blockdef>
         <blockdef name="stack_manager">
-            <timestamp>2020-6-5T1:38:45</timestamp>
-            <rect width="256" x="64" y="-320" height="320" />
+            <timestamp>2020-6-7T17:39:38</timestamp>
+            <rect width="64" x="320" y="84" height="24" />
+            <line x2="384" y1="96" y2="96" x1="320" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
@@ -114,6 +117,7 @@
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="256" x="64" y="-320" height="448" />
         </blockdef>
         <blockdef name="pc_increment_v2_module">
             <timestamp>2020-6-5T1:29:4</timestamp>
@@ -140,7 +144,7 @@
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="RAM_internal">
-            <timestamp>2020-6-6T19:44:39</timestamp>
+            <timestamp>2020-6-7T20:57:43</timestamp>
             <rect width="304" x="64" y="-320" height="320" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -198,6 +202,7 @@
             <blockpin signalname="increment" name="clk" />
             <blockpin signalname="XLXN_146(10:0)" name="in_val(10:0)" />
             <blockpin signalname="STACK_IN(10:0)" name="out_val(10:0)" />
+            <blockpin signalname="levels_Out(2:0)" name="level_out(2:0)" />
         </block>
         <block symbolname="rest2" name="XLXI_47">
             <blockpin signalname="XLXN_146(10:0)" name="in_val(10:0)" />
@@ -250,12 +255,14 @@
             <wire x2="2976" y1="512" y2="2480" x1="2976" />
         </branch>
         <branch name="XLXN_75">
-            <wire x2="1760" y1="256" y2="640" x1="1760" />
+            <wire x2="1760" y1="256" y2="272" x1="1760" />
+            <wire x2="1760" y1="272" y2="640" x1="1760" />
             <wire x2="1920" y1="640" y2="640" x1="1760" />
         </branch>
         <branch name="XLXN_76">
             <wire x2="1968" y1="16" y2="16" x1="1904" />
-            <wire x2="1968" y1="16" y2="64" x1="1968" />
+            <wire x2="1968" y1="16" y2="48" x1="1968" />
+            <wire x2="1968" y1="48" y2="64" x1="1968" />
             <wire x2="1904" y1="16" y2="576" x1="1904" />
             <wire x2="1920" y1="576" y2="576" x1="1904" />
         </branch>
@@ -300,7 +307,8 @@
         <iomarker fontsize="28" x="560" y="1936" name="CY" orien="R180" />
         <branch name="increment">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1664" y="512" type="branch" />
-            <wire x2="1920" y1="512" y2="512" x1="1664" />
+            <wire x2="1680" y1="512" y2="512" x1="1664" />
+            <wire x2="1920" y1="512" y2="512" x1="1680" />
         </branch>
         <branch name="increment">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2240" y="256" type="branch" />
@@ -381,7 +389,8 @@
         <instance x="1920" y="800" name="XLXI_50" orien="R0">
         </instance>
         <branch name="XLXN_156(21:0)">
-            <wire x2="2544" y1="512" y2="512" x1="2352" />
+            <wire x2="2528" y1="512" y2="512" x1="2352" />
+            <wire x2="2544" y1="512" y2="512" x1="2528" />
         </branch>
         <iomarker fontsize="28" x="3040" y="1280" name="INSTRUCTION_EXTENDIDA(21:0)" orien="R0" />
         <instance x="2544" y="352" name="XLXI_52" orien="R0">
@@ -390,5 +399,9 @@
             <wire x2="3344" y1="2112" y2="2112" x1="3232" />
         </branch>
         <iomarker fontsize="28" x="3344" y="2112" name="is_void" orien="R0" />
+        <branch name="levels_Out(2:0)">
+            <wire x2="2432" y1="2080" y2="2080" x1="2336" />
+        </branch>
+        <iomarker fontsize="28" x="2432" y="2080" name="levels_Out(2:0)" orien="R0" />
     </sheet>
 </drawing>

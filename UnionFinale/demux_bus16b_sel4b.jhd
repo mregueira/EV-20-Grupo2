@@ -1,0 +1,7 @@
+MODULE demux_bus16b_sel4b
+	SUBMODULE demux_bus16b_sel3b
+		INSTANCE XLXI_1
+	SUBMODULE demux_bus16b_sel3b
+		INSTANCE XLXI_2
+	SUBMODULE demux_bus16b_sel1b
+		INSTANCE XLXI_3

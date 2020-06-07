@@ -1,0 +1,7 @@
+MODULE demux3b_w_en
+	SUBMODULE demux2b_w_en
+		INSTANCE XLXI_1
+	SUBMODULE demux2b_w_en
+		INSTANCE XLXI_2
+	SUBMODULE demux1b
+		INSTANCE XLXI_3

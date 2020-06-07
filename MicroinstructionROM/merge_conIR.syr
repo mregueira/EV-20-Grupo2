@@ -1,0 +1,2739 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: merge_conIR.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "merge_conIR.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "merge_conIR"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : merge_conIR
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\mux1.vf" into library work
+Parsing module <mux1>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\mux2.vf" into library work
+Parsing module <mux1_MUSER_mux2>.
+Parsing module <mux2>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\fdce1.vf" into library work
+Parsing module <IFD_HXILINX_fdce1>.
+Parsing module <fdce1>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\mux4.vf" into library work
+Parsing module <mux1_MUSER_mux4>.
+Parsing module <mux2_MUSER_mux4>.
+Parsing module <mux4>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\LATCH4.vf" into library work
+Parsing module <IFD_HXILINX_LATCH4>.
+Parsing module <fdce1_MUSER_LATCH4>.
+Parsing module <LATCH4>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\mux5.vf" into library work
+Parsing module <mux1_MUSER_mux5>.
+Parsing module <mux2_MUSER_mux5>.
+Parsing module <mux4_MUSER_mux5>.
+Parsing module <mux5>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\LATCH5.vf" into library work
+Parsing module <IFD_HXILINX_LATCH5>.
+Parsing module <fdce1_MUSER_LATCH5>.
+Parsing module <LATCH4_MUSER_LATCH5>.
+Parsing module <LATCH5>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\mux6.vf" into library work
+Parsing module <mux1_MUSER_mux6>.
+Parsing module <mux2_MUSER_mux6>.
+Parsing module <mux4_MUSER_mux6>.
+Parsing module <mux5_MUSER_mux6>.
+Parsing module <mux6>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\LATCH6.vf" into library work
+Parsing module <IFD_HXILINX_LATCH6>.
+Parsing module <fdce1_MUSER_LATCH6>.
+Parsing module <LATCH4_MUSER_LATCH6>.
+Parsing module <LATCH5_MUSER_LATCH6>.
+Parsing module <LATCH6>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\LATCH1.vf" into library work
+Parsing module <IFD_HXILINX_LATCH1>.
+Parsing module <fdce1_MUSER_LATCH1>.
+Parsing module <LATCH1>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\mux7.vf" into library work
+Parsing module <mux1_MUSER_mux7>.
+Parsing module <mux2_MUSER_mux7>.
+Parsing module <mux4_MUSER_mux7>.
+Parsing module <mux5_MUSER_mux7>.
+Parsing module <mux6_MUSER_mux7>.
+Parsing module <mux7>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\mux10.vf" into library work
+Parsing module <mux1_MUSER_mux10>.
+Parsing module <mux2_MUSER_mux10>.
+Parsing module <mux4_MUSER_mux10>.
+Parsing module <mux5_MUSER_mux10>.
+Parsing module <mux6_MUSER_mux10>.
+Parsing module <mux10>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\LATCH7.vf" into library work
+Parsing module <IFD_HXILINX_LATCH7>.
+Parsing module <fdce1_MUSER_LATCH7>.
+Parsing module <LATCH1_MUSER_LATCH7>.
+Parsing module <LATCH4_MUSER_LATCH7>.
+Parsing module <LATCH5_MUSER_LATCH7>.
+Parsing module <LATCH6_MUSER_LATCH7>.
+Parsing module <LATCH7>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\LATCH2.vf" into library work
+Parsing module <IFD_HXILINX_LATCH2>.
+Parsing module <fdce1_MUSER_LATCH2>.
+Parsing module <LATCH1_MUSER_LATCH2>.
+Parsing module <LATCH2>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\LATCH10.vf" into library work
+Parsing module <IFD_HXILINX_LATCH10>.
+Parsing module <fdce1_MUSER_LATCH10>.
+Parsing module <LATCH4_MUSER_LATCH10>.
+Parsing module <LATCH5_MUSER_LATCH10>.
+Parsing module <LATCH6_MUSER_LATCH10>.
+Parsing module <LATCH10>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\COMPARADOR5.vf" into library work
+Parsing module <COMPARADOR5>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\UC2.vf" into library work
+Parsing module <OR6_HXILINX_UC2>.
+Parsing module <COMPARADOR5_MUSER_UC2>.
+Parsing module <UC2>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\UC1.vf" into library work
+Parsing module <IFD_HXILINX_UC1>.
+Parsing module <fdce1_MUSER_UC1>.
+Parsing module <LATCH1_MUSER_UC1>.
+Parsing module <mux1_MUSER_UC1>.
+Parsing module <mux2_MUSER_UC1>.
+Parsing module <mux4_MUSER_UC1>.
+Parsing module <mux5_MUSER_UC1>.
+Parsing module <mux6_MUSER_UC1>.
+Parsing module <mux10_MUSER_UC1>.
+Parsing module <mux7_MUSER_UC1>.
+Parsing module <UC1>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\toRetire.vf" into library work
+Parsing module <IFD_HXILINX_toRetire>.
+Parsing module <fdce1_MUSER_toRetire>.
+Parsing module <LATCH4_MUSER_toRetire>.
+Parsing module <LATCH5_MUSER_toRetire>.
+Parsing module <LATCH6_MUSER_toRetire>.
+Parsing module <LATCH1_MUSER_toRetire>.
+Parsing module <LATCH7_MUSER_toRetire>.
+Parsing module <toRetire>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\toOperand.vf" into library work
+Parsing module <IFD_HXILINX_toOperand>.
+Parsing module <fdce1_MUSER_toOperand>.
+Parsing module <LATCH4_MUSER_toOperand>.
+Parsing module <LATCH5_MUSER_toOperand>.
+Parsing module <LATCH6_MUSER_toOperand>.
+Parsing module <LATCH10_MUSER_toOperand>.
+Parsing module <LATCH1_MUSER_toOperand>.
+Parsing module <LATCH2_MUSER_toOperand>.
+Parsing module <LATCH7_MUSER_toOperand>.
+Parsing module <toOperand>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\toExecute.vf" into library work
+Parsing module <IFD_HXILINX_toExecute>.
+Parsing module <fdce1_MUSER_toExecute>.
+Parsing module <LATCH4_MUSER_toExecute>.
+Parsing module <LATCH5_MUSER_toExecute>.
+Parsing module <LATCH6_MUSER_toExecute>.
+Parsing module <LATCH1_MUSER_toExecute>.
+Parsing module <LATCH7_MUSER_toExecute>.
+Parsing module <LATCH2_MUSER_toExecute>.
+Parsing module <toExecute>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\ipcore_dir\MicroinstructionROMv2.v" into library work
+Parsing module <MicroinstructionROMv2>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\Decode.vf" into library work
+Parsing module <mux1_MUSER_Decode>.
+Parsing module <mux2_MUSER_Decode>.
+Parsing module <mux4_MUSER_Decode>.
+Parsing module <mux5_MUSER_Decode>.
+Parsing module <Decode>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\voider.v" into library work
+Parsing module <voider>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\Tuberia.vf" into library work
+Parsing module <OR6_HXILINX_Tuberia>.
+Parsing module <IFD_HXILINX_Tuberia>.
+Parsing module <fdce1_MUSER_Tuberia>.
+Parsing module <LATCH1_MUSER_Tuberia>.
+Parsing module <mux1_MUSER_Tuberia>.
+Parsing module <mux2_MUSER_Tuberia>.
+Parsing module <mux4_MUSER_Tuberia>.
+Parsing module <mux5_MUSER_Tuberia>.
+Parsing module <mux6_MUSER_Tuberia>.
+Parsing module <mux10_MUSER_Tuberia>.
+Parsing module <mux7_MUSER_Tuberia>.
+Parsing module <UC1_MUSER_Tuberia>.
+Parsing module <Decode_MUSER_Tuberia>.
+Parsing module <COMPARADOR5_MUSER_Tuberia>.
+Parsing module <UC2_MUSER_Tuberia>.
+Parsing module <LATCH4_MUSER_Tuberia>.
+Parsing module <LATCH5_MUSER_Tuberia>.
+Parsing module <LATCH6_MUSER_Tuberia>.
+Parsing module <LATCH7_MUSER_Tuberia>.
+Parsing module <toRetire_MUSER_Tuberia>.
+Parsing module <LATCH10_MUSER_Tuberia>.
+Parsing module <LATCH2_MUSER_Tuberia>.
+Parsing module <toOperand_MUSER_Tuberia>.
+Parsing module <toExecute_MUSER_Tuberia>.
+Parsing module <Tuberia>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\stack_manager.v" into library work
+Parsing module <stack_manager>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\rest2.v" into library work
+Parsing module <rest2>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\RAM_internal.v" into library work
+Parsing module <RAM_internal>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\pc_increment_v2.v" into library work
+Parsing module <pc_increment_v2_module>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\MROM.vf" into library work
+Parsing module <MROM>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\instruction_register_v2.v" into library work
+Parsing module <instruction_register_v2>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\bloqueSaltos.v" into library work
+Parsing module <bloqueSaltos>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\unionMagica.vf" into library work
+Parsing module <unionMagica>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge.vf" into library work
+Parsing module <OR6_HXILINX_merge>.
+Parsing module <IFD_HXILINX_merge>.
+Parsing module <MROM_MUSER_merge>.
+Parsing module <fdce1_MUSER_merge>.
+Parsing module <LATCH1_MUSER_merge>.
+Parsing module <mux1_MUSER_merge>.
+Parsing module <mux2_MUSER_merge>.
+Parsing module <mux4_MUSER_merge>.
+Parsing module <mux5_MUSER_merge>.
+Parsing module <mux6_MUSER_merge>.
+Parsing module <mux10_MUSER_merge>.
+Parsing module <mux7_MUSER_merge>.
+Parsing module <UC1_MUSER_merge>.
+Parsing module <Decode_MUSER_merge>.
+Parsing module <COMPARADOR5_MUSER_merge>.
+Parsing module <UC2_MUSER_merge>.
+Parsing module <LATCH4_MUSER_merge>.
+Parsing module <LATCH5_MUSER_merge>.
+Parsing module <LATCH6_MUSER_merge>.
+Parsing module <LATCH7_MUSER_merge>.
+Parsing module <toRetire_MUSER_merge>.
+Parsing module <LATCH10_MUSER_merge>.
+Parsing module <LATCH2_MUSER_merge>.
+Parsing module <toOperand_MUSER_merge>.
+Parsing module <toExecute_MUSER_merge>.
+Parsing module <Tuberia_MUSER_merge>.
+Parsing module <merge>.
+Analyzing Verilog file "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf" into library work
+Parsing module <OR6_HXILINX_merge_conIR>.
+Parsing module <IFD_HXILINX_merge_conIR>.
+Parsing module <unionMagica_MUSER_merge_conIR>.
+Parsing module <MROM_MUSER_merge_conIR>.
+Parsing module <fdce1_MUSER_merge_conIR>.
+Parsing module <LATCH1_MUSER_merge_conIR>.
+Parsing module <mux1_MUSER_merge_conIR>.
+Parsing module <mux2_MUSER_merge_conIR>.
+Parsing module <mux4_MUSER_merge_conIR>.
+Parsing module <mux5_MUSER_merge_conIR>.
+Parsing module <mux6_MUSER_merge_conIR>.
+Parsing module <mux10_MUSER_merge_conIR>.
+Parsing module <mux7_MUSER_merge_conIR>.
+Parsing module <UC1_MUSER_merge_conIR>.
+Parsing module <Decode_MUSER_merge_conIR>.
+Parsing module <COMPARADOR5_MUSER_merge_conIR>.
+Parsing module <UC2_MUSER_merge_conIR>.
+Parsing module <LATCH4_MUSER_merge_conIR>.
+Parsing module <LATCH5_MUSER_merge_conIR>.
+Parsing module <LATCH6_MUSER_merge_conIR>.
+Parsing module <LATCH7_MUSER_merge_conIR>.
+Parsing module <toRetire_MUSER_merge_conIR>.
+Parsing module <LATCH10_MUSER_merge_conIR>.
+Parsing module <LATCH2_MUSER_merge_conIR>.
+Parsing module <toOperand_MUSER_merge_conIR>.
+Parsing module <toExecute_MUSER_merge_conIR>.
+Parsing module <Tuberia_MUSER_merge_conIR>.
+Parsing module <merge_MUSER_merge_conIR>.
+Parsing module <merge_conIR>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <merge_conIR>.
+
+Elaborating module <merge_MUSER_merge_conIR>.
+
+Elaborating module <Tuberia_MUSER_merge_conIR>.
+
+Elaborating module <toExecute_MUSER_merge_conIR>.
+
+Elaborating module <LATCH4_MUSER_merge_conIR>.
+
+Elaborating module <fdce1_MUSER_merge_conIR>.
+
+Elaborating module <IFD_HXILINX_merge_conIR(INIT=1'b0)>.
+
+Elaborating module <AND2>.
+
+Elaborating module <LATCH2_MUSER_merge_conIR>.
+
+Elaborating module <LATCH1_MUSER_merge_conIR>.
+
+Elaborating module <LATCH7_MUSER_merge_conIR>.
+
+Elaborating module <LATCH6_MUSER_merge_conIR>.
+
+Elaborating module <LATCH5_MUSER_merge_conIR>.
+
+Elaborating module <toRetire_MUSER_merge_conIR>.
+
+Elaborating module <INV>.
+
+Elaborating module <toOperand_MUSER_merge_conIR>.
+
+Elaborating module <LATCH10_MUSER_merge_conIR>.
+
+Elaborating module <UC2_MUSER_merge_conIR>.
+
+Elaborating module <OR2>.
+
+Elaborating module <AND3>.
+
+Elaborating module <OR3>.
+
+Elaborating module <COMPARADOR5_MUSER_merge_conIR>.
+
+Elaborating module <XOR2>.
+
+Elaborating module <AND4>.
+
+Elaborating module <OR6_HXILINX_merge_conIR>.
+
+Elaborating module <Decode_MUSER_merge_conIR>.
+
+Elaborating module <mux1_MUSER_merge_conIR>.
+
+Elaborating module <MUXCY>.
+
+Elaborating module <mux5_MUSER_merge_conIR>.
+
+Elaborating module <mux4_MUSER_merge_conIR>.
+
+Elaborating module <mux2_MUSER_merge_conIR>.
+
+Elaborating module <UC1_MUSER_merge_conIR>.
+WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf" Line 428: Assignment to clr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf" Line 429: Assignment to ena ignored, since the identifier is never used
+
+Elaborating module <mux6_MUSER_merge_conIR>.
+
+Elaborating module <mux7_MUSER_merge_conIR>.
+
+Elaborating module <mux10_MUSER_merge_conIR>.
+WARNING:HDLCompiler:552 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf" Line 479: Input port CLR is not connected on this instance
+
+Elaborating module <MROM_MUSER_merge_conIR>.
+
+Elaborating module <MicroinstructionROMv2>.
+WARNING:HDLCompiler:1499 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\ipcore_dir\MicroinstructionROMv2.v" Line 39: Empty module <MicroinstructionROMv2> remains a black box.
+
+Elaborating module <unionMagica_MUSER_merge_conIR>.
+
+Elaborating module <VCC>.
+
+Elaborating module <GND>.
+
+Elaborating module <voider>.
+
+Elaborating module <pc_increment_v2_module>.
+WARNING:HDLCompiler:413 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\pc_increment_v2.v" Line 42: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\pc_increment_v2.v" Line 48: Result of 12-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <bloqueSaltos>.
+
+Elaborating module <stack_manager>.
+WARNING:HDLCompiler:413 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\stack_manager.v" Line 35: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\stack_manager.v" Line 36: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\stack_manager.v" Line 40: Result of 32-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <rest2>.
+WARNING:HDLCompiler:413 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\rest2.v" Line 26: Result of 32-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <RAM_internal>.
+
+Elaborating module <instruction_register_v2>.
+WARNING:HDLCompiler:552 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf" Line 135: Input port data_in[21] is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf" line 1302: Output port <PC> of the instance <XLXI_4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf" line 1302: Output port <increment> of the instance <XLXI_4> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <merge_conIR> synthesized.
+
+Synthesizing Unit <merge_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <merge_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <Tuberia_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <Tuberia_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <toExecute_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <toExecute_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <LATCH4_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+WARNING:Xst:647 - Input <CLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <LATCH4_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <fdce1_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Set property "HU_SET = XLXI_1_16" for instance <XLXI_1>.
+    Summary:
+	no macro.
+Unit <fdce1_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <IFD_HXILINX_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+        INIT = 1'b0
+    Set property "IOB = TRUE" for signal <Q>.
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <IFD_HXILINX_merge_conIR> synthesized.
+
+Synthesizing Unit <LATCH2_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <LATCH2_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <LATCH1_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+WARNING:Xst:647 - Input <CLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <LATCH1_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <LATCH7_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <LATCH7_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <LATCH6_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <LATCH6_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <LATCH5_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <LATCH5_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <toRetire_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <toRetire_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <toOperand_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <toOperand_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <LATCH10_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <LATCH10_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <UC2_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Set property "HU_SET = XLXI_30_17" for instance <XLXI_30>.
+    Set property "HU_SET = XLXI_41_18" for instance <XLXI_41>.
+WARNING:Xst:647 - Input <DecodeType<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DecodeType<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DecodeType<6:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ExecuteBusC<5:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ExecuteType<2:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ExecuteType<4:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ExecuteType<6:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <OperandBusC<5:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <OperandType<2:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <OperandType<4:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <OperandType<6:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RetireBusC<5:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RetireType<2:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RetireType<6:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <UC2_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <COMPARADOR5_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <COMPARADOR5_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <OR6_HXILINX_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <OR6_HXILINX_merge_conIR> synthesized.
+
+Synthesizing Unit <Decode_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+WARNING:Xst:647 - Input <instruction<4:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <Decode_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <mux1_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <mux1_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <mux5_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <mux5_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <mux4_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <mux4_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <mux2_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <mux2_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <UC1_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+WARNING:Xst:2898 - Port 'CLR', unconnected in block instance 'XLXI_68', is tied to GND.
+    Summary:
+	no macro.
+Unit <UC1_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <mux6_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <mux6_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <mux7_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <mux7_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <mux10_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <mux10_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <MROM_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+    Summary:
+	no macro.
+Unit <MROM_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <unionMagica_MUSER_merge_conIR>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\merge_conIR.vf".
+WARNING:Xst:2898 - Port 'data_in', unconnected in block instance 'XLXI_50', is tied to GND.
+    Summary:
+	no macro.
+Unit <unionMagica_MUSER_merge_conIR> synthesized.
+
+Synthesizing Unit <voider>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\voider.v".
+    Found 1-bit register for signal <is_void>.
+    Found 3-bit register for signal <cnt>.
+    Found 3-bit comparator greater for signal <GND_41_o_cnt[2]_LessThan_5_o> created at line 35
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <voider> synthesized.
+
+Synthesizing Unit <pc_increment_v2_module>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\pc_increment_v2.v".
+    Found 11-bit register for signal <pc>.
+    Found 12-bit adder for signal <n0023> created at line 42.
+    Found 11-bit adder for signal <pc[10]_GND_42_o_add_3_OUT> created at line 48.
+    Found 11-bit subtractor for signal <GND_42_o_GND_42_o_sub_3_OUT<10:0>> created at line 42.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+Unit <pc_increment_v2_module> synthesized.
+
+Synthesizing Unit <bloqueSaltos>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\bloqueSaltos.v".
+WARNING:Xst:647 - Input <W0to15<14:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <bloqueSaltos> synthesized.
+
+Synthesizing Unit <stack_manager>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\stack_manager.v".
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <stack>, simulation mismatch.
+    Found 3x11-bit dual-port RAM <Mram_stack> for signal <stack>.
+    Found 3-bit register for signal <level>.
+    Found 4-bit subtractor for signal <n0017> created at line 44.
+    Found 3-bit adder for signal <level[2]_GND_44_o_add_2_OUT> created at line 35.
+    Found 11-bit subtractor for signal <GND_44_o_GND_44_o_sub_4_OUT<10:0>> created at line 36.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <stack_manager> synthesized.
+
+Synthesizing Unit <rest2>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\rest2.v".
+    Found 11-bit subtractor for signal <out_val> created at line 23.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <rest2> synthesized.
+
+Synthesizing Unit <RAM_internal>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\RAM_internal.v".
+        RAM_WIDTH = 22
+        RAM_DEPTH = 1024
+        ADDR_SIZE = 11
+WARNING:Xst:647 - Input <addr<10:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1024x22-bit single-port RAM <Mram_mem> for signal <mem>.
+    Found 22-bit register for signal <data_out>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  22 D-type flip-flop(s).
+Unit <RAM_internal> synthesized.
+
+Synthesizing Unit <instruction_register_v2>.
+    Related source file is "C:\Users\Marcelo\Documents\GitHub\EV-20-Grupo2\MicroinstructionROM\instruction_register_v2.v".
+    Found 22-bit register for signal <aux>.
+    Summary:
+	inferred  22 D-type flip-flop(s).
+Unit <instruction_register_v2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 1024x22-bit single-port RAM                           : 1
+ 3x11-bit dual-port RAM                                : 1
+# Adders/Subtractors                                   : 6
+ 11-bit addsub                                         : 1
+ 11-bit subtractor                                     : 2
+ 12-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+# Registers                                            : 83
+ 1-bit register                                        : 78
+ 11-bit register                                       : 1
+ 22-bit register                                       : 2
+ 3-bit register                                        : 2
+# Comparators                                          : 1
+ 3-bit comparator greater                              : 1
+# Multiplexers                                         : 7
+ 11-bit 2-to-1 multiplexer                             : 6
+ 3-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/MicroinstructionROMv2.ngc>.
+Loading core <MicroinstructionROMv2> for timing and area information for instance <XLXI_9>.
+WARNING:Xst:1290 - Hierarchical block <XLXI_47> is unconnected in block <XLXI_4>.
+   It will be removed from the design.
+WARNING:Xst:1293 - FF/Latch <cnt_0> has a constant value of 0 in block <XLXI_32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt_2> has a constant value of 0 in block <XLXI_32>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <stack_manager>.
+The following registers are absorbed into counter <level>: 1 register on signal <level>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_stack> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 3-word x 11-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <store>         | high     |
+    |     addrA          | connected to signal <level<1:0>>    |          |
+    |     diA            | connected to signal <GND_44_o_GND_44_o_sub_4_OUT> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 3-word x 11-bit                     |          |
+    |     addrB          | connected to signal <n0017<1:0>>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <stack_manager> synthesized (advanced).
+
+Synthesizing (advanced) Unit <unionMagica_MUSER_merge_conIR>.
+INFO:Xst:3225 - The RAM <XLXI_50/Mram_mem> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 22-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <increment_DUMMY> | rise     |
+    |     weA            | connected to signal <XLXN_76>       | high     |
+    |     addrA          | connected to signal <XLXN_146<9:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 22-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <increment_DUMMY> | rise     |
+    |     addrB          | connected to signal <XLXI_44/pc[10]_GND_42_o_mux_6_OUT<9:0>> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <unionMagica_MUSER_merge_conIR> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 1024x22-bit dual-port block RAM                       : 1
+ 3x11-bit dual-port distributed RAM                    : 1
+# Adders/Subtractors                                   : 5
+ 11-bit adder                                          : 1
+ 11-bit addsub                                         : 1
+ 11-bit subtractor                                     : 2
+ 3-bit subtractor                                      : 1
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 136
+ Flip-Flops                                            : 136
+# Comparators                                          : 1
+ 3-bit comparator greater                              : 1
+# Multiplexers                                         : 6
+ 11-bit 2-to-1 multiplexer                             : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <cnt_0> has a constant value of 0 in block <voider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cnt_2> has a constant value of 0 in block <voider>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <merge_conIR> ...
+
+Optimizing unit <Tuberia_MUSER_merge_conIR> ...
+
+Optimizing unit <toOperand_MUSER_merge_conIR> ...
+
+Optimizing unit <IFD_HXILINX_merge_conIR> ...
+
+Optimizing unit <Decode_MUSER_merge_conIR> ...
+
+Optimizing unit <UC2_MUSER_merge_conIR> ...
+
+Optimizing unit <COMPARADOR5_MUSER_merge_conIR> ...
+
+Optimizing unit <UC1_MUSER_merge_conIR> ...
+
+Optimizing unit <unionMagica_MUSER_merge_conIR> ...
+
+Optimizing unit <OR6_HXILINX_merge_conIR> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block merge_conIR, actual ratio is 0.
+FlipFlop XLXI_4/XLXI_32/is_void has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 138
+ Flip-Flops                                            : 138
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : merge_conIR.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 419
+#      AND2                        : 84
+#      AND3                        : 4
+#      AND4                        : 4
+#      GND                         : 2
+#      INV                         : 24
+#      LUT1                        : 44
+#      LUT2                        : 31
+#      LUT3                        : 15
+#      LUT4                        : 12
+#      LUT5                        : 16
+#      LUT6                        : 63
+#      MUXCY                       : 69
+#      MUXF7                       : 3
+#      OR2                         : 9
+#      OR3                         : 1
+#      VCC                         : 1
+#      XOR2                        : 15
+#      XORCY                       : 22
+# FlipFlops/Latches                : 138
+#      FD                          : 113
+#      FDE                         : 25
+# RAMS                             : 3
+#      RAM32M                      : 2
+#      RAMB36E1                    : 1
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 73
+#      IBUF                        : 4
+#      OBUF                        : 69
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              61  out of  126800     0%  
+ Number of Slice LUTs:                  213  out of  63400     0%  
+    Number used as Logic:               205  out of  63400     0%  
+    Number used as Memory:                8  out of  19000     0%  
+       Number used as RAM:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    274
+   Number with an unused Flip Flop:     213  out of    274    77%  
+   Number with an unused LUT:            61  out of    274    22%  
+   Number of fully used LUT-FF pairs:     0  out of    274     0%  
+   Number of unique control sets:        80
+
+IO Utilization: 
+ Number of IOs:                          87
+ Number of bonded IOBs:                  73  out of    210    34%  
+    IOB Flip Flops/Latches:              77
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    135     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                          | Clock buffer(FF name)                                                       | Load  |
+--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+-------+
+XLXI_4/increment_DUMMY(XLXI_4/XLXI_9:O)                                                                                               | BUFG(*)(XLXI_4/XLXI_46/level_2)                                             | 64    |
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_4/XLXI_2:O)                                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_4/XLXI_1/Q)                | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_5/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_5/XLXI_2:O)                  | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_5/XLXI_1/Q)         | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_2:O)  | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q) | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_2:O)  | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q) | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_2:O)  | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q) | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_2:O)  | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q) | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_2/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_2/XLXI_4/XLXI_2:O)                                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_2/XLXI_4/XLXI_1/Q)                | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_3/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_3/XLXI_4/XLXI_2:O)                                              | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_3/XLXI_4/XLXI_1/Q)                       | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_2/XLXI_1/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_2/XLXI_1/XLXI_4/XLXI_2:O)                                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_2/XLXI_1/XLXI_4/XLXI_1/Q)                | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_2/XLXI_2/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_2/XLXI_2/XLXI_4/XLXI_2:O)                                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_2/XLXI_2/XLXI_4/XLXI_1/Q)                | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_1/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_1/XLXI_4/XLXI_2:O)                                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_1/XLXI_4/XLXI_1/Q)                | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_2/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_2/XLXI_4/XLXI_2:O)                                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_2/XLXI_4/XLXI_1/Q)                | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_16/XLXI_2:O)                            | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_16/XLXI_1/Q)              | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_15/XLXI_2:O)                            | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_15/XLXI_1/Q)              | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_14/XLXI_2:O)                            | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_14/XLXI_1/Q)              | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_13/XLXI_2:O)                            | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_13/XLXI_1/Q)              | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_4/XLXI_2:O)                              | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_4/XLXI_1/Q)               | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_5/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_5/XLXI_2:O)                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_5/XLXI_1/Q)        | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_2:O)| NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q)| 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_2:O)| NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q)| 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_2:O)| NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q)| 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_2:O)| NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q)| 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_16/XLXI_2:O)                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q)        | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_15/XLXI_2:O)                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q)        | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_14/XLXI_2:O)                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q)        | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_13/XLXI_2:O)                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q)        | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_5/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_5/XLXI_2:O)                                | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_5/XLXI_1/Q)                | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_4/XLXI_2:O)                                              | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_4/XLXI_1/Q)                       | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_16/XLXI_2:O)              | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q)       | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_15/XLXI_2:O)              | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q)       | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_14/XLXI_2:O)              | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q)       | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_13/XLXI_2:O)              | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q)       | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_5/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_5/XLXI_2:O)                              | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_5/XLXI_1/Q)               | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_4/XLXI_2:O)                                            | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_4/XLXI_1/Q)                      | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_5/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_5/XLXI_2:O)                                            | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_5/XLXI_1/Q)                      | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_13/XLXI_2:O)                            | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_13/XLXI_1/Q)              | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_14/XLXI_2:O)                            | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_14/XLXI_1/Q)              | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_15/XLXI_2:O)                            | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_15/XLXI_1/Q)              | 1     |
+XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_16/XLXI_2:O)                            | NONE(*)(XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_16/XLXI_1/Q)              | 1     |
+XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_13/XLXI_2:O)                                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_13/XLXI_1/Q)                         | 1     |
+XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_14/XLXI_2:O)                                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_14/XLXI_1/Q)                         | 1     |
+XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_15/XLXI_2:O)                                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_15/XLXI_1/Q)                         | 1     |
+XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_16/XLXI_2:O)                                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_16/XLXI_1/Q)                         | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_4/XLXI_2:O)                                                | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_4/XLXI_1/Q)                        | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_5/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_5/XLXI_2:O)                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_5/XLXI_1/Q)                 | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_13/XLXI_2:O)                  | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q)         | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_14/XLXI_2:O)                  | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q)         | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_15/XLXI_2:O)                  | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q)         | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_16/XLXI_2:O)                  | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q)         | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_2/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_2/XLXI_4/XLXI_2:O)                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_2/XLXI_4/XLXI_1/Q)                 | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_2:O)    | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q)  | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_2:O)    | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q)  | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_2:O)    | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q)  | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_2:O)    | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q)  | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_5/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_5/XLXI_2:O)                    | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_5/XLXI_1/Q)          | 1     |
+XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_4/XLXI_2:O)                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_4/XLXI_1/Q)                 | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_16/XLXI_2:O)                                              | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_16/XLXI_1/Q)                       | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_15/XLXI_2:O)                                              | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_15/XLXI_1/Q)                       | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_14/XLXI_2:O)                                              | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_14/XLXI_1/Q)                       | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_13/XLXI_2:O)                                              | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_13/XLXI_1/Q)                       | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_4/XLXI_2:O)                                                | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_4/XLXI_1/Q)                        | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_5/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_5/XLXI_2:O)                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_5/XLXI_1/Q)                 | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_13/XLXI_2:O)                  | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q)         | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_14/XLXI_2:O)                  | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q)         | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_15/XLXI_2:O)                  | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q)         | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_16/XLXI_2:O)                  | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q)         | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_2/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_2/XLXI_4/XLXI_2:O)                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_2/XLXI_4/XLXI_1/Q)                 | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_1/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_1/XLXI_4/XLXI_2:O)                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_1/XLXI_4/XLXI_1/Q)                 | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_2/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_2/XLXI_4/XLXI_2:O)                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_2/XLXI_4/XLXI_1/Q)                 | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_2:O)    | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q)  | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_2:O)    | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q)  | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_2:O)    | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q)  | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_2:O)    | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q)  | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_5/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_5/XLXI_2:O)                    | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_5/XLXI_1/Q)          | 1     |
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_4/XLXI_2:O)                                  | NONE(*)(XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_4/XLXI_1/Q)                 | 1     |
+XLXI_2/XLXI_2/XLXI_33/XLXN_1(XLXI_2/XLXI_2/XLXI_33/XLXI_2:O)                                                                          | NONE(*)(XLXI_2/XLXI_2/XLXI_33/XLXI_1/Q)                                     | 1     |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1(XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXI_2:O)                                            | NONE(*)(XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXI_1/Q)                      | 1     |
+--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+-------+
+(*) These 78 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.796ns (Maximum Frequency: 263.401MHz)
+   Minimum input arrival time before clock: 3.088ns
+   Maximum output required time after clock: 1.724ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_4/increment_DUMMY'
+  Clock period: 3.796ns (frequency: 263.401MHz)
+  Total number of paths / destination ports: 10014 / 59
+-------------------------------------------------------------------------
+Delay:               3.796ns (Levels of Logic = 14)
+  Source:            XLXI_4/XLXI_52/aux_12 (FF)
+  Destination:       XLXI_4/XLXI_44/pc_10 (FF)
+  Source Clock:      XLXI_4/increment_DUMMY rising
+  Destination Clock: XLXI_4/increment_DUMMY rising
+
+  Data Path: XLXI_4/XLXI_52/aux_12 to XLXI_4/XLXI_44/pc_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.361   0.389  XLXI_4/XLXI_52/aux_12 (XLXI_4/XLXI_52/aux_12)
+     LUT2:I0->O            7   0.097   0.711  XLXI_4/XLXI_52/out_ins_completa<12>1 (INST_EXTEND_12_OBUF)
+     LUT6:I1->O            3   0.097   0.305  XLXI_4/XLXI_45/is_RET2 (XLXI_4/XLXI_45/is_RET1)
+     LUT5:I4->O           18   0.097   0.374  XLXI_4/XLXI_45/is_RET3 (XLXI_4/load)
+     LUT6:I5->O            1   0.097   0.295  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_A4_SW0 (N4)
+     LUT6:I5->O            0   0.097   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_A4 (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_A<2>)
+     MUXCY:DI->O           1   0.337   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<2> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<3> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<4> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<5> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<6> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<7> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<8> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<8>)
+     MUXCY:CI->O           0   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<9> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<9>)
+     XORCY:CI->O           1   0.370   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_xor<10> (XLXI_4/XLXI_44/pc[10]_GND_42_o_mux_6_OUT<10>)
+     FD:D                      0.008          XLXI_4/XLXI_44/pc_10
+    ----------------------------------------
+    Total                      3.796ns (1.722ns logic, 2.075ns route)
+                                       (45.4% logic, 54.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_4/increment_DUMMY'
+  Total number of paths / destination ports: 408 / 14
+-------------------------------------------------------------------------
+Offset:              3.088ns (Levels of Logic = 16)
+  Source:            W<15> (PAD)
+  Destination:       XLXI_4/XLXI_44/pc_10 (FF)
+  Destination Clock: XLXI_4/increment_DUMMY rising
+
+  Data Path: W<15> to XLXI_4/XLXI_44/pc_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.693  W_15_IBUF (W_15_IBUF)
+     LUT6:I0->O            3   0.097   0.305  XLXI_4/XLXI_45/pre_load1 (XLXI_4/XLXI_45/pre_load)
+     LUT6:I5->O            1   0.097   0.379  XLXI_4/XLXI_45/is_RET3_SW0 (N58)
+     LUT6:I4->O            2   0.097   0.383  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_A121 (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_A12)
+     LUT6:I4->O            1   0.097   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_lut<0> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<0> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<1> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<2> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<3> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<4> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<5> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<6> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<7> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<8> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<8>)
+     MUXCY:CI->O           0   0.023   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<9> (XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_cy<9>)
+     XORCY:CI->O           1   0.370   0.000  XLXI_4/XLXI_44/Mmux_pc[10]_GND_42_o_mux_6_OUT_rs_xor<10> (XLXI_4/XLXI_44/pc[10]_GND_42_o_mux_6_OUT<10>)
+     FD:D                      0.008          XLXI_4/XLXI_44/pc_10
+    ----------------------------------------
+    Total                      3.088ns (1.327ns logic, 1.761ns route)
+                                       (43.0% logic, 57.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_5/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_5/XLXI_1/Q (FF)
+  Destination:       abus_out<4> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_5/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_5/XLXI_1/Q to abus_out<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_5/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_8/XLXI_3/XLXI_1 (abus_out_4_OBUF)
+     OBUF:I->O                 0.000          abus_out_4_OBUF (abus_out<4>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              1.724ns (Levels of Logic = 4)
+  Source:            XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXI_1/Q (FF)
+  Destination:       abus_out<4> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXI_1/Q to abus_out<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              43   0.361   0.404  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXI_1:Q'
+     LUT1:I0->O            1   0.097   0.000  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_4/XLXI_2/XLXI_1/XLXI_1_rt (XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_4/XLXI_2/XLXI_1/XLXI_1_rt)
+     MUXCY:S->O            1   0.583   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_4/XLXI_2/XLXI_1/XLXI_1 (DAdd_out_8_OBUF)
+     OBUF:I->O                 0.000          DAdd_out_8_OBUF (DAdd_out<8>)
+    ----------------------------------------
+    Total                      1.724ns (1.041ns logic, 0.683ns route)
+                                       (60.4% logic, 39.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_16/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_16/XLXI_1/Q (FF)
+  Destination:       abus_out<3> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_16/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_16/XLXI_1/Q to abus_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_16/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_8/XLXI_1/XLXI_2/XLXI_2/XLXI_1 (abus_out_3_OBUF)
+     OBUF:I->O                 0.000          abus_out_3_OBUF (abus_out<3>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_15/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_15/XLXI_1/Q (FF)
+  Destination:       abus_out<2> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_15/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_15/XLXI_1/Q to abus_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_15/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_8/XLXI_1/XLXI_2/XLXI_1/XLXI_1 (abus_out_2_OBUF)
+     OBUF:I->O                 0.000          abus_out_2_OBUF (abus_out<2>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_14/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_14/XLXI_1/Q (FF)
+  Destination:       abus_out<1> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_14/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_14/XLXI_1/Q to abus_out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_14/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_8/XLXI_1/XLXI_1/XLXI_2/XLXI_1 (abus_out_1_OBUF)
+     OBUF:I->O                 0.000          abus_out_1_OBUF (abus_out<1>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_13/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_13/XLXI_1/Q (FF)
+  Destination:       abus_out<0> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_13/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_13/XLXI_1/Q to abus_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_13/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_8/XLXI_1/XLXI_1/XLXI_1/XLXI_1 (abus_out_0_OBUF)
+     OBUF:I->O                 0.000          abus_out_0_OBUF (abus_out<0>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_16/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_16/XLXI_1/Q (FF)
+  Destination:       alu_out<3> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_16/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_16/XLXI_1/Q to alu_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_16/XLXI_1:Q'
+     OBUF:I->O                 0.000          alu_out_3_OBUF (alu_out<3>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_15/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_15/XLXI_1/Q (FF)
+  Destination:       alu_out<2> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_15/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_15/XLXI_1/Q to alu_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_15/XLXI_1:Q'
+     OBUF:I->O                 0.000          alu_out_2_OBUF (alu_out<2>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_14/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_14/XLXI_1/Q (FF)
+  Destination:       alu_out<1> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_14/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_14/XLXI_1/Q to alu_out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_14/XLXI_1:Q'
+     OBUF:I->O                 0.000          alu_out_1_OBUF (alu_out<1>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_13/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_13/XLXI_1/Q (FF)
+  Destination:       alu_out<0> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_13/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_13/XLXI_1/Q to alu_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_13/XLXI_1:Q'
+     OBUF:I->O                 0.000          alu_out_0_OBUF (alu_out<0>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_4/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_4/XLXI_1/Q (FF)
+  Destination:       bbus_out<5> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_4/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_4/XLXI_1/Q to bbus_out<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_4/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_5/XLXI_2/XLXI_1 (bbus_out_5_OBUF)
+     OBUF:I->O                 0.000          bbus_out_5_OBUF (bbus_out<5>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_5/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_5/XLXI_1/Q (FF)
+  Destination:       bbus_out<4> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_5/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_5/XLXI_1/Q to bbus_out<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_5/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_5/XLXI_1/XLXI_3/XLXI_1 (bbus_out_4_OBUF)
+     OBUF:I->O                 0.000          bbus_out_4_OBUF (bbus_out<4>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_16/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q (FF)
+  Destination:       bbus_out<3> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_16/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q to bbus_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_16/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_5/XLXI_1/XLXI_1/XLXI_2/XLXI_2/XLXI_1 (bbus_out_3_OBUF)
+     OBUF:I->O                 0.000          bbus_out_3_OBUF (bbus_out<3>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_15/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q (FF)
+  Destination:       bbus_out<2> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_15/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q to bbus_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_15/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_5/XLXI_1/XLXI_1/XLXI_2/XLXI_1/XLXI_1 (bbus_out_2_OBUF)
+     OBUF:I->O                 0.000          bbus_out_2_OBUF (bbus_out<2>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_14/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q (FF)
+  Destination:       bbus_out<1> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_14/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q to bbus_out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_14/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_5/XLXI_1/XLXI_1/XLXI_1/XLXI_2/XLXI_1 (bbus_out_1_OBUF)
+     OBUF:I->O                 0.000          bbus_out_1_OBUF (bbus_out<1>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_13/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q (FF)
+  Destination:       bbus_out<0> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_13/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q to bbus_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_13/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_5/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1 (bbus_out_0_OBUF)
+     OBUF:I->O                 0.000          bbus_out_0_OBUF (bbus_out<0>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_4/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_4/XLXI_1/Q (FF)
+  Destination:       cbus_out<5> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_4/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_4/XLXI_1/Q to cbus_out<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_4/XLXI_1:Q'
+     OBUF:I->O                 0.000          cbus_out_5_OBUF (cbus_out<5>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_5/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_5/XLXI_1/Q (FF)
+  Destination:       cbus_out<4> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_5/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_5/XLXI_1/Q to cbus_out<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.361   0.283  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_5/XLXI_1:Q'
+     OBUF:I->O                 0.000          cbus_out_4_OBUF (cbus_out<4>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_16/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q (FF)
+  Destination:       cbus_out<3> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_16/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q to cbus_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.361   0.283  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_16/XLXI_1:Q'
+     OBUF:I->O                 0.000          cbus_out_3_OBUF (cbus_out<3>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_15/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q (FF)
+  Destination:       cbus_out<2> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_15/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q to cbus_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.361   0.283  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_15/XLXI_1:Q'
+     OBUF:I->O                 0.000          cbus_out_2_OBUF (cbus_out<2>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_14/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q (FF)
+  Destination:       cbus_out<1> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_14/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q to cbus_out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.361   0.283  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_14/XLXI_1:Q'
+     OBUF:I->O                 0.000          cbus_out_1_OBUF (cbus_out<1>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_13/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q (FF)
+  Destination:       cbus_out<0> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_13/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q to cbus_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.361   0.283  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_13/XLXI_1:Q'
+     OBUF:I->O                 0.000          cbus_out_0_OBUF (cbus_out<0>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_16/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_16/XLXI_1/Q (FF)
+  Destination:       DAdd_out<9> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_16/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_16/XLXI_1/Q to DAdd_out<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_16/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_4/XLXI_2/XLXI_2/XLXI_1 (DAdd_out_9_OBUF)
+     OBUF:I->O                 0.000          DAdd_out_9_OBUF (DAdd_out<9>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_15/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_15/XLXI_1/Q (FF)
+  Destination:       DAdd_out<8> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_15/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_15/XLXI_1/Q to DAdd_out<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_15/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_4/XLXI_2/XLXI_1/XLXI_1 (DAdd_out_8_OBUF)
+     OBUF:I->O                 0.000          DAdd_out_8_OBUF (DAdd_out<8>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_14/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_14/XLXI_1/Q (FF)
+  Destination:       DAdd_out<7> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_14/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_14/XLXI_1/Q to DAdd_out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_14/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_4/XLXI_1/XLXI_2/XLXI_1 (DAdd_out_7_OBUF)
+     OBUF:I->O                 0.000          DAdd_out_7_OBUF (DAdd_out<7>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_13/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_13/XLXI_1/Q (FF)
+  Destination:       DAdd_out<6> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_13/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_13/XLXI_1/Q to DAdd_out<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_13/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_4/XLXI_1/XLXI_1/XLXI_1 (DAdd_out_6_OBUF)
+     OBUF:I->O                 0.000          DAdd_out_6_OBUF (DAdd_out<6>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_4/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_4/XLXI_1/Q (FF)
+  Destination:       DAdd_out<5> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_4/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_4/XLXI_1/Q to DAdd_out<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_4/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_3/XLXI_2/XLXI_1 (DAdd_out_5_OBUF)
+     OBUF:I->O                 0.000          DAdd_out_5_OBUF (DAdd_out<5>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_5/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_5/XLXI_1/Q (FF)
+  Destination:       DAdd_out<4> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_5/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_5/XLXI_1/Q to DAdd_out<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_5/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_3/XLXI_1/XLXI_3/XLXI_1 (DAdd_out_4_OBUF)
+     OBUF:I->O                 0.000          DAdd_out_4_OBUF (DAdd_out<4>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q (FF)
+  Destination:       DAdd_out<3> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q to DAdd_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_3/XLXI_1/XLXI_1/XLXI_2/XLXI_2/XLXI_1 (DAdd_out_3_OBUF)
+     OBUF:I->O                 0.000          DAdd_out_3_OBUF (DAdd_out<3>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q (FF)
+  Destination:       DAdd_out<2> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q to DAdd_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_3/XLXI_1/XLXI_1/XLXI_2/XLXI_1/XLXI_1 (DAdd_out_2_OBUF)
+     OBUF:I->O                 0.000          DAdd_out_2_OBUF (DAdd_out<2>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q (FF)
+  Destination:       DAdd_out<1> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q to DAdd_out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_2/XLXI_1 (DAdd_out_1_OBUF)
+     OBUF:I->O                 0.000          DAdd_out_1_OBUF (DAdd_out<1>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q (FF)
+  Destination:       DAdd_out<0> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q to DAdd_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_63/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_1 (DAdd_out_0_OBUF)
+     OBUF:I->O                 0.000          DAdd_out_0_OBUF (DAdd_out<0>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_4/increment_DUMMY'
+  Total number of paths / destination ports: 47 / 25
+-------------------------------------------------------------------------
+Offset:              1.316ns (Levels of Logic = 2)
+  Source:            XLXI_4/XLXI_52/aux_19 (FF)
+  Destination:       INST_EXTEND<19> (PAD)
+  Source Clock:      XLXI_4/increment_DUMMY rising
+
+  Data Path: XLXI_4/XLXI_52/aux_19 to INST_EXTEND<19>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              21   0.361   0.470  XLXI_4/XLXI_52/aux_19 (XLXI_4/XLXI_52/aux_19)
+     LUT2:I0->O           40   0.097   0.387  XLXI_4/XLXI_52/out_ins_completa<19>1 (INST_EXTEND_19_OBUF)
+     OBUF:I->O                 0.000          INST_EXTEND_19_OBUF (INST_EXTEND<19>)
+    ----------------------------------------
+    Total                      1.316ns (0.458ns logic, 0.858ns route)
+                                       (34.8% logic, 65.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_2/XLXI_4/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_2/XLXI_4/XLXI_1/Q (FF)
+  Destination:       mem_out<1> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_2/XLXI_4/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_2/XLXI_4/XLXI_1/Q to mem_out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_2/XLXI_4/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_4/XLXI_2/XLXI_1 (mem_out_1_OBUF)
+     OBUF:I->O                 0.000          mem_out_1_OBUF (mem_out<1>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_1/XLXI_4/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_1/XLXI_4/XLXI_1/Q (FF)
+  Destination:       mem_out<0> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_1/XLXI_4/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_1/XLXI_4/XLXI_1/Q to mem_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_1/XLXI_4/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_4/XLXI_1/XLXI_1 (mem_out_0_OBUF)
+     OBUF:I->O                 0.000          mem_out_0_OBUF (mem_out<0>)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_2/XLXI_4/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_2/XLXI_4/XLXI_1/Q (FF)
+  Destination:       sh_out<1> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_2/XLXI_4/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_2/XLXI_4/XLXI_1/Q to sh_out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_2/XLXI_4/XLXI_1:Q'
+     OBUF:I->O                 0.000          sh_out_1_OBUF (sh_out<1>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_1/XLXI_4/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_1/XLXI_4/XLXI_1/Q (FF)
+  Destination:       sh_out<0> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_1/XLXI_4/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_1/XLXI_4/XLXI_1/Q to sh_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_1/XLXI_4/XLXI_1:Q'
+     OBUF:I->O                 0.000          sh_out_0_OBUF (sh_out<0>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_2/XLXI_4/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_2/XLXI_4/XLXI_1/Q (FF)
+  Destination:       type_out<6> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_2/XLXI_4/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_2/XLXI_4/XLXI_1/Q to type_out<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_2/XLXI_4/XLXI_1:Q'
+     OBUF:I->O                 0.000          type_out_6_OBUF (type_out<6>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_4/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_4/XLXI_1/Q (FF)
+  Destination:       type_out<5> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_4/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_4/XLXI_1/Q to type_out<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_4/XLXI_1:Q'
+     OBUF:I->O                 0.000          type_out_5_OBUF (type_out<5>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_5/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_5/XLXI_1/Q (FF)
+  Destination:       type_out<4> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_5/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_5/XLXI_1/Q to type_out<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_5/XLXI_1:Q'
+     OBUF:I->O                 0.000          type_out_4_OBUF (type_out<4>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q (FF)
+  Destination:       type_out<3> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_1/Q to type_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.361   0.283  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXI_1:Q'
+     OBUF:I->O                 0.000          type_out_3_OBUF (type_out<3>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q (FF)
+  Destination:       type_out<2> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_1/Q to type_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXI_1:Q'
+     OBUF:I->O                 0.000          type_out_2_OBUF (type_out<2>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.650ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q (FF)
+  Destination:       type_out<1> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_1/Q to type_out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.361   0.289  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXI_1:Q'
+     OBUF:I->O                 0.000          type_out_1_OBUF (type_out<1>)
+    ----------------------------------------
+    Total                      0.650ns (0.361ns logic, 0.289ns route)
+                                       (55.5% logic, 44.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q (FF)
+  Destination:       type_out<0> (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_1/Q to type_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.361   0.283  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXI_1:Q'
+     OBUF:I->O                 0.000          type_out_0_OBUF (type_out<0>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_33/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.654ns (Levels of Logic = 2)
+  Source:            XLXI_2/XLXI_2/XLXI_33/XLXI_1/Q (FF)
+  Destination:       hold (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_33/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_33/XLXI_1/Q to hold
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.361   0.293  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_33/XLXI_1:Q'
+     OBUF:I->O                 0.000          hold_OBUF (hold)
+    ----------------------------------------
+    Total                      0.654ns (0.361ns logic, 0.293ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_2/XLXI_14/XLXI_3/XLXI_4/XLXN_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.207ns (Levels of Logic = 3)
+  Source:            XLXI_2/XLXI_2/XLXI_14/XLXI_3/XLXI_4/XLXI_1/Q (FF)
+  Destination:       kmx_out (PAD)
+  Source Clock:      XLXI_2/XLXI_2/XLXI_14/XLXI_3/XLXI_4/XLXN_1 rising
+
+  Data Path: XLXI_2/XLXI_2/XLXI_14/XLXI_3/XLXI_4/XLXI_1/Q to kmx_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.361   0.000  Q (Q)
+     end scope: 'XLXI_2/XLXI_2/XLXI_14/XLXI_3/XLXI_4/XLXI_1:Q'
+     MUXCY:DI->O           1   0.567   0.279  XLXI_2/XLXI_2/XLXI_37/XLXI_3/XLXI_1 (kmx_out_OBUF)
+     OBUF:I->O                 0.000          kmx_out_OBUF (kmx_out)
+    ----------------------------------------
+    Total                      1.207ns (0.928ns logic, 0.279ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_13/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    1.938|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_14/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    2.033|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_15/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    2.078|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_16/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    1.882|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_13/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    4.018|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_14/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    4.018|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_15/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    4.018|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_16/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    4.018|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_5/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    4.018|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_4/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    4.018|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_13/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.957|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_14/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.957|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_15/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.957|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_1/XLXI_16/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.957|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_23/XLXI_5/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.855|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.957|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.957|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.957|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.957|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_1/XLXI_5/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.855|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_1/XLXI_4/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.855|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_13/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.873|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_14/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.957|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_15/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.957|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_24/XLXI_2/XLXI_16/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    0.873|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_3/XLXI_4/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    1.674|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_1/XLXI_4/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    1.674|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_4/XLXI_2/XLXI_4/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    1.674|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_1/XLXI_1/XLXI_14/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    2.082|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_5/XLXI_4/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    2.082|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    2.082|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    1.970|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    1.812|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    1.698|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_5/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    2.022|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_4/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    2.033|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_2/XLXI_4/XLXN_1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    1.966|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_33/XLXN_1
+----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_13/XLXN_1      |    5.293|         |         |         |
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_14/XLXN_1      |    5.293|         |         |         |
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_15/XLXN_1      |    5.293|         |         |         |
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_16/XLXN_1      |    5.293|         |         |         |
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_5/XLXN_1              |    4.503|         |         |         |
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1|    3.164|         |         |         |
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1|    3.317|         |         |         |
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1|    2.132|         |         |         |
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_4/XLXN_1               |    3.310|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1                     |    5.810|         |         |         |
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1 |    2.209|         |         |         |
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1 |    2.750|         |         |         |
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1 |    1.640|         |         |         |
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_4/XLXN_1                |    2.734|         |         |         |
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_13/XLXN_1        |    4.801|         |         |         |
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_14/XLXN_1        |    4.801|         |         |         |
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_15/XLXN_1        |    4.801|         |         |         |
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_16/XLXN_1        |    4.801|         |         |         |
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_5/XLXN_1                |    4.011|         |         |         |
+XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1 |    2.425|         |         |         |
+XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1 |    2.750|         |         |         |
+XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1 |    1.772|         |         |         |
+XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_13/XLXN_1        |    4.933|         |         |         |
+XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_14/XLXN_1        |    4.933|         |         |         |
+XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_15/XLXN_1        |    4.933|         |         |         |
+XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_16/XLXN_1        |    4.933|         |         |         |
+XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_5/XLXN_1                |    4.143|         |         |         |
+XLXI_4/increment_DUMMY                                          |    5.540|         |         |         |
+----------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_33/XLXN_1|    1.453|         |         |         |
+XLXI_4/increment_DUMMY      |    1.550|         |         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_13/XLXN_1
+-------------------------------------------+---------+---------+---------+---------+
+                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_13/XLXN_1   |    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1|    1.462|         |         |         |
+-------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_14/XLXN_1
+-------------------------------------------+---------+---------+---------+---------+
+                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_14/XLXN_1   |    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1|    1.462|         |         |         |
+-------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_15/XLXN_1
+-------------------------------------------+---------+---------+---------+---------+
+                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_15/XLXN_1   |    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1|    1.462|         |         |         |
+-------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_1/XLXI_16/XLXN_1
+-------------------------------------------+---------+---------+---------+---------+
+                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/ALU/XLXI_16/XLXN_1   |    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1|    1.462|         |         |         |
+-------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_1/XLXI_4/XLXN_1
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_2/XLXI_1/XLXI_4/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1      |    1.462|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_2/XLXI_2/XLXI_4/XLXN_1
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_2/XLXI_2/XLXI_4/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1      |    1.462|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1
+----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1|    0.936|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1                     |    1.453|         |         |         |
+----------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1
+----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1|    0.936|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1                     |    1.453|         |         |         |
+----------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1
+----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1                     |    1.462|         |         |         |
+----------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1
+----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1                     |    1.462|         |         |         |
+----------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_5/XLXN_1
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_1/XLXI_5/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1             |    1.462|         |         |         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_4/XLXN_1
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_1/XLXI_4/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1      |    1.462|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_2/XLXI_4/XLXN_1
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_6/XLXI_2/XLXI_4/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1      |    1.462|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_13/XLXN_1
+----------------------------------------------------------+---------+---------+---------+---------+
+                                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_13/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1               |    1.462|         |         |         |
+----------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_14/XLXN_1
+----------------------------------------------------------+---------+---------+---------+---------+
+                                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_14/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1               |    1.462|         |         |         |
+----------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_15/XLXN_1
+----------------------------------------------------------+---------+---------+---------+---------+
+                                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_15/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1               |    1.462|         |         |         |
+----------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_16/XLXN_1
+----------------------------------------------------------+---------+---------+---------+---------+
+                                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_1/XLXI_16/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1               |    1.462|         |         |         |
+----------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_5/XLXN_1
+--------------------------------------------------+---------+---------+---------+---------+
+                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_1/XLXI_5/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1       |    1.462|         |         |         |
+--------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_4/XLXN_1
+-------------------------------------------+---------+---------+---------+---------+
+                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_14/XLXI_22/XLXI_4/XLXN_1|    0.945|         |         |         |
+XLXI_2/XLXI_2/XLXI_37/XLXI_68/XLXI_4/XLXN_1|    1.462|         |         |         |
+-------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1
+---------------------------------------------------------------+---------+---------+---------+---------+
+                                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_13/XLXN_1|    0.653|         |         |         |
+---------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1
+---------------------------------------------------------------+---------+---------+---------+---------+
+                                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_14/XLXN_1|    0.658|         |         |         |
+---------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1
+---------------------------------------------------------------+---------+---------+---------+---------+
+                                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_15/XLXN_1|    0.648|         |         |         |
+---------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1
+---------------------------------------------------------------+---------+---------+---------+---------+
+                                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_1/XLXI_16/XLXN_1|    0.653|         |         |         |
+---------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_1/XLXI_5/XLXN_1
+-------------------------------------------------------+---------+---------+---------+---------+
+                                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_1/XLXI_5/XLXN_1|    0.648|         |         |         |
+-------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_1/XLXI_4/XLXN_1
+------------------------------------------------+---------+---------+---------+---------+
+                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_1/XLXI_4/XLXN_1|    0.653|         |         |         |
+------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_1/XLXI_2/XLXI_4/XLXN_1
+------------------------------------------------+---------+---------+---------+---------+
+                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_3/XLXI_2/XLXI_4/XLXN_1|    0.648|         |         |         |
+------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_13/XLXN_1
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_13/XLXN_1|    0.653|         |         |         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_14/XLXN_1
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_14/XLXN_1|    0.653|         |         |         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_15/XLXN_1
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_15/XLXN_1|    0.653|         |         |         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_1/XLXI_16/XLXN_1
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_1/XLXI_16/XLXN_1|    0.653|         |         |         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_1/XLXI_5/XLXN_1
+------------------------------------------------+---------+---------+---------+---------+
+                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_1/XLXI_5/XLXN_1|    0.653|         |         |         |
+------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_2/XLXI_2/XLXI_6/XLXI_2/XLXI_4/XLXN_1
+-----------------------------------------+---------+---------+---------+---------+
+                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------+---------+---------+---------+---------+
+XLXI_2/XLXI_2/XLXI_5/XLXI_4/XLXI_4/XLXN_1|    0.648|         |         |         |
+-----------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_4/increment_DUMMY
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+XLXI_4/increment_DUMMY|    3.796|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.14 secs
+ 
+--> 
+
+Total memory usage is 4642868 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   39 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

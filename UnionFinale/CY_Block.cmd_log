@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/CY_Block.v -lang verilog -prj UnionFinale -o CY_Block.spl -module CY_Block -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w CY_Block.spl C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/CY_Block.sym 

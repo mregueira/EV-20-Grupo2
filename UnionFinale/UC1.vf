@@ -1,0 +1,351 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : UC1.vf
+// /___/   /\     Timestamp : 06/07/2020 17:24:09
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/UC1.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/UnionFinale/UC1.sch
+//Design Name: UC1
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module IFD_HXILINX_UC1(Q, C, D);
+   
+   output             Q;
+
+   input 	      C;	
+   input              D;
+   
+   parameter INIT = 1'b0;
+   (* IOB = "TRUE" *) 
+
+   reg                Q = INIT;
+
+   always @(posedge C)
+     begin
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module fdce1_MUSER_UC1(chipEnable, 
+                       clk, 
+                       d, 
+                       q);
+
+    input chipEnable;
+    input clk;
+    input d;
+   output q;
+   
+   wire XLXN_1;
+   
+   (* HU_SET = "XLXI_1_84" *) 
+   IFD_HXILINX_UC1 #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
+                           .D(d), 
+                           .Q(q));
+   AND2  XLXI_2 (.I0(chipEnable), 
+                .I1(clk), 
+                .O(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH1_MUSER_UC1(CLK, 
+                        CLR, 
+                        ENABLE, 
+                        INPUT, 
+                        OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input INPUT;
+   output OUTPUT;
+   
+   
+   fdce1_MUSER_UC1  XLXI_4 (.chipEnable(ENABLE), 
+                           .clk(CLK), 
+                           .d(INPUT), 
+                           .q(OUTPUT));
+endmodule
+`timescale 1ns / 1ps
+
+module mux1_MUSER_UC1(constante, 
+                      hold, 
+                      muxin, 
+                      muxout);
+
+    input constante;
+    input hold;
+    input muxin;
+   output muxout;
+   
+   
+   MUXCY  XLXI_1 (.CI(constante), 
+                 .DI(muxin), 
+                 .S(hold), 
+                 .O(muxout));
+endmodule
+`timescale 1ns / 1ps
+
+module mux2_MUSER_UC1(const, 
+                      hold, 
+                      muxin, 
+                      muxout);
+
+    input [1:0] const;
+    input hold;
+    input [1:0] muxin;
+   output [1:0] muxout;
+   
+   
+   mux1_MUSER_UC1  XLXI_1 (.constante(const[0]), 
+                          .hold(hold), 
+                          .muxin(muxin[0]), 
+                          .muxout(muxout[0]));
+   mux1_MUSER_UC1  XLXI_2 (.constante(const[1]), 
+                          .hold(hold), 
+                          .muxin(muxin[1]), 
+                          .muxout(muxout[1]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux4_MUSER_UC1(const, 
+                      hold, 
+                      muxin, 
+                      muxout);
+
+    input [3:0] const;
+    input hold;
+    input [3:0] muxin;
+   output [3:0] muxout;
+   
+   
+   mux2_MUSER_UC1  XLXI_1 (.const(const[1:0]), 
+                          .hold(hold), 
+                          .muxin(muxin[1:0]), 
+                          .muxout(muxout[1:0]));
+   mux2_MUSER_UC1  XLXI_2 (.const(const[3:2]), 
+                          .hold(hold), 
+                          .muxin(muxin[3:2]), 
+                          .muxout(muxout[3:2]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux5_MUSER_UC1(const, 
+                      hold, 
+                      muxin, 
+                      muxout);
+
+    input [4:0] const;
+    input hold;
+    input [4:0] muxin;
+   output [4:0] muxout;
+   
+   
+   mux4_MUSER_UC1  XLXI_1 (.const(const[3:0]), 
+                          .hold(hold), 
+                          .muxin(muxin[3:0]), 
+                          .muxout(muxout[3:0]));
+   mux1_MUSER_UC1  XLXI_3 (.constante(const[4]), 
+                          .hold(hold), 
+                          .muxin(muxin[4]), 
+                          .muxout(muxout[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux6_MUSER_UC1(const, 
+                      hold, 
+                      muxin, 
+                      muxout);
+
+    input [5:0] const;
+    input hold;
+    input [5:0] muxin;
+   output [5:0] muxout;
+   
+   
+   mux5_MUSER_UC1  XLXI_1 (.const(const[4:0]), 
+                          .hold(hold), 
+                          .muxin(muxin[4:0]), 
+                          .muxout(muxout[4:0]));
+   mux1_MUSER_UC1  XLXI_2 (.constante(const[5]), 
+                          .hold(hold), 
+                          .muxin(muxin[5]), 
+                          .muxout(muxout[5]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux10_MUSER_UC1(const, 
+                       muxin, 
+                       selector, 
+                       muxout);
+
+    input [9:0] const;
+    input [9:0] muxin;
+    input selector;
+   output [9:0] muxout;
+   
+   
+   mux6_MUSER_UC1  XLXI_3 (.const(const[5:0]), 
+                          .hold(selector), 
+                          .muxin(muxin[5:0]), 
+                          .muxout(muxout[5:0]));
+   mux4_MUSER_UC1  XLXI_4 (.const(const[9:6]), 
+                          .hold(selector), 
+                          .muxin(muxin[9:6]), 
+                          .muxout(muxout[9:6]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux7_MUSER_UC1(const, 
+                      hold, 
+                      muxin, 
+                      muxout);
+
+    input [6:0] const;
+    input hold;
+    input [6:0] muxin;
+   output [6:0] muxout;
+   
+   
+   mux6_MUSER_UC1  XLXI_1 (.const(const[5:0]), 
+                          .hold(hold), 
+                          .muxin(muxin[5:0]), 
+                          .muxout(muxout[5:0]));
+   mux1_MUSER_UC1  XLXI_2 (.constante(const[6]), 
+                          .hold(hold), 
+                          .muxin(muxin[6]), 
+                          .muxout(muxout[6]));
+endmodule
+`timescale 1ns / 1ps
+
+module UC1(abusIN, 
+           aluIN, 
+           bbusIN, 
+           cbusIN, 
+           clk, 
+           DAdd, 
+           h, 
+           jump, 
+           kmxIN, 
+           memIN, 
+           shIN, 
+           typeIN, 
+           abusOUTuc1, 
+           aluOUTuc1, 
+           bbusOUTuc1, 
+           cbusOUTuc1, 
+           DAddOUTuc1, 
+           kmxOUTuc1, 
+           memOUTuc1, 
+           shOUTuc1, 
+           typeOUTuc1);
+
+    input [4:0] abusIN;
+    input [3:0] aluIN;
+    input [5:0] bbusIN;
+    input [5:0] cbusIN;
+    input clk;
+    input [9:0] DAdd;
+    input h;
+    input jump;
+    input kmxIN;
+    input [1:0] memIN;
+    input [1:0] shIN;
+    input [6:0] typeIN;
+   output [4:0] abusOUTuc1;
+   output [3:0] aluOUTuc1;
+   output [5:0] bbusOUTuc1;
+   output [5:0] cbusOUTuc1;
+   output [9:0] DAddOUTuc1;
+   output kmxOUTuc1;
+   output [1:0] memOUTuc1;
+   output [1:0] shOUTuc1;
+   output [6:0] typeOUTuc1;
+   
+   wire clr;
+   wire ena;
+   wire hold;
+   wire [3:0] XLXN_20;
+   wire [1:0] XLXN_23;
+   wire XLXN_26;
+   wire [1:0] XLXN_29;
+   wire [5:0] XLXN_33;
+   wire [6:0] XLXN_36;
+   wire [5:0] XLXN_39;
+   wire [4:0] XLXN_42;
+   wire [9:0] XLXN_151;
+   wire XLXN_161;
+   wire XLXN_162;
+   
+   assign clr = 0;
+   assign ena = 1;
+   assign XLXN_20 = 4'h8;
+   assign XLXN_23 = 2'b00;
+   assign XLXN_26 = 0;
+   assign XLXN_29 = 2'b00;
+   assign XLXN_33 = 6'b100011;
+   assign XLXN_36 = 7'b0000000;
+   assign XLXN_39 = 6'b100011;
+   assign XLXN_42 = 5'b00000;
+   assign XLXN_151 = 10'b0000000000;
+   assign XLXN_162 = 1;
+   mux4_MUSER_UC1  XLXI_1 (.const(XLXN_20[3:0]), 
+                          .hold(hold), 
+                          .muxin(aluIN[3:0]), 
+                          .muxout(aluOUTuc1[3:0]));
+   mux2_MUSER_UC1  XLXI_2 (.const(XLXN_23[1:0]), 
+                          .hold(hold), 
+                          .muxin(shIN[1:0]), 
+                          .muxout(shOUTuc1[1:0]));
+   mux1_MUSER_UC1  XLXI_3 (.constante(XLXN_26), 
+                          .hold(hold), 
+                          .muxin(kmxIN), 
+                          .muxout(kmxOUTuc1));
+   mux2_MUSER_UC1  XLXI_4 (.const(XLXN_29[1:0]), 
+                          .hold(hold), 
+                          .muxin(memIN[1:0]), 
+                          .muxout(memOUTuc1[1:0]));
+   mux6_MUSER_UC1  XLXI_5 (.const(XLXN_33[5:0]), 
+                          .hold(hold), 
+                          .muxin(bbusIN[5:0]), 
+                          .muxout(bbusOUTuc1[5:0]));
+   mux7_MUSER_UC1  XLXI_6 (.const(XLXN_36[6:0]), 
+                          .hold(hold), 
+                          .muxin(typeIN[6:0]), 
+                          .muxout(typeOUTuc1[6:0]));
+   mux6_MUSER_UC1  XLXI_7 (.const(XLXN_39[5:0]), 
+                          .hold(hold), 
+                          .muxin(cbusIN[5:0]), 
+                          .muxout(cbusOUTuc1[5:0]));
+   mux5_MUSER_UC1  XLXI_8 (.const(XLXN_42[4:0]), 
+                          .hold(hold), 
+                          .muxin(abusIN[4:0]), 
+                          .muxout(abusOUTuc1[4:0]));
+   mux10_MUSER_UC1  XLXI_63 (.const(XLXN_151[9:0]), 
+                            .muxin(DAdd[9:0]), 
+                            .selector(hold), 
+                            .muxout(DAddOUTuc1[9:0]));
+   OR2  XLXI_65 (.I0(jump), 
+                .I1(h), 
+                .O(XLXN_161));
+   LATCH1_MUSER_UC1  XLXI_68 (.CLK(clk), 
+                             .CLR(), 
+                             .ENABLE(XLXN_162), 
+                             .INPUT(XLXN_161), 
+                             .OUTPUT(hold));
+endmodule

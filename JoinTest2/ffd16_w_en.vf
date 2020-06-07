@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ffd16_w_en.vf
-// /___/   /\     Timestamp : 06/06/2020 19:00:26
+// /___/   /\     Timestamp : 06/07/2020 14:51:08
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -53,7 +53,7 @@ module ffd16_w_en(CLK,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_12" *) 
+   (* HU_SET = "XLXI_1_11" *) 
    IFD16_HXILINX_ffd16_w_en  XLXI_1 (.C(XLXN_1), 
                                     .D(D[15:0]), 
                                     .Q(Q[15:0]));

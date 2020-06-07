@@ -1,3 +1,4 @@
 sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog merge_drc.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge.sch 
 sch2sym -intstyle ise -family artix7 -w -refsym merge C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge.sch C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge.sym 
 sch2sym -intstyle ise -family artix7 -w -refsym merge C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge.sch C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge.sym 
+sch2sym -intstyle ise -family artix7 -w -refsym merge {C:/Users/PC 64/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge.sch} {C:/Users/PC 64/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge.sym} 

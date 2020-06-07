@@ -54,7 +54,7 @@
             <rect width="256" x="64" y="-256" height="768" />
         </blockdef>
         <blockdef name="merge">
-            <timestamp>2020-6-6T23:44:36</timestamp>
+            <timestamp>2020-6-7T0:25:24</timestamp>
             <line x2="0" y1="32" y2="32" x1="64" />
             <rect width="64" x="0" y="-620" height="24" />
             <line x2="0" y1="-608" y2="-608" x1="64" />
@@ -92,6 +92,7 @@
         <block symbolname="merge" name="XLXI_2">
             <blockpin signalname="XLXN_32(13:0)" name="instruction(13:0)" />
             <blockpin signalname="CLK" name="clk" />
+            <blockpin signalname="XLXN_36" name="JUMP" />
             <blockpin signalname="DAdd_out(9:0)" name="DAdd_out(9:0)" />
             <blockpin signalname="bbus_out(5:0)" name="bbus_out(5:0)" />
             <blockpin signalname="mem_out(1:0)" name="mem_out(1:0)" />
@@ -102,7 +103,6 @@
             <blockpin signalname="hold" name="hold" />
             <blockpin signalname="cbus_out(5:0)" name="cbus_out(5:0)" />
             <blockpin signalname="type_out(6:0)" name="type_out(6:0)" />
-            <blockpin signalname="XLXN_36" name="JUMP" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">

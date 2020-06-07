@@ -16,7 +16,6 @@
         <signal name="instruction(13:0)" />
         <signal name="clk" />
         <signal name="instruction(13:7)" />
-        <signal name="XLXN_30" />
         <signal name="DAdd_out(9:0)" />
         <signal name="bbus_out(5:0)" />
         <signal name="mem_out(1:0)" />
@@ -81,13 +80,11 @@
             <rect width="336" x="64" y="-640" height="704" />
         </blockdef>
         <blockdef name="MROM">
-            <timestamp>2020-6-4T20:57:57</timestamp>
+            <timestamp>2020-6-7T0:20:35</timestamp>
             <rect width="64" x="848" y="212" height="24" />
             <line x2="912" y1="224" y2="224" x1="848" />
             <rect width="64" x="0" y="-492" height="24" />
             <line x2="0" y1="-480" y2="-480" x1="64" />
-            <line x2="0" y1="-256" y2="-256" x1="64" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
             <rect width="64" x="848" y="-364" height="24" />
             <line x2="912" y1="-352" y2="-352" x1="848" />
             <line x2="912" y1="-288" y2="-288" x1="848" />
@@ -100,11 +97,6 @@
             <rect width="64" x="848" y="-44" height="24" />
             <line x2="912" y1="-32" y2="-32" x1="848" />
             <rect width="784" x="64" y="-512" height="768" />
-        </blockdef>
-        <blockdef name="constant">
-            <timestamp>2006-1-1T10:10:10</timestamp>
-            <rect width="112" x="0" y="0" height="64" />
-            <line x2="112" y1="32" y2="32" x1="144" />
         </blockdef>
         <block symbolname="Tuberia" name="XLXI_2">
             <blockpin signalname="clk" name="CLK2" />
@@ -130,8 +122,6 @@
         </block>
         <block symbolname="MROM" name="XLXI_3">
             <blockpin signalname="instruction(13:7)" name="Bus_B(6:0)" />
-            <blockpin signalname="clk" name="CLK_ROM" />
-            <blockpin signalname="XLXN_30" name="ROM_RESET" />
             <blockpin signalname="Ti(6:0)" name="Ti(6:0)" />
             <blockpin signalname="cbus(5:0)" name="C_Bus(5:0)" />
             <blockpin signalname="bbus(5:0)" name="B_Bus(5:0)" />
@@ -139,14 +129,6 @@
             <blockpin signalname="kmx" name="KMx" />
             <blockpin signalname="sh(1:0)" name="SH(1:0)" />
             <blockpin signalname="alu(3:0)" name="ALUC(3:0)" />
-        </block>
-        <block symbolname="constant" name="XLXI_4">
-            <attr value="0" name="CValue">
-                <trait delete="all:1 sym:0" />
-                <trait editname="all:1 sch:0" />
-                <trait valuetype="BitVector 32 Hexadecimal" />
-            </attr>
-            <blockpin signalname="XLXN_30" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -236,15 +218,6 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="448" y="720" type="branch" />
             <wire x2="560" y1="720" y2="720" x1="448" />
         </branch>
-        <branch name="clk">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="448" y="944" type="branch" />
-            <wire x2="560" y1="944" y2="944" x1="448" />
-        </branch>
-        <branch name="XLXN_30">
-            <wire x2="560" y1="1168" y2="1168" x1="464" />
-        </branch>
-        <instance x="320" y="1136" name="XLXI_4" orien="R0">
-        </instance>
         <branch name="DAdd_out(9:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2688" y="656" type="branch" />
             <wire x2="2688" y1="656" y2="656" x1="2640" />

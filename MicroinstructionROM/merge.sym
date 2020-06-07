@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="merge">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2020-6-6T23:44:36</timestamp>
+    <timestamp>2020-6-7T0:25:24</timestamp>
     <pin polarity="Input" x="0" y="-608" name="instruction(13:0)" />
     <pin polarity="Input" x="0" y="-32" name="clk" />
+    <pin polarity="Input" x="0" y="32" name="JUMP" />
     <pin polarity="Output" x="464" y="-608" name="DAdd_out(9:0)" />
     <pin polarity="Output" x="464" y="-544" name="bbus_out(5:0)" />
     <pin polarity="Output" x="464" y="-480" name="mem_out(1:0)" />
@@ -14,11 +15,11 @@
     <pin polarity="Output" x="464" y="-160" name="hold" />
     <pin polarity="Output" x="464" y="-96" name="cbus_out(5:0)" />
     <pin polarity="Output" x="464" y="-32" name="type_out(6:0)" />
-    <pin polarity="Input" x="0" y="32" name="JUMP" />
     <graph>
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="232" y="-648" type="symbol" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-608" type="pin instruction(13:0)" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="32" type="pin JUMP" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-608" type="pin DAdd_out(9:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-544" type="pin bbus_out(5:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-480" type="pin mem_out(1:0)" />
@@ -29,7 +30,6 @@
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-160" type="pin hold" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-96" type="pin cbus_out(5:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-32" type="pin type_out(6:0)" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="32" type="pin JUMP" />
         <line x2="0" y1="32" y2="32" x1="64" />
         <rect width="64" x="0" y="-620" height="24" />
         <line x2="0" y1="-608" y2="-608" x1="64" />

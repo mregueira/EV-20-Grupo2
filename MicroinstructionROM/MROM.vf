@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : MROM.vf
-// /___/   /\     Timestamp : 06/06/2020 19:22:04
+// /___/   /\     Timestamp : 06/06/2020 21:29:34
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.sch
+//Command: sch2hdl -sympath "C:/Users/PC 64/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir" -intstyle ise -family artix7 -verilog "C:/Users/PC 64/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/MROM.vf" -w "C:/Users/PC 64/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/MROM.sch"
 //Design Name: MROM
 //Device: artix7
 //Purpose:
@@ -21,8 +21,6 @@
 `timescale 1ns / 1ps
 
 module MROM(Bus_B, 
-            CLK_ROM, 
-            ROM_RESET, 
             ALUC, 
             B_Bus, 
             C_Bus, 
@@ -32,8 +30,6 @@ module MROM(Bus_B,
             Ti);
 
     input [6:0] Bus_B;
-    input CLK_ROM;
-    input ROM_RESET;
    output [3:0] ALUC;
    output [5:0] B_Bus;
    output [5:0] C_Bus;
@@ -42,10 +38,10 @@ module MROM(Bus_B,
    output [1:0] SH;
    output [6:0] Ti;
    
+   wire [6:0] Bus_B_DUMMY;
    
-   MicroinstructionROM  XLXI_7 (.a(Bus_B[6:0]), 
-                               .clk(CLK_ROM), 
-                               .qspo_rst(ROM_RESET), 
-                               .qspo({ALUC[3:0], SH[1:0], KMx, MEM[1:0], 
+   assign Bus_B_DUMMY[6:0] = Bus_B[6:0];
+   MicroinstructionROMv2  XLXI_9 (.a(Bus_B_DUMMY[6:0]), 
+                                 .spo({ALUC[3:0], SH[1:0], KMx, MEM[1:0], 
          B_Bus[5:0], C_Bus[5:0], Ti[6:0]}));
 endmodule

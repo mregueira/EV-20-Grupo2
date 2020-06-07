@@ -38,7 +38,8 @@
         <port polarity="Output" name="cbus_out(5:0)" />
         <port polarity="Input" name="CLK" />
         <blockdef name="unionMagica">
-            <timestamp>2020-6-6T19:19:16</timestamp>
+            <timestamp>2020-6-7T0:44:4</timestamp>
+            <line x2="384" y1="544" y2="544" x1="320" />
             <rect width="64" x="320" y="468" height="24" />
             <line x2="384" y1="480" y2="480" x1="320" />
             <rect width="64" x="320" y="404" height="24" />
@@ -51,7 +52,7 @@
             <line x2="0" y1="224" y2="224" x1="64" />
             <rect width="64" x="320" y="20" height="24" />
             <line x2="384" y1="32" y2="32" x1="320" />
-            <rect width="256" x="64" y="-256" height="768" />
+            <rect width="256" x="64" y="-256" height="832" />
         </blockdef>
         <blockdef name="merge">
             <timestamp>2020-6-7T0:25:24</timestamp>
@@ -88,6 +89,7 @@
             <blockpin signalname="XLXN_35" name="increment" />
             <blockpin signalname="XLXN_34(10:0)" name="PC(10:0)" />
             <blockpin signalname="XLXN_33(21:0)" name="INSTRUCTION_EXTENDIDA(21:0)" />
+            <blockpin signalname="XLXN_36" name="is_void" />
         </block>
         <block symbolname="merge" name="XLXI_2">
             <blockpin signalname="XLXN_32(13:0)" name="instruction(13:0)" />
@@ -202,7 +204,9 @@
         <iomarker fontsize="28" x="2656" y="1312" name="cbus_out(5:0)" orien="R0" />
         <iomarker fontsize="28" x="2656" y="1376" name="type_out(6:0)" orien="R0" />
         <branch name="XLXN_36">
+            <wire x2="1536" y1="1552" y2="1552" x1="1040" />
             <wire x2="1584" y1="1440" y2="1440" x1="1536" />
+            <wire x2="1536" y1="1440" y2="1552" x1="1536" />
         </branch>
     </sheet>
 </drawing>

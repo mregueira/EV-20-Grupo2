@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : LATCH6.vf
-// /___/   /\     Timestamp : 06/06/2020 19:22:51
+// /___/   /\     Timestamp : 06/06/2020 23:27:38
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -53,7 +53,7 @@ module fdce1_MUSER_LATCH6(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_38" *) 
+   (* HU_SET = "XLXI_1_44" *) 
    IFD_HXILINX_LATCH6 #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                               .D(d), 
                               .Q(q));

@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : merge.vf
-// /___/   /\     Timestamp : 06/06/2020 21:30:03
+// /___/   /\     Timestamp : 06/06/2020 23:27:13
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath "C:/Users/PC 64/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir" -intstyle ise -family artix7 -verilog "C:/Users/PC 64/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge.vf" -w "C:/Users/PC 64/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge.sch"
+//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge.sch
 //Design Name: merge
 //Device: artix7
 //Purpose:
@@ -82,6 +82,48 @@ module MROM_MUSER_merge(Bus_B,
    MicroinstructionROMv2  XLXI_9 (.a(Bus_B_DUMMY[6:0]), 
                                  .spo({ALUC[3:0], SH[1:0], KMx, MEM[1:0], 
          B_Bus[5:0], C_Bus[5:0], Ti[6:0]}));
+endmodule
+`timescale 1ns / 1ps
+
+module fdce1_MUSER_merge(chipEnable, 
+                         clk, 
+                         d, 
+                         q);
+
+    input chipEnable;
+    input clk;
+    input d;
+   output q;
+   
+   wire XLXN_1;
+   
+   (* HU_SET = "XLXI_1_28" *) 
+   IFD_HXILINX_merge #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
+                             .D(d), 
+                             .Q(q));
+   AND2  XLXI_2 (.I0(chipEnable), 
+                .I1(clk), 
+                .O(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH1_MUSER_merge(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input INPUT;
+   output OUTPUT;
+   
+   
+   fdce1_MUSER_merge  XLXI_4 (.chipEnable(ENABLE), 
+                             .clk(CLK), 
+                             .d(INPUT), 
+                             .q(OUTPUT));
 endmodule
 `timescale 1ns / 1ps
 
@@ -213,208 +255,6 @@ module mux10_MUSER_merge(const,
 endmodule
 `timescale 1ns / 1ps
 
-module fdce1_MUSER_merge(chipEnable, 
-                         clk, 
-                         d, 
-                         q);
-
-    input chipEnable;
-    input clk;
-    input d;
-   output q;
-   
-   wire XLXN_1;
-   
-   (* HU_SET = "XLXI_1_0" *) 
-   IFD_HXILINX_merge #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
-                             .D(d), 
-                             .Q(q));
-   AND2  XLXI_2 (.I0(chipEnable), 
-                .I1(clk), 
-                .O(XLXN_1));
-endmodule
-`timescale 1ns / 1ps
-
-module LATCH4_MUSER_merge(CLK, 
-                          CLR, 
-                          ENABLE, 
-                          INPUT, 
-                          OUTPUT);
-
-    input CLK;
-    input CLR;
-    input ENABLE;
-    input [3:0] INPUT;
-   output [3:0] OUTPUT;
-   
-   
-   fdce1_MUSER_merge  XLXI_13 (.chipEnable(ENABLE), 
-                              .clk(CLK), 
-                              .d(INPUT[0]), 
-                              .q(OUTPUT[0]));
-   fdce1_MUSER_merge  XLXI_14 (.chipEnable(ENABLE), 
-                              .clk(CLK), 
-                              .d(INPUT[1]), 
-                              .q(OUTPUT[1]));
-   fdce1_MUSER_merge  XLXI_15 (.chipEnable(ENABLE), 
-                              .clk(CLK), 
-                              .d(INPUT[2]), 
-                              .q(OUTPUT[2]));
-   fdce1_MUSER_merge  XLXI_16 (.chipEnable(ENABLE), 
-                              .clk(CLK), 
-                              .d(INPUT[3]), 
-                              .q(OUTPUT[3]));
-endmodule
-`timescale 1ns / 1ps
-
-module LATCH5_MUSER_merge(CLK, 
-                          CLR, 
-                          ENABLE, 
-                          INPUT, 
-                          OUTPUT);
-
-    input CLK;
-    input CLR;
-    input ENABLE;
-    input [4:0] INPUT;
-   output [4:0] OUTPUT;
-   
-   
-   LATCH4_MUSER_merge  XLXI_1 (.CLK(CLK), 
-                              .CLR(CLR), 
-                              .ENABLE(ENABLE), 
-                              .INPUT(INPUT[3:0]), 
-                              .OUTPUT(OUTPUT[3:0]));
-   fdce1_MUSER_merge  XLXI_5 (.chipEnable(ENABLE), 
-                             .clk(CLK), 
-                             .d(INPUT[4]), 
-                             .q(OUTPUT[4]));
-endmodule
-`timescale 1ns / 1ps
-
-module LATCH6_MUSER_merge(CLK, 
-                          CLR, 
-                          ENABLE, 
-                          INPUT, 
-                          OUTPUT);
-
-    input CLK;
-    input CLR;
-    input ENABLE;
-    input [5:0] INPUT;
-   output [5:0] OUTPUT;
-   
-   
-   LATCH5_MUSER_merge  XLXI_1 (.CLK(CLK), 
-                              .CLR(CLR), 
-                              .ENABLE(ENABLE), 
-                              .INPUT(INPUT[4:0]), 
-                              .OUTPUT(OUTPUT[4:0]));
-   fdce1_MUSER_merge  XLXI_4 (.chipEnable(ENABLE), 
-                             .clk(CLK), 
-                             .d(INPUT[5]), 
-                             .q(OUTPUT[5]));
-endmodule
-`timescale 1ns / 1ps
-
-module LATCH10_MUSER_merge(CLK, 
-                           CLR, 
-                           ENABLE, 
-                           INPUT, 
-                           OUTPUT);
-
-    input CLK;
-    input CLR;
-    input ENABLE;
-    input [9:0] INPUT;
-   output [9:0] OUTPUT;
-   
-   
-   LATCH6_MUSER_merge  XLXI_1 (.CLK(CLK), 
-                              .CLR(CLR), 
-                              .ENABLE(ENABLE), 
-                              .INPUT(INPUT[5:0]), 
-                              .OUTPUT(OUTPUT[5:0]));
-   LATCH4_MUSER_merge  XLXI_2 (.CLK(CLK), 
-                              .CLR(CLR), 
-                              .ENABLE(ENABLE), 
-                              .INPUT(INPUT[9:6]), 
-                              .OUTPUT(OUTPUT[9:6]));
-endmodule
-`timescale 1ns / 1ps
-
-module LATCH1_MUSER_merge(CLK, 
-                          CLR, 
-                          ENABLE, 
-                          INPUT, 
-                          OUTPUT);
-
-    input CLK;
-    input CLR;
-    input ENABLE;
-    input INPUT;
-   output OUTPUT;
-   
-   
-   fdce1_MUSER_merge  XLXI_4 (.chipEnable(ENABLE), 
-                             .clk(CLK), 
-                             .d(INPUT), 
-                             .q(OUTPUT));
-endmodule
-`timescale 1ns / 1ps
-
-module LATCH2_MUSER_merge(CLK, 
-                          CLR, 
-                          ENABLE, 
-                          INPUT, 
-                          OUTPUT);
-
-    input CLK;
-    input CLR;
-    input ENABLE;
-    input [1:0] INPUT;
-   output [1:0] OUTPUT;
-   
-   
-   LATCH1_MUSER_merge  XLXI_1 (.CLK(CLK), 
-                              .CLR(CLR), 
-                              .ENABLE(ENABLE), 
-                              .INPUT(INPUT[0]), 
-                              .OUTPUT(OUTPUT[0]));
-   LATCH1_MUSER_merge  XLXI_2 (.CLK(CLK), 
-                              .CLR(CLR), 
-                              .ENABLE(ENABLE), 
-                              .INPUT(INPUT[1]), 
-                              .OUTPUT(OUTPUT[1]));
-endmodule
-`timescale 1ns / 1ps
-
-module LATCH7_MUSER_merge(CLK, 
-                          CLR, 
-                          ENABLE, 
-                          INPUT, 
-                          OUTPUT);
-
-    input CLK;
-    input CLR;
-    input ENABLE;
-    input [6:0] INPUT;
-   output [6:0] OUTPUT;
-   
-   
-   LATCH6_MUSER_merge  XLXI_1 (.CLK(CLK), 
-                              .CLR(CLR), 
-                              .ENABLE(ENABLE), 
-                              .INPUT(INPUT[5:0]), 
-                              .OUTPUT(OUTPUT[5:0]));
-   LATCH1_MUSER_merge  XLXI_2 (.CLK(CLK), 
-                              .CLR(CLR), 
-                              .ENABLE(ENABLE), 
-                              .INPUT(INPUT[6]), 
-                              .OUTPUT(OUTPUT[6]));
-endmodule
-`timescale 1ns / 1ps
-
 module mux7_MUSER_merge(const, 
                         hold, 
                         muxin, 
@@ -492,16 +332,9 @@ module UC1_MUSER_merge(abusIN,
    wire [6:0] XLXN_36;
    wire [5:0] XLXN_39;
    wire [4:0] XLXN_42;
-   wire [3:0] XLXN_92;
-   wire [1:0] XLXN_93;
-   wire XLXN_94;
-   wire [1:0] XLXN_95;
-   wire [5:0] XLXN_96;
-   wire [6:0] XLXN_97;
-   wire [5:0] XLXN_98;
-   wire [4:0] XLXN_99;
-   wire [9:0] XLXN_145;
    wire [9:0] XLXN_151;
+   wire XLXN_161;
+   wire XLXN_162;
    
    assign clr = 0;
    assign ena = 1;
@@ -514,106 +347,63 @@ module UC1_MUSER_merge(abusIN,
    assign XLXN_39 = 6'b100011;
    assign XLXN_42 = 5'b00000;
    assign XLXN_151 = 10'b0000000000;
+   assign XLXN_162 = 1;
    mux4_MUSER_merge  XLXI_1 (.const(XLXN_20[3:0]), 
                             .hold(hold), 
                             .muxin(aluIN[3:0]), 
-                            .muxout(XLXN_92[3:0]));
+                            .muxout(aluOUTuc1[3:0]));
    mux2_MUSER_merge  XLXI_2 (.const(XLXN_23[1:0]), 
                             .hold(hold), 
                             .muxin(shIN[1:0]), 
-                            .muxout(XLXN_93[1:0]));
+                            .muxout(shOUTuc1[1:0]));
    mux1_MUSER_merge  XLXI_3 (.constante(XLXN_26), 
                             .hold(hold), 
                             .muxin(kmxIN), 
-                            .muxout(XLXN_94));
+                            .muxout(kmxOUTuc1));
    mux2_MUSER_merge  XLXI_4 (.const(XLXN_29[1:0]), 
                             .hold(hold), 
                             .muxin(memIN[1:0]), 
-                            .muxout(XLXN_95[1:0]));
+                            .muxout(memOUTuc1[1:0]));
    mux6_MUSER_merge  XLXI_5 (.const(XLXN_33[5:0]), 
                             .hold(hold), 
                             .muxin(bbusIN[5:0]), 
-                            .muxout(XLXN_96[5:0]));
+                            .muxout(bbusOUTuc1[5:0]));
    mux7_MUSER_merge  XLXI_6 (.const(XLXN_36[6:0]), 
                             .hold(hold), 
                             .muxin(typeIN[6:0]), 
-                            .muxout(XLXN_97[6:0]));
+                            .muxout(typeOUTuc1[6:0]));
    mux6_MUSER_merge  XLXI_7 (.const(XLXN_39[5:0]), 
                             .hold(hold), 
                             .muxin(cbusIN[5:0]), 
-                            .muxout(XLXN_98[5:0]));
+                            .muxout(cbusOUTuc1[5:0]));
    mux5_MUSER_merge  XLXI_8 (.const(XLXN_42[4:0]), 
                             .hold(hold), 
                             .muxin(abusIN[4:0]), 
-                            .muxout(XLXN_99[4:0]));
-   LATCH1_MUSER_merge  XLXI_25 (.CLK(clk), 
-                               .CLR(clr), 
-                               .ENABLE(ena), 
-                               .INPUT(XLXN_94), 
-                               .OUTPUT(kmxOUTuc1));
-   LATCH2_MUSER_merge  XLXI_26 (.CLK(clk), 
-                               .CLR(clr), 
-                               .ENABLE(ena), 
-                               .INPUT(XLXN_95[1:0]), 
-                               .OUTPUT(memOUTuc1[1:0]));
-   LATCH2_MUSER_merge  XLXI_27 (.CLK(clk), 
-                               .CLR(clr), 
-                               .ENABLE(ena), 
-                               .INPUT(XLXN_93[1:0]), 
-                               .OUTPUT(shOUTuc1[1:0]));
-   LATCH4_MUSER_merge  XLXI_28 (.CLK(clk), 
-                               .CLR(clr), 
-                               .ENABLE(ena), 
-                               .INPUT(XLXN_92[3:0]), 
-                               .OUTPUT(aluOUTuc1[3:0]));
-   LATCH6_MUSER_merge  XLXI_29 (.CLK(clk), 
-                               .CLR(clr), 
-                               .ENABLE(ena), 
-                               .INPUT(XLXN_96[5:0]), 
-                               .OUTPUT(bbusOUTuc1[5:0]));
-   LATCH7_MUSER_merge  XLXI_30 (.CLK(clk), 
-                               .CLR(clr), 
-                               .ENABLE(ena), 
-                               .INPUT(XLXN_97[6:0]), 
-                               .OUTPUT(typeOUTuc1[6:0]));
-   LATCH6_MUSER_merge  XLXI_31 (.CLK(clk), 
-                               .CLR(clr), 
-                               .ENABLE(ena), 
-                               .INPUT(XLXN_98[5:0]), 
-                               .OUTPUT(cbusOUTuc1[5:0]));
-   LATCH5_MUSER_merge  XLXI_32 (.CLK(clk), 
-                               .CLR(clr), 
-                               .ENABLE(ena), 
-                               .INPUT(XLXN_99[4:0]), 
-                               .OUTPUT(abusOUTuc1[4:0]));
-   LATCH10_MUSER_merge  XLXI_62 (.CLK(clk), 
-                                .CLR(clr), 
-                                .ENABLE(ena), 
-                                .INPUT(XLXN_145[9:0]), 
-                                .OUTPUT(DAddOUTuc1[9:0]));
+                            .muxout(abusOUTuc1[4:0]));
    mux10_MUSER_merge  XLXI_63 (.const(XLXN_151[9:0]), 
                               .muxin(DAdd[9:0]), 
                               .selector(hold), 
-                              .muxout(XLXN_145[9:0]));
+                              .muxout(DAddOUTuc1[9:0]));
    OR2  XLXI_65 (.I0(jump), 
                 .I1(h), 
-                .O(hold));
+                .O(XLXN_161));
+   LATCH1_MUSER_merge  XLXI_68 (.CLK(clk), 
+                               .CLR(), 
+                               .ENABLE(XLXN_162), 
+                               .INPUT(XLXN_161), 
+                               .OUTPUT(hold));
 endmodule
 `timescale 1ns / 1ps
 
 module Decode_MUSER_merge(cbusmir, 
                           CLK, 
                           instruction, 
-                          ABUS, 
-                          CBUS, 
-                          DAdd);
+                          CBUS);
 
     input [5:0] cbusmir;
     input CLK;
     input [13:0] instruction;
-   output [4:0] ABUS;
    output [5:0] CBUS;
-   output [9:0] DAdd;
    
    wire selector;
    wire XLXN_4;
@@ -622,43 +412,9 @@ module Decode_MUSER_merge(cbusmir,
    wire XLXN_7;
    wire XLXN_8;
    wire XLXN_9;
-   wire XLXN_11;
-   wire XLXN_120;
-   wire XLXN_121;
-   wire XLXN_135;
-   wire XLXN_136;
    wire XLXN_147;
-   wire XLXN_157;
-   wire XLXN_158;
-   wire XLXN_162;
-   wire XLXN_163;
-   wire [4:0] XLXN_165;
-   wire [9:0] XLXN_167;
-   wire XLXN_183;
-   wire XLXN_190;
-   wire XLXN_192;
-   wire [4:0] XLXN_201;
-   wire [4:0] XLXN_202;
-   wire XLXN_204;
-   wire XLXN_205;
-   wire XLXN_209;
-   wire XLXN_210;
    
-   assign XLXN_11 = 1;
-   assign XLXN_120 = 0;
-   assign XLXN_121 = 1;
-   assign XLXN_135 = 0;
-   assign XLXN_136 = 1;
    assign XLXN_147 = 0;
-   assign XLXN_157 = 0;
-   assign XLXN_158 = 1;
-   assign XLXN_162 = 0;
-   assign XLXN_163 = 1;
-   assign XLXN_192 = 1;
-   assign XLXN_204 = 0;
-   assign XLXN_205 = 1;
-   assign XLXN_209 = 1;
-   assign XLXN_210 = 0;
    AND3  XLXI_1 (.I0(XLXN_7), 
                 .I1(XLXN_6), 
                 .I2(instruction[11]), 
@@ -670,7 +426,7 @@ module Decode_MUSER_merge(cbusmir,
                 .O(XLXN_5));
    OR2  XLXI_3 (.I0(XLXN_5), 
                .I1(XLXN_4), 
-               .O(XLXN_183));
+               .O(selector));
    INV  XLXI_6 (.I(instruction[12]), 
                .O(XLXN_6));
    INV  XLXI_7 (.I(instruction[13]), 
@@ -679,52 +435,14 @@ module Decode_MUSER_merge(cbusmir,
                .O(XLXN_8));
    INV  XLXI_9 (.I(instruction[13]), 
                .O(XLXN_9));
-   LATCH10_MUSER_merge  XLXI_24 (.CLK(CLK), 
-                                .CLR(XLXN_120), 
-                                .ENABLE(XLXN_121), 
-                                .INPUT(XLXN_167[9:0]), 
-                                .OUTPUT(DAdd[9:0]));
    mux1_MUSER_merge  XLXI_30 (.constante(XLXN_147), 
                              .hold(selector), 
                              .muxin(cbusmir[5]), 
                              .muxout(CBUS[5]));
-   mux5_MUSER_merge  XLXI_31 (.const(XLXN_201[4:0]), 
+   mux5_MUSER_merge  XLXI_31 (.const(instruction[9:5]), 
                              .hold(selector), 
                              .muxin(cbusmir[4:0]), 
                              .muxout(CBUS[4:0]));
-   LATCH5_MUSER_merge  XLXI_35 (.CLK(CLK), 
-                               .CLR(XLXN_135), 
-                               .ENABLE(XLXN_136), 
-                               .INPUT(XLXN_165[4:0]), 
-                               .OUTPUT(ABUS[4:0]));
-   LATCH10_MUSER_merge  XLXI_44 (.CLK(CLK), 
-                                .CLR(XLXN_157), 
-                                .ENABLE(XLXN_158), 
-                                .INPUT(instruction[9:0]), 
-                                .OUTPUT(XLXN_167[9:0]));
-   LATCH5_MUSER_merge  XLXI_45 (.CLK(CLK), 
-                               .CLR(XLXN_162), 
-                               .ENABLE(XLXN_163), 
-                               .INPUT(instruction[4:0]), 
-                               .OUTPUT(XLXN_165[4:0]));
-   fdce1_MUSER_merge  XLXI_50 (.chipEnable(XLXN_11), 
-                              .clk(CLK), 
-                              .d(XLXN_190), 
-                              .q(selector));
-   fdce1_MUSER_merge  XLXI_58 (.chipEnable(XLXN_192), 
-                              .clk(CLK), 
-                              .d(XLXN_183), 
-                              .q(XLXN_190));
-   LATCH5_MUSER_merge  XLXI_69 (.CLK(CLK), 
-                               .CLR(XLXN_204), 
-                               .ENABLE(XLXN_205), 
-                               .INPUT(XLXN_202[4:0]), 
-                               .OUTPUT(XLXN_201[4:0]));
-   LATCH5_MUSER_merge  XLXI_70 (.CLK(CLK), 
-                               .CLR(XLXN_210), 
-                               .ENABLE(XLXN_209), 
-                               .INPUT(instruction[9:5]), 
-                               .OUTPUT(XLXN_202[4:0]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -854,7 +572,7 @@ module UC2_MUSER_merge(DecodeBusA,
    COMPARADOR5_MUSER_merge  XLXI_29 (.a(DecodeBusA[4:0]), 
                                     .b(RetireBusC[4:0]), 
                                     .iguales(XLXN_43));
-   (* HU_SET = "XLXI_30_1" *) 
+   (* HU_SET = "XLXI_30_29" *) 
    OR6_HXILINX_merge  XLXI_30 (.I0(XLXN_78), 
                               .I1(XLXN_49), 
                               .I2(XLXN_48), 
@@ -862,7 +580,7 @@ module UC2_MUSER_merge(DecodeBusA,
                               .I4(XLXN_46), 
                               .I5(XLXN_60), 
                               .O(hold));
-   (* HU_SET = "XLXI_41_2" *) 
+   (* HU_SET = "XLXI_41_30" *) 
    OR6_HXILINX_merge  XLXI_41 (.I0(RetireType[1]), 
                               .I1(RetireType[0]), 
                               .I2(ExecuteType[1]), 
@@ -876,6 +594,114 @@ module UC2_MUSER_merge(DecodeBusA,
    AND2  XLXI_43 (.I0(XLXN_77), 
                  .I1(XLXN_76), 
                  .O(XLXN_78));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH4_MUSER_merge(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [3:0] INPUT;
+   output [3:0] OUTPUT;
+   
+   
+   fdce1_MUSER_merge  XLXI_13 (.chipEnable(ENABLE), 
+                              .clk(CLK), 
+                              .d(INPUT[0]), 
+                              .q(OUTPUT[0]));
+   fdce1_MUSER_merge  XLXI_14 (.chipEnable(ENABLE), 
+                              .clk(CLK), 
+                              .d(INPUT[1]), 
+                              .q(OUTPUT[1]));
+   fdce1_MUSER_merge  XLXI_15 (.chipEnable(ENABLE), 
+                              .clk(CLK), 
+                              .d(INPUT[2]), 
+                              .q(OUTPUT[2]));
+   fdce1_MUSER_merge  XLXI_16 (.chipEnable(ENABLE), 
+                              .clk(CLK), 
+                              .d(INPUT[3]), 
+                              .q(OUTPUT[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH5_MUSER_merge(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [4:0] INPUT;
+   output [4:0] OUTPUT;
+   
+   
+   LATCH4_MUSER_merge  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[3:0]), 
+                              .OUTPUT(OUTPUT[3:0]));
+   fdce1_MUSER_merge  XLXI_5 (.chipEnable(ENABLE), 
+                             .clk(CLK), 
+                             .d(INPUT[4]), 
+                             .q(OUTPUT[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH6_MUSER_merge(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [5:0] INPUT;
+   output [5:0] OUTPUT;
+   
+   
+   LATCH5_MUSER_merge  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[4:0]), 
+                              .OUTPUT(OUTPUT[4:0]));
+   fdce1_MUSER_merge  XLXI_4 (.chipEnable(ENABLE), 
+                             .clk(CLK), 
+                             .d(INPUT[5]), 
+                             .q(OUTPUT[5]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH7_MUSER_merge(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [6:0] INPUT;
+   output [6:0] OUTPUT;
+   
+   
+   LATCH6_MUSER_merge  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[5:0]), 
+                              .OUTPUT(OUTPUT[5:0]));
+   LATCH1_MUSER_merge  XLXI_2 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[6]), 
+                              .OUTPUT(OUTPUT[6]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -906,6 +732,58 @@ module toRetire_MUSER_merge(cbusIN,
                               .ENABLE(ENABLE), 
                               .INPUT(cbusIN[5:0]), 
                               .OUTPUT(cbusOUTret[5:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH10_MUSER_merge(CLK, 
+                           CLR, 
+                           ENABLE, 
+                           INPUT, 
+                           OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [9:0] INPUT;
+   output [9:0] OUTPUT;
+   
+   
+   LATCH6_MUSER_merge  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[5:0]), 
+                              .OUTPUT(OUTPUT[5:0]));
+   LATCH4_MUSER_merge  XLXI_2 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[9:6]), 
+                              .OUTPUT(OUTPUT[9:6]));
+endmodule
+`timescale 1ns / 1ps
+
+module LATCH2_MUSER_merge(CLK, 
+                          CLR, 
+                          ENABLE, 
+                          INPUT, 
+                          OUTPUT);
+
+    input CLK;
+    input CLR;
+    input ENABLE;
+    input [1:0] INPUT;
+   output [1:0] OUTPUT;
+   
+   
+   LATCH1_MUSER_merge  XLXI_1 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[0]), 
+                              .OUTPUT(OUTPUT[0]));
+   LATCH1_MUSER_merge  XLXI_2 (.CLK(CLK), 
+                              .CLR(CLR), 
+                              .ENABLE(ENABLE), 
+                              .INPUT(INPUT[1]), 
+                              .OUTPUT(OUTPUT[1]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -1092,7 +970,6 @@ module Tuberia_MUSER_merge(ALU,
    output [1:0] SHOUT;
    output [6:0] TYPEOUT;
    
-   wire [4:0] ABUS;
    wire [4:0] ABUSaUC1;
    wire [3:0] ALUaUC1;
    wire [3:0] ALUop;
@@ -1101,7 +978,6 @@ module Tuberia_MUSER_merge(ALU,
    wire [5:0] CBUSaUC1;
    wire [5:0] CBUSexec;
    wire [5:0] CBUSop;
-   wire [9:0] DAdd;
    wire [9:0] DAddaUC1;
    wire KMXaUC1;
    wire [1:0] MEMaUC1;
@@ -1152,13 +1028,13 @@ module Tuberia_MUSER_merge(ALU,
                                 .typeOUTret(TYPEOUT_DUMMY[6:0]));
    INV  XLXI_7 (.I(HOLD_DUMMY), 
                .O(XLXN_2));
-   toOperand_MUSER_merge  XLXI_14 (.abusIN(ABUS[4:0]), 
+   toOperand_MUSER_merge  XLXI_14 (.abusIN(instruction[4:0]), 
                                   .aluIN(ALU[3:0]), 
                                   .bbusIN(BBUS[5:0]), 
                                   .cbusIN(CBUS[5:0]), 
                                   .CLK(CLK2), 
                                   .CLR(XLXN_11), 
-                                  .DAddIN(DAdd[9:0]), 
+                                  .DAddIN(instruction[9:0]), 
                                   .ENABLE(XLXN_2), 
                                   .kmxIN(KMX), 
                                   .memIN(MEM[1:0]), 
@@ -1173,7 +1049,7 @@ module Tuberia_MUSER_merge(ALU,
                                   .memOUT(MEMaUC1[1:0]), 
                                   .shOUT(SHaUC1[1:0]), 
                                   .typeOUT(TYPEaUC1[6:0]));
-   UC2_MUSER_merge  XLXI_17 (.DecodeBusA(ABUS[4:0]), 
+   UC2_MUSER_merge  XLXI_17 (.DecodeBusA(instruction[4:0]), 
                             .DecodeMem(MEM[1:0]), 
                             .DecodeType(TYPEIN[6:0]), 
                             .ExecuteBusC(CBUSexec[5:0]), 
@@ -1186,9 +1062,7 @@ module Tuberia_MUSER_merge(ALU,
    Decode_MUSER_merge  XLXI_32 (.cbusmir(cbusrom[5:0]), 
                                .CLK(CLK2), 
                                .instruction(instruction[13:0]), 
-                               .ABUS(ABUS[4:0]), 
-                               .CBUS(CBUS[5:0]), 
-                               .DAdd(DAdd[9:0]));
+                               .CBUS(CBUS[5:0]));
    fdce1_MUSER_merge  XLXI_33 (.chipEnable(XLXN_84), 
                               .clk(XLXN_85), 
                               .d(XLXN_77), 

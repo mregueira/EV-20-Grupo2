@@ -30,6 +30,7 @@
         <port polarity="Input" name="CLK" />
         <port polarity="Output" name="INSTRUCTION(13:0)" />
         <port polarity="Input" name="HOLD" />
+        <port polarity="Output" name="is_void" />
         <port polarity="Output" name="increment" />
         <port polarity="Output" name="PC(10:0)" />
         <port polarity="Input" name="W(15:0)" />
@@ -385,5 +386,9 @@
         <iomarker fontsize="28" x="3040" y="1280" name="INSTRUCTION_EXTENDIDA(21:0)" orien="R0" />
         <instance x="2544" y="352" name="XLXI_52" orien="R0">
         </instance>
+        <branch name="is_void">
+            <wire x2="3344" y1="2112" y2="2112" x1="3232" />
+        </branch>
+        <iomarker fontsize="28" x="3344" y="2112" name="is_void" orien="R0" />
     </sheet>
 </drawing>

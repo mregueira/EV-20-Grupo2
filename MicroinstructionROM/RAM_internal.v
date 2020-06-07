@@ -23,15 +23,13 @@ end
 initial begin // para pruebas setear la memoria
 	mem[0] = 22'b0000001000000000000000; // clear carry
 	mem[1] = 22'b0000010000000000000000; // set carry
-	mem[2] = 22'b1110000000000000000000; // jump if carry a PC = 0
-	mem[3] = 22'b0000000000000000000000; // complemento w 
+	mem[2] = 22'b0111000000010000000000; // branch to subroutine (2+4=6)
+	mem[3] = 22'b1110000000000000000000; // jump if carry a PC = 0
 	mem[4] = 22'b0000000000000000000000; // complemento w
 	mem[5] = 22'b0000001000000000000000; // clear carry
-	mem[6] = 22'b0000001000000000000000; // clear carry
-	mem[7] = 22'b0000001000000000000000; // clear carry
-	mem[8] = 22'b0111000000010000000000; // branch to subroutine (8+4=12)
-	
-	
+	mem[6] = 22'b0011000010000000000000; // mover w al reg 1
+	mem[7] = 22'b0000110000000100000000; // or que lee 1
+	mem[8] = 22'b0000011000000000000000; // ret
 	mem[9] = 22'b0000000000000000000000;
 	mem[10] = 22'b1000000000000100000000; // branch to 0
 	mem[11] = 22'b0000000000000000000000;

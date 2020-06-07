@@ -91,8 +91,8 @@ Compiling module merge_MUSER_merge_conIR
 Compiling module merge_conIR
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 27 sub-compilation(s) to finish...
+Waiting for 8 sub-compilation(s) to finish...
 Compiled 49 Verilog Units
 Built simulation executable C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge_conIR_isim_beh.exe
-Fuse Memory Usage: 32088 KB
-Fuse CPU Usage: 1733 ms
+Fuse Memory Usage: 32084 KB
+Fuse CPU Usage: 1484 ms

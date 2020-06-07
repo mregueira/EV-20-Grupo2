@@ -12,82 +12,74 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
 Finished circuit initialization process.
-# isim force add /merge_conIR/CLK 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-WARNING in merge_conIR.XLXI_2.XLXI_3.XLXI_9.inst at time              1950000 ns: 
-Reading from out-of-range address. Max address in merge_conIR.XLXI_2.XLXI_3.XLXI_9.inst is         127
+# run 1.00us
 # restart
 # isim force add /merge_conIR/CLK 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /merge_conIR/CY 0 -radix bin
+# isim force add /merge_conIR/W 0000000000000000 -radix bin
+# run 1.00us
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+# restart
+# isim force add /merge_conIR/CLK 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /merge_conIR/CY 0 -radix bin
 # run 0.0333us
 Simulator is doing circuit initialization process.
 WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
 Finished circuit initialization process.
 # run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-# run 0.0333us
-WARNING in merge_conIR.XLXI_2.XLXI_3.XLXI_9.inst at time               950000 ns: 
-Reading from out-of-range address. Max address in merge_conIR.XLXI_2.XLXI_3.XLXI_9.inst is         127
-# run 0.0333us
-# restart
 # isim force add /merge_conIR/CY 1 -radix bin
-# isim force add /merge_conIR/CLK 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
 # run 0.0333us
-Simulator is doing circuit initialization process.
-WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
-Finished circuit initialization process.
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
+# run 0.0333us
 # run 0.0333us
 # run 0.0333us
 # run 0.0333us

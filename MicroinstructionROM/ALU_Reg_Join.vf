@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ALU_Reg_Join.vf
-// /___/   /\     Timestamp : 06/08/2020 01:46:18
+// /___/   /\     Timestamp : 06/08/2020 20:04:47
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ALU_Reg_Join.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ALU_Reg_Join.sch
+//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ALU_Reg_Join.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ALU_Reg_Join.sch
 //Design Name: ALU_Reg_Join
 //Device: artix7
 //Purpose:
@@ -362,7 +362,7 @@ module ffd16_w_en_MUSER_ALU_Reg_Join(CLK,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_78" *) 
+   (* HU_SET = "XLXI_1_69" *) 
    IFD16_HXILINX_ALU_Reg_Join  XLXI_1 (.C(XLXN_1), 
                                       .D(D[15:0]), 
                                       .Q(Q[15:0]));
@@ -2804,7 +2804,7 @@ module ALU_main_MUSER_ALU_Reg_Join(A,
    wire _B;
    wire _0xFFFF;
    
-   (* HU_SET = "ALUC_Decoder_79" *) 
+   (* HU_SET = "ALUC_Decoder_70" *) 
    D4_16E_HXILINX_ALU_Reg_Join  ALUC_Decoder (.A0(ALUC[0]), 
                                              .A1(ALUC[1]), 
                                              .A2(ALUC[2]), 
@@ -2855,7 +2855,7 @@ module ALU_main_MUSER_ALU_Reg_Join(A,
                          .IN_1(AdderOut[15:0]), 
                          .S(OP_SEL_2), 
                          .Y(Z[15:0]));
-   (* HU_SET = "XLXI_1_80" *) 
+   (* HU_SET = "XLXI_1_71" *) 
    ADD16_HXILINX_ALU_Reg_Join  XLXI_1 (.A(XLXN_5[15:0]), 
                                       .B(XLXN_6[15:0]), 
                                       .CI(XLXN_2), 
@@ -2874,10 +2874,10 @@ module ALU_main_MUSER_ALU_Reg_Join(A,
    OR2  XLXI_6 (.I0(CO_B), 
                .I1(XLXN_4), 
                .O(CO));
-   (* HU_SET = "XLXI_9_81" *) 
+   (* HU_SET = "XLXI_9_72" *) 
    INV16_HXILINX_ALU_Reg_Join  XLXI_9 (.I(A[15:0]), 
                                       .O(XLXN_8[15:0]));
-   (* HU_SET = "XLXI_10_82" *) 
+   (* HU_SET = "XLXI_10_73" *) 
    INV16_HXILINX_ALU_Reg_Join  XLXI_10 (.I(B[15:0]), 
                                        .O(XLXN_143[15:0]));
    OR2  XLXI_86 (.I0(A_p_B_p_CY), 
@@ -2940,7 +2940,7 @@ module ALU_main_MUSER_ALU_Reg_Join(A,
                  .O(XLXN_347));
    INV  XLXI_142 (.I(m_B), 
                  .O(XLXN_348));
-   (* HU_SET = "XLXI_143_83" *) 
+   (* HU_SET = "XLXI_143_74" *) 
    AND6_HXILINX_ALU_Reg_Join  XLXI_143 (.I0(XLXN_348), 
                                        .I1(XLXN_347), 
                                        .I2(XLXN_346), 

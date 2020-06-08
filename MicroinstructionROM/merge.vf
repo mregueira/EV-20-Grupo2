@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : merge.vf
-// /___/   /\     Timestamp : 06/08/2020 01:45:51
+// /___/   /\     Timestamp : 06/08/2020 20:03:50
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge.sch
+//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/merge.sch
 //Design Name: merge
 //Device: artix7
 //Purpose:
@@ -97,7 +97,7 @@ module fdce1_MUSER_merge(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_63" *) 
+   (* HU_SET = "XLXI_1_44" *) 
    IFD_HXILINX_merge #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                              .D(d), 
                              .Q(q));
@@ -572,7 +572,7 @@ module UC2_MUSER_merge(DecodeBusA,
    COMPARADOR5_MUSER_merge  XLXI_29 (.a(DecodeBusA[4:0]), 
                                     .b(RetireBusC[4:0]), 
                                     .iguales(XLXN_43));
-   (* HU_SET = "XLXI_30_64" *) 
+   (* HU_SET = "XLXI_30_45" *) 
    OR6_HXILINX_merge  XLXI_30 (.I0(XLXN_78), 
                               .I1(XLXN_49), 
                               .I2(XLXN_48), 
@@ -580,20 +580,16 @@ module UC2_MUSER_merge(DecodeBusA,
                               .I4(XLXN_46), 
                               .I5(XLXN_60), 
                               .O(hold));
-   (* HU_SET = "XLXI_41_65" *) 
-   OR6_HXILINX_merge  XLXI_41 (.I0(RetireType[1]), 
-                              .I1(RetireType[0]), 
-                              .I2(ExecuteType[1]), 
-                              .I3(ExecuteType[0]), 
-                              .I4(OperandType[1]), 
-                              .I5(OperandType[0]), 
-                              .O(XLXN_76));
    OR2  XLXI_42 (.I0(DecodeMem[1]), 
                 .I1(DecodeMem[0]), 
                 .O(XLXN_77));
    AND2  XLXI_43 (.I0(XLXN_77), 
                  .I1(XLXN_76), 
                  .O(XLXN_78));
+   OR3  XLXI_44 (.I0(RetireType[1]), 
+                .I1(ExecuteType[1]), 
+                .I2(OperandType[1]), 
+                .O(XLXN_76));
 endmodule
 `timescale 1ns / 1ps
 

@@ -43,9 +43,6 @@
         <signal name="XLXN_76" />
         <signal name="XLXN_77" />
         <signal name="XLXN_78" />
-        <signal name="OperandType(0)" />
-        <signal name="ExecuteType(0)" />
-        <signal name="RetireType(0)" />
         <signal name="DecodeMem(0)" />
         <signal name="DecodeMem(1)" />
         <port polarity="Input" name="DecodeBusA(4:0)" />
@@ -193,15 +190,6 @@
             <blockpin signalname="RetireBusC(4:0)" name="b(4:0)" />
             <blockpin signalname="XLXN_43" name="iguales" />
         </block>
-        <block symbolname="or6" name="XLXI_41">
-            <blockpin signalname="RetireType(1)" name="I0" />
-            <blockpin signalname="RetireType(0)" name="I1" />
-            <blockpin signalname="ExecuteType(1)" name="I2" />
-            <blockpin signalname="ExecuteType(0)" name="I3" />
-            <blockpin signalname="OperandType(1)" name="I4" />
-            <blockpin signalname="OperandType(0)" name="I5" />
-            <blockpin signalname="XLXN_76" name="O" />
-        </block>
         <block symbolname="or2" name="XLXI_42">
             <blockpin signalname="DecodeMem(1)" name="I0" />
             <blockpin signalname="DecodeMem(0)" name="I1" />
@@ -211,6 +199,12 @@
             <blockpin signalname="XLXN_77" name="I0" />
             <blockpin signalname="XLXN_76" name="I1" />
             <blockpin signalname="XLXN_78" name="O" />
+        </block>
+        <block symbolname="or3" name="XLXI_44">
+            <blockpin signalname="RetireType(1)" name="I0" />
+            <blockpin signalname="ExecuteType(1)" name="I1" />
+            <blockpin signalname="OperandType(1)" name="I2" />
+            <blockpin signalname="XLXN_76" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -381,7 +375,6 @@
         </branch>
         <instance x="1184" y="1888" name="XLXI_29" orien="R0">
         </instance>
-        <instance x="1616" y="2416" name="XLXI_41" orien="R0" />
         <instance x="1616" y="2608" name="XLXI_42" orien="R0" />
         <instance x="2016" y="2320" name="XLXI_43" orien="R0" />
         <branch name="XLXN_76">
@@ -396,30 +389,6 @@
             <wire x2="2768" y1="2224" y2="2224" x1="2272" />
             <wire x2="2768" y1="1232" y2="2224" x1="2768" />
         </branch>
-        <branch name="OperandType(0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1536" y="2032" type="branch" />
-            <wire x2="1616" y1="2032" y2="2032" x1="1536" />
-        </branch>
-        <branch name="OperandType(1)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1552" y="2096" type="branch" />
-            <wire x2="1616" y1="2096" y2="2096" x1="1552" />
-        </branch>
-        <branch name="ExecuteType(0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1568" y="2160" type="branch" />
-            <wire x2="1616" y1="2160" y2="2160" x1="1568" />
-        </branch>
-        <branch name="ExecuteType(1)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1536" y="2224" type="branch" />
-            <wire x2="1616" y1="2224" y2="2224" x1="1536" />
-        </branch>
-        <branch name="RetireType(0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1568" y="2288" type="branch" />
-            <wire x2="1616" y1="2288" y2="2288" x1="1568" />
-        </branch>
-        <branch name="RetireType(1)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1568" y="2352" type="branch" />
-            <wire x2="1616" y1="2352" y2="2352" x1="1568" />
-        </branch>
         <branch name="DecodeMem(0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1568" y="2480" type="branch" />
             <wire x2="1616" y1="2480" y2="2480" x1="1568" />
@@ -427,6 +396,19 @@
         <branch name="DecodeMem(1)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1568" y="2544" type="branch" />
             <wire x2="1616" y1="2544" y2="2544" x1="1568" />
+        </branch>
+        <instance x="1616" y="2320" name="XLXI_44" orien="R0" />
+        <branch name="OperandType(1)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1536" y="2128" type="branch" />
+            <wire x2="1616" y1="2128" y2="2128" x1="1536" />
+        </branch>
+        <branch name="ExecuteType(1)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1552" y="2192" type="branch" />
+            <wire x2="1616" y1="2192" y2="2192" x1="1552" />
+        </branch>
+        <branch name="RetireType(1)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1536" y="2256" type="branch" />
+            <wire x2="1616" y1="2256" y2="2256" x1="1536" />
         </branch>
     </sheet>
 </drawing>

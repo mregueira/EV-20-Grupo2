@@ -23,7 +23,6 @@
         <signal name="SelA_Aux(4:0)" />
         <signal name="Mem_Control(1)" />
         <signal name="Mem_Control(0)" />
-        <signal name="XLXN_53" />
         <signal name="CY_Feedback" />
         <port polarity="Input" name="CLK_CPU" />
         <blockdef name="gnd">
@@ -90,15 +89,6 @@
             <line x2="480" y1="-800" y2="-800" x1="416" />
             <line x2="480" y1="-32" y2="-32" x1="416" />
         </blockdef>
-        <blockdef name="fd">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <rect width="256" x="64" y="-320" height="256" />
-            <line x2="64" y1="-128" y2="-128" x1="0" />
-            <line x2="64" y1="-256" y2="-256" x1="0" />
-            <line x2="320" y1="-256" y2="-256" x1="384" />
-            <line x2="64" y1="-128" y2="-144" x1="80" />
-            <line x2="80" y1="-112" y2="-128" x1="64" />
-        </blockdef>
         <block symbolname="gnd" name="XLXI_8">
             <blockpin signalname="SelA_Aux(5)" name="G" />
         </block>
@@ -132,12 +122,7 @@
             <blockpin signalname="Mem_Control(0)" name="Wr" />
             <blockpin signalname="Levels_Con(2:0)" name="LEVEL(2:0)" />
             <blockpin signalname="W_Feedback(15:0)" name="W_Block1(15:0)" />
-            <blockpin signalname="XLXN_53" name="CY_OUT" />
-        </block>
-        <block symbolname="fd" name="XLXI_12">
-            <blockpin signalname="CLK_CPU" name="C" />
-            <blockpin signalname="XLXN_53" name="D" />
-            <blockpin signalname="CY_Feedback" name="Q" />
+            <blockpin signalname="CY_Feedback" name="CY_OUT" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="5440" height="3520">
@@ -273,15 +258,6 @@
             <wire x2="3392" y1="2096" y2="2096" x1="3312" />
             <wire x2="3408" y1="2096" y2="2096" x1="3392" />
         </branch>
-        <branch name="XLXN_53">
-            <wire x2="4144" y1="2160" y2="2160" x1="3888" />
-            <wire x2="4144" y1="2160" y2="2400" x1="4144" />
-            <wire x2="4400" y1="2400" y2="2400" x1="4144" />
-        </branch>
-        <branch name="CY_Feedback">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="4880" y="2400" type="branch" />
-            <wire x2="4880" y1="2400" y2="2400" x1="4784" />
-        </branch>
         <branch name="CY_Feedback">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1520" y="1424" type="branch" />
             <wire x2="1536" y1="1424" y2="1424" x1="1520" />
@@ -295,10 +271,9 @@
         </instance>
         <instance x="3408" y="2192" name="XLXI_11" orien="R0">
         </instance>
-        <instance x="4400" y="2656" name="XLXI_12" orien="R0" />
-        <branch name="CLK_CPU">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4272" y="2528" type="branch" />
-            <wire x2="4400" y1="2528" y2="2528" x1="4272" />
+        <branch name="CY_Feedback">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="3984" y="2160" type="branch" />
+            <wire x2="3984" y1="2160" y2="2160" x1="3888" />
         </branch>
     </sheet>
 </drawing>

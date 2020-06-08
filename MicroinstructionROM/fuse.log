@@ -174,8 +174,9 @@ Compiling module ALU_Reg_Join_MUSER_CPU_main
 Compiling module CPU_main
 Compiling module glbl
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\CPU_main_isim_beh.exe.sim\libPortability.dll".
 Compiled 94 Verilog Units
 Built simulation executable C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main_isim_beh.exe
-Fuse Memory Usage: 38000 KB
-Fuse CPU Usage: 1749 ms
+Fuse Memory Usage: 37256 KB
+Fuse CPU Usage: 1499 ms

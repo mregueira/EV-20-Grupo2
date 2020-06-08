@@ -272,13 +272,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1591480868" xil_pn:in_ck="-8698020994179389372" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591480868">
+    <transform xil_pn:end_ts="1591575861" xil_pn:in_ck="-8698020994179389372" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591575861">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_Reg_Join.vf"/>
       <outfile xil_pn:name="ALU_main.vf"/>
       <outfile xil_pn:name="AND_Bus16.v"/>
@@ -317,13 +313,10 @@
       <outfile xil_pn:name="register_bank_easy.vf"/>
       <outfile xil_pn:name="test_ff.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1591480873" xil_pn:in_ck="-8698020994179389372" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5704425561895372018" xil_pn:start_ts="1591480868">
+    <transform xil_pn:end_ts="1591575867" xil_pn:in_ck="-8698020994179389372" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5704425561895372018" xil_pn:start_ts="1591575861">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_Reg_Join_beh.prj"/>
       <outfile xil_pn:name="ALU_Reg_Join_isim_beh.exe"/>
@@ -332,10 +325,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1591480873" xil_pn:in_ck="-1929777438452892530" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6424935641811534997" xil_pn:start_ts="1591480873">
+    <transform xil_pn:end_ts="1591575867" xil_pn:in_ck="-6917010247216172342" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6424935641811534997" xil_pn:start_ts="1591575867">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_Reg_Join_isim_beh.wdb"/>
@@ -398,6 +390,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_Reg_Join.jhd"/>
       <outfile xil_pn:name="ALU_Reg_Join.lso"/>
       <outfile xil_pn:name="ALU_Reg_Join.ngc"/>

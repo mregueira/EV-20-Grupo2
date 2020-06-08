@@ -35,15 +35,6 @@
             <line x2="64" y1="-64" y2="-80" x1="64" />
             <line x2="64" y1="-128" y2="-96" x1="64" />
         </blockdef>
-        <blockdef name="CY_Block">
-            <timestamp>2020-6-7T19:30:27</timestamp>
-            <rect width="256" x="64" y="-192" height="192" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
-        </blockdef>
         <blockdef name="merge_conIR">
             <timestamp>2020-6-7T20:40:5</timestamp>
             <rect width="320" x="64" y="-768" height="768" />
@@ -99,14 +90,17 @@
             <line x2="480" y1="-800" y2="-800" x1="416" />
             <line x2="480" y1="-32" y2="-32" x1="416" />
         </blockdef>
+        <blockdef name="fd">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <rect width="256" x="64" y="-320" height="256" />
+            <line x2="64" y1="-128" y2="-128" x1="0" />
+            <line x2="64" y1="-256" y2="-256" x1="0" />
+            <line x2="320" y1="-256" y2="-256" x1="384" />
+            <line x2="64" y1="-128" y2="-144" x1="80" />
+            <line x2="80" y1="-112" y2="-128" x1="64" />
+        </blockdef>
         <block symbolname="gnd" name="XLXI_8">
             <blockpin signalname="SelA_Aux(5)" name="G" />
-        </block>
-        <block symbolname="CY_Block" name="XLXI_9">
-            <blockpin signalname="XLXN_53" name="CY_out" />
-            <blockpin signalname="CLK_CPU" name="CLK_CY" />
-            <blockpin signalname="ALUC_Operation(3:0)" name="ALUC(3:0)" />
-            <blockpin signalname="CY_Feedback" name="CY" />
         </block>
         <block symbolname="merge_conIR" name="XLXI_10">
             <blockpin signalname="CY_Feedback" name="CY" />
@@ -139,6 +133,11 @@
             <blockpin signalname="Levels_Con(2:0)" name="LEVEL(2:0)" />
             <blockpin signalname="W_Feedback(15:0)" name="W_Block1(15:0)" />
             <blockpin signalname="XLXN_53" name="CY_OUT" />
+        </block>
+        <block symbolname="fd" name="XLXI_12">
+            <blockpin signalname="CLK_CPU" name="C" />
+            <blockpin signalname="XLXN_53" name="D" />
+            <blockpin signalname="CY_Feedback" name="Q" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="5440" height="3520">
@@ -274,16 +273,6 @@
             <wire x2="3392" y1="2096" y2="2096" x1="3312" />
             <wire x2="3408" y1="2096" y2="2096" x1="3392" />
         </branch>
-        <instance x="4400" y="2560" name="XLXI_9" orien="R0">
-        </instance>
-        <branch name="CLK_CPU">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4272" y="2464" type="branch" />
-            <wire x2="4400" y1="2464" y2="2464" x1="4272" />
-        </branch>
-        <branch name="ALUC_Operation(3:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4272" y="2528" type="branch" />
-            <wire x2="4400" y1="2528" y2="2528" x1="4272" />
-        </branch>
         <branch name="XLXN_53">
             <wire x2="4144" y1="2160" y2="2160" x1="3888" />
             <wire x2="4144" y1="2160" y2="2400" x1="4144" />
@@ -306,5 +295,10 @@
         </instance>
         <instance x="3408" y="2192" name="XLXI_11" orien="R0">
         </instance>
+        <instance x="4400" y="2656" name="XLXI_12" orien="R0" />
+        <branch name="CLK_CPU">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4272" y="2528" type="branch" />
+            <wire x2="4400" y1="2528" y2="2528" x1="4272" />
+        </branch>
     </sheet>
 </drawing>

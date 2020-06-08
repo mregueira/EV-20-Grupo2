@@ -13,87 +13,23 @@ Simulator is doing circuit initialization process.
 WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
 Finished circuit initialization process.
 # isim force add /CPU_main/CLK_CPU 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /CPU_main/XLXI_11/XLXI_37/XLXI_14/XLXI_131/Q 25 -radix dec
+# isim force add /CPU_main/XLXI_11/XLXI_37/XLXI_14/XLXI_131/Q 25 -radix dec
 # run 0.1us
-# restart
-# isim force add /CPU_main/CLK_CPU 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /CPU_main/W_Feedback 1111111111111111 -radix bin
-# isim force add /CPU_main/W_Feedback 1111111111111111 -radix bin
-# run 0.1us
-Simulator is doing circuit initialization process.
-WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
-Finished circuit initialization process.
-# isim force remove /CPU_main/W_Feedback
-# run 0.1us
-# run 0.1us
-# restart
-# isim force add /CPU_main/CLK_CPU 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
-# run 0.1us
-Simulator is doing circuit initialization process.
-WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
-Finished circuit initialization process.
-# restart
-# isim force add /CPU_main/CLK_CPU 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /CPU_main/W_Feedback 12 -radix unsigned
-# isim force add /CPU_main/W_Feedback 12 -radix unsigned
-# run 0.1us
-Simulator is doing circuit initialization process.
-WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
-Finished circuit initialization process.
-# isim force remove /CPU_main/W_Feedback
-# run 0.1us
-# restart
-# isim force add /CPU_main/CLK_CPU 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /CPU_main/W_Feedback 12 -radix unsigned
-# isim force add /CPU_main/W_Feedback 12 -radix unsigned
-# run 0.1us
-Simulator is doing circuit initialization process.
-WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
-Finished circuit initialization process.
-# run 0.1us
-# isim force remove /CPU_main/W_Feedback
-# run 0.1us
-# restart
-# isim force add /CPU_main/CLK_CPU 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /CPU_main/W_Feedback 12 -radix unsigned
-# run 0.1us
-Simulator is doing circuit initialization process.
-WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
-Finished circuit initialization process.
-# run 0.1us
-# run 0.1us
-# isim force remove /CPU_main/W_Feedback
-# restart
-# isim force add /CPU_main/CLK_CPU 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /CPU_main/W_Feedback 12 -radix unsigned
-# run 0.1us
-Simulator is doing circuit initialization process.
-WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
-Finished circuit initialization process.
-# run 0.1us
-# run 0.1us
-# isim force remove /CPU_main/W_Feedback
-# restart
-# isim force add /CPU_main/XLXI_11/XLXI_37/XLXI_14/XLXI_131/Q 12 -radix unsigned
-# isim force add /CPU_main/CLK_CPU 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
-# run 0.1us
-Simulator is doing circuit initialization process.
-WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
-Finished circuit initialization process.
 # run 0.1us
 # isim force remove /CPU_main/XLXI_11/XLXI_37/XLXI_14/XLXI_131/Q
 # run 0.1us
 # run 0.1us
 # run 0.1us
-# restart
-# isim force add /CPU_main/CLK_CPU 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /CPU_main/XLXI_11/XLXI_37/XLXI_14/XLXI_131/Q 17 -radix dec
-# isim force add /CPU_main/XLXI_11/XLXI_37/XLXI_14/XLXI_131/Q 17 -radix dec
 # run 0.1us
-Simulator is doing circuit initialization process.
-WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
-Finished circuit initialization process.
 # run 0.1us
-# isim force remove /CPU_main/XLXI_11/XLXI_37/XLXI_14/XLXI_131/Q
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
+# run 0.1us
 # run 0.1us
 # run 0.1us
 # run 0.1us

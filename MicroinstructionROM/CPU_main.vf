@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : CPU_main.vf
-// /___/   /\     Timestamp : 06/07/2020 18:13:42
+// /___/   /\     Timestamp : 06/08/2020 01:46:12
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -400,7 +400,7 @@ module ffd16_w_en_MUSER_CPU_main(CLK,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_18" *) 
+   (* HU_SET = "XLXI_1_69" *) 
    IFD16_HXILINX_CPU_main  XLXI_1 (.C(XLXN_1), 
                                   .D(D[15:0]), 
                                   .Q(Q[15:0]));
@@ -2842,7 +2842,7 @@ module ALU_main_MUSER_CPU_main(A,
    wire _B;
    wire _0xFFFF;
    
-   (* HU_SET = "ALUC_Decoder_19" *) 
+   (* HU_SET = "ALUC_Decoder_70" *) 
    D4_16E_HXILINX_CPU_main  ALUC_Decoder (.A0(ALUC[0]), 
                                          .A1(ALUC[1]), 
                                          .A2(ALUC[2]), 
@@ -2893,7 +2893,7 @@ module ALU_main_MUSER_CPU_main(A,
                          .IN_1(AdderOut[15:0]), 
                          .S(OP_SEL_2), 
                          .Y(Z[15:0]));
-   (* HU_SET = "XLXI_1_20" *) 
+   (* HU_SET = "XLXI_1_71" *) 
    ADD16_HXILINX_CPU_main  XLXI_1 (.A(XLXN_5[15:0]), 
                                   .B(XLXN_6[15:0]), 
                                   .CI(XLXN_2), 
@@ -2912,10 +2912,10 @@ module ALU_main_MUSER_CPU_main(A,
    OR2  XLXI_6 (.I0(CO_B), 
                .I1(XLXN_4), 
                .O(CO));
-   (* HU_SET = "XLXI_9_21" *) 
+   (* HU_SET = "XLXI_9_72" *) 
    INV16_HXILINX_CPU_main  XLXI_9 (.I(A[15:0]), 
                                   .O(XLXN_8[15:0]));
-   (* HU_SET = "XLXI_10_22" *) 
+   (* HU_SET = "XLXI_10_73" *) 
    INV16_HXILINX_CPU_main  XLXI_10 (.I(B[15:0]), 
                                    .O(XLXN_143[15:0]));
    OR2  XLXI_86 (.I0(A_p_B_p_CY), 
@@ -2978,7 +2978,7 @@ module ALU_main_MUSER_CPU_main(A,
                  .O(XLXN_347));
    INV  XLXI_142 (.I(m_B), 
                  .O(XLXN_348));
-   (* HU_SET = "XLXI_143_23" *) 
+   (* HU_SET = "XLXI_143_74" *) 
    AND6_HXILINX_CPU_main  XLXI_143 (.I0(XLXN_348), 
                                    .I1(XLXN_347), 
                                    .I2(XLXN_346), 
@@ -3268,7 +3268,7 @@ module fdce1_MUSER_CPU_main(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_24" *) 
+   (* HU_SET = "XLXI_1_75" *) 
    IFD_HXILINX_CPU_main #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                                 .D(d), 
                                 .Q(q));
@@ -3743,7 +3743,7 @@ module UC2_MUSER_CPU_main(DecodeBusA,
    COMPARADOR5_MUSER_CPU_main  XLXI_29 (.a(DecodeBusA[4:0]), 
                                        .b(RetireBusC[4:0]), 
                                        .iguales(XLXN_43));
-   (* HU_SET = "XLXI_30_25" *) 
+   (* HU_SET = "XLXI_30_76" *) 
    OR6_HXILINX_CPU_main  XLXI_30 (.I0(XLXN_78), 
                                  .I1(XLXN_49), 
                                  .I2(XLXN_48), 
@@ -3751,7 +3751,7 @@ module UC2_MUSER_CPU_main(DecodeBusA,
                                  .I4(XLXN_46), 
                                  .I5(XLXN_60), 
                                  .O(hold));
-   (* HU_SET = "XLXI_41_26" *) 
+   (* HU_SET = "XLXI_41_77" *) 
    OR6_HXILINX_CPU_main  XLXI_41 (.I0(RetireType[1]), 
                                  .I1(RetireType[0]), 
                                  .I2(ExecuteType[1]), 
@@ -4410,10 +4410,6 @@ module CPU_main(CLK_CPU);
    wire XLXN_53;
    
    GND  XLXI_8 (.G(SelA_Aux[5]));
-   CY_Block  XLXI_9 (.ALUC(ALUC_Operation[3:0]), 
-                    .CLK_CY(CLK_CPU), 
-                    .CY_out(XLXN_53), 
-                    .CY(CY_Feedback));
    merge_conIR_MUSER_CPU_main  XLXI_10 (.CLK(CLK_CPU), 
                                        .CY(CY_Feedback), 
                                        .W(W_Feedback[15:0]), 
@@ -4443,4 +4439,7 @@ module CPU_main(CLK_CPU);
                                         .Y_X_Kmx_Sel(KMx_Selector), 
                                         .CY_OUT(XLXN_53), 
                                         .W_Block1(W_Feedback[15:0]));
+   FD #( .INIT(1'b0) ) XLXI_12 (.C(CLK_CPU), 
+               .D(XLXN_53), 
+               .Q(CY_Feedback));
 endmodule

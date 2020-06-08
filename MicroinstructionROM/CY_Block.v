@@ -8,11 +8,7 @@ output reg CY;
 
 always@(posedge CLK_CY) begin
 	case(ALUC)
-		4: CY = CY_out; 
-		5: CY = CY_out;
-		11: CY = CY_out;
-		12: CY = CY_out;
-		default: CY = 0;
+		default: CY = CY_out;
 	endcase
 end
 

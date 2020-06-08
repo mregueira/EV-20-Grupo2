@@ -73,14 +73,12 @@ Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/Microinst
 Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge.vf" into library work
 Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ALU_main.vf" into library work
 Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/merge_conIR.vf" into library work
-Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CY_Block.v" into library work
 Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ALU_Reg_Join.vf" into library work
 Analyzing Verilog file "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main.vf" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling module GND
-Compiling module CY_Block
 Compiling module IFD_HXILINX_CPU_main
 Compiling module AND2
 Compiling module fdce1_MUSER_CPU_main
@@ -171,12 +169,12 @@ Compiling module jsr_backup_reg_MUSER_CPU_main
 Compiling module register_bank_MUSER_CPU_main
 Compiling module register_bank_easy_MUSER_CPU_mai...
 Compiling module ALU_Reg_Join_MUSER_CPU_main
+Compiling module FD
 Compiling module CPU_main
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\CPU_main_isim_beh.exe.sim\libPortability.dll".
 Compiled 94 Verilog Units
 Built simulation executable C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main_isim_beh.exe
-Fuse Memory Usage: 37256 KB
-Fuse CPU Usage: 1499 ms
+Fuse Memory Usage: 37232 KB
+Fuse CPU Usage: 1421 ms

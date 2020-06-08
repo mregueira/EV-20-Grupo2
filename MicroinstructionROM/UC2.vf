@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : UC2.vf
-// /___/   /\     Timestamp : 06/07/2020 18:08:21
+// /___/   /\     Timestamp : 06/08/2020 01:45:46
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -163,7 +163,7 @@ module UC2(DecodeBusA,
    COMPARADOR5_MUSER_UC2  XLXI_29 (.a(DecodeBusA[4:0]), 
                                   .b(RetireBusC[4:0]), 
                                   .iguales(XLXN_43));
-   (* HU_SET = "XLXI_30_33" *) 
+   (* HU_SET = "XLXI_30_57" *) 
    OR6_HXILINX_UC2  XLXI_30 (.I0(XLXN_78), 
                             .I1(XLXN_49), 
                             .I2(XLXN_48), 
@@ -171,7 +171,7 @@ module UC2(DecodeBusA,
                             .I4(XLXN_46), 
                             .I5(XLXN_60), 
                             .O(hold));
-   (* HU_SET = "XLXI_41_34" *) 
+   (* HU_SET = "XLXI_41_58" *) 
    OR6_HXILINX_UC2  XLXI_41 (.I0(RetireType[1]), 
                             .I1(RetireType[0]), 
                             .I2(ExecuteType[1]), 

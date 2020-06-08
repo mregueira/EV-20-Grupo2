@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main.syr" 
+xst -intstyle ise -ifn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main.xst" -ofn "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main.syr" 

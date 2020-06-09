@@ -21,12 +21,12 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/CPU_main.vf";
+static const char *ng0 = "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main.vf";
 static int ng1[] = {0, 0};
 
 
 
-static void Cont_3588_0(char *t0)
+static void Cont_3586_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -51,7 +51,7 @@ LAB0:    t1 = (t0 + 3968U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(3588, ng0);
+LAB2:    xsi_set_current_line(3586, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 4352);
     t4 = (t3 + 56U);
@@ -79,7 +79,7 @@ LAB1:    return;
 
 extern void work_m_00000000002669896399_2254868999_init()
 {
-	static char *pe[] = {(void *)Cont_3588_0};
+	static char *pe[] = {(void *)Cont_3586_0};
 	xsi_register_didat("work_m_00000000002669896399_2254868999", "isim/CPU_main_isim_beh.exe.sim/work/m_00000000002669896399_2254868999.didat");
 	xsi_register_executes(pe);
 }

@@ -21,11 +21,11 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/CPU_main.vf";
+static const char *ng0 = "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main.vf";
 
 
 
-static void Cont_3180_0(char *t0)
+static void Cont_3176_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -51,7 +51,7 @@ LAB0:    t1 = (t0 + 5888U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(3180, ng0);
+LAB2:    xsi_set_current_line(3176, ng0);
     t2 = (t0 + 4728U);
     t3 = *((char **)t2);
     t2 = (t0 + 6816);
@@ -79,7 +79,7 @@ LAB2:    xsi_set_current_line(3180, ng0);
 LAB1:    return;
 }
 
-static void Cont_3181_1(char *t0)
+static void Cont_3177_1(char *t0)
 {
     char t3[8];
     char *t1;
@@ -114,7 +114,7 @@ LAB0:    t1 = (t0 + 6136U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(3181, ng0);
+LAB2:    xsi_set_current_line(3177, ng0);
     t2 = (t0 + 4568U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -155,7 +155,7 @@ LAB2:    xsi_set_current_line(3181, ng0);
 LAB1:    return;
 }
 
-static void Cont_3182_2(char *t0)
+static void Cont_3178_2(char *t0)
 {
     char *t1;
     char *t2;
@@ -181,7 +181,7 @@ LAB0:    t1 = (t0 + 6384U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(3182, ng0);
+LAB2:    xsi_set_current_line(3178, ng0);
     t2 = (t0 + 4408U);
     t3 = *((char **)t2);
     t2 = (t0 + 6944);
@@ -210,9 +210,9 @@ LAB1:    return;
 }
 
 
-extern void work_m_00000000001676969952_1586172442_init()
+extern void work_m_00000000001340228869_1586172442_init()
 {
-	static char *pe[] = {(void *)Cont_3180_0,(void *)Cont_3181_1,(void *)Cont_3182_2};
-	xsi_register_didat("work_m_00000000001676969952_1586172442", "isim/CPU_main_isim_beh.exe.sim/work/m_00000000001676969952_1586172442.didat");
+	static char *pe[] = {(void *)Cont_3176_0,(void *)Cont_3177_1,(void *)Cont_3178_2};
+	xsi_register_didat("work_m_00000000001340228869_1586172442", "isim/CPU_main_isim_beh.exe.sim/work/m_00000000001340228869_1586172442.didat");
 	xsi_register_executes(pe);
 }

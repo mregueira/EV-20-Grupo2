@@ -35,7 +35,7 @@
             <line x2="64" y1="-128" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="merge_conIR">
-            <timestamp>2020-6-7T20:40:5</timestamp>
+            <timestamp>2020-6-9T1:12:49</timestamp>
             <rect width="320" x="64" y="-768" height="768" />
             <line x2="0" y1="-736" y2="-736" x1="64" />
             <line x2="0" y1="-384" y2="-384" x1="64" />
@@ -62,7 +62,7 @@
             <line x2="448" y1="-32" y2="-32" x1="384" />
         </blockdef>
         <blockdef name="ALU_Reg_Join">
-            <timestamp>2020-6-7T20:33:52</timestamp>
+            <timestamp>2020-6-9T2:46:18</timestamp>
             <rect width="352" x="64" y="-832" height="832" />
             <rect width="64" x="0" y="-812" height="24" />
             <line x2="0" y1="-800" y2="-800" x1="64" />
@@ -92,7 +92,7 @@
         <block symbolname="gnd" name="XLXI_8">
             <blockpin signalname="SelA_Aux(5)" name="G" />
         </block>
-        <block symbolname="merge_conIR" name="XLXI_10">
+        <block symbolname="merge_conIR" name="XLXI_13">
             <blockpin signalname="CY_Feedback" name="CY" />
             <blockpin signalname="CLK_CPU" name="CLK" />
             <blockpin signalname="W_Feedback(15:0)" name="W(15:0)" />
@@ -107,7 +107,7 @@
             <blockpin signalname="Instruction_Extended(21:0)" name="INST_EXTEND(21:0)" />
             <blockpin signalname="Levels_Con(2:0)" name="levels_out(2:0)" />
         </block>
-        <block symbolname="ALU_Reg_Join" name="XLXI_11">
+        <block symbolname="ALU_Reg_Join" name="XLXI_14">
             <blockpin signalname="Instruction_Extended(15:0)" name="Y_KMx_IN(15:0)" />
             <blockpin signalname="KMx_Selector" name="Y_X_Kmx_Sel" />
             <blockpin signalname="Shifter_Selector(1:0)" name="Shifter_Sel(1:0)" />
@@ -267,13 +267,13 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="3312" y="1712" type="branch" />
             <wire x2="3408" y1="1712" y2="1712" x1="3312" />
         </branch>
-        <instance x="1584" y="2160" name="XLXI_10" orien="R0">
-        </instance>
-        <instance x="3408" y="2192" name="XLXI_11" orien="R0">
-        </instance>
         <branch name="CY_Feedback">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="3984" y="2160" type="branch" />
             <wire x2="3984" y1="2160" y2="2160" x1="3888" />
         </branch>
+        <instance x="1584" y="2160" name="XLXI_13" orien="R0">
+        </instance>
+        <instance x="3408" y="2192" name="XLXI_14" orien="R0">
+        </instance>
     </sheet>
 </drawing>

@@ -20,29 +20,43 @@
 //////////////////////////////////////////////////////////////////////////////////
 module bloqueSaltos(
     input CY,
+	 input CLK,
+	 input Hold,
     input [15:0] W0to15,
-    output pre_load,
-	 output is_BSR,
-	 output is_RET,
-	 output [9:0]S,
-	 output [10:0]D,
+    output reg pre_load,
+	 output reg is_BSR,
+	 output reg is_RET,
+	 output reg[9:0]S,
+	 output reg[10:0]D,
 	 input [13:0]B
     );
 	
-	wire case_jmp; 
-	assign case_jmp = !B[12] & !B[11]; // jmp
-	wire case_jze;
-	assign case_jze = (!B[12]) & (B[11]) & W0to15[0]; // jze
-	wire case_jne;
-	assign case_jne = (B[12] & (!B[11]) ) & W0to15[15]; //jne
-	wire case_ccy;
-	assign case_ccy = (B[12] & B[11]) & CY; //ccy
+	reg case_jmp; 
+	reg case_jze;
+	reg case_jne;
+	reg case_ccy;
 	
-	assign pre_load = is_BSR | is_RET | ( B[13] & (case_jmp | case_jze | case_jne | case_ccy ));
+always@(posedge CLK) begin
+	if(Hold == 0)begin
+			case_jmp = !B[12] & !B[11]; // jmp
 	
-	assign is_BSR = (!B[13]) & B[12] & B[11] & B[10];
-	assign is_RET = (B == 14'b00000110000000);
-	assign S = B[9:0];
-	assign D = B[10:0];
+	
+			case_jze = (!B[12]) & (B[11]) & W0to15[0]; // jze
+
+
+			case_jne = (B[12] & (!B[11]) ) & W0to15[15]; //jne
+
+
+			case_ccy = (B[12] & B[11]) & CY; //ccy
+
+			is_BSR = (!B[13]) & B[12] & B[11] & B[10];
+			is_RET = (B == 14'b00000110000000);
+			S = B[9:0];
+			D = B[10:0];
+			
+			pre_load = is_BSR | is_RET | ( B[13] & (case_jmp | case_jze | case_jne | case_ccy ));
+	end
+end	
+	
 	
 endmodule

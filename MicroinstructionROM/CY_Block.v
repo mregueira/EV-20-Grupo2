@@ -1,14 +1,13 @@
-module CY_Block(ALUC,CY_out,CY,CLK_CY
+module CY_Block(ALUC,CY_forced
     );
 
 input [3:0]ALUC;
-input CY_out;
-input CLK_CY;
-output reg CY;
+output reg CY_forced;
 
-always@(posedge CLK_CY) begin
+always@* begin
 	case(ALUC)
-		default: CY = CY_out;
+		12: CY_forced = 1;
+		11: CY_forced = 0;
 	endcase
 end
 

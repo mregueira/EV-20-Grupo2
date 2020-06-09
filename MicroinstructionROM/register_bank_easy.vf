@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : register_bank_easy.vf
-// /___/   /\     Timestamp : 06/08/2020 20:04:58
+// /___/   /\     Timestamp : 06/09/2020 00:33:03
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/register_bank_easy.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/register_bank_easy.sch
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/register_bank_easy.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/register_bank_easy.sch
 //Design Name: register_bank_easy
 //Device: artix7
 //Purpose:
@@ -215,7 +215,7 @@ module ffd16_w_en_MUSER_register_bank_easy(CLK,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_75" *) 
+   (* HU_SET = "XLXI_1_76" *) 
    IFD16_HXILINX_register_bank_easy  XLXI_1 (.C(XLXN_1), 
                                             .D(D[15:0]), 
                                             .Q(Q[15:0]));

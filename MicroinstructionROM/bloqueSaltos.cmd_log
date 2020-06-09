@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/bloqueSaltos.v -lang verilog -prj MicroinstructionROM -o bloqueSaltos.spl -module bloqueSaltos -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w bloqueSaltos.spl C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/bloqueSaltos.sym 

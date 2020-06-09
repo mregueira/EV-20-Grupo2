@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ALU_main.vf
-// /___/   /\     Timestamp : 06/08/2020 20:03:13
+// /___/   /\     Timestamp : 06/09/2020 00:31:23
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ALU_main.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ALU_main.sch
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ALU_main.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ALU_main.sch
 //Design Name: ALU_main
 //Device: artix7
 //Purpose:
@@ -169,7 +169,6 @@ module ALU_main(A,
    wire B_SEL_2;
    wire CO_A;
    wire CO_B;
-   wire CY_EN;
    wire CY_0;
    wire CY_1;
    wire m_B;
@@ -180,7 +179,6 @@ module ALU_main(A,
    wire OP_SEL_2;
    wire OUT_1b;
    wire XLXN_1;
-   wire XLXN_2;
    wire XLXN_3;
    wire XLXN_4;
    wire [15:0] XLXN_5;
@@ -209,7 +207,7 @@ module ALU_main(A,
    wire _B;
    wire _0xFFFF;
    
-   (* HU_SET = "ALUC_Decoder_28" *) 
+   (* HU_SET = "ALUC_Decoder_25" *) 
    D4_16E_HXILINX_ALU_main  ALUC_Decoder (.A0(ALUC[0]), 
                                          .A1(ALUC[1]), 
                                          .A2(ALUC[2]), 
@@ -260,16 +258,13 @@ module ALU_main(A,
                          .IN_1(AdderOut[15:0]), 
                          .S(OP_SEL_2), 
                          .Y(Z[15:0]));
-   (* HU_SET = "XLXI_1_29" *) 
+   (* HU_SET = "XLXI_1_26" *) 
    ADD16_HXILINX_ALU_main  XLXI_1 (.A(XLXN_5[15:0]), 
                                   .B(XLXN_6[15:0]), 
-                                  .CI(XLXN_2), 
+                                  .CI(XLXN_1), 
                                   .CO(XLXN_3), 
                                   .OFL(), 
                                   .S(AdderOut[15:0]));
-   AND2  XLXI_2 (.I0(XLXN_1), 
-                .I1(CY_EN), 
-                .O(XLXN_2));
    OR2  XLXI_3 (.I0(OUT_1b), 
                .I1(CY), 
                .O(XLXN_1));
@@ -279,15 +274,12 @@ module ALU_main(A,
    OR2  XLXI_6 (.I0(CO_B), 
                .I1(XLXN_4), 
                .O(CO));
-   (* HU_SET = "XLXI_9_30" *) 
+   (* HU_SET = "XLXI_9_27" *) 
    INV16_HXILINX_ALU_main  XLXI_9 (.I(A[15:0]), 
                                   .O(XLXN_8[15:0]));
-   (* HU_SET = "XLXI_10_31" *) 
+   (* HU_SET = "XLXI_10_28" *) 
    INV16_HXILINX_ALU_main  XLXI_10 (.I(B[15:0]), 
                                    .O(XLXN_143[15:0]));
-   OR2  XLXI_86 (.I0(A_p_B_p_CY), 
-                .I1(A_p_B), 
-                .O(CO_A));
    OR2  XLXI_87 (.I0(CY_1), 
                 .I1(CY_1), 
                 .O(CO_B));
@@ -320,11 +312,6 @@ module ALU_main(A,
                  .O(XLXN_345));
    INV  XLXI_109 (.I(A_p_B_p_CY), 
                  .O(XLXN_346));
-   OR4  XLXI_118 (.I0(m_B), 
-                 .I1(A_m_B), 
-                 .I2(ONE), 
-                 .I3(A_p_B_p_CY), 
-                 .O(CY_EN));
    OR3  XLXI_119 (.I0(m_B), 
                  .I1(A_m_B), 
                  .I2(ONE), 
@@ -345,7 +332,7 @@ module ALU_main(A,
                  .O(XLXN_347));
    INV  XLXI_142 (.I(m_B), 
                  .O(XLXN_348));
-   (* HU_SET = "XLXI_143_32" *) 
+   (* HU_SET = "XLXI_143_29" *) 
    AND6_HXILINX_ALU_main  XLXI_143 (.I0(XLXN_348), 
                                    .I1(XLXN_347), 
                                    .I2(XLXN_346), 
@@ -353,4 +340,6 @@ module ALU_main(A,
                                    .I4(XLXN_344), 
                                    .I5(XLXN_343), 
                                    .O(B_SEL_2));
+   INV  XLXI_145 (.I(CY_0), 
+                 .O(CO_A));
 endmodule

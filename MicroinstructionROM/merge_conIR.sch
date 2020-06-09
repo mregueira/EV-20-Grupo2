@@ -63,7 +63,7 @@
             <rect width="336" x="64" y="-640" height="704" />
         </blockdef>
         <blockdef name="unionMagica">
-            <timestamp>2020-6-7T20:50:25</timestamp>
+            <timestamp>2020-6-9T1:11:58</timestamp>
             <rect width="448" x="64" y="-384" height="384" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
             <line x2="0" y1="-256" y2="-256" x1="64" />
@@ -96,7 +96,7 @@
             <blockpin signalname="cbus_out(5:0)" name="cbus_out(5:0)" />
             <blockpin signalname="type_out(6:0)" name="type_out(6:0)" />
         </block>
-        <block symbolname="unionMagica" name="XLXI_4">
+        <block symbolname="unionMagica" name="XLXI_5">
             <blockpin signalname="CY" name="CY" />
             <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="hold" name="HOLD" />
@@ -165,8 +165,6 @@
         <iomarker fontsize="28" x="2656" y="1120" name="alu_out(3:0)" orien="R0" />
         <iomarker fontsize="28" x="2656" y="1184" name="sh_out(1:0)" orien="R0" />
         <iomarker fontsize="28" x="2656" y="1312" name="cbus_out(5:0)" orien="R0" />
-        <instance x="656" y="1392" name="XLXI_4" orien="R0">
-        </instance>
         <branch name="CLK">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="592" y="1136" type="branch" />
             <wire x2="656" y1="1136" y2="1136" x1="592" />
@@ -200,5 +198,7 @@
             <wire x2="1440" y1="1712" y2="1712" x1="1312" />
         </branch>
         <iomarker fontsize="28" x="1440" y="1712" name="levels_out(2:0)" orien="R0" />
+        <instance x="656" y="1392" name="XLXI_5" orien="R0">
+        </instance>
     </sheet>
 </drawing>

@@ -21,13 +21,13 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/CPU_main.vf";
+static const char *ng0 = "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/CPU_main.vf";
 static int ng1[] = {0, 0};
 static int ng2[] = {1, 0};
 
 
 
-static void Cont_4169_0(char *t0)
+static void Cont_4167_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -52,7 +52,7 @@ LAB0:    t1 = (t0 + 9728U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(4169, ng0);
+LAB2:    xsi_set_current_line(4167, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 12144);
     t4 = (t3 + 56U);
@@ -77,7 +77,7 @@ LAB2:    xsi_set_current_line(4169, ng0);
 LAB1:    return;
 }
 
-static void Cont_4170_1(char *t0)
+static void Cont_4168_1(char *t0)
 {
     char *t1;
     char *t2;
@@ -102,7 +102,7 @@ LAB0:    t1 = (t0 + 9976U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(4170, ng0);
+LAB2:    xsi_set_current_line(4168, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 12208);
     t4 = (t3 + 56U);
@@ -127,7 +127,7 @@ LAB2:    xsi_set_current_line(4170, ng0);
 LAB1:    return;
 }
 
-static void Cont_4171_2(char *t0)
+static void Cont_4169_2(char *t0)
 {
     char *t1;
     char *t2;
@@ -152,7 +152,7 @@ LAB0:    t1 = (t0 + 10224U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(4171, ng0);
+LAB2:    xsi_set_current_line(4169, ng0);
     t2 = ((char*)((ng2)));
     t3 = (t0 + 12272);
     t4 = (t3 + 56U);
@@ -177,7 +177,7 @@ LAB2:    xsi_set_current_line(4171, ng0);
 LAB1:    return;
 }
 
-static void Cont_4172_3(char *t0)
+static void Cont_4170_3(char *t0)
 {
     char *t1;
     char *t2;
@@ -202,7 +202,7 @@ LAB0:    t1 = (t0 + 10472U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(4172, ng0);
+LAB2:    xsi_set_current_line(4170, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 12336);
     t4 = (t3 + 56U);
@@ -227,7 +227,7 @@ LAB2:    xsi_set_current_line(4172, ng0);
 LAB1:    return;
 }
 
-static void Cont_4173_4(char *t0)
+static void Cont_4171_4(char *t0)
 {
     char *t1;
     char *t2;
@@ -252,7 +252,7 @@ LAB0:    t1 = (t0 + 10720U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(4173, ng0);
+LAB2:    xsi_set_current_line(4171, ng0);
     t2 = ((char*)((ng2)));
     t3 = (t0 + 12400);
     t4 = (t3 + 56U);
@@ -277,7 +277,7 @@ LAB2:    xsi_set_current_line(4173, ng0);
 LAB1:    return;
 }
 
-static void Cont_4174_5(char *t0)
+static void Cont_4172_5(char *t0)
 {
     char *t1;
     char *t2;
@@ -302,7 +302,7 @@ LAB0:    t1 = (t0 + 10968U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(4174, ng0);
+LAB2:    xsi_set_current_line(4172, ng0);
     t2 = ((char*)((ng2)));
     t3 = (t0 + 12464);
     t4 = (t3 + 56U);
@@ -327,7 +327,7 @@ LAB2:    xsi_set_current_line(4174, ng0);
 LAB1:    return;
 }
 
-static void Cont_4175_6(char *t0)
+static void Cont_4173_6(char *t0)
 {
     char t3[8];
     char *t1;
@@ -362,7 +362,7 @@ LAB0:    t1 = (t0 + 11216U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(4175, ng0);
+LAB2:    xsi_set_current_line(4173, ng0);
     t2 = (t0 + 8408U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -403,7 +403,7 @@ LAB2:    xsi_set_current_line(4175, ng0);
 LAB1:    return;
 }
 
-static void Cont_4176_7(char *t0)
+static void Cont_4174_7(char *t0)
 {
     char *t1;
     char *t2;
@@ -429,7 +429,7 @@ LAB0:    t1 = (t0 + 11464U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(4176, ng0);
+LAB2:    xsi_set_current_line(4174, ng0);
     t2 = (t0 + 8568U);
     t3 = *((char **)t2);
     t2 = (t0 + 12592);
@@ -457,7 +457,7 @@ LAB2:    xsi_set_current_line(4176, ng0);
 LAB1:    return;
 }
 
-static void Cont_4177_8(char *t0)
+static void Cont_4175_8(char *t0)
 {
     char t3[8];
     char *t1;
@@ -492,7 +492,7 @@ LAB0:    t1 = (t0 + 11712U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(4177, ng0);
+LAB2:    xsi_set_current_line(4175, ng0);
     t2 = (t0 + 8248U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -536,7 +536,7 @@ LAB1:    return;
 
 extern void work_m_00000000001769488671_2153154757_init()
 {
-	static char *pe[] = {(void *)Cont_4169_0,(void *)Cont_4170_1,(void *)Cont_4171_2,(void *)Cont_4172_3,(void *)Cont_4173_4,(void *)Cont_4174_5,(void *)Cont_4175_6,(void *)Cont_4176_7,(void *)Cont_4177_8};
+	static char *pe[] = {(void *)Cont_4167_0,(void *)Cont_4168_1,(void *)Cont_4169_2,(void *)Cont_4170_3,(void *)Cont_4171_4,(void *)Cont_4172_5,(void *)Cont_4173_6,(void *)Cont_4174_7,(void *)Cont_4175_8};
 	xsi_register_didat("work_m_00000000001769488671_2153154757", "isim/CPU_main_isim_beh.exe.sim/work/m_00000000001769488671_2153154757.didat");
 	xsi_register_executes(pe);
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="RAM_internal">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2020-6-7T20:57:43</timestamp>
+    <timestamp>2020-6-9T1:11:20</timestamp>
     <attr value="RAM_internal" name="VeriModel" />
     <pin polarity="Input" x="0" y="-288" name="clk" />
     <pin polarity="Input" x="0" y="-224" name="wr_enb" />

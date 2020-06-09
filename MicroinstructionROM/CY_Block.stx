@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: CY_Block.prj
 
@@ -44,7 +44,7 @@ Parsing module <CY_Block>.
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.86 secs
+Total CPU time to Xst completion: 6.05 secs
  
 --> 
 

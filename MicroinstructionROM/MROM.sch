@@ -24,7 +24,7 @@
         <port polarity="Output" name="ALUC(3:0)" />
         <port polarity="Input" name="Bus_B(6:0)" />
         <blockdef name="MicroinstructionROMv2">
-            <timestamp>2020-6-7T17:27:7</timestamp>
+            <timestamp>2020-6-9T0:4:4</timestamp>
             <rect width="224" x="32" y="32" height="512" />
             <line x2="32" y1="80" y2="80" style="linewidth:W" x1="0" />
             <line x2="256" y1="80" y2="80" style="linewidth:W" x1="288" />

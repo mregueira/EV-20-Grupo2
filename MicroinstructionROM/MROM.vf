@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : MROM.vf
-// /___/   /\     Timestamp : 06/08/2020 20:02:27
+// /___/   /\     Timestamp : 06/09/2020 00:31:04
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/MROM.sch
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/MROM.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/MROM.sch
 //Design Name: MROM
 //Device: artix7
 //Purpose:

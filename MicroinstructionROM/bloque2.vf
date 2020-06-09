@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : bloque2.vf
-// /___/   /\     Timestamp : 06/08/2020 20:04:09
+// /___/   /\     Timestamp : 06/09/2020 00:32:45
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/bloque2.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/bloque2.sch
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/bloque2.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/bloque2.sch
 //Design Name: bloque2
 //Device: artix7
 //Purpose:

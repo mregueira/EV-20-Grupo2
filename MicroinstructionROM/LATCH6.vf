@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : LATCH6.vf
-// /___/   /\     Timestamp : 06/08/2020 20:04:18
+// /___/   /\     Timestamp : 06/09/2020 00:32:18
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH6.vf -w C:/Users/Martina/Desktop/EV-20-Grupo2/MicroinstructionROM/LATCH6.sch
+//Command: sch2hdl -sympath C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/ipcore_dir -intstyle ise -family artix7 -verilog C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/LATCH6.vf -w C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/MicroinstructionROM/LATCH6.sch
 //Design Name: LATCH6
 //Device: artix7
 //Purpose:
@@ -53,7 +53,7 @@ module fdce1_MUSER_LATCH6(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_58" *) 
+   (* HU_SET = "XLXI_1_57" *) 
    IFD_HXILINX_LATCH6 #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                               .D(d), 
                               .Q(q));

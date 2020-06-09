@@ -38,7 +38,9 @@
         <port polarity="Output" name="INSTRUCTION_EXTENDIDA(21:0)" />
         <port polarity="Output" name="levels_Out(2:0)" />
         <blockdef name="bloqueSaltos">
-            <timestamp>2020-6-5T1:35:35</timestamp>
+            <timestamp>2020-6-9T1:8:30</timestamp>
+            <line x2="0" y1="352" y2="352" x1="64" />
+            <line x2="0" y1="416" y2="416" x1="64" />
             <rect width="64" x="320" y="212" height="24" />
             <line x2="384" y1="224" y2="224" x1="320" />
             <rect width="64" x="320" y="276" height="24" />
@@ -51,7 +53,7 @@
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="384" y1="-288" y2="-288" x1="320" />
-            <rect width="256" x="64" y="-320" height="640" />
+            <rect width="256" x="64" y="-320" height="768" />
         </blockdef>
         <blockdef name="and2">
             <timestamp>2000-1-1T10:10:10</timestamp>
@@ -144,7 +146,7 @@
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="RAM_internal">
-            <timestamp>2020-6-7T20:57:43</timestamp>
+            <timestamp>2020-6-9T1:11:20</timestamp>
             <rect width="304" x="64" y="-320" height="320" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -195,6 +197,8 @@
             <blockpin signalname="load" name="is_RET" />
             <blockpin signalname="S(9:0)" name="S(9:0)" />
             <blockpin signalname="D(10:0)" name="D(10:0)" />
+            <blockpin signalname="CLK" name="CLK" />
+            <blockpin signalname="HOLD" name="Hold" />
         </block>
         <block symbolname="stack_manager" name="XLXI_46">
             <blockpin signalname="load" name="load" />
@@ -208,20 +212,20 @@
             <blockpin signalname="XLXN_146(10:0)" name="in_val(10:0)" />
             <blockpin signalname="PC(10:0)" name="out_val(10:0)" />
         </block>
-        <block symbolname="RAM_internal" name="XLXI_50">
-            <blockpin signalname="increment" name="clk" />
-            <blockpin signalname="XLXN_76" name="wr_enb" />
-            <blockpin signalname="XLXN_75" name="rd_enb" />
-            <blockpin signalname="XLXN_146(10:0)" name="addr(10:0)" />
-            <blockpin name="data_in(21:0)" />
-            <blockpin signalname="XLXN_156(21:0)" name="data_out(21:0)" />
-        </block>
         <block symbolname="instruction_register_v2" name="XLXI_52">
             <blockpin signalname="increment" name="increment" />
             <blockpin signalname="is_void" name="is_void" />
             <blockpin signalname="XLXN_156(21:0)" name="in_ins(21:0)" />
             <blockpin signalname="INSTRUCTION_EXTENDIDA(21:0)" name="out_ins_completa(21:0)" />
             <blockpin signalname="INSTRUCTION(13:0)" name="out_ins(13:0)" />
+        </block>
+        <block symbolname="RAM_internal" name="XLXI_53">
+            <blockpin signalname="increment" name="clk" />
+            <blockpin signalname="XLXN_76" name="wr_enb" />
+            <blockpin signalname="XLXN_75" name="rd_enb" />
+            <blockpin signalname="XLXN_146(10:0)" name="addr(10:0)" />
+            <blockpin name="data_in(21:0)" />
+            <blockpin signalname="XLXN_156(21:0)" name="data_out(21:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -247,12 +251,12 @@
         <iomarker fontsize="28" x="656" y="720" name="CLK" orien="R180" />
         <instance x="1696" y="256" name="XLXI_13" orien="R0" />
         <branch name="INSTRUCTION(13:0)">
-            <wire x2="672" y1="2048" y2="2048" x1="656" />
-            <wire x2="656" y1="2048" y2="2480" x1="656" />
-            <wire x2="2976" y1="2480" y2="2480" x1="656" />
+            <wire x2="672" y1="2048" y2="2048" x1="320" />
+            <wire x2="320" y1="2048" y2="2592" x1="320" />
+            <wire x2="2976" y1="2592" y2="2592" x1="320" />
             <wire x2="2976" y1="512" y2="512" x1="2928" />
             <wire x2="3056" y1="512" y2="512" x1="2976" />
-            <wire x2="2976" y1="512" y2="2480" x1="2976" />
+            <wire x2="2976" y1="512" y2="2592" x1="2976" />
         </branch>
         <branch name="XLXN_75">
             <wire x2="1760" y1="256" y2="272" x1="1760" />
@@ -386,8 +390,6 @@
             <wire x2="2944" y1="1280" y2="1280" x1="2928" />
             <wire x2="3040" y1="1280" y2="1280" x1="2944" />
         </branch>
-        <instance x="1920" y="800" name="XLXI_50" orien="R0">
-        </instance>
         <branch name="XLXN_156(21:0)">
             <wire x2="2528" y1="512" y2="512" x1="2352" />
             <wire x2="2544" y1="512" y2="512" x1="2528" />
@@ -403,5 +405,15 @@
             <wire x2="2432" y1="2080" y2="2080" x1="2336" />
         </branch>
         <iomarker fontsize="28" x="2432" y="2080" name="levels_Out(2:0)" orien="R0" />
+        <branch name="CLK">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="560" y="2368" type="branch" />
+            <wire x2="672" y1="2368" y2="2368" x1="560" />
+        </branch>
+        <branch name="HOLD">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="560" y="2432" type="branch" />
+            <wire x2="672" y1="2432" y2="2432" x1="560" />
+        </branch>
+        <instance x="1920" y="800" name="XLXI_53" orien="R0">
+        </instance>
     </sheet>
 </drawing>

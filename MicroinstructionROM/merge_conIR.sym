@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="merge_conIR">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2020-6-7T20:40:5</timestamp>
+    <timestamp>2020-6-9T1:12:49</timestamp>
     <pin polarity="Input" x="0" y="-736" name="CY" />
     <pin polarity="Input" x="0" y="-384" name="CLK" />
     <pin polarity="Input" x="0" y="-32" name="W(15:0)" />

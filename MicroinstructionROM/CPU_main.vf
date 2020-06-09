@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : CPU_main.vf
-// /___/   /\     Timestamp : 06/09/2020 00:32:41
+// /___/   /\     Timestamp : 06/09/2020 01:47:43
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -198,6 +198,28 @@ module IFD16_HXILINX_CPU_main(Q, C, D);
 endmodule
 `timescale 1ns / 1ps
 
+module ffd16_w_en_MUSER_CPU_main(CLK, 
+                                 D, 
+                                 EN, 
+                                 Q);
+
+    input CLK;
+    input [15:0] D;
+    input EN;
+   output [15:0] Q;
+   
+   wire XLXN_1;
+   
+   (* HU_SET = "XLXI_1_40" *) 
+   IFD16_HXILINX_CPU_main  XLXI_1 (.C(XLXN_1), 
+                                  .D(D[15:0]), 
+                                  .Q(Q[15:0]));
+   AND2  XLXI_2 (.I0(CLK), 
+                .I1(EN), 
+                .O(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
 module ALU_main_MUSER_CPU_main(A, 
                                ALUC, 
                                B, 
@@ -228,6 +250,7 @@ module ALU_main_MUSER_CPU_main(A,
    wire B_SEL_2;
    wire CO_A;
    wire CO_B;
+   wire CY_EN;
    wire CY_0;
    wire CY_1;
    wire m_B;
@@ -237,7 +260,6 @@ module ALU_main_MUSER_CPU_main(A,
    wire OP_SEL_1;
    wire OP_SEL_2;
    wire OUT_1b;
-   wire XLXN_1;
    wire XLXN_3;
    wire XLXN_4;
    wire [15:0] XLXN_5;
@@ -261,12 +283,14 @@ module ALU_main_MUSER_CPU_main(A,
    wire XLXN_346;
    wire XLXN_347;
    wire XLXN_348;
+   wire XLXN_349;
+   wire XLXN_350;
    wire ZERO;
    wire _A;
    wire _B;
    wire _0xFFFF;
    
-   (* HU_SET = "ALUC_Decoder_66" *) 
+   (* HU_SET = "ALUC_Decoder_41" *) 
    D4_16E_HXILINX_CPU_main  ALUC_Decoder (.A0(ALUC[0]), 
                                          .A1(ALUC[1]), 
                                          .A2(ALUC[2]), 
@@ -317,26 +341,26 @@ module ALU_main_MUSER_CPU_main(A,
                          .IN_1(AdderOut[15:0]), 
                          .S(OP_SEL_2), 
                          .Y(Z[15:0]));
-   (* HU_SET = "XLXI_1_67" *) 
+   (* HU_SET = "XLXI_1_42" *) 
    ADD16_HXILINX_CPU_main  XLXI_1 (.A(XLXN_5[15:0]), 
                                   .B(XLXN_6[15:0]), 
-                                  .CI(XLXN_1), 
+                                  .CI(XLXN_350), 
                                   .CO(XLXN_3), 
                                   .OFL(), 
                                   .S(AdderOut[15:0]));
    OR2  XLXI_3 (.I0(OUT_1b), 
                .I1(CY), 
-               .O(XLXN_1));
+               .O(XLXN_349));
    AND2  XLXI_5 (.I0(CO_A), 
                 .I1(XLXN_3), 
                 .O(XLXN_4));
    OR2  XLXI_6 (.I0(CO_B), 
                .I1(XLXN_4), 
                .O(CO));
-   (* HU_SET = "XLXI_9_68" *) 
+   (* HU_SET = "XLXI_9_43" *) 
    INV16_HXILINX_CPU_main  XLXI_9 (.I(A[15:0]), 
                                   .O(XLXN_8[15:0]));
-   (* HU_SET = "XLXI_10_69" *) 
+   (* HU_SET = "XLXI_10_44" *) 
    INV16_HXILINX_CPU_main  XLXI_10 (.I(B[15:0]), 
                                    .O(XLXN_143[15:0]));
    OR2  XLXI_87 (.I0(CY_1), 
@@ -391,7 +415,7 @@ module ALU_main_MUSER_CPU_main(A,
                  .O(XLXN_347));
    INV  XLXI_142 (.I(m_B), 
                  .O(XLXN_348));
-   (* HU_SET = "XLXI_143_70" *) 
+   (* HU_SET = "XLXI_143_45" *) 
    AND6_HXILINX_CPU_main  XLXI_143 (.I0(XLXN_348), 
                                    .I1(XLXN_347), 
                                    .I2(XLXN_346), 
@@ -401,6 +425,12 @@ module ALU_main_MUSER_CPU_main(A,
                                    .O(B_SEL_2));
    INV  XLXI_145 (.I(CY_0), 
                  .O(CO_A));
+   AND2  XLXI_146 (.I0(XLXN_349), 
+                  .I1(CY_EN), 
+                  .O(XLXN_350));
+   OR2  XLXI_147 (.I0(CY_1), 
+                 .I1(A_p_B_p_CY), 
+                 .O(CY_EN));
 endmodule
 `timescale 1ns / 1ps
 
@@ -591,28 +621,6 @@ module demux3b_w_en_MUSER_CPU_main(ENABLE,
                    .x(x), 
                    .a0(XLXN_10), 
                    .a1(XLXN_11));
-endmodule
-`timescale 1ns / 1ps
-
-module ffd16_w_en_MUSER_CPU_main(CLK, 
-                                 D, 
-                                 EN, 
-                                 Q);
-
-    input CLK;
-    input [15:0] D;
-    input EN;
-   output [15:0] Q;
-   
-   wire XLXN_1;
-   
-   (* HU_SET = "XLXI_1_71" *) 
-   IFD16_HXILINX_CPU_main  XLXI_1 (.C(XLXN_1), 
-                                  .D(D[15:0]), 
-                                  .Q(Q[15:0]));
-   AND2  XLXI_2 (.I0(CLK), 
-                .I1(EN), 
-                .O(XLXN_1));
 endmodule
 `timescale 1ns / 1ps
 
@@ -3027,6 +3035,8 @@ module ALU_Reg_Join_MUSER_CPU_main(ALUC_IN,
    wire [15:0] XLXN_49;
    wire XLXN_52;
    wire XLXN_53;
+   wire XLXN_56;
+   wire [15:0] Y_KMx_IN_LT;
    
    GND  GND_0 (.G(XLXN_13[0]));
    GND  GND_1 (.G(XLXN_13[1]));
@@ -3081,7 +3091,7 @@ module ALU_Reg_Join_MUSER_CPU_main(ALUC_IN,
                    .S1(Shifter_Sel[1]), 
                    .OUT_C(XLXN_10[15:0]));
    Mux2Bus16  XLXI_13 (.IN_0(XLXN_7[15:0]), 
-                      .IN_1(Y_KMx_IN[15:0]), 
+                      .IN_1(Y_KMx_IN_LT[15:0]), 
                       .S(Y_X_Kmx_Sel), 
                       .Y(XLXN_6[15:0]));
    RAM_main_MUSER_CPU_main  XLXI_27 (.CLK(CLK), 
@@ -3133,6 +3143,11 @@ module ALU_Reg_Join_MUSER_CPU_main(ALUC_IN,
    OR2  XLXI_41 (.I0(XLXN_52), 
                 .I1(XLXN_53), 
                 .O(CY_OUT));
+   ffd16_w_en_MUSER_CPU_main  XLXI_42 (.CLK(CLK), 
+                                      .D(Y_KMx_IN[15:0]), 
+                                      .EN(XLXN_56), 
+                                      .Q(Y_KMx_IN_LT[15:0]));
+   VCC  XLXI_43 (.P(XLXN_56));
 endmodule
 `timescale 1ns / 1ps
 
@@ -3266,7 +3281,7 @@ module fdce1_MUSER_CPU_main(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_72" *) 
+   (* HU_SET = "XLXI_1_46" *) 
    IFD_HXILINX_CPU_main #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                                 .D(d), 
                                 .Q(q));
@@ -3741,7 +3756,7 @@ module UC2_MUSER_CPU_main(DecodeBusA,
    COMPARADOR5_MUSER_CPU_main  XLXI_29 (.a(DecodeBusA[4:0]), 
                                        .b(RetireBusC[4:0]), 
                                        .iguales(XLXN_43));
-   (* HU_SET = "XLXI_30_73" *) 
+   (* HU_SET = "XLXI_30_47" *) 
    OR6_HXILINX_CPU_main  XLXI_30 (.I0(XLXN_78), 
                                  .I1(XLXN_49), 
                                  .I2(XLXN_48), 

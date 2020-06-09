@@ -25,7 +25,7 @@ static const char *ng0 = "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/Microin
 
 
 
-static void Cont_2663_0(char *t0)
+static void Cont_2671_0(char *t0)
 {
     char t3[8];
     char *t1;
@@ -60,7 +60,7 @@ LAB0:    t1 = (t0 + 21248U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(2663, ng0);
+LAB2:    xsi_set_current_line(2671, ng0);
     t2 = (t0 + 20088U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -104,7 +104,7 @@ LAB1:    return;
 
 extern void work_m_00000000004076988150_3099821747_init()
 {
-	static char *pe[] = {(void *)Cont_2663_0};
+	static char *pe[] = {(void *)Cont_2671_0};
 	xsi_register_didat("work_m_00000000004076988150_3099821747", "isim/CPU_main_isim_beh.exe.sim/work/m_00000000004076988150_3099821747.didat");
 	xsi_register_executes(pe);
 }

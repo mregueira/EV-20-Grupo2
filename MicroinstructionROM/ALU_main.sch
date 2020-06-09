@@ -12,7 +12,6 @@
         <signal name="CY" />
         <signal name="CO" />
         <signal name="Z(15:0)" />
-        <signal name="XLXN_1" />
         <signal name="XLXN_3" />
         <signal name="XLXN_4" />
         <signal name="XLXN_5(15:0)" />
@@ -68,6 +67,9 @@
         <signal name="XLXN_346" />
         <signal name="XLXN_347" />
         <signal name="XLXN_348" />
+        <signal name="XLXN_349" />
+        <signal name="XLXN_350" />
+        <signal name="CY_EN" />
         <port polarity="Input" name="A(15:0)" />
         <port polarity="Input" name="B(15:0)" />
         <port polarity="Input" name="CY" />
@@ -282,7 +284,7 @@
         <block symbolname="add16" name="XLXI_1">
             <blockpin signalname="XLXN_5(15:0)" name="A(15:0)" />
             <blockpin signalname="XLXN_6(15:0)" name="B(15:0)" />
-            <blockpin signalname="XLXN_1" name="CI" />
+            <blockpin signalname="XLXN_350" name="CI" />
             <blockpin signalname="XLXN_3" name="CO" />
             <blockpin name="OFL" />
             <blockpin signalname="AdderOut(15:0)" name="S(15:0)" />
@@ -290,7 +292,7 @@
         <block symbolname="or2" name="XLXI_3">
             <blockpin signalname="OUT_1b" name="I0" />
             <blockpin signalname="CY" name="I1" />
-            <blockpin signalname="XLXN_1" name="O" />
+            <blockpin signalname="XLXN_349" name="O" />
         </block>
         <block symbolname="and2" name="XLXI_5">
             <blockpin signalname="CO_A" name="I0" />
@@ -458,6 +460,16 @@
             <blockpin signalname="CY_0" name="I" />
             <blockpin signalname="CO_A" name="O" />
         </block>
+        <block symbolname="and2" name="XLXI_146">
+            <blockpin signalname="XLXN_349" name="I0" />
+            <blockpin signalname="CY_EN" name="I1" />
+            <blockpin signalname="XLXN_350" name="O" />
+        </block>
+        <block symbolname="or2" name="XLXI_147">
+            <blockpin signalname="CY_1" name="I0" />
+            <blockpin signalname="A_p_B_p_CY" name="I1" />
+            <blockpin signalname="CY_EN" name="O" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="5440" height="3520">
         <instance x="2080" y="800" name="XLXI_1" orien="R0" />
@@ -469,13 +481,6 @@
         <instance x="1584" y="1168" name="B_MUX1" orien="R0">
         </instance>
         <instance x="880" y="704" name="XLXI_9" orien="R0" />
-        <branch name="XLXN_1">
-            <wire x2="1776" y1="256" y2="256" x1="1648" />
-            <wire x2="2032" y1="256" y2="256" x1="1776" />
-            <wire x2="2080" y1="224" y2="224" x1="2032" />
-            <wire x2="2080" y1="224" y2="352" x1="2080" />
-            <wire x2="2032" y1="224" y2="256" x1="2032" />
-        </branch>
         <branch name="XLXN_3">
             <wire x2="2656" y1="736" y2="736" x1="2528" />
         </branch>
@@ -989,6 +994,32 @@
         <branch name="CO_A">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2192" y="2688" type="branch" />
             <wire x2="2192" y1="2688" y2="2688" x1="2080" />
+        </branch>
+        <instance x="1728" y="320" name="XLXI_146" orien="R0" />
+        <branch name="XLXN_349">
+            <wire x2="1728" y1="256" y2="256" x1="1648" />
+        </branch>
+        <branch name="XLXN_350">
+            <wire x2="2080" y1="224" y2="224" x1="1984" />
+            <wire x2="2080" y1="224" y2="352" x1="2080" />
+        </branch>
+        <branch name="CY_EN">
+            <attrtext style="alignment:SOFT-VLEFT;fontsize:28;fontname:Arial" attrname="Name" x="1632" y="144" type="branch" />
+            <wire x2="1632" y1="144" y2="192" x1="1632" />
+            <wire x2="1728" y1="192" y2="192" x1="1632" />
+        </branch>
+        <instance x="2128" y="2128" name="XLXI_147" orien="R0" />
+        <branch name="CY_EN">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2496" y="2032" type="branch" />
+            <wire x2="2496" y1="2032" y2="2032" x1="2384" />
+        </branch>
+        <branch name="A_p_B_p_CY">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2016" y="2000" type="branch" />
+            <wire x2="2128" y1="2000" y2="2000" x1="2016" />
+        </branch>
+        <branch name="CY_1">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2016" y="2064" type="branch" />
+            <wire x2="2128" y1="2064" y2="2064" x1="2016" />
         </branch>
     </sheet>
 </drawing>

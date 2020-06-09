@@ -25,7 +25,7 @@ static const char *ng0 = "C:/Users/Marcelo/Documents/GitHub/EV-20-Grupo2/Microin
 
 
 
-static void Cont_3176_0(char *t0)
+static void Cont_3191_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -51,7 +51,7 @@ LAB0:    t1 = (t0 + 5888U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(3176, ng0);
+LAB2:    xsi_set_current_line(3191, ng0);
     t2 = (t0 + 4728U);
     t3 = *((char **)t2);
     t2 = (t0 + 6816);
@@ -79,7 +79,7 @@ LAB2:    xsi_set_current_line(3176, ng0);
 LAB1:    return;
 }
 
-static void Cont_3177_1(char *t0)
+static void Cont_3192_1(char *t0)
 {
     char t3[8];
     char *t1;
@@ -114,7 +114,7 @@ LAB0:    t1 = (t0 + 6136U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(3177, ng0);
+LAB2:    xsi_set_current_line(3192, ng0);
     t2 = (t0 + 4568U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -155,7 +155,7 @@ LAB2:    xsi_set_current_line(3177, ng0);
 LAB1:    return;
 }
 
-static void Cont_3178_2(char *t0)
+static void Cont_3193_2(char *t0)
 {
     char *t1;
     char *t2;
@@ -181,7 +181,7 @@ LAB0:    t1 = (t0 + 6384U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(3178, ng0);
+LAB2:    xsi_set_current_line(3193, ng0);
     t2 = (t0 + 4408U);
     t3 = *((char **)t2);
     t2 = (t0 + 6944);
@@ -212,7 +212,7 @@ LAB1:    return;
 
 extern void work_m_00000000001340228869_1586172442_init()
 {
-	static char *pe[] = {(void *)Cont_3176_0,(void *)Cont_3177_1,(void *)Cont_3178_2};
+	static char *pe[] = {(void *)Cont_3191_0,(void *)Cont_3192_1,(void *)Cont_3193_2};
 	xsi_register_didat("work_m_00000000001340228869_1586172442", "isim/CPU_main_isim_beh.exe.sim/work/m_00000000001340228869_1586172442.didat");
 	xsi_register_executes(pe);
 }

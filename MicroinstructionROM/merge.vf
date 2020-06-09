@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : merge.vf
-// /___/   /\     Timestamp : 06/09/2020 00:32:10
+// /___/   /\     Timestamp : 06/09/2020 01:47:33
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -97,7 +97,7 @@ module fdce1_MUSER_merge(chipEnable,
    
    wire XLXN_1;
    
-   (* HU_SET = "XLXI_1_51" *) 
+   (* HU_SET = "XLXI_1_38" *) 
    IFD_HXILINX_merge #( .INIT(1'b0) ) XLXI_1 (.C(XLXN_1), 
                              .D(d), 
                              .Q(q));
@@ -572,7 +572,7 @@ module UC2_MUSER_merge(DecodeBusA,
    COMPARADOR5_MUSER_merge  XLXI_29 (.a(DecodeBusA[4:0]), 
                                     .b(RetireBusC[4:0]), 
                                     .iguales(XLXN_43));
-   (* HU_SET = "XLXI_30_52" *) 
+   (* HU_SET = "XLXI_30_39" *) 
    OR6_HXILINX_merge  XLXI_30 (.I0(XLXN_78), 
                               .I1(XLXN_49), 
                               .I2(XLXN_48), 

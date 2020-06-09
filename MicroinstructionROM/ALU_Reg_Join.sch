@@ -12,7 +12,6 @@
         <signal name="XLXN_5(15:0)" />
         <signal name="XLXN_6(15:0)" />
         <signal name="XLXN_7(15:0)" />
-        <signal name="Y_KMx_IN(15:0)" />
         <signal name="XLXN_10(15:0)" />
         <signal name="XLXN_11(15:0)" />
         <signal name="XLXN_12(15:0)" />
@@ -40,7 +39,9 @@
         <signal name="CY_OUT" />
         <signal name="XLXN_52" />
         <signal name="XLXN_53" />
-        <port polarity="Input" name="Y_KMx_IN(15:0)" />
+        <signal name="Y_KMx_IN_LT(15:0)" />
+        <signal name="Y_KMx_IN(15:0)" />
+        <signal name="XLXN_56" />
         <port polarity="Output" name="W_Block1(15:0)" />
         <port polarity="Input" name="Y_X_Kmx_Sel" />
         <port polarity="Input" name="Shifter_Sel(1:0)" />
@@ -55,6 +56,7 @@
         <port polarity="Input" name="Wr" />
         <port polarity="Input" name="LEVEL(2:0)" />
         <port polarity="Output" name="CY_OUT" />
+        <port polarity="Input" name="Y_KMx_IN(15:0)" />
         <blockdef name="ALU_main">
             <timestamp>2020-6-9T2:7:33</timestamp>
             <rect width="256" x="64" y="-384" height="384" />
@@ -188,7 +190,7 @@
         <block symbolname="Mux2Bus16" name="XLXI_13">
             <blockpin signalname="Y_X_Kmx_Sel" name="S" />
             <blockpin signalname="XLXN_7(15:0)" name="IN_0(15:0)" />
-            <blockpin signalname="Y_KMx_IN(15:0)" name="IN_1(15:0)" />
+            <blockpin signalname="Y_KMx_IN_LT(15:0)" name="IN_1(15:0)" />
             <blockpin signalname="XLXN_6(15:0)" name="Y(15:0)" />
         </block>
         <block symbolname="vcc" name="VCC(15:0)">
@@ -270,6 +272,15 @@
             <blockpin signalname="XLXN_53" name="I1" />
             <blockpin signalname="CY_OUT" name="O" />
         </block>
+        <block symbolname="ffd16_w_en" name="XLXI_42">
+            <blockpin signalname="Y_KMx_IN(15:0)" name="D(15:0)" />
+            <blockpin signalname="XLXN_56" name="EN" />
+            <blockpin signalname="CLK" name="CLK" />
+            <blockpin signalname="Y_KMx_IN_LT(15:0)" name="Q(15:0)" />
+        </block>
+        <block symbolname="vcc" name="XLXI_43">
+            <blockpin signalname="XLXN_56" name="P" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="7040" height="5440">
         <instance x="5664" y="2528" name="XLXI_2" orien="R0">
@@ -295,9 +306,6 @@
             <wire x2="3760" y1="1712" y2="1712" x1="3360" />
             <wire x2="3360" y1="1712" y2="1888" x1="3360" />
         </branch>
-        <branch name="Y_KMx_IN(15:0)">
-            <wire x2="3760" y1="1776" y2="1776" x1="3648" />
-        </branch>
         <instance x="3760" y="1808" name="XLXI_13" orien="R0">
         </instance>
         <branch name="XLXN_10(15:0)">
@@ -318,7 +326,6 @@
         <branch name="XLXN_13(15:0)">
             <wire x2="5008" y1="2496" y2="2496" x1="4784" />
         </branch>
-        <iomarker fontsize="28" x="3648" y="1776" name="Y_KMx_IN(15:0)" orien="R180" />
         <branch name="W_Block1(15:0)">
             <wire x2="3440" y1="2208" y2="2208" x1="3344" />
         </branch>
@@ -475,6 +482,28 @@
             <wire x2="5632" y1="1664" y2="1664" x1="5568" />
             <wire x2="5632" y1="1664" y2="1776" x1="5632" />
             <wire x2="5696" y1="1776" y2="1776" x1="5632" />
+        </branch>
+        <instance x="3536" y="1376" name="XLXI_42" orien="R0">
+        </instance>
+        <branch name="Y_KMx_IN_LT(15:0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="4000" y="1216" type="branch" />
+            <wire x2="4000" y1="1216" y2="1216" x1="3920" />
+        </branch>
+        <branch name="Y_KMx_IN(15:0)">
+            <wire x2="3536" y1="1216" y2="1216" x1="3456" />
+        </branch>
+        <branch name="XLXN_56">
+            <wire x2="3536" y1="1280" y2="1280" x1="3456" />
+        </branch>
+        <branch name="CLK">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="3456" y="1344" type="branch" />
+            <wire x2="3536" y1="1344" y2="1344" x1="3456" />
+        </branch>
+        <instance x="3456" y="1344" name="XLXI_43" orien="R270" />
+        <iomarker fontsize="28" x="3456" y="1216" name="Y_KMx_IN(15:0)" orien="R180" />
+        <branch name="Y_KMx_IN_LT(15:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="3664" y="1776" type="branch" />
+            <wire x2="3760" y1="1776" y2="1776" x1="3664" />
         </branch>
     </sheet>
 </drawing>

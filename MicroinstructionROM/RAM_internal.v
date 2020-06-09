@@ -27,7 +27,7 @@ initial begin // para pruebas setear la memoria
 	mem[3] = 22'b1110000000000000000000; // jump if carry a PC = 0
 	mem[4] = 22'b0000000000000000000000; // complemento w
 	mem[5] = 22'b0000001000000000000000; // clear carry
-	mem[6] = 22'b0011000010000000000000; // mover w al reg 1
+	mem[6] = 22'b0001000000000000010001; // cargar w con 17
 	mem[7] = 22'b0000110000000100000000; // or que lee 1
 	mem[8] = 22'b0000011000000000000000; // ret
 	mem[9] = 22'b0000000000000000000000;

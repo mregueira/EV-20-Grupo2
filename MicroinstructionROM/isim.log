@@ -13,43 +13,6 @@ Simulator is doing circuit initialization process.
 WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
 Finished circuit initialization process.
 # isim force add /CPU_main/CLK_CPU 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /CPU_main/XLXI_14/XLXI_37/XLXI_14/XLXI_131/Q 25 -radix dec
-# run 0.10us
-# run 0.10us
-# isim force remove /CPU_main/XLXI_14/XLXI_37/XLXI_14/XLXI_131/Q
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
-# run 0.10us
 # run 0.10us
 # run 0.10us
 # run 0.10us
